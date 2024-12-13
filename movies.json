@@ -1,0 +1,257 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "duration": 142,
+        "streaming_services": [
+            "Netflix",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Max",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Godfather",
+        "duration": 175,
+        "streaming_services": [
+            "Netflix",
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime",
+            "Max",
+            "Netflix basic with Ads",
+            "Tivify"
+        ]
+    },
+    {
+        "title": "The Godfather Part II",
+        "duration": 202,
+        "streaming_services": [
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime",
+            "Max"
+        ]
+    },
+    {
+        "title": "Schindler's List",
+        "duration": 195,
+        "streaming_services": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "12 Angry Men",
+        "duration": 97,
+        "streaming_services": [
+            "Filmin",
+            "MGM Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Spirited Away",
+        "duration": 125,
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Dilwale Dulhania Le Jayenge",
+        "duration": 190,
+        "streaming_services": []
+    },
+    {
+        "title": "The Dark Knight",
+        "duration": 152,
+        "streaming_services": [
+            "Netflix",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Max",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Green Mile",
+        "duration": 189,
+        "streaming_services": [
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Parasite",
+        "duration": 133,
+        "streaming_services": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Max"
+        ]
+    },
+    {
+        "title": "Pulp Fiction",
+        "duration": 154,
+        "streaming_services": [
+            "Netflix",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Max",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Your Name.",
+        "duration": 106,
+        "streaming_services": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Flow",
+        "duration": 85,
+        "streaming_services": []
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "duration": 201,
+        "streaming_services": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "Forrest Gump",
+        "duration": 142,
+        "streaming_services": [
+            "SkyShowtime"
+        ]
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "duration": 161,
+        "streaming_services": [
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "Seven Samurai",
+        "duration": 207,
+        "streaming_services": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Grave of the Fireflies",
+        "duration": 89,
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "GoodFellas",
+        "duration": 145,
+        "streaming_services": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Max"
+        ]
+    },
+    {
+        "title": "Cinema Paradiso",
+        "duration": 124,
+        "streaming_services": [
+            "Amazon Prime Video",
+            "Filmin",
+            "Acontra Plus",
+            "Tivify"
+        ]
+    },
+    {
+        "title": "Life Is Beautiful",
+        "duration": 116,
+        "streaming_services": []
+    },
+    {
+        "title": "Interstellar",
+        "duration": 169,
+        "streaming_services": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Max",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Impossible Things",
+        "duration": 88,
+        "streaming_services": []
+    },
+    {
+        "title": "Fight Club",
+        "duration": 139,
+        "streaming_services": [
+            "Disney Plus",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Psycho",
+        "duration": 109,
+        "streaming_services": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "City of God",
+        "duration": 129,
+        "streaming_services": [
+            "Movistar Plus+ Ficción Total ",
+            "Max",
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "Once Upon a Time in America",
+        "duration": 229,
+        "streaming_services": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "duration": 179,
+        "streaming_services": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "One Flew Over the Cuckoo's Nest",
+        "duration": 133,
+        "streaming_services": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Gabriel's Inferno",
+        "duration": 122,
+        "streaming_services": []
+    }
+]

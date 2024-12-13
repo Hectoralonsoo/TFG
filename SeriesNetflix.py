@@ -1,4 +1,4 @@
-"""import requests
+import requests
 
 # Tu clave de API de TMDb
 api_key = 'd566937910f1e5247e09d2f97385dd0a'  # Reemplaza con tu clave de API de TMDb
@@ -68,38 +68,4 @@ for serie in series:
             print(f"  Temporada {season['season_number']}: {season['name']}")
     else:
         print("  No se encontraron temporadas.")
-"""
 
-import requests
-
-api_key = 'd566937910f1e5247e09d2f97385dd0a'  # Reemplaza con tu clave de API de TMDb
-base_url = 'https://api.themoviedb.org/3'
-
-def get_seasons(series_id):
-    url = f'{base_url}/tv/{series_id}'
-    params = {'api_key': api_key, 'language': 'es-ES'}
-    response = requests.get(url, params=params)
-    if response.status_code == 200:
-        return response.json().get('seasons', [])
-    return []
-
-def is_available_on_netflix(series_id):
-    url = f'{base_url}/tv/{series_id}/watch/providers'
-    response = requests.get(url, params={'api_key': api_key})
-    if response.status_code == 200:
-        providers = response.json().get('results', {}).get('ES', {})
-        return any(provider['provider_id'] == 8 for provider in providers.get('flatrate', []))
-    return False
-
-def print_netflix_seasons(series_id):
-    if is_available_on_netflix(series_id):
-        seasons = get_seasons(series_id)
-        print("Temporadas de Bob Esponja en Netflix:")
-        for season in seasons:
-            print(f"  Temporada {season['season_number']}: {season['name']}")
-    else:
-        print("Bob Esponja no está disponible en Netflix en España.")
-
-# ID de Bob Esponja
-series_id = 387
-print_netflix_seasons(series_id)
