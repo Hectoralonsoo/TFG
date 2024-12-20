@@ -11,6 +11,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 32,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Good Cop / Bad Cop",
@@ -54,6 +55,11 @@
                 "season_number": 1,
                 "season_name": "Season 1",
                 "season_duration": 352,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads",
+                    "Tivify"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Pilot",
@@ -89,6 +95,10 @@
                 "season_number": 2,
                 "season_name": "Season 2",
                 "season_duration": 623,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Seven Thirty-Seven",
@@ -148,6 +158,10 @@
                 "season_number": 3,
                 "season_name": "Season 3",
                 "season_duration": 624,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "No Más",
@@ -207,6 +221,10 @@
                 "season_number": 4,
                 "season_name": "Season 4",
                 "season_duration": 619,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Box Cutter",
@@ -266,6 +284,10 @@
                 "season_number": 5,
                 "season_name": "Season 5",
                 "season_duration": 777,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Live Free or Die",
@@ -336,72 +358,6 @@
         ]
     },
     {
-        "title": "Dan Da Dan",
-        "streaming_services": [
-            "Netflix",
-            "Netflix basic with Ads",
-            "Crunchyroll",
-            "Crunchyroll Amazon Channel"
-        ],
-        "seasons": [
-            {
-                "season_number": 1,
-                "season_name": "Season 1",
-                "season_duration": 240,
-                "episodes": [
-                    {
-                        "episode_name": "That's How Love Starts, Ya Know!",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "That's a Space Alien, Ain't It?!",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "It's a Granny vs. Granny Clash!",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "Kicking Turbo Granny's Ass",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "Like, Where Are Your Balls?!",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "A Dangerous Woman Arrives",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "To a Kinder World",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "I've Got This Funny Feeling",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "Merge! Serpo Dover Demon Nessie!",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "Have You Ever Seen a Cattle Mutilation?",
-                        "duration": 24
-                    },
-                    {
-                        "episode_name": "First Love",
-                        "duration": 0
-                    },
-                    {
-                        "episode_name": "Let's Go to the Cursed House",
-                        "duration": 0
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "title": "Hazbin Hotel",
         "streaming_services": [
             "Amazon Prime Video"
@@ -411,6 +367,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 37,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Hazbin Hotel (Pilot)",
@@ -426,6 +383,9 @@
                 "season_number": 1,
                 "season_name": "Season 1",
                 "season_duration": 200,
+                "streaming_providers": [
+                    "Amazon Prime Video"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Overture",
@@ -465,6 +425,7 @@
                 "season_number": 2,
                 "season_name": "Season 2",
                 "season_duration": 0,
+                "streaming_providers": [],
                 "episodes": []
             }
         ]
@@ -480,6 +441,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 42,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "OO Magic Episode 1: The Magic of Saying What You Are Thinking",
@@ -543,6 +505,10 @@
                 "season_number": 1,
                 "season_name": "Season 1",
                 "season_duration": 701,
+                "streaming_providers": [
+                    "Crunchyroll",
+                    "Crunchyroll Amazon Channel"
+                ],
                 "episodes": [
                     {
                         "episode_name": "The Journey's End",
@@ -662,9 +628,82 @@
                 "season_number": 2,
                 "season_name": "Season 2",
                 "season_duration": 0,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Episode 1",
+                        "duration": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Dan Da Dan",
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads",
+            "Crunchyroll",
+            "Crunchyroll Amazon Channel"
+        ],
+        "seasons": [
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 264,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads",
+                    "Crunchyroll",
+                    "Crunchyroll Amazon Channel"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "That's How Love Starts, Ya Know!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "That's a Space Alien, Ain't It?!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "It's a Granny vs. Granny Clash!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Kicking Turbo Granny's Ass",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Like, Where Are Your Balls?!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Dangerous Woman Arrives",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "To a Kinder World",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "I've Got This Funny Feeling",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Merge! Serpo Dover Demon Nessie!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Have You Ever Seen a Cattle Mutilation?",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "First Love",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Let's Go to the Cursed House",
                         "duration": 0
                     }
                 ]
@@ -682,6 +721,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 122,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Making Mel",
@@ -721,6 +761,10 @@
                 "season_number": 1,
                 "season_name": "Season 1",
                 "season_duration": 379,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Welcome to the Playground",
@@ -764,6 +808,10 @@
                 "season_number": 2,
                 "season_name": "Season 2",
                 "season_duration": 370,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Heavy Is the Crown",
@@ -806,6 +854,90 @@
         ]
     },
     {
+        "title": "Twenty Five Twenty One",
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ],
+        "seasons": [
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 1224,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Episode 1",
+                        "duration": 76
+                    },
+                    {
+                        "episode_name": "Episode 2",
+                        "duration": 75
+                    },
+                    {
+                        "episode_name": "Episode 3",
+                        "duration": 71
+                    },
+                    {
+                        "episode_name": "Episode 4",
+                        "duration": 75
+                    },
+                    {
+                        "episode_name": "Episode 5",
+                        "duration": 77
+                    },
+                    {
+                        "episode_name": "Episode 6",
+                        "duration": 75
+                    },
+                    {
+                        "episode_name": "Episode 7",
+                        "duration": 73
+                    },
+                    {
+                        "episode_name": "Episode 8",
+                        "duration": 73
+                    },
+                    {
+                        "episode_name": "Episode 9",
+                        "duration": 73
+                    },
+                    {
+                        "episode_name": "Episode 10",
+                        "duration": 71
+                    },
+                    {
+                        "episode_name": "Episode 11",
+                        "duration": 77
+                    },
+                    {
+                        "episode_name": "Episode 12",
+                        "duration": 75
+                    },
+                    {
+                        "episode_name": "Episode 13",
+                        "duration": 75
+                    },
+                    {
+                        "episode_name": "Episode 14",
+                        "duration": 79
+                    },
+                    {
+                        "episode_name": "Episode 15",
+                        "duration": 89
+                    },
+                    {
+                        "episode_name": "Episode 16",
+                        "duration": 90
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "title": "Avatar: The Last Airbender",
         "streaming_services": [
             "Netflix",
@@ -819,6 +951,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 430,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Unaired Pilot",
@@ -922,6 +1055,13 @@
                 "season_number": 1,
                 "season_name": "Book One: Water",
                 "season_duration": 487,
+                "streaming_providers": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Movistar Plus+ Ficción Total ",
+                    "SkyShowtime",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "The Boy in the Iceberg",
@@ -1009,6 +1149,12 @@
                 "season_number": 2,
                 "season_name": "Book Two: Earth",
                 "season_duration": 497,
+                "streaming_providers": [
+                    "Netflix",
+                    "Movistar Plus+ Ficción Total ",
+                    "SkyShowtime",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "The Avatar State",
@@ -1096,6 +1242,12 @@
                 "season_number": 3,
                 "season_name": "Book Three: Fire",
                 "season_duration": 512,
+                "streaming_providers": [
+                    "Netflix",
+                    "Movistar Plus+ Ficción Total ",
+                    "SkyShowtime",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "The Awakening",
@@ -1186,86 +1338,6 @@
         ]
     },
     {
-        "title": "Twenty Five Twenty One",
-        "streaming_services": [
-            "Netflix",
-            "Netflix basic with Ads"
-        ],
-        "seasons": [
-            {
-                "season_number": 1,
-                "season_name": "Season 1",
-                "season_duration": 1224,
-                "episodes": [
-                    {
-                        "episode_name": "Episode 1",
-                        "duration": 76
-                    },
-                    {
-                        "episode_name": "Episode 2",
-                        "duration": 75
-                    },
-                    {
-                        "episode_name": "Episode 3",
-                        "duration": 71
-                    },
-                    {
-                        "episode_name": "Episode 4",
-                        "duration": 75
-                    },
-                    {
-                        "episode_name": "Episode 5",
-                        "duration": 77
-                    },
-                    {
-                        "episode_name": "Episode 6",
-                        "duration": 75
-                    },
-                    {
-                        "episode_name": "Episode 7",
-                        "duration": 73
-                    },
-                    {
-                        "episode_name": "Episode 8",
-                        "duration": 73
-                    },
-                    {
-                        "episode_name": "Episode 9",
-                        "duration": 73
-                    },
-                    {
-                        "episode_name": "Episode 10",
-                        "duration": 71
-                    },
-                    {
-                        "episode_name": "Episode 11",
-                        "duration": 77
-                    },
-                    {
-                        "episode_name": "Episode 12",
-                        "duration": 75
-                    },
-                    {
-                        "episode_name": "Episode 13",
-                        "duration": 75
-                    },
-                    {
-                        "episode_name": "Episode 14",
-                        "duration": 79
-                    },
-                    {
-                        "episode_name": "Episode 15",
-                        "duration": 89
-                    },
-                    {
-                        "episode_name": "Episode 16",
-                        "duration": 90
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "title": "One Piece",
         "streaming_services": [
             "Crunchyroll",
@@ -1276,6 +1348,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 1660,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Contingency Plan. Complete Summary One Piece",
@@ -1415,6 +1488,10 @@
                 "season_number": 1,
                 "season_name": "East Blue",
                 "season_duration": 1524,
+                "streaming_providers": [
+                    "Crunchyroll",
+                    "Crunchyroll Amazon Channel"
+                ],
                 "episodes": [
                     {
                         "episode_name": "I'm Luffy! The Man Who Will Become the Pirate King!",
@@ -1666,6 +1743,9 @@
                 "season_number": 2,
                 "season_name": "Whisky Peak & Little Garden",
                 "season_duration": 388,
+                "streaming_providers": [
+                    "Crunchyroll"
+                ],
                 "episodes": [
                     {
                         "episode_name": "The First Line of Defense? the Giant Whale Laboon Appears!",
@@ -1737,6 +1817,7 @@
                 "season_number": 3,
                 "season_name": "Drum Island",
                 "season_duration": 336,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Nami's Sick? Beyond the Snow Falling on the Sea!",
@@ -1800,6 +1881,7 @@
                 "season_number": 4,
                 "season_name": "Alabasta",
                 "season_duration": 936,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Alabasta's Hero and a Ballerina on the Ship!",
@@ -1963,6 +2045,7 @@
                 "season_number": 5,
                 "season_name": "Post-Alabasta, Goat Island & Ruluka Island",
                 "season_duration": 312,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The First Patient! The Untold Story of the Rumble Ball!",
@@ -2022,6 +2105,7 @@
                 "season_number": 6,
                 "season_name": "Skypiea",
                 "season_duration": 1248,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Log is Taken! Salvage King, Masira!",
@@ -2237,6 +2321,7 @@
                 "season_number": 7,
                 "season_name": "Long Ring Long Land",
                 "season_duration": 792,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "A State of Emergency is Issued! A Notorious Pirate Ship has Infiltrated!",
@@ -2376,6 +2461,7 @@
                 "season_number": 8,
                 "season_name": "Water Seven",
                 "season_duration": 840,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Dashing Sea Train and the City of Water: Water Seven!",
@@ -2523,6 +2609,7 @@
                 "season_number": 9,
                 "season_name": "Enies Lobby",
                 "season_duration": 1752,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Landing Operations Start! Charge in, Straw Hats!",
@@ -2822,6 +2909,7 @@
                 "season_number": 10,
                 "season_name": "Thriller Bark",
                 "season_duration": 1080,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Plunging into the Devil’s Sea! The Mysterious Skeleton Floating in the Fog!",
@@ -3009,6 +3097,7 @@
                 "season_number": 11,
                 "season_name": "Sabaody Archipelago",
                 "season_duration": 624,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Slow-Slow Menace! 'Silver Fox' Foxy Returns!",
@@ -3120,6 +3209,7 @@
                 "season_number": 12,
                 "season_name": "Amazon Lily",
                 "season_duration": 336,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Landing! The All-Female Island, Amazon Lily",
@@ -3183,6 +3273,7 @@
                 "season_number": 13,
                 "season_name": "Impel Down & Marineford",
                 "season_duration": 2424,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "A Deadly Infiltration! The Underwater Prison Impel Down",
@@ -3594,6 +3685,7 @@
                 "season_number": 14,
                 "season_name": "Fishman Island",
                 "season_duration": 1392,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "A Suprising Fact! The Man Who Guarded the Sunny!",
@@ -3833,6 +3925,7 @@
                 "season_number": 15,
                 "season_name": "Punk Hazard",
                 "season_duration": 1488,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Straw Hats Stunned! Enter: A Samurai's Horrifying Severed Head!",
@@ -4088,6 +4181,9 @@
                 "season_number": 16,
                 "season_name": "Dressrosa",
                 "season_duration": 1200,
+                "streaming_providers": [
+                    "Crunchyroll Amazon Channel"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Shaking Heaven and Earth! Admiral Fujitora's Power!",
@@ -4295,6 +4391,7 @@
                 "season_number": 17,
                 "season_name": "Dressrosa (2)",
                 "season_duration": 1344,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Little People's Princess! Captive Mansherry!",
@@ -4526,6 +4623,7 @@
                 "season_number": 18,
                 "season_name": "Zou",
                 "season_duration": 1320,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Sword Technique Heats Up! Law and Zoro Finally Appear!",
@@ -4753,6 +4851,7 @@
                 "season_number": 19,
                 "season_name": "Whole Cake Island",
                 "season_duration": 1776,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "To the East Blue! Sanji's Resolute Departure!",
@@ -5056,6 +5155,7 @@
                 "season_number": 20,
                 "season_name": "Levely Arc",
                 "season_duration": 336,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The World is Stunned! The Fifth Emperor of the Sea Emerges!",
@@ -5119,6 +5219,7 @@
                 "season_number": 21,
                 "season_name": "Wano Country Arc",
                 "season_duration": 4728,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Land of Wano! To the Samurai Country where Cherry Blossoms Flutter!",
@@ -5912,8 +6013,9 @@
             },
             {
                 "season_number": 22,
-                "season_name": "Egghead",
+                "season_name": "Egghead Island",
                 "season_duration": 816,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Entering a New Chapter! Luffy and Sabo's Paths!",
@@ -6067,6 +6169,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 102,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "The Blind Alchemist",
@@ -6154,6 +6257,11 @@
                 "season_number": 1,
                 "season_name": "Season 1",
                 "season_duration": 1600,
+                "streaming_providers": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Netflix basic with Ads"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Fullmetal Alchemist",
@@ -6426,6 +6534,7 @@
                 "season_number": 0,
                 "season_name": "Specials",
                 "season_duration": 133,
+                "streaming_providers": [],
                 "episodes": [
                     {
                         "episode_name": "Rick and Morty The Non-Canonical Adventures: The Thing",
@@ -6573,6 +6682,10 @@
                 "season_number": 1,
                 "season_name": "Season 1",
                 "season_duration": 244,
+                "streaming_providers": [
+                    "Movistar Plus+ Ficción Total ",
+                    "Max"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Pilot",
@@ -6624,6 +6737,9 @@
                 "season_number": 2,
                 "season_name": "Season 2",
                 "season_duration": 228,
+                "streaming_providers": [
+                    "Max"
+                ],
                 "episodes": [
                     {
                         "episode_name": "A Rickle in Time",
@@ -6671,6 +6787,9 @@
                 "season_number": 3,
                 "season_name": "Season 3",
                 "season_duration": 230,
+                "streaming_providers": [
+                    "Max"
+                ],
                 "episodes": [
                     {
                         "episode_name": "The Rickshank Rickdemption",
@@ -6718,6 +6837,9 @@
                 "season_number": 4,
                 "season_name": "Season 4",
                 "season_duration": 227,
+                "streaming_providers": [
+                    "Max"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Edge of Tomorty: Rick Die Rickpeat",
@@ -6765,6 +6887,9 @@
                 "season_number": 5,
                 "season_name": "Season 5",
                 "season_duration": 225,
+                "streaming_providers": [
+                    "Max"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Mort Dinner Rick Andre",
@@ -6812,6 +6937,9 @@
                 "season_number": 6,
                 "season_name": "Season 6",
                 "season_duration": 223,
+                "streaming_providers": [
+                    "Max"
+                ],
                 "episodes": [
                     {
                         "episode_name": "Solaricks",
@@ -6859,6 +6987,9 @@
                 "season_number": 7,
                 "season_name": "Season 7",
                 "season_duration": 230,
+                "streaming_providers": [
+                    "Max"
+                ],
                 "episodes": [
                     {
                         "episode_name": "How Poopy Got His Poop Back",
@@ -6906,6 +7037,7 @@
                 "season_number": 8,
                 "season_name": "Season 8",
                 "season_duration": 0,
+                "streaming_providers": [],
                 "episodes": []
             }
         ]

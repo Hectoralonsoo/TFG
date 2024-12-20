@@ -52,7 +52,20 @@ def get_seasons_of_series(series_id):
         print(f"Error al obtener temporadas de la serie {series_id}")
         return []
 
+def get_providers_for_season(series_id, season_number):
+    url = f'{base_url}/tv/{series_id}/season/{season_number}/watch/providers'
+    params = {
+        'api_key': api_key,
+        'language': 'es-ES'  # Idioma español
+    }
 
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        return data.get('results', {})
+    else:
+        print(f"Error al obtener proveedores para la temporada {season_number} de la serie {series_id}")
+        return {}
 # ID de Netflix en TMDb
 netflix_service_id = 8  # Netflix
 
@@ -66,6 +79,12 @@ for serie in series:
     if seasons:
         for season in seasons:
             print(f"  Temporada {season['season_number']}: {season['name']}")
+            providers = get_providers_for_season(serie['id'], season['season_number'])
+            if providers:
+                print(f"    Proveedores en España:")
+                for provider in providers.get('flatrate', []):
+                    print(f"      - {provider['provider_name']}")
+            else:
+                print("    No se encontraron proveedores para esta temporada en España.")
     else:
         print("  No se encontraron temporadas.")
-

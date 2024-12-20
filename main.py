@@ -8,6 +8,11 @@ tv_id = "1399"  # Ejemplo: Game of Thrones
 # URL base
 base_url = "https://api.themoviedb.org/3"
 
+def getSeasonStreamingProviders(serie_id, season_number, country_code='ES'):
+    url = f"{base_url}/tv/{serie_id}/season/{season_number}/watch/providers?api_key={api_key}"
+    response = requests.get(url).json()
+    providers = response.get("results", {}).get(country_code, {}).get("flatrate", [])
+    return [provider["provider_name"] for provider in providers]
 
 def getBestMovies(cantidad):
     peliculas = []
@@ -40,7 +45,13 @@ def getMovieDuration(movie_id):
     movie_data = requests.get(url).json()
     return movie_data.get("runtime", "Desconocido")
 
-
+def searchSeriesByName(name):
+    url = f"{base_url}/search/tv?api_key={api_key}&query={name}&language=es-ES"
+    response = requests.get(url).json()
+    series = response.get("results", [])
+    if series:
+        return series[0]  # Retorna la primera serie que coincida
+    return None
 
 
 
@@ -83,12 +94,15 @@ def getSeasonDuration(serie_id):
 
         # Obtener la duración total de los episodios y la lista de episodios
         season_duration, episodes_duration = getEpisodeDuration(serie_id, season_number)
+        season_streaming_providers = getSeasonStreamingProviders(serie_id, season_number)
 
         seasons_duration.append({
             "season_number": season_number,
             "season_name": season_name,
             "season_duration": season_duration,
+            "streaming_providers": season_streaming_providers,
             "episodes": episodes_duration
+
         })
 
     return seasons_duration
@@ -125,3 +139,30 @@ def getAndSaveMovie(cantidad, archivo_salida):
 
 getAndSaveMovie(30, "movies.json")
 getAndSaveSeries(10, "series.json")
+
+serie_name = "SpongeBob SquarePants"
+serie_data = searchSeriesByName(serie_name)
+
+if serie_data:
+    serie_id = serie_data["id"]
+    print(f"Información de la serie: {serie_data['name']}")
+
+    # Obtener la duración de las temporadas y los proveedores de streaming
+    duraciones_temporadas = getSeasonDuration(serie_id)
+
+    # Obtener los proveedores de streaming de la serie en general
+    streaming_services = getStreamingProviders("tv", serie_id, "ES")
+
+    # Crear un diccionario con la información de la serie
+    serie_info = {
+        "title": serie_data["name"],
+        "overview": serie_data.get("overview", "Sin descripción"),
+        "streaming_services": streaming_services,
+        "seasons": duraciones_temporadas,
+    }
+
+    # Guardar la información en un archivo JSON
+    saveJson("bob_esponja_info.json", serie_info)
+    print(f"Datos de {serie_name} guardados en 'bob_esponja_info.json'.")
+else:
+    print("No se encontró la serie.")
