@@ -650,7 +650,7 @@
             {
                 "season_number": 1,
                 "season_name": "Season 1",
-                "season_duration": 264,
+                "season_duration": 288,
                 "streaming_providers": [
                     "Netflix",
                     "Netflix basic with Ads",
@@ -704,7 +704,19 @@
                     },
                     {
                         "episode_name": "Let's Go to the Cursed House",
-                        "duration": 0
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 24,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Episode 1",
+                        "duration": 24
                     }
                 ]
             }
@@ -7039,6 +7051,4384 @@
                 "season_duration": 0,
                 "streaming_providers": [],
                 "episodes": []
+            }
+        ]
+    },
+    {
+        "title": "Better Call Saul",
+        "streaming_services": [
+            "Netflix",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Netflix basic with Ads",
+            "Tivify"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 32,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Day One",
+                        "duration": 5
+                    },
+                    {
+                        "episode_name": "In the Studio",
+                        "duration": 6
+                    },
+                    {
+                        "episode_name": "A Look at the Series",
+                        "duration": 4
+                    },
+                    {
+                        "episode_name": "Characters of Better Call Saul",
+                        "duration": 4
+                    },
+                    {
+                        "episode_name": "No Picnic",
+                        "duration": 3
+                    },
+                    {
+                        "episode_name": "American Greed: James McGill",
+                        "duration": 10
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 478,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads",
+                    "Tivify"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Uno",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "Mijo",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Nacho",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Hero",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Alpine Shepherd Boy",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Five-O",
+                        "duration": 43
+                    },
+                    {
+                        "episode_name": "Bingo",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "RICO",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Pimento",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Marco",
+                        "duration": 50
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 466,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Switch",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Cobbler",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Amarillo",
+                        "duration": 43
+                    },
+                    {
+                        "episode_name": "Gloves Off",
+                        "duration": 44
+                    },
+                    {
+                        "episode_name": "Rebecca",
+                        "duration": 46
+                    },
+                    {
+                        "episode_name": "Bali Ha'i",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Inflatable",
+                        "duration": 43
+                    },
+                    {
+                        "episode_name": "Fifi",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Nailed",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Klick",
+                        "duration": 49
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Season 3",
+                "season_duration": 505,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Mabel",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Witness",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Sunk Costs",
+                        "duration": 46
+                    },
+                    {
+                        "episode_name": "Sabrosito",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Chicanery",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Off Brand",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Expenses",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Slip",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Fall",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Lantern",
+                        "duration": 57
+                    }
+                ]
+            },
+            {
+                "season_number": 4,
+                "season_name": "Season 4",
+                "season_duration": 497,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Smoke",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Breathe",
+                        "duration": 46
+                    },
+                    {
+                        "episode_name": "Something Beautiful",
+                        "duration": 43
+                    },
+                    {
+                        "episode_name": "Talk",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Quite a Ride",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Piñata",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Something Stupid",
+                        "duration": 42
+                    },
+                    {
+                        "episode_name": "Coushatta",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Wiedersehen",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "Winner",
+                        "duration": 61
+                    }
+                ]
+            },
+            {
+                "season_number": 5,
+                "season_name": "Season 5",
+                "season_duration": 530,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Magic Man",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "50% Off",
+                        "duration": 46
+                    },
+                    {
+                        "episode_name": "The Guy for This",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "Namaste",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Dedicado a Max",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "Wexler v. Goodman",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "JMM",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "Bagman",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "Bad Choice Road",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "Something Unforgivable",
+                        "duration": 61
+                    }
+                ]
+            },
+            {
+                "season_number": 6,
+                "season_name": "Season 6",
+                "season_duration": 702,
+                "streaming_providers": [
+                    "Netflix",
+                    "Movistar Plus+",
+                    "Movistar Plus+ Ficción Total ",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Wine and Roses",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Carrot and Stick",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "Rock and Hard Place",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Hit and Run",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Black and Blue",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Axe and Grind",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Plan and Execution",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "Point and Shoot",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Fun and Games",
+                        "duration": 57
+                    },
+                    {
+                        "episode_name": "Nippy",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Breaking Bad",
+                        "duration": 58
+                    },
+                    {
+                        "episode_name": "Waterworks",
+                        "duration": 59
+                    },
+                    {
+                        "episode_name": "Saul Gone",
+                        "duration": 70
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Chernobyl",
+        "streaming_services": [
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ],
+        "seasons": [
+            {
+                "season_number": 1,
+                "season_name": "Miniseries",
+                "season_duration": 331,
+                "streaming_providers": [
+                    "Movistar Plus+ Ficción Total ",
+                    "Max"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "1:23:45",
+                        "duration": 61
+                    },
+                    {
+                        "episode_name": "Please Remain Calm",
+                        "duration": 66
+                    },
+                    {
+                        "episode_name": "Open Wide, O Earth",
+                        "duration": 64
+                    },
+                    {
+                        "episode_name": "The Happiness of All Mankind",
+                        "duration": 67
+                    },
+                    {
+                        "episode_name": "Vichnaya Pamyat",
+                        "duration": 73
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Anne with an E",
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ],
+        "seasons": [
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 353,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Your Will Shall Decide Your Destiny",
+                        "duration": 89
+                    },
+                    {
+                        "episode_name": "I Am No Bird, and No Net Ensnares Me",
+                        "duration": 44
+                    },
+                    {
+                        "episode_name": "But What Is So Headstrong as Youth?",
+                        "duration": 44
+                    },
+                    {
+                        "episode_name": "An Inward Treasure Born",
+                        "duration": 44
+                    },
+                    {
+                        "episode_name": "Tightly Knotted to a Similar String",
+                        "duration": 44
+                    },
+                    {
+                        "episode_name": "Remorse Is the Poison of Life",
+                        "duration": 44
+                    },
+                    {
+                        "episode_name": "Wherever You Are Is My Home",
+                        "duration": 44
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 449,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Youth is the Season of Hope",
+                        "duration": 46
+                    },
+                    {
+                        "episode_name": "Signs are Small Measurable Things, but Interpretations are Illimitable",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "The True Seeing is Within",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "The Painful Eagerness of Unfed Hope",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "The Determining Acts of Her Life",
+                        "duration": 44
+                    },
+                    {
+                        "episode_name": "I Protest Against Any Absolute Conclusion",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Memory Has as Many Moods as the Temper",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Struggling Against the Perception of Facts",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "What We Have Been Makes Us What We Are",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "The Growing Good of the World",
+                        "duration": 44
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Season 3",
+                "season_duration": 450,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "A Secret Which I Desired to Divine",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "There is Something at Work in My Soul Which I Do Not Understand",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "What Can Stop the Determined Heart",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "A Hope of Meeting You in Another World",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "I Am Fearless and Therefore Powerful",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "The Summit of My Desires",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "A Strong Effort of the Spirit of Good",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Great and Sudden Change",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "A Dense and Frightful Darkness",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "The Better Feeling of My Heart",
+                        "duration": 45
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Attack on Titan",
+        "streaming_services": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Netflix basic with Ads",
+            "Crunchyroll",
+            "Crunchyroll Amazon Channel"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 948,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Since That Day",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 1 / Day 2",
+                        "duration": 7
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 3 / Day 4",
+                        "duration": 7
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 5 / Day 6 / Day 7",
+                        "duration": 7
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 8 / Day 9 / Day 10",
+                        "duration": 7
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 11 / Day 12 / Day 13",
+                        "duration": 11
+                    },
+                    {
+                        "episode_name": "Ilse's Notebook: Memoirs of a Recon Corps Member",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 14 / Day 15 / Day 16",
+                        "duration": 13
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 17 / Day 18 / Day 19",
+                        "duration": 14
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 20 / Day 21 / Day 22",
+                        "duration": 10
+                    },
+                    {
+                        "episode_name": "Reading & Live Event",
+                        "duration": 118
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, Cadets, Fly!: Day 23 / Day 24 / Day 25",
+                        "duration": 10
+                    },
+                    {
+                        "episode_name": "The Sudden Visitor: The Torturous Curse of Youth",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Distress",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Choice with No Regrets (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Choice with No Regrets (2)",
+                        "duration": 30
+                    },
+                    {
+                        "episode_name": "Lost Girls: Wall Sina, Goodbye (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Lost Girls: Wall Sina, Goodbye (2)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Lost Girls: Lost in the Cruel World",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, New Levi Squad, Fly!: Day 38 / Day 39 / Day 40",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, New Levi Squad, Fly!: Day 41 / Day 42 / Day 43",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, New Levi Squad, Fly!: Day 44 / Day 45 / Day 46",
+                        "duration": 3
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, New Levi Squad, Fly!: Day 47 / Day 48 / Day 49",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, New Levi Squad, Fly!: Day 50 / Day 51/ Day 52",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, New Levi Squad, Fly!: Day 53 / Day 54 / Day 55",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Fly, New Levi Squad, Fly!: Day 56 / Day 57 / Day 58 / Day 59",
+                        "duration": 3
+                    },
+                    {
+                        "episode_name": "―Special Omnibus― 1st Night ～The Battle Between Humanity and Titans～",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "―Special Omnibus― 2nd Night ～The Emergence of The Intelligent Titans～",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "―Special Omnibus― 3rd Night ～The Uprising of the Scout Regiment and the True Ruler～",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "―Special Omnibus― 4th Night ～The Truth of the Titans and the Secret of the Walls～",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "―Special Omnibus― 5th Night ～Marley's Warriors and the Island's Devils～",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "―Special Omnibus― 6th Night ～Decisions of Future～",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Survey Cops: Day 60 / Day 61 / Day 62 / Day 63 / Day 64 / Day 65 / Day 66 / Day 67",
+                        "duration": 6
+                    },
+                    {
+                        "episode_name": "Chibi Theater: Survey Cops: Day 68 / Day 69 / Day 70 / Day 71 / Day 72 / Day 73 / Day 74 / Day 75",
+                        "duration": 5
+                    },
+                    {
+                        "episode_name": "―Special Omnibus― 7th Night ～Footsteps of the End～",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "The Final Chapters Special (1)",
+                        "duration": 61
+                    },
+                    {
+                        "episode_name": "The Final Chapters Special (2)",
+                        "duration": 85
+                    },
+                    {
+                        "episode_name": "Episode 38",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 39",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 40",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 41",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 42",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 43",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 44",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 45",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 46",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 47",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 48",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 49",
+                        "duration": 0
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 600,
+                "streaming_providers": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Netflix basic with Ads",
+                    "Crunchyroll"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "To You, in 2000 Years: The Fall of Shiganshina (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "That Day: The Fall of Shiganshina (2)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Dim Light Amid Despair: Humanity's Comeback (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Night of the Closing Ceremony: Humanity's Comeback (2)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "First Battle: The Struggle for Trost (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The World the Girl Saw: The Struggle for Trost (2)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Small Blade: The Struggle for Trost (3)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "I Can Hear His Heartbeat: The Struggle for Trost (4)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Whereabouts of His Left Arm: The Struggle for Trost (5)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Response: The Struggle for Trost (6)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Idol: The Struggle for Trost (7)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Wound: The Struggle for Trost (8)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Primal Desire: The Struggle for Trost (9)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Can't Look Into His Eyes Yet: Eve of the Counterattack (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Special Operations Squad: Eve of the Counterattack (2)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "What Needs to be Done Now: Eve of the Counterattack (3)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Female Titan: The 57th Exterior Scouting Mission (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Forest of Giant Trees: The 57th Exterior Scouting Mission (2)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bite: The 57th Exterior Scouting Mission (3)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Erwin Smith: The 57th Exterior Scouting Mission (4)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Crushing Blow: The 57th Exterior Scouting Mission (5)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Defeated: The 57th Exterior Scouting Mission (6)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Smile: Assault on Stohess (1)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Mercy: Assault on Stohess (2)",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Wall: Assault on Stohess (3)",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 288,
+                "streaming_providers": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Crunchyroll",
+                    "Crunchyroll Amazon Channel"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Beast Titan",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "I'm Home",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Southwestward",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Soldier",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Historia",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Warrior",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Close Combat",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Hunters",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Opening",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Children",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Charge",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Scream",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Season 3",
+                "season_duration": 528,
+                "streaming_providers": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Crunchyroll"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Smoke Signal",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Pain",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Old Story",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Trust",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Reply",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Sin",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Wish",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Outside the Walls of Orvud District",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Ruler of the Walls",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Friends",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bystander",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Night of the Battle to Retake the Wall",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Town Where Everything Began",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Thunder Spears",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Descent",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Perfect Game",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hero",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Midnight Sun",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Basement",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "That Day",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Attack Titan",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Other Side of the Wall",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 4,
+                "season_name": "The Final Season",
+                "season_duration": 671,
+                "streaming_providers": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Crunchyroll"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "The Other Side of the Sea",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Midnight Train",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Door of Hope",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "From One Hand to Another",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Declaration of War",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The War Hammer Titan",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Assault",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Assassin's Bullet",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Brave Volunteers",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Sound Argument",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Deceiver",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Guides",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Children of the Forest",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Savagery",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Sole Salvation",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Above and Below",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Judgment",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Sneak Attack",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Two Brothers",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Memories of the Future",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "From You, 2,000 Years Ago",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Thaw",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Sunset",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Pride",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Night of the End",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Traitor",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Retrospective",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Dawn of Humanity",
+                        "duration": 23
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Alchemy of Souls",
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 131,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "The Tale of Mages",
+                        "duration": 65
+                    },
+                    {
+                        "episode_name": "The Mage's Journal",
+                        "duration": 66
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Part 1",
+                "season_duration": 1501,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Episode 1",
+                        "duration": 70
+                    },
+                    {
+                        "episode_name": "Episode 2",
+                        "duration": 72
+                    },
+                    {
+                        "episode_name": "Episode 3",
+                        "duration": 76
+                    },
+                    {
+                        "episode_name": "Episode 4",
+                        "duration": 74
+                    },
+                    {
+                        "episode_name": "Episode 5",
+                        "duration": 74
+                    },
+                    {
+                        "episode_name": "Episode 6",
+                        "duration": 73
+                    },
+                    {
+                        "episode_name": "Episode 7",
+                        "duration": 76
+                    },
+                    {
+                        "episode_name": "Episode 8",
+                        "duration": 75
+                    },
+                    {
+                        "episode_name": "Episode 9",
+                        "duration": 76
+                    },
+                    {
+                        "episode_name": "Episode 10",
+                        "duration": 74
+                    },
+                    {
+                        "episode_name": "Episode 11",
+                        "duration": 80
+                    },
+                    {
+                        "episode_name": "Episode 12",
+                        "duration": 78
+                    },
+                    {
+                        "episode_name": "Episode 13",
+                        "duration": 74
+                    },
+                    {
+                        "episode_name": "Episode 14",
+                        "duration": 70
+                    },
+                    {
+                        "episode_name": "Episode 15",
+                        "duration": 69
+                    },
+                    {
+                        "episode_name": "Episode 16",
+                        "duration": 69
+                    },
+                    {
+                        "episode_name": "Episode 17",
+                        "duration": 74
+                    },
+                    {
+                        "episode_name": "Episode 18",
+                        "duration": 73
+                    },
+                    {
+                        "episode_name": "Episode 19",
+                        "duration": 87
+                    },
+                    {
+                        "episode_name": "Episode 20",
+                        "duration": 87
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Part 2: Light & Shadow",
+                "season_duration": 787,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Episode 1",
+                        "duration": 86
+                    },
+                    {
+                        "episode_name": "Episode 2",
+                        "duration": 79
+                    },
+                    {
+                        "episode_name": "Episode 3",
+                        "duration": 81
+                    },
+                    {
+                        "episode_name": "Episode 4",
+                        "duration": 77
+                    },
+                    {
+                        "episode_name": "Episode 5",
+                        "duration": 78
+                    },
+                    {
+                        "episode_name": "Episode 6",
+                        "duration": 77
+                    },
+                    {
+                        "episode_name": "Episode 7",
+                        "duration": 72
+                    },
+                    {
+                        "episode_name": "Episode 8",
+                        "duration": 75
+                    },
+                    {
+                        "episode_name": "Episode 9",
+                        "duration": 78
+                    },
+                    {
+                        "episode_name": "Episode 10",
+                        "duration": 84
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "The Owl House",
+        "streaming_services": [
+            "Disney Plus"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 5,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Welcome to Hexside!",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Eda's Cursed Brush",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Paint Scare!",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Art Lessons with Luz",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Coven Lovin Soap Opera",
+                        "duration": 1
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 457,
+                "streaming_providers": [
+                    "Disney Plus"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "A Lying Witch and a Warden",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Witches Before Wizards",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "I Was a Teenage Abomination",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Intruder",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Covention",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hooty's Moving Hassle",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Lost in Language",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Once Upon a Swap",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Something Ventured, Someone Framed",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Escape of the Palisman",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Sense and Insensitivity",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Adventures in the Elements",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The First Day",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Really Small Problems",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Understanding Willow",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Enchanting Grom Fright",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Wing It Like Witches",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Agony of a Witch",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Young Blood, Old Souls",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 533,
+                "streaming_providers": [
+                    "Disney Plus"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Separate Tides",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Escaping Expulsion",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Echoes of the Past",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Keeping Up A-fear-ances",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Through the Looking Glass Ruins",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Hunting Palismen",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Eda's Requiem",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Knock, Knock, Knockin' on Hooty's Door",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Eclipse Lake",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Yesterday's Lie",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "Follies at the Coven Day Parade",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "Elsewhere and Elsewhen",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Any Sport in a Storm",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "Reaching Out",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "Them's the Breaks, Kid",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Hollow Mind",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Edge of the World",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Labyrinth Runners",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "O Titan, Where Art Thou",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Clouds on the Horizon",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "King's Tide",
+                        "duration": 28
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Season 3",
+                "season_duration": 159,
+                "streaming_providers": [
+                    "Disney Plus"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Thanks to Them",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "For the Future",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Watching and Dreaming",
+                        "duration": 58
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Fighting Spirit",
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 176,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Boxer's Fist",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Champion Road",
+                        "duration": 90
+                    },
+                    {
+                        "episode_name": "Kimura vs Mashiba",
+                        "duration": 62
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "The First Step",
+                "season_duration": 1800,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "The First Step",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Fruits of Labor",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Tears of Joy",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Shadow Boxing",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "3 Months to Counter",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Opening Bell of the Rematch",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Destructive Force Of One CM",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Promise to Meet Again",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "C Class License",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Debut Match!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Obsession for Victory",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Becoming a Bully's Buddy",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Eastern Japan Rookie Championship Tournament Begins",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Powerful Arms! Hooks vs. Uppercut!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Test of Endurance",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Premonition of a Hard Battle",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Ippo on the Beach",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Clinch",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "K.O. Dream",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Threat of Shotgun",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Way to Capture a Prodigy",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Forward! Forward!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Another Semi-Final",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "To the Place We Promised...",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Every Emotion",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Battle for Distance",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Death Match",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Victory or Defeat",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Rocky of Naniwa",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "To Enemy Ground",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Traces of Intense Battles",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Throw Your Right!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Smash Force",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Rookie King",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Continuing Journey",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Champ and I",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Thing to Strive For",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Two Rookies of the Year",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Challenge in a Foreign Land",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Counter to Surpass All Counters",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Barf-michi's Big Fight",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Sharing a Dream",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Speed Star",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Blind Spot in the Ring",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The White Fangs of the Wolf",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Be the Gazelle",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Fighting Spirit Within",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Red Wolf",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Courage to Believe",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Something to Convey",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Group Date",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Challenger",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "So That I Can Be Myself",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Fists of the Champ",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Japan Featherweight Title Match",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Power that Stands in the Way",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Conclusion",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Heartbroken",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Look of Determination",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Rival",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Comeback Anxiety",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Revival",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Youth of Fire",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hot Rod Era",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Summer of the Kamogawa Corps",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Mr. Takamura's Tears",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Kamogawa Gym Swings Into Action",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Chief's Peril",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Trap of the Southpaw",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Young Punk",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Time for the Showdown",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Lollapalooza",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Surpass That Moment",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Mixup",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "One Step Further",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "New Challenger",
+                "season_duration": 624,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "The New Step",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bloody Cross",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "To a Promise",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Towards The World",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Strength of the World",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Figure to Chase After",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Advent of the Devil",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Spirit For One Last Attack",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Inheritance Qualifications",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Biting Dog",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Ippo vs. Hammer Nao",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Requirements For A Pro",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Ippo At The Beach 2",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Two Spars",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Itagaki`s Debut Fight!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Two Hawks",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Wild Kid",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Extreme Weight Control",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Critical Situation",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Junior Middleweight World Title Match",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Battle of Hawk",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Brawl",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Supporting Hand",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The King",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Please Accept This Bronze Statue",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "New Challenger",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Rising",
+                "season_duration": 600,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "The Strongest Challenger",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Dempsey Roll Destroyed",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Woman's Battle",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Goddess of Victory",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "100% Fake",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Distance Between Me and Glory",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Cheese Champion",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Mad Dog and the Red Wolf",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Savage Scenario",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Face Of Determination",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Fearless Challenger",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Anti-Dempsey Perfected",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Fist That Picks You Up",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Empowering Words",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Storm Descends on Makunouchi Fishing Boat",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Golden Eagle",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Eleki's Shocker and Papaya's Coconut",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Unfinished New Counter",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hawk vs. Eagle",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Lesson Never Forgotten",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The End of the Death Match",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Flower of Hope",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Courage to Live",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Iron Fist",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Vow",
+                        "duration": 24
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Demon Slayer: Kimetsu no Yaiba",
+        "streaming_services": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Netflix basic with Ads",
+            "Crunchyroll Amazon Channel"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 137,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Junior High and High School!! Kimetsu Academy Story #1",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Junior High and High School!! Kimetsu Academy Story #2",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Junior High and High School!! Kimetsu Academy Story #3",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Junior High and High School!! Kimetsu Academy Story: Valentine Edition #1",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Junior High and High School!! Kimetsu Academy Story: Valentine Edition #2",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Junior High and High School!! Kimetsu Academy Story: Valentine Edition #3",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Junior High and High School!! Kimetsu Academy Story: Valentine Edition #4",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 1",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 2",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 3",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 4",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 5",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 6",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 7",
+                        "duration": 116
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 8",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 9",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 10",
+                        "duration": 1
+                    },
+                    {
+                        "episode_name": "Zen'itsu's Sugoroku 11",
+                        "duration": 1
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Tanjiro Kamado, Unwavering Resolve",
+                "season_duration": 598,
+                "streaming_providers": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Cruelty",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Trainer Sakonji Urokodaki",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Sabito and Makomo",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Final Selection",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "My Own Steel",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Swordsman Accompanying a Demon",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Muzan Kibutsuji",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "The Smell of Enchanting Blood",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Temari Demon and Arrow Demon",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Together Forever",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Tsuzumi Mansion",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "The Boar Bares Its Fangs, Zenitsu Sleeps",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Something More Important Than Life",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "The House With the Wisteria Family Crest",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Mount Natagumo",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Letting Someone Else Go First",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "You Must Master a Single Thing",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "A Forged Bond",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Hinokami",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Pretend Family",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Against Corps Rules",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Master of the Mansion",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Hashira Meeting",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Rehabilitation Training",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Tsuguko, Kanao Tsuyuri",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "New Mission",
+                        "duration": 23
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Mugen Train",
+                "season_duration": 167,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Flame Hashira Kyojuro Rengoku",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "Deep Sleep",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Should Have Been",
+                        "duration": 25
+                    },
+                    {
+                        "episode_name": "Insult",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Move Forward!",
+                        "duration": 21
+                    },
+                    {
+                        "episode_name": "Akaza",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Set Your Heart Ablaze",
+                        "duration": 26
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Entertainment District",
+                "season_duration": 295,
+                "streaming_providers": [
+                    "Netflix",
+                    "Netflix basic with Ads"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Sound Hashira Tengen Uzui",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Infiltrating the Entertainment District",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "What Are You?",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Tonight",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Things Are Gonna Get Real Flashy!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Layered Memories",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Transformation",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Gathering",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Defeating an Upper Rank Demon",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Never Give Up",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "No Matter How Many Lives",
+                        "duration": 32
+                    }
+                ]
+            },
+            {
+                "season_number": 4,
+                "season_name": "Swordsmith Village",
+                "season_duration": 315,
+                "streaming_providers": [
+                    "Crunchyroll Amazon Channel"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Someone's Dream",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Yoriichi Type Zero",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Sword From Over 300 Years Ago",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Thank You, Tokito",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bright Red Sword",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Aren't You Going to Become a Hashira?",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Awful Villain",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Mu in Muichiro",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Mist Hashira Muichiro Tokito",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Love Hashira Mitsuri Kanroji",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Connected Bond: Daybreak and First Light",
+                        "duration": 52
+                    }
+                ]
+            },
+            {
+                "season_number": 5,
+                "season_name": "Hashira Training",
+                "season_duration": 242,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "To Defeat Muzan Kibutsuji",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Water Hashira Giyu Tomioka's Pain",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Fully Recovered Tanjiro Joins the Hashira Training!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "To Bring a Smile to One's Face",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "I Even Ate Demons",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Strongest of the Demon Slayer Corps",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Stone Hashira Gyomei Himejima",
+                        "duration": 32
+                    },
+                    {
+                        "episode_name": "The Hashira Unite",
+                        "duration": 41
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Kamisama Kiss",
+        "streaming_services": [],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 160,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "The God Was Discarded",
+                        "duration": 14
+                    },
+                    {
+                        "episode_name": "The God Goes to the Hot Spring",
+                        "duration": 14
+                    },
+                    {
+                        "episode_name": "The God Leaps into the Past",
+                        "duration": 30
+                    },
+                    {
+                        "episode_name": "The Fox Falls in Love",
+                        "duration": 30
+                    },
+                    {
+                        "episode_name": "The God Becomes a Bride",
+                        "duration": 30
+                    },
+                    {
+                        "episode_name": "The God Meets Someone",
+                        "duration": 30
+                    },
+                    {
+                        "episode_name": "The Goddess Will Be Happy",
+                        "duration": 12
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 312,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Nanami Becomes a God",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Becomes a Target",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Makes a Match",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Is Kidnapped",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Loses Her Home",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Catches a Cold",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Asks a Boy Out on a Date",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Goes to the Beach",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Goes to the Dragon King's Palace",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Tomoe Becomes a Familiar / The God Goes to a Mixer",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Familiar Goes Into Town",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Nanami Quits Being a God",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "I've Started the \"Being a God\" Thing",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 288,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "I've Started the \"Being a God\" Thing Again",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Goes to Izumo",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Falls Into the Netherworld",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Races Across the Netherworld",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Makes Her Second Romantic Confession",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Meets a Little Tengu",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Goes to Mount Kurama",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Sneaks In",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Is Blindsided",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Receives a Romantic Confession",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Goes Back to Being a Child",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The God Receives a Marriage Proposal",
+                        "duration": 24
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "The Sopranos",
+        "streaming_services": [
+            "Max"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 213,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Supper with The Sopranos Part I",
+                        "duration": 37
+                    },
+                    {
+                        "episode_name": "Supper with The Sopranos Part II",
+                        "duration": 39
+                    },
+                    {
+                        "episode_name": "Alec Baldwin Interviews David Chase Part I",
+                        "duration": 22
+                    },
+                    {
+                        "episode_name": "Alec Baldwin Interviews David Chase Part II",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Defining A Television Landmark",
+                        "duration": 46
+                    },
+                    {
+                        "episode_name": "‘The Sopranos’ Cast Reunites For 20th Anniversary",
+                        "duration": 46
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 677,
+                "streaming_providers": [
+                    "Max"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "The Sopranos",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "46 Long",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Denial, Anger, Acceptance",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Meadowlands",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "College",
+                        "duration": 57
+                    },
+                    {
+                        "episode_name": "Pax Soprana",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Down Neck",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "The Legend of Tennessee Moltisanti",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Boca",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "A Hit Is a Hit",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Nobody Knows Anything",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Isabella",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "I Dream of Jeannie Cusamano",
+                        "duration": 60
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 690,
+                "streaming_providers": [
+                    "Max"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Guy Walks into a Psychiatrist's Office",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Do Not Resuscitate",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Toodle-Fucking-Oo",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Commendatori",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Big Girls Don't Cry",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "The Happy Wanderer",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "D-Girl",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Full Leather Jacket",
+                        "duration": 42
+                    },
+                    {
+                        "episode_name": "From Where to Eternity",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "Bust Out",
+                        "duration": 59
+                    },
+                    {
+                        "episode_name": "House Arrest",
+                        "duration": 57
+                    },
+                    {
+                        "episode_name": "The Knight in White Satin Armor",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "Funhouse",
+                        "duration": 59
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Season 3",
+                "season_duration": 715,
+                "streaming_providers": [
+                    "Max"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Mr. Ruggerio's Neighborhood",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Proshai, Livushka",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Fortunate Son",
+                        "duration": 58
+                    },
+                    {
+                        "episode_name": "Employee of the Month",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Another Toothpick",
+                        "duration": 59
+                    },
+                    {
+                        "episode_name": "University",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Second Opinion",
+                        "duration": 59
+                    },
+                    {
+                        "episode_name": "He Is Risen",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "The Telltale Moozadell",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "To Save Us All from Satan's Power",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "Pine Barrens",
+                        "duration": 59
+                    },
+                    {
+                        "episode_name": "Amour Fou",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "Army of One",
+                        "duration": 60
+                    }
+                ]
+            },
+            {
+                "season_number": 4,
+                "season_name": "Season 4",
+                "season_duration": 733,
+                "streaming_providers": [
+                    "Max"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "For All Debts Public and Private",
+                        "duration": 58
+                    },
+                    {
+                        "episode_name": "No-Show",
+                        "duration": 57
+                    },
+                    {
+                        "episode_name": "Christopher",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "The Weight",
+                        "duration": 58
+                    },
+                    {
+                        "episode_name": "Pie-O-My",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "Everybody Hurts",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "Watching Too Much Television",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "Mergers and Acquisitions",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Whoever Did This",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "The Strong, Silent Type",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Calling All Cars",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "Eloise",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Whitecaps",
+                        "duration": 75
+                    }
+                ]
+            },
+            {
+                "season_number": 5,
+                "season_name": "Season 5",
+                "season_duration": 698,
+                "streaming_providers": [
+                    "Max"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Two Tonys",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Rat Pack",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Where's Johnny?",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "All Happy Families",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Irregular Around the Margins",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "Sentimental Education",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "In Camelot",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "Marco Polo",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Unidentified Black Males",
+                        "duration": 58
+                    },
+                    {
+                        "episode_name": "Cold Cuts",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "The Test Dream",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Long Term Parking",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "All Due Respect",
+                        "duration": 55
+                    }
+                ]
+            },
+            {
+                "season_number": 6,
+                "season_name": "Season 6",
+                "season_duration": 1139,
+                "streaming_providers": [
+                    "Max"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Members Only",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Join the Club",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Mayham",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "The Fleshy Part of the Thigh",
+                        "duration": 57
+                    },
+                    {
+                        "episode_name": "Mr. and Mrs. Sacramoni Request",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "Live Free or Die",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "Luxury Lounge",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "Johnny Cakes",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "The Ride",
+                        "duration": 54
+                    },
+                    {
+                        "episode_name": "Moe n' Joe",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Cold Stones",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Kaisha",
+                        "duration": 59
+                    },
+                    {
+                        "episode_name": "Soprano Home Movies",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "Stage 5",
+                        "duration": 56
+                    },
+                    {
+                        "episode_name": "Remember When",
+                        "duration": 58
+                    },
+                    {
+                        "episode_name": "Chasing It",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "Walk Like a Man",
+                        "duration": 55
+                    },
+                    {
+                        "episode_name": "Kennedy and Heidi",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "The Second Coming",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "The Blue Comet",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Made in America",
+                        "duration": 60
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Blue Planet II",
+        "streaming_services": [
+            "Discovery+"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 94,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "The Prequel",
+                        "duration": 5
+                    },
+                    {
+                        "episode_name": "Oceans of Wonder",
+                        "duration": 89
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Miniseries",
+                "season_duration": 368,
+                "streaming_providers": [
+                    "Discovery+"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "One Ocean",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "The Deep",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Coral Reefs",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Big Blue",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "Green Seas",
+                        "duration": 53
+                    },
+                    {
+                        "episode_name": "Coasts",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "Our Blue Planet",
+                        "duration": 60
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "My Hero Academia",
+        "streaming_services": [
+            "Crunchyroll",
+            "Crunchyroll Amazon Channel"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 308,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Save! Rescue Training!",
+                        "duration": 26
+                    },
+                    {
+                        "episode_name": "Hero Notebook",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Training of the Dead",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "All Might: Rising",
+                        "duration": 2
+                    },
+                    {
+                        "episode_name": "End-Roll BBQ Picture Drama",
+                        "duration": 6
+                    },
+                    {
+                        "episode_name": "Episode 6",
+                        "duration": 10
+                    },
+                    {
+                        "episode_name": "Make It! Do-or-Die Survival Training (1)",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Make It! Do-or-Die Survival Training (2)",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Episode 9",
+                        "duration": 6
+                    },
+                    {
+                        "episode_name": "HLB",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Laugh! As If You Are in Hell",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "U.A. Heroes Battle",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Memories Episode 1 - Izuku Midoriya: Resolve",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Memories Episode 2 - Toshinori Yagi: Embers",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Memories Episode 3 - Heroes: Convictions",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Memories Episode 4 - Tomura Shigaraki: Destruction",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 312,
+                "streaming_providers": [
+                    "Crunchyroll",
+                    "Crunchyroll Amazon Channel"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Izuku Midoriya: Origin",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "What It Takes to Be a Hero",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Roaring Muscles",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Start Line",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "What I Can Do for Now",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Rage, You Damn Nerd",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Deku vs. Kacchan",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bakugo’s Start Line",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Yeah, Just Do Your Best, Iida!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Encounter with the Unknown",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Game Over",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "All Might",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "In Each of Our Hearts",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 600,
+                "streaming_providers": [
+                    "Crunchyroll",
+                    "Crunchyroll Amazon Channel"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "That’s the Idea, Ochaco",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Roaring Sports Festival",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "In Their Own Quirky Ways",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Strategy, Strategy, Strategy",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Cavalry Battle Finale",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Boy Born with Everything",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Victory or Defeat",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Battle on, Challengers!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bakugo vs. Uraraka",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Shoto Todoroki: Origin",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Fight On, Iida",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Todoroki vs. Bakugo",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Time to Pick Some Names",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bizarre! Gran Torino Appears",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Midoriya and Shigaraki",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hero Killer: Stain vs U.A. Students",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Climax",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Aftermath of Hero Killer: Stain",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Everyone's Internships",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Listen Up!! A Tale from the Past",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Gear up for Final Exams",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Yaoyorozu: Rising",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Stripping the Varnish",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Katsuki Bakugo: Origin",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Encounter",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Season 3",
+                "season_duration": 600,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Game Start",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Wild, Wild Pussycats",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Kota",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "My Hero",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Drive It Home, Iron Fist!!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Roaring Upheaval",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "What a Twist!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "From Iida to Midoriya",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "All For One",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Symbol of Peace",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "One For All",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "End of the Beginning, Beginning of the End",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Moving into Dorms",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Create Those Ultimate Moves",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Test",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Shiketsu High Lurking",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Class 1-A",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "RUSH!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Rescue Exercises",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Special Episode: Save the World with Love!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "What’s the Big Idea?",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Talk about Your Quirk",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Deku vs. Kacchan, Part 2",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Season for Encounters",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Unrivaled",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 4,
+                "season_name": "Season 4",
+                "season_duration": 600,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "The Scoop on U.A. Class 1-A",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Overhaul",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Boy Meets…",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Fighting Fate",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Let’s Go, Gutsy Red Riot",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "An Unpleasant Talk",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "GO!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Suneater of the Big Three",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Red Riot",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Temp Squad",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Lemillion",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Unforeseen Hope",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Infinite 100%",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Bright Future",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Smoldering Flames",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Win Those Kids’ Hearts",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Relief for License Trainees",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "School Festival",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Prepping for the School Festival Is the Most Fun Part",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Gold Tips Imperial",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Deku vs. Gentle Criminal",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "School Festival Start!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Let It Flow! School Festival!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Japanese Hero Billboard Chart",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "His Start",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 5,
+                "season_name": "Season 5",
+                "season_duration": 600,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "All Hands on Deck! Class 1-A",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Vestiges",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Clash! Class A vs. Class B!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Make It Happen, Shinso!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Operation New Improv Moves",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Foresight",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Match 3",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Match 3 Conclusion",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Early Bird!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "That Which Is Inherited",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Our Brawl",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The New Power and All For One",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Have a Merry Christmas!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Off to Endeavor's Agency!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "One Thing at a Time",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Long Time No See, Selkie",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Hellish Todoroki Family",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Unforgiven",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "More of a Hero Than Anyone",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "My Villain Academia",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Revival Party",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Sad Man's Parade",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Tenko Shimura: Origin",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Tomura Shigaraki: Origin",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The High, Deep Blue Sky",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 6,
+                "season_name": "Season 6",
+                "season_duration": 600,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "A Quiet Beginning",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Mirko, the No. 5 Hero",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "One's Justice",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Inheritance",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Thrill of Destruction",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Encounter, Part 2",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Disaster Walker",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "League of Villains vs. U.A. Students",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Katsuki Bakugo: Rising",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Ones Within Us",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Dabi's Dance",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Threads of Hope",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Final Performance",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hellish Hell",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Tartarus",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Hellish Todoroki Family, Part 2",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Wrong Way to Put Out a Fire",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Izuku Midoriya and Tomura Shigaraki",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Full Power!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hired Gun",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Lovely Lady Nagant",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Friend",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Deku vs. Class A",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Young Woman's Declaration",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "No Man Is an Island",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 7,
+                "season_name": "Season 7",
+                "season_duration": 504,
+                "streaming_providers": [
+                    "Crunchyroll"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "In the Nick of Time! A Big-Time Maverick from the West",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Specter",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Villain",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Story of How We All Became Heroes",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Let You Down",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Division",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Inflation",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Two Flashfires",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Extras",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Wounded Hero, Burning Bright and True!!",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Light Fades to Rain",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Those Who Defend, Those Who Violate",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Chain of Events, Across the Ages",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Together With Shoji",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Butterfly Effect",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "The Chain Thus Far",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Hopes",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "It's a Small World",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "I Am Here",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "A Girl's Ego",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Battle Without a Quirk",
+                        "duration": 24
+                    }
+                ]
+            },
+            {
+                "season_number": 8,
+                "season_name": "Final Season",
+                "season_duration": 48,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Episode 1",
+                        "duration": 24
+                    },
+                    {
+                        "episode_name": "Episode 2",
+                        "duration": 24
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "INVINCIBLE",
+        "streaming_services": [
+            "Amazon Prime Video"
+        ],
+        "seasons": [
+            {
+                "season_number": 0,
+                "season_name": "Specials",
+                "season_duration": 56,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "PRESENTING ATOM EVE SPECIAL EPISODE",
+                        "duration": 56
+                    }
+                ]
+            },
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 390,
+                "streaming_providers": [
+                    "Amazon Prime Video"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "IT'S ABOUT TIME",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "HERE GOES NOTHING",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "WHO YOU CALLING UGLY?",
+                        "duration": 45
+                    },
+                    {
+                        "episode_name": "NEIL ARMSTRONG, EAT YOUR HEART OUT",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "THAT ACTUALLY HURT",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "YOU LOOK KINDA DEAD",
+                        "duration": 48
+                    },
+                    {
+                        "episode_name": "WE NEED TO TALK",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "WHERE I REALLY COME FROM",
+                        "duration": 48
+                    }
+                ]
+            },
+            {
+                "season_number": 2,
+                "season_name": "Season 2",
+                "season_duration": 405,
+                "streaming_providers": [
+                    "Amazon Prime Video"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "A LESSON FOR YOUR NEXT LIFE",
+                        "duration": 49
+                    },
+                    {
+                        "episode_name": "IN ABOUT SIX HOURS I LOSE MY VIRGINITY TO A FISH",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "THIS MISSIVE, THIS MACHINATION!",
+                        "duration": 50
+                    },
+                    {
+                        "episode_name": "IT'S BEEN A WHILE",
+                        "duration": 47
+                    },
+                    {
+                        "episode_name": "THIS MUST COME AS A SHOCK",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "IT'S NOT THAT SIMPLE",
+                        "duration": 51
+                    },
+                    {
+                        "episode_name": "I'M NOT GOING ANYWHERE",
+                        "duration": 52
+                    },
+                    {
+                        "episode_name": "I THOUGHT YOU WERE STRONGER",
+                        "duration": 54
+                    }
+                ]
+            },
+            {
+                "season_number": 3,
+                "season_name": "Season 3",
+                "season_duration": 0,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Episode 1",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 2",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 3",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 4",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 5",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 6",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 7",
+                        "duration": 0
+                    },
+                    {
+                        "episode_name": "Episode 8",
+                        "duration": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Marry My Husband",
+        "streaming_services": [
+            "Amazon Prime Video"
+        ],
+        "seasons": [
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 1009,
+                "streaming_providers": [
+                    "Amazon Prime Video"
+                ],
+                "episodes": [
+                    {
+                        "episode_name": "Episode 1",
+                        "duration": 66
+                    },
+                    {
+                        "episode_name": "Episode 2",
+                        "duration": 61
+                    },
+                    {
+                        "episode_name": "Episode 3",
+                        "duration": 59
+                    },
+                    {
+                        "episode_name": "Episode 4",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "Episode 5",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "Episode 6",
+                        "duration": 65
+                    },
+                    {
+                        "episode_name": "Episode 7",
+                        "duration": 61
+                    },
+                    {
+                        "episode_name": "Episode 8",
+                        "duration": 62
+                    },
+                    {
+                        "episode_name": "Episode 9",
+                        "duration": 63
+                    },
+                    {
+                        "episode_name": "Episode 10",
+                        "duration": 65
+                    },
+                    {
+                        "episode_name": "Episode 11",
+                        "duration": 69
+                    },
+                    {
+                        "episode_name": "Episode 12",
+                        "duration": 66
+                    },
+                    {
+                        "episode_name": "Episode 13",
+                        "duration": 60
+                    },
+                    {
+                        "episode_name": "Episode 14",
+                        "duration": 61
+                    },
+                    {
+                        "episode_name": "Episode 15",
+                        "duration": 64
+                    },
+                    {
+                        "episode_name": "Episode 16",
+                        "duration": 67
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Death Note",
+        "streaming_services": [],
+        "seasons": [
+            {
+                "season_number": 1,
+                "season_name": "Season 1",
+                "season_duration": 848,
+                "streaming_providers": [],
+                "episodes": [
+                    {
+                        "episode_name": "Rebirth",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Confrontation",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Dealings",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Pursuit",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Tactics",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Unraveling",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Overcast",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Glare",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Encounter",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Doubt",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Assault",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Love",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Confession",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Friend",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Wager",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Decision",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Execution",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Ally",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Matsuda",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Makeshift",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Performance",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Guidance",
+                        "duration": 22
+                    },
+                    {
+                        "episode_name": "Frenzy",
+                        "duration": 22
+                    },
+                    {
+                        "episode_name": "Revival",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Silence",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Renewal",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Abduction",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Impatience",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Father",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Justice",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Transfer",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Selection",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Scorn",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "Vigilance",
+                        "duration": 22
+                    },
+                    {
+                        "episode_name": "Malice",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "1.28",
+                        "duration": 23
+                    },
+                    {
+                        "episode_name": "New World",
+                        "duration": 23
+                    }
+                ]
             }
         ]
     }

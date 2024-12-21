@@ -1,4 +1,5 @@
-import requests
+from Loaders import LoadSeries
+"""import requests
 
 # Tu clave de API de TMDb
 api_key = 'd566937910f1e5247e09d2f97385dd0a'  # Reemplaza con tu clave de API de TMDb
@@ -41,3 +42,13 @@ for movie in all_movies:
 
 # Imprimir el número total de películas obtenidas
 print(f"\nTotal de películas: {len(all_movies)}")
+"""
+i = 0
+series = LoadSeries.load_series_from_json("Data/series.json")
+
+
+
+
+
+
+

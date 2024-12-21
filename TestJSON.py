@@ -1,6 +1,6 @@
 import json
 
-with open('streamingPlans.json', 'r', encoding='utf-8') as file:
+with open('Data/streamingPlans.json', 'r', encoding='utf-8') as file:
     streaming_data = json.load(file)
 
 service_names = [service_name for service in streaming_data for service_name in service.keys()]

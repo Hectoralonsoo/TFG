@@ -28,8 +28,7 @@
         "streaming_services": [
             "Movistar Plus+ Ficción Total ",
             "SkyShowtime",
-            "Max",
-            "Tivify"
+            "Max"
         ]
     },
     {
@@ -173,7 +172,8 @@
         "streaming_services": [
             "Amazon Prime Video",
             "Filmin",
-            "Acontra Plus"
+            "Acontra Plus",
+            "Tivify"
         ]
     },
     {
@@ -228,16 +228,16 @@
         ]
     },
     {
+        "title": "A Dog's Will",
+        "duration": 104,
+        "streaming_services": []
+    },
+    {
         "title": "Once Upon a Time in America",
         "duration": 229,
         "streaming_services": [
             "Disney Plus"
         ]
-    },
-    {
-        "title": "A Dog's Will",
-        "duration": 104,
-        "streaming_services": []
     },
     {
         "title": "The Lord of the Rings: The Fellowship of the Ring",
@@ -253,6 +253,153 @@
         "duration": 133,
         "streaming_services": [
             "Filmin"
+        ]
+    },
+    {
+        "title": "Gabriel's Inferno",
+        "duration": 122,
+        "streaming_services": []
+    },
+    {
+        "title": "Primal: Tales of Savagery",
+        "duration": 85,
+        "streaming_services": []
+    },
+    {
+        "title": "Howl's Moving Castle",
+        "duration": 119,
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Harakiri",
+        "duration": 135,
+        "streaming_services": [
+            "Amazon Prime Video",
+            "Filmin",
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "Spider-Man: Into the Spider-Verse",
+        "duration": 117,
+        "streaming_services": [
+            "Netflix",
+            "Movistar Plus+ Ficción Total ",
+            "Max",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Two Towers",
+        "duration": 179,
+        "streaming_services": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "The Empire Strikes Back",
+        "duration": 124,
+        "streaming_services": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Gabriel's Inferno: Part II",
+        "duration": 105,
+        "streaming_services": []
+    },
+    {
+        "title": "A Silent Voice: The Movie",
+        "duration": 129,
+        "streaming_services": []
+    },
+    {
+        "title": "Dou kyu sei – Classmates",
+        "duration": 61,
+        "streaming_services": []
+    },
+    {
+        "title": "The Wild Robot",
+        "duration": 102,
+        "streaming_services": []
+    },
+    {
+        "title": "Gabriel's Inferno: Part III",
+        "duration": 105,
+        "streaming_services": []
+    },
+    {
+        "title": "The Pianist",
+        "duration": 150,
+        "streaming_services": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "Whiplash",
+        "duration": 107,
+        "streaming_services": [
+            "Netflix",
+            "Netflix basic with Ads",
+            "Tivify"
+        ]
+    },
+    {
+        "title": "Hope",
+        "duration": 122,
+        "streaming_services": []
+    },
+    {
+        "title": "The Legend of Hei",
+        "duration": 102,
+        "streaming_services": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Se7en",
+        "duration": 127,
+        "streaming_services": [
+            "Netflix",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Inception",
+        "duration": 148,
+        "streaming_services": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Max",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Radical",
+        "duration": 126,
+        "streaming_services": [
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Spider-Man: Across the Spider-Verse",
+        "duration": 140,
+        "streaming_services": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
         ]
     }
 ]

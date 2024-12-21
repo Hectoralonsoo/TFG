@@ -137,8 +137,8 @@ def getAndSaveMovie(cantidad, archivo_salida):
     saveJson(archivo_salida, movieDuration)
     print(f"Datos guardados en {archivo_salida}.")
 
-getAndSaveMovie(30, "movies.json")
-getAndSaveSeries(10, "series.json")
+getAndSaveMovie(50, "movies.json")
+getAndSaveSeries(25, "series.json")
 
 serie_name = "SpongeBob SquarePants"
 serie_data = searchSeriesByName(serie_name)

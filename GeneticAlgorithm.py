@@ -185,9 +185,9 @@ def load_movies_from_json(json_file):
     return movies_list
 
     # Nombre del archivo JSON
-json_series_file = "series.json"
-json_movies_file = "movies.json"
-json_streaming_plans_file = "streamingPlans.json"
+json_series_file = "Data/series.json"
+json_movies_file = "Data/movies.json"
+json_streaming_plans_file = "Data/streamingPlans.json"
     # Cargar series desde el JSON
 
 try:
@@ -219,7 +219,5 @@ except json.JSONDecodeError:
       print(f"Error: El archivo {json_streaming_plans_file} no es un JSON válido.")
 
 
+#print(stream_plan_list[1])
 
-print(stream_plan_list[1])
-print(movies_list[5])
-print(series_list[0])
