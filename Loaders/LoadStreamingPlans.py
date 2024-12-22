@@ -36,7 +36,13 @@ def load_streaming_plan_json(json_file):
     return streaming_plans_list
 
 file = "../Data/streamingPlans.json"
-
 streaming_plan_list = load_streaming_plan_json(file)
+
+def getServices(streaming_plan_list):
+    service_and_plans = [f"{plan.service_name} {plan.name}" for plan in streaming_plan_list]
+    return service_and_plans
+    return plans
+
 for plan in streaming_plan_list:
     print(plan)
+    print(getServices(streaming_plan_list))

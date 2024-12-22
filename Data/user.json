@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "monthly_minutes": 1200,
+    "movies": ["Inception", "The Dark Knight", "Interstellar"],
+    "series": [
+      {
+        "name": "Breaking Bad",
+        "seasons": [1, 2, 3, 4, 5]
+      },
+      {
+        "name": "Stranger Things",
+        "seasons": [1, 2, 3, 4]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "monthly_minutes": 900,
+    "movies": ["The Matrix", "John Wick", "Pulp Fiction"],
+    "series": [
+      {
+        "name": "The Witcher",
+        "seasons": [1, 2, 3]
+      },
+      {
+        "name": "The Crown",
+        "seasons": [1, 2, 3, 4]
+      }
+    ]
+  }
+]
