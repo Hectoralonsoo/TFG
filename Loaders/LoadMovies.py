@@ -22,7 +22,7 @@ def load_movies_from_json(json_file):
             movie = Movie(
                 title=movie_data.get("title", "Sin título"),
                 duration=movie_data.get("duration", 0),
-                streaming_services=movie_data.get("streaming_services", [])
+                streaming_services=movie_data.get("platforms", [])
             )
             movies_list.append(movie)
         except Exception as e:
