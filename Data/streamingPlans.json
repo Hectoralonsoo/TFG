@@ -5,8 +5,7 @@
         {
           "name": "Standard",
           "profiles": 3,
-          "price_eur": 4.99,
-          "price_brl": 14.90
+          "price_eur": 4.99
         }
       ]
     },
@@ -15,8 +14,7 @@
         {
           "name": "Standard",
           "profiles": 6,
-          "price_eur": 6.99,
-          "price_brl": 21.90
+          "price_eur": 6.99
         }
       ]
     },
@@ -25,8 +23,7 @@
         {
           "name": "Standard",
           "profiles": 5,
-          "price_eur": 7.99,
-          "price_brl": 19.90
+          "price_eur": 7.99
         }
       ]
     },
@@ -35,14 +32,12 @@
         {
           "name": "Fan",
           "profiles": 1,
-          "price_eur": 4.99,
-          "price_brl": 25.00
+          "price_eur": 4.99
         },
         {
           "name": "Mega Fan",
           "profiles": 4,
-          "price_eur": 6.49,
-          "price_brl": 32.00
+          "price_eur": 6.49
         }
       ]
     },
@@ -51,20 +46,17 @@
         {
           "name": "Individual",
           "profiles": 1,
-          "price_eur": 11.99,
-          "price_brl": 20.90
+          "price_eur": 11.99
         },
         {
           "name": "Family",
           "profiles": 6,
-          "price_eur": 17.99,
-          "price_brl": 31.90
+          "price_eur": 17.99
         },
         {
           "name": "Student",
           "profiles": 1,
-          "price_eur": 6.99,
-          "price_brl": 12.50
+          "price_eur": 6.99
         }
       ]
     },
@@ -72,8 +64,7 @@
         "plans": [
             {"name": "Standard",
               "profiles": 5,
-              "price_eur": 5.99,
-              "price_brl": 21.90
+              "price_eur": 5.99
             }
         ]
     },
@@ -81,14 +72,13 @@
         "plans": [
             {"name": "Standard",
               "profiles": 3,
-              "price_eur": 9.99,
-              "price_brl": 27.90
+              "price_eur": 9.99
             },
             {
               "name": "Mobile",
               "profiles": 1,
-              "price_eur": 5.99,
-              "price_brl": 19.90}
+              "price_eur": 5.99
+            }
         ]
     },
     "Starz": {
@@ -96,8 +86,7 @@
             {
               "name": "Standard",
               "profiles": 4,
-              "price_eur": 4.99,
-              "price_brl": 14.90
+              "price_eur": 4.99
             }
         ]
     },
@@ -106,20 +95,17 @@
             {
               "name": "Free",
               "profiles": 1,
-              "price_eur": 0.00,
-              "price_brl": 0.00
+              "price_eur": 0.00
             },
             {
               "name": "Premium",
               "profiles": 3,
-              "price_eur": 4.99,
-              "price_brl": 19.90
+              "price_eur": 4.99
             },
             {
               "name": "Premium Plus",
               "profiles": 3,
-              "price_eur": 9.99,
-              "price_brl": 39.90
+              "price_eur": 9.99
             }
         ]
     },
@@ -128,14 +114,12 @@
             {
               "name": "Standard",
               "profiles": 2,
-              "price_eur": 12.99,
-              "price_brl": 49.90
+              "price_eur": 12.99
             },
             {
               "name": "Premium",
               "profiles": 4,
-              "price_eur": 19.99,
-              "price_brl": 89.90
+              "price_eur": 19.99
             }
         ]
     },
@@ -144,20 +128,17 @@
             {
               "name": "Basic",
               "profiles": 1,
-              "price_eur": 7.99,
-              "price_brl": 25.90
+              "price_eur": 7.99
             },
             {
               "name": "Standard",
               "profiles": 2,
-              "price_eur": 12.99,
-              "price_brl": 39.90
+              "price_eur": 12.99
             },
             {
               "name": "Premium",
               "profiles": 4,
-              "price_eur": 17.99,
-              "price_brl": 55.90
+              "price_eur": 17.99
             }
         ]
     },
@@ -166,20 +147,17 @@
             {
               "name": "Basic",
               "profiles": 1,
-              "price_eur": 5.99,
-              "price_brl": 19.90
+              "price_eur": 5.99
             },
             {
               "name": "Standard",
               "profiles": 2,
-              "price_eur": 11.99,
-              "price_brl": 34.90
+              "price_eur": 11.99
             },
             {
               "name": "Premium",
               "profiles": 4,
-              "price_eur": 17.99,
-              "price_brl": 49.90
+              "price_eur": 17.99
             }
         ]
     },
@@ -188,14 +166,12 @@
             {
               "name": "Standard",
               "profiles": 2,
-              "price_eur": 8.99,
-              "price_brl": 27.90
+              "price_eur": 8.99
             },
             {
               "name": "Premium",
               "profiles": 4,
-              "price_eur": 14.99,
-              "price_brl": 44.90
+              "price_eur": 14.99
             }
         ]
     },
@@ -204,8 +180,7 @@
             {
               "name": "Pay-Per-View",
               "profiles": 1,
-              "price_eur": 2.99,
-              "price_brl": 8.90
+              "price_eur": 2.99
             }
         ]
     }

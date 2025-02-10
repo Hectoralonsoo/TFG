@@ -3,7 +3,6 @@ import json
 
 # Configuración
 api_key = "d566937910f1e5247e09d2f97385dd0a"
-tv_id = "1399"  # Ejemplo: Game of Thrones
 
 # URL base
 base_url = "https://api.themoviedb.org/3"
@@ -100,7 +99,7 @@ def getSeasonDuration(serie_id):
             "season_number": season_number,
             "season_name": season_name,
             "season_duration": season_duration,
-            "streaming_providers": season_streaming_providers,
+            "platforms": season_streaming_providers,
             "episodes": episodes_duration
 
         })
@@ -116,7 +115,7 @@ def getAndSaveSeries(cantidad, archivo_salida):
         streaming_services = getStreamingProviders("tv", serie["id"], "ES")
         series_duracion.append({
             "title": serie["name"],
-            "streaming_services": streaming_services,
+            "platforms": streaming_services,
             "seasons": duraciones_temporadas,
         })
     saveJson(archivo_salida, series_duracion)
@@ -132,37 +131,13 @@ def getAndSaveMovie(cantidad, archivo_salida):
         movieDuration.append({
             "title": movie["title"],
             "duration": duracion,
-            "streaming_services": streaming_services
+            "platforms": streaming_services
         })
     saveJson(archivo_salida, movieDuration)
     print(f"Datos guardados en {archivo_salida}.")
 
-getAndSaveMovie(50, "movies.json")
-getAndSaveSeries(25, "series.json")
+#getAndSaveMovie(200, "movies.json")
+getAndSaveSeries(250, "series.json")
 
-serie_name = "SpongeBob SquarePants"
-serie_data = searchSeriesByName(serie_name)
 
-if serie_data:
-    serie_id = serie_data["id"]
-    print(f"Información de la serie: {serie_data['name']}")
 
-    # Obtener la duración de las temporadas y los proveedores de streaming
-    duraciones_temporadas = getSeasonDuration(serie_id)
-
-    # Obtener los proveedores de streaming de la serie en general
-    streaming_services = getStreamingProviders("tv", serie_id, "ES")
-
-    # Crear un diccionario con la información de la serie
-    serie_info = {
-        "title": serie_data["name"],
-        "overview": serie_data.get("overview", "Sin descripción"),
-        "streaming_services": streaming_services,
-        "seasons": duraciones_temporadas,
-    }
-
-    # Guardar la información en un archivo JSON
-    saveJson("bob_esponja_info.json", serie_info)
-    print(f"Datos de {serie_name} guardados en 'bob_esponja_info.json'.")
-else:
-    print("No se encontró la serie.")
