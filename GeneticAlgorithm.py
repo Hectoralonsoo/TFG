@@ -1,13 +1,15 @@
 import random
 from time import time
+import json
 from inspyred import ec
 from Loaders.LoadStreamingPlans import load_streaming_plan_json
+from Loaders.LoadPlatforms import load_platforms_json
 from Loaders.LoadUsers import load_users_from_json
 
 # Cargar datos
 streamingPlans = load_streaming_plan_json("Data/streamingPlans.json")
+platforms = load_platforms_json("Data/MoviesPlatform.json")
 users = load_users_from_json("Data/users.json")
-lambda_ = 0.5
 
 # Agrupar planes por plataforma
 plataformas_con_planes = {}
@@ -21,6 +23,19 @@ available_plans = list(plataformas_con_planes.keys())
 n_plataformas = len(available_plans)
 n_usuarios = len(users)
 
+# Crear un índice único para cada plataforma y plan
+indice_plataformas = {}
+indice_global = 0
+for plataforma, planes in plataformas_con_planes.items():
+    indice_plataformas[plataforma] = {}
+    for plan in planes:
+        indice_plataformas[plataforma][plan.name] = indice_global
+        indice_global += 1
+
+# Guardar el índice en un archivo JSON
+with open("Data/indice_plataformas.json", "w", encoding="utf-8") as f:
+    json.dump(indice_plataformas, f, indent=4)
+
 # Estructura para precios y perfiles
 precios_plataformas = {
     plataforma: {
@@ -31,7 +46,6 @@ precios_plataformas = {
     }
     for plataforma, planes in plataformas_con_planes.items()
 }
-
 
 def print_platforms_and_plans(precios_plataformas):
     print("Plataformas y Planes Disponibles:")
@@ -44,31 +58,15 @@ def print_platforms_and_plans(precios_plataformas):
             print(f"    Precio: {plan['price']}€")
         print("--------------------------------")
 
-
-# Función para verificar disponibilidad de contenido
-def contenido_disponible(contenido, plataforma):
-    return contenido.platform == plataforma
-
-
 # Generador de individuos mejorado
 def generar_individuo(random, args):
     individuo = {}
-    for plataforma in available_plans:
-        for mes in range(12):
-            # 50% de probabilidad de incluir la plataforma en el mes
-            if random.random() < 0.5:
-                planes_disponibles = plataformas_con_planes[plataforma]
-                plan = random.choice(planes_disponibles)
-                # Seleccionar hasta el máximo de perfiles permitidos
-                max_usuarios = plan.profiles
-                usuarios = random.sample(
-                    range(n_usuarios),
-                    k=random.randint(1, max_usuarios)
-                ) if n_usuarios > 0 else []
-                individuo[(plataforma, mes)] = {
-                    "plan": plan.name,
-                    "users": usuarios
-                }
+    for mes in range(12):
+        plataforma = random.choice(platforms)
+        individuo[mes] = {
+           "plataforma": plataforma,
+        }
+    print(individuo)
     return individuo
 
 
@@ -79,52 +77,15 @@ def fitness_function(candidates, args):
     for individuo in candidates:
         total_cost = 0
         total_access = 0
-        user_platforms = {user.id: [set() for _ in range(12)] for user in users}
 
-        # Primera pasada: calcular costos y preparar datos de acceso
-        for (plataforma, mes), grupo in individuo.items():
-            try:
-                plan = next(
-                    p for p in plataformas_con_planes[plataforma]
-                    if p.name == grupo["plan"]
-                )
-            except StopIteration:
-                continue
-
-            # Validar y calcular costo
-            if len(grupo["users"]) > plan.profiles:
-                total_cost += 10000
-            else:
-                total_cost += plan.price
-
-            # Registrar plataformas por usuario
-            for user_id in grupo["users"]:
-                if 0 <= user_id < len(users):
-                    user_platforms[users[user_id].id][mes].add(plataforma)
-
-        # Segunda pasada: calcular acceso
-        for user in users:
-            for mes in range(12):
-                minutos_disponibles = user.monthly_minutes
-                plataformas_acceso = user_platforms[user.id][mes]
-
-                for contenido in user.movies + user.series:
-                    if minutos_disponibles <= 0:
-                        break
-
-                    # Verificar si el contenido está disponible en alguna plataforma
-                    for plataforma in plataformas_acceso:
-                        if contenido_disponible(contenido, plataforma):
-                            duracion = min(contenido.duration, minutos_disponibles)
-                            total_access += user.interest * (duracion / contenido.duration)
-                            minutos_disponibles -= duracion
-                            break  # Solo contar una vez por contenido
-
-        fitness = total_cost - (lambda_ * total_access)
-        fitness_values.append(fitness)
+        # Primera pasada: calcular costos
+        for mes, usuarios_planes in individuo.items():
+            for user_id, datos_plan in usuarios_planes.items():
+                plataforma = datos_plan["plataforma"]
+                plan_nombre = datos_plan["plan"]
+                # Buscar el plan correspondiente
 
     return fitness_values
-
 
 # Configuración optimizada del algoritmo genético
 def main():
@@ -143,7 +104,7 @@ def main():
     final_poblacion = ga.evolve(
         generator=generar_individuo,
         evaluator=fitness_function,
-        pop_size=100,
+        pop_size=10,
         maximize=False,
         max_generations=100,
         num_elites=2,
@@ -160,12 +121,11 @@ def main():
 
     print("\nSolución Óptima Encontrada:")
     print("--------------------------------")
-    for (plataforma, mes), datos in mejor.candidate.items():
-        print(f"Mes {mes + 1} - {plataforma}:")
-        print(f"  Plan: {datos['plan']}")
-        print(f"  Usuarios: {len(datos['users'])}")
+    for mes, usuarios_planes in mejor.candidate.items():
+        print(f"Mes {mes + 1}:")
+        for user_id, datos_plan in usuarios_planes.items():
+            print(f"  Usuario {user_id}: {datos_plan['plataforma']} - {datos_plan['plan']}")
     print("--------------------------------")
 
-
-
-main()
+if __name__ == "__main__":
+    main()
