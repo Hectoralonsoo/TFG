@@ -54,19 +54,34 @@ def generate_user(user_id, max_movies=10, max_series=10):
             "interest": interest
         })
 
-
+        # Agregar preferencias para series
     for serie in selected_series:
         interest = round(random.uniform(0.5, 1.0), 2)
+        available_seasons = []
+        # Filtrar temporadas que tengan plataformas y crear una copia sin episodios
+        for season in serie["seasons"]:
+            if season.get("platforms"):  # Se ignoran temporadas sin plataformas
+                season_copy = {k: v for k, v in season.items() if k != "episodes"}
+                available_seasons.append(season_copy)
+
+        # Ordenar las temporadas por número de temporada (asumiendo que la clave es "season_number")
+        available_seasons.sort(key=lambda s: s.get("season_number", 0))
+
+        # Elegir una temporada de inicio aleatoriamente y tomar todas las siguientes
+        if available_seasons:
+            start_index = random.randint(0, len(available_seasons) - 1)
+            selected_seasons = available_seasons[start_index:]
+        else:
+            selected_seasons = []
+
         user.series.append({
             "title": serie["title"],
-            "season":serie["seasons"],
+            "season": selected_seasons,
             "platforms": serie["platforms"],
             "interest": interest
         })
 
-
     return user
-
 
 
 
