@@ -1,89 +1,174 @@
 {
-    "Amazon Prime Video": {
-        "plan": "Suscripción mensual",
-        "precio": "4.99 EUR",
-        "perfiles": 6
-    },
-    "Apple TV Plus": {
-        "plan": "Suscripción mensual",
-        "precio": "9.99 EUR",
-        "perfiles": 6
-    },
-    "Disney Plus": {
-        "planes": [
-            {
-                "plan": "Estándar con anuncios",
-                "precio": "5.99 EUR",
-                "perfiles": 2
-            },
-            {
-                "plan": "Estándar",
-                "precio": "8.99 EUR",
-                "perfiles": 4
-            },
-            {
-                "plan": "Premium",
-                "precio": "11.99 EUR",
-                "perfiles": 4
-            }
-        ]
-    },
-    "Filmin": {
-        "plan": "Suscripción mensual",
-        "precio": "9.99 EUR",
-        "perfiles": 2
-    },
-    "FlixOlé": {
-        "plan": "Suscripción mensual",
-        "precio": "3.99 EUR",
-        "perfiles": 4
-    },
-    "Max": {
-        "planes": [
-            {
-                "plan": "Estándar",
-                "precio": "9.99 EUR",
-                "perfiles": 2
-            },
-            {
-                "plan": "Premium",
-                "precio": "13.99 EUR",
-                "perfiles": 4
-            }
-        ]
-    },
-    "Movistar Plus+": {
-        "plan": "Suscripción mensual",
-        "precio": "9.99 EUR",
-        "perfiles": 2
-    },
-    "Netflix": {
-        "planes": [
-            {
-                "plan": "Estándar con anuncios",
-                "precio": "6.99 EUR",
-                "perfiles": 2
-            },
-            {
-                "plan": "Estándar",
-                "precio": "13.99 EUR",
-                "perfiles": 2
-            },
-            {
-                "plan": "Premium",
-                "precio": "19.99 EUR",
-                "perfiles": 4
-            }
-        ]
-    },
-    "SkyShowtime": {
-        "plan": "Suscripción mensual",
-        "precio": "5.99 EUR",
+  "Acontra Plus": {
+    "plan": "Mensual Basica",
+    "precio": 7.99,
+    "perfiles": 5
+  },
+  "Amazon Prime Video": {
+    "plan": "Suscripción mensual",
+    "precio": 4.99,
+    "perfiles": 6
+  },
+  "Apple TV Plus": {
+    "plan": "Suscripción mensual",
+    "precio": 9.99,
+    "perfiles": 5
+  },
+  "Atres Player": {
+     "planes": [
+      {
+        "plan": "Premium",
+        "precio": 4.99,
+        "perfiles": 1
+      },
+      {
+        "plan": "Premium familiar",
+        "precio": 7.99,
         "perfiles": 3
-    },
-    "fuboTV": {
-        "plan": "Suscripción mensual",
-        "precio": "3.99 EUR",
+      }
+    ]
+  },
+  "Crunchyroll": {
+    "planes": [
+      {
+        "plan": "Fan",
+        "precio": 4.99,
+        "perfiles": 1
+      },
+      {
+        "plan": "Mega Fan",
+        "precio": 6.49,
+        "perfiles": 4
+      }
+    ]
+  },
+  "Disney Plus": {
+    "planes": [
+      {
+        "plan": "Estándar con anuncios",
+        "precio": 5.99,
         "perfiles": 2
-    }
+      },
+      {
+        "plan": "Estándar",
+        "precio": 9.99,
+        "perfiles": 2
+      },
+      {
+        "plan": "Premium",
+        "precio": 13.99,
+        "perfiles": 4
+      }
+    ]
+  },
+  "Filmin": {
+    "plan": "Suscripción mensual",
+    "precio": 9.99,
+    "perfiles": 1
+  },
+  "FlixOlé": {
+    "plan": "Suscripción mensual",
+    "precio": 3.99,
+    "perfiles": 4
+  },
+  "Kocowa": {
+    "planes": [
+      {
+        "plan": "Basic",
+        "precio": 6.99,
+        "perfiles": 1
+      },
+      {
+        "plan": "Premium",
+        "precio": 7.99,
+        "perfiles": 4
+      }
+    ]
+  },
+  "Max": {
+    "planes": [
+      {
+        "plan": "Básico con anuncios",
+        "precio": 9.99,
+        "perfiles": 2
+      },
+      {
+        "plan": "Estándar",
+        "precio": 16.99,
+        "perfiles": 2
+      },
+      {
+        "plan": "Premium",
+        "precio": 20.99,
+        "perfiles": 4
+      }
+    ]
+  },
+  "Movistar Plus+": {
+    "plan": "Movistar Plus+",
+    "precio": 9.99,
+    "perfiles": 2
+  },
+  "Movistar Plus+ Ficción Total": {
+    "plan": "Movistar Plus+ Ficción Total",
+    "precio": 19,
+    "perfiles": 2
+  },
+  "Netflix": {
+    "planes": [
+      {
+        "plan": "Estándar",
+        "precio": 13.99,
+        "perfiles": 2
+      },
+      {
+        "plan": "Premium",
+        "precio": 19.99,
+        "perfiles": 4
+      }
+    ]
+  },
+  "Netflix basic with Ads": {
+    "plan": "Suscripción mensual",
+    "precio": 6.99,
+    "perfiles": 2
+  },
+  "SkyShowtime": {
+    "planes": [
+      {
+        "plan": "Estándar con anuncios",
+        "precio": 4.99,
+        "perfiles": 1
+      },
+      {
+        "plan": "Estándar",
+        "precio": 7.99,
+        "perfiles": 2
+      },
+      {
+        "plan": "Premium",
+        "precio": 12.99,
+        "perfiles": 5
+      }
+    ]
+  },
+  "Tivify": {
+    "planes": [
+      {
+        "plan": "Tivify Plus",
+        "precio": 2.99,
+        "perfiles": 1
+      },
+      {
+        "plan": "Tivify Premium",
+        "precio": 7.99,
+        "perfiles": 2
+      }
+    ]
+  },
+  "fuboTV": {
+    "plan": "Plan latino",
+    "precio": 9.99,
+    "perfiles": 2
+  }
 }

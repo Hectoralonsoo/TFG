@@ -7,19 +7,20 @@ from Models.User import User
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
-
 # Load existing data
 def load_json_data(filename):
     with open(DATA_DIR / filename, "r", encoding="utf-8") as f:
         return json.load(f)
 
-
 movies = load_json_data("movies.json")
 series = load_json_data("series.json")
 streaming_plans = load_json_data("streamingPlans.json")
 
-# Extract platforms from streaming_plans (assuming streaming_plans is a list of dicts)
-platforms = [list(platform.keys())[0] for platform in streaming_plans]
+
+
+platforms = list(streaming_plans.keys())
+
+
 
 
 # Helper functions
@@ -34,7 +35,7 @@ def generate_user(user_id, max_movies=10, max_series=10):
 
     # Calcular minutos de visualización mensual (base ±50%)
     base_minutes = 1800
-    monthly_minutes = int(base_minutes * (0.5 + random.random()))  # 900-2700 mins
+    monthly_minutes = int(base_minutes * (0.5 + random.random()))  # Entre 900 y 2700 minutos
 
     # Crear usuario
     user = User(
@@ -45,7 +46,7 @@ def generate_user(user_id, max_movies=10, max_series=10):
         series=[]
     )
 
-    # Agregar preferencias con interés y plataformas disponibles
+    # Agregar preferencias con interés y plataformas disponibles para películas
     for movie in selected_movies:
         interest = round(random.uniform(0.5, 1.0), 2)
         user.movies.append({
@@ -54,7 +55,7 @@ def generate_user(user_id, max_movies=10, max_series=10):
             "interest": interest
         })
 
-        # Agregar preferencias para series
+    # Agregar preferencias para series
     for serie in selected_series:
         interest = round(random.uniform(0.5, 1.0), 2)
         available_seasons = []
@@ -83,11 +84,8 @@ def generate_user(user_id, max_movies=10, max_series=10):
 
     return user
 
-
-
 # Generate 100 users
 users = [generate_user(user_id) for user_id in range(1, 101)]
-
 
 # Save to JSON
 def save_users_to_json(users, filename):
@@ -104,7 +102,6 @@ def save_users_to_json(users, filename):
 
     with open(DATA_DIR / filename, "w", encoding="utf-8") as f:
         json.dump(users_data, f, indent=4, ensure_ascii=False)
-
 
 save_users_to_json(users, "users.json")
 print("✅ Users generated successfully at:", DATA_DIR / "users.json")
