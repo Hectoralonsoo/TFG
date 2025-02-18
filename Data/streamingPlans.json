@@ -1,190 +1,89 @@
-[
-  {
+{
     "Amazon Prime Video": {
-      "plans": [
-        {
-          "name": "Standard",
-          "profiles": 3,
-          "price_eur": 4.99
-        }
-      ]
+        "plan": "Suscripción mensual",
+        "precio": "4.99 EUR",
+        "perfiles": 6
     },
-    "Apple TV+": {
-      "plans": [
-        {
-          "name": "Standard",
-          "profiles": 6,
-          "price_eur": 6.99
-        }
-      ]
+    "Apple TV Plus": {
+        "plan": "Suscripción mensual",
+        "precio": "9.99 EUR",
+        "perfiles": 6
     },
-    "Paramount+": {
-      "plans": [
-        {
-          "name": "Standard",
-          "profiles": 5,
-          "price_eur": 7.99
-        }
-      ]
-    },
-    "Crunchyroll": {
-      "plans": [
-        {
-          "name": "Fan",
-          "profiles": 1,
-          "price_eur": 4.99
-        },
-        {
-          "name": "Mega Fan",
-          "profiles": 4,
-          "price_eur": 6.49
-        }
-      ]
-    },
-    "YouTube Premium": {
-      "plans": [
-        {
-          "name": "Individual",
-          "profiles": 1,
-          "price_eur": 11.99
-        },
-        {
-          "name": "Family",
-          "profiles": 6,
-          "price_eur": 17.99
-        },
-        {
-          "name": "Student",
-          "profiles": 1,
-          "price_eur": 6.99
-        }
-      ]
-    },
-    "Discovery+": {
-        "plans": [
-            {"name": "Standard",
-              "profiles": 5,
-              "price_eur": 5.99
-            }
-        ]
-    },
-    "HBO Max": {
-        "plans": [
-            {"name": "Standard",
-              "profiles": 3,
-              "price_eur": 9.99
+    "Disney Plus": {
+        "planes": [
+            {
+                "plan": "Estándar con anuncios",
+                "precio": "5.99 EUR",
+                "perfiles": 2
             },
             {
-              "name": "Mobile",
-              "profiles": 1,
-              "price_eur": 5.99
+                "plan": "Estándar",
+                "precio": "8.99 EUR",
+                "perfiles": 4
+            },
+            {
+                "plan": "Premium",
+                "precio": "11.99 EUR",
+                "perfiles": 4
             }
         ]
     },
-    "Starz": {
-        "plans": [
+    "Filmin": {
+        "plan": "Suscripción mensual",
+        "precio": "9.99 EUR",
+        "perfiles": 2
+    },
+    "FlixOlé": {
+        "plan": "Suscripción mensual",
+        "precio": "3.99 EUR",
+        "perfiles": 4
+    },
+    "Max": {
+        "planes": [
             {
-              "name": "Standard",
-              "profiles": 4,
-              "price_eur": 4.99
+                "plan": "Estándar",
+                "precio": "9.99 EUR",
+                "perfiles": 2
+            },
+            {
+                "plan": "Premium",
+                "precio": "13.99 EUR",
+                "perfiles": 4
             }
         ]
     },
-    "Peacock": {
-        "plans": [
-            {
-              "name": "Free",
-              "profiles": 1,
-              "price_eur": 0.00
-            },
-            {
-              "name": "Premium",
-              "profiles": 3,
-              "price_eur": 4.99
-            },
-            {
-              "name": "Premium Plus",
-              "profiles": 3,
-              "price_eur": 9.99
-            }
-        ]
-    },
-    "DAZN": {
-        "plans": [
-            {
-              "name": "Standard",
-              "profiles": 2,
-              "price_eur": 12.99
-            },
-            {
-              "name": "Premium",
-              "profiles": 4,
-              "price_eur": 19.99
-            }
-        ]
+    "Movistar Plus+": {
+        "plan": "Suscripción mensual",
+        "precio": "9.99 EUR",
+        "perfiles": 2
     },
     "Netflix": {
-        "plans": [
+        "planes": [
             {
-              "name": "Basic",
-              "profiles": 1,
-              "price_eur": 7.99
+                "plan": "Estándar con anuncios",
+                "precio": "6.99 EUR",
+                "perfiles": 2
             },
             {
-              "name": "Standard",
-              "profiles": 2,
-              "price_eur": 12.99
+                "plan": "Estándar",
+                "precio": "13.99 EUR",
+                "perfiles": 2
             },
             {
-              "name": "Premium",
-              "profiles": 4,
-              "price_eur": 17.99
+                "plan": "Premium",
+                "precio": "19.99 EUR",
+                "perfiles": 4
             }
         ]
     },
-    "Hulu": {
-        "plans": [
-            {
-              "name": "Basic",
-              "profiles": 1,
-              "price_eur": 5.99
-            },
-            {
-              "name": "Standard",
-              "profiles": 2,
-              "price_eur": 11.99
-            },
-            {
-              "name": "Premium",
-              "profiles": 4,
-              "price_eur": 17.99
-            }
-        ]
+    "SkyShowtime": {
+        "plan": "Suscripción mensual",
+        "precio": "5.99 EUR",
+        "perfiles": 3
     },
-    "Star+": {
-        "plans": [
-            {
-              "name": "Standard",
-              "profiles": 2,
-              "price_eur": 8.99
-            },
-            {
-              "name": "Premium",
-              "profiles": 4,
-              "price_eur": 14.99
-            }
-        ]
-    },
-    "Rakuten TV": {
-        "plans": [
-            {
-              "name": "Pay-Per-View",
-              "profiles": 1,
-              "price_eur": 2.99
-            }
-        ]
+    "fuboTV": {
+        "plan": "Suscripción mensual",
+        "precio": "3.99 EUR",
+        "perfiles": 2
     }
-  }
-
-
-]
+}

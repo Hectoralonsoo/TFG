@@ -19,7 +19,8 @@
             "Movistar Plus+ Ficción Total ",
             "SkyShowtime",
             "Max",
-            "Netflix basic with Ads"
+            "Netflix basic with Ads",
+            "Tivify"
         ]
     },
     {
@@ -116,7 +117,8 @@
         "platforms": [
             "Amazon Prime Video",
             "Movistar Plus+ Ficción Total ",
-            "Max"
+            "Max",
+            "Tivify"
         ]
     },
     {
@@ -156,6 +158,15 @@
         ]
     },
     {
+        "title": "Interstellar",
+        "duration": 169,
+        "platforms": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
         "title": "Grave of the Fireflies",
         "duration": 89,
         "platforms": [
@@ -164,19 +175,11 @@
         ]
     },
     {
-        "title": "Interstellar",
-        "duration": 169,
-        "platforms": [
-            "Netflix",
-            "Amazon Prime Video",
-            "Netflix basic with Ads",
-            "Tivify"
-        ]
-    },
-    {
         "title": "Life Is Beautiful",
         "duration": 116,
-        "platforms": []
+        "platforms": [
+            "Tivify"
+        ]
     },
     {
         "title": "Cinema Paradiso",
@@ -202,11 +205,6 @@
         "platforms": []
     },
     {
-        "title": "A Dog's Will",
-        "duration": 104,
-        "platforms": []
-    },
-    {
         "title": "City of God",
         "duration": 129,
         "platforms": [
@@ -214,6 +212,11 @@
             "Max",
             "Acontra Plus"
         ]
+    },
+    {
+        "title": "A Dog's Will",
+        "duration": 104,
+        "platforms": []
     },
     {
         "title": "Psycho",
@@ -226,20 +229,19 @@
         ]
     },
     {
-        "title": "Once Upon a Time in America",
-        "duration": 229,
-        "platforms": [
-            "Disney Plus"
-        ]
-    },
-    {
         "title": "The Lord of the Rings: The Fellowship of the Ring",
         "duration": 179,
         "platforms": [
             "Amazon Prime Video",
             "Movistar Plus+ Ficción Total ",
-            "Max",
-            "Tivify"
+            "Max"
+        ]
+    },
+    {
+        "title": "Once Upon a Time in America",
+        "duration": 229,
+        "platforms": [
+            "Disney Plus"
         ]
     },
     {
@@ -264,17 +266,17 @@
         ]
     },
     {
+        "title": "Primal: Tales of Savagery",
+        "duration": 85,
+        "platforms": []
+    },
+    {
         "title": "Howl's Moving Castle",
         "duration": 119,
         "platforms": [
             "Netflix",
             "Netflix basic with Ads"
         ]
-    },
-    {
-        "title": "Primal: Tales of Savagery",
-        "duration": 85,
-        "platforms": []
     },
     {
         "title": "The Lord of the Rings: The Two Towers",
@@ -318,6 +320,14 @@
         "platforms": []
     },
     {
+        "title": "Whiplash",
+        "duration": 107,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
         "title": "The Pianist",
         "duration": 150,
         "platforms": [
@@ -333,10 +343,12 @@
         "platforms": []
     },
     {
-        "title": "Whiplash",
-        "duration": 107,
+        "title": "Se7en",
+        "duration": 127,
         "platforms": [
             "Netflix",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
             "Netflix basic with Ads"
         ]
     },
@@ -351,16 +363,6 @@
         ]
     },
     {
-        "title": "Se7en",
-        "duration": 127,
-        "platforms": [
-            "Netflix",
-            "Movistar Plus+ Ficción Total ",
-            "Filmin",
-            "Netflix basic with Ads"
-        ]
-    },
-    {
         "title": "Inception",
         "duration": 148,
         "platforms": [
@@ -368,14 +370,15 @@
             "Amazon Prime Video",
             "Movistar Plus+ Ficción Total ",
             "Max",
-            "Netflix basic with Ads",
-            "Tivify"
+            "Netflix basic with Ads"
         ]
     },
     {
-        "title": "Flow",
-        "duration": 85,
-        "platforms": []
+        "title": "The Legend of Hei",
+        "duration": 102,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
     },
     {
         "title": "The Quintessential Quintuplets Movie",
@@ -387,16 +390,11 @@
         ]
     },
     {
-        "title": "The Legend of Hei",
-        "duration": 102,
+        "title": "Rear Window",
+        "duration": 112,
         "platforms": [
-            "Amazon Prime Video"
+            "Filmin"
         ]
-    },
-    {
-        "title": "The Wild Robot",
-        "duration": 102,
-        "platforms": []
     },
     {
         "title": "Spider-Man: Across the Spider-Verse",
@@ -407,19 +405,17 @@
         ]
     },
     {
-        "title": "Rear Window",
-        "duration": 112,
-        "platforms": [
-            "Filmin"
-        ]
-    },
-    {
         "title": "The Silence of the Lambs",
         "duration": 119,
         "platforms": [
             "Filmin",
             "MGM Plus Amazon Channel"
         ]
+    },
+    {
+        "title": "The Wild Robot",
+        "duration": 102,
+        "platforms": []
     },
     {
         "title": "American History X",
@@ -432,6 +428,11 @@
     {
         "title": "Dou kyu sei – Classmates",
         "duration": 61,
+        "platforms": []
+    },
+    {
+        "title": "Flow",
+        "duration": 85,
         "platforms": []
     },
     {
@@ -481,25 +482,17 @@
         ]
     },
     {
-        "title": "Léon: The Professional",
-        "duration": 111,
-        "platforms": []
-    },
-    {
-        "title": "Perfect Blue",
-        "duration": 82,
-        "platforms": [
-            "Movistar Plus+",
-            "Movistar Plus+ Ficción Total "
-        ]
-    },
-    {
         "title": "Dead Poets Society",
         "duration": 128,
         "platforms": [
             "Disney Plus",
             "Filmin"
         ]
+    },
+    {
+        "title": "Léon: The Professional",
+        "duration": 111,
+        "platforms": []
     },
     {
         "title": "The Great Dictator",
@@ -511,16 +504,17 @@
         ]
     },
     {
+        "title": "Perfect Blue",
+        "duration": 82,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
         "title": "Sunset Boulevard",
         "duration": 110,
         "platforms": []
-    },
-    {
-        "title": "Once Upon a Studio",
-        "duration": 9,
-        "platforms": [
-            "Disney Plus"
-        ]
     },
     {
         "title": "Josee, the Tiger and the Fish",
@@ -537,6 +531,13 @@
         "platforms": []
     },
     {
+        "title": "Once Upon a Studio",
+        "duration": 9,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
         "title": "Once Upon a Time in the West",
         "duration": 166,
         "platforms": [
@@ -545,17 +546,17 @@
         ]
     },
     {
+        "title": "Hotarubi no Mori e",
+        "duration": 45,
+        "platforms": []
+    },
+    {
         "title": "Neon Genesis Evangelion: The End of Evangelion",
         "duration": 87,
         "platforms": [
             "Netflix",
             "Netflix basic with Ads"
         ]
-    },
-    {
-        "title": "Hotarubi no Mori e",
-        "duration": 45,
-        "platforms": []
     },
     {
         "title": "Modern Times",
@@ -614,26 +615,19 @@
         "platforms": []
     },
     {
-        "title": "Miracle in Cell No. 7",
-        "duration": 132,
-        "platforms": [
-            "Netflix",
-            "Netflix basic with Ads"
-        ]
-    },
-    {
-        "title": "TAYLOR SWIFT | THE ERAS TOUR",
-        "duration": 169,
-        "platforms": [
-            "Disney Plus"
-        ]
-    },
-    {
         "title": "Paths of Glory",
         "duration": 88,
         "platforms": [
             "Filmin",
             "MGM Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Miracle in Cell No. 7",
+        "duration": 132,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
         ]
     },
     {
@@ -659,11 +653,25 @@
     {
         "title": "Oldboy",
         "duration": 120,
-        "platforms": []
+        "platforms": [
+            "Acontra Plus Amazon Channel"
+        ]
     },
     {
         "title": "Clouds",
         "duration": 121,
+        "platforms": []
+    },
+    {
+        "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
+        "duration": 155,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Life in a Year",
+        "duration": 107,
         "platforms": []
     },
     {
@@ -674,15 +682,10 @@
         ]
     },
     {
-        "title": "Life in a Year",
-        "duration": 107,
-        "platforms": []
-    },
-    {
-        "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
-        "duration": 155,
+        "title": "TAYLOR SWIFT | THE ERAS TOUR",
+        "duration": 169,
         "platforms": [
-            "Amazon Prime Video"
+            "Disney Plus"
         ]
     },
     {
@@ -714,13 +717,6 @@
         ]
     },
     {
-        "title": "Avengers: Endgame",
-        "duration": 181,
-        "platforms": [
-            "Disney Plus"
-        ]
-    },
-    {
         "title": "Klaus",
         "duration": 96,
         "platforms": [
@@ -729,11 +725,10 @@
         ]
     },
     {
-        "title": "Green Book",
-        "duration": 130,
+        "title": "Avengers: Endgame",
+        "duration": 181,
         "platforms": [
-            "Netflix",
-            "Netflix basic with Ads"
+            "Disney Plus"
         ]
     },
     {
@@ -741,6 +736,14 @@
         "duration": 149,
         "platforms": [
             "Disney Plus"
+        ]
+    },
+    {
+        "title": "Green Book",
+        "duration": 130,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
         ]
     },
     {
@@ -774,6 +777,14 @@
         ]
     },
     {
+        "title": "Ultraman: Rising",
+        "duration": 117,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
         "title": "Il Sorpasso",
         "duration": 105,
         "platforms": []
@@ -802,14 +813,6 @@
         "platforms": []
     },
     {
-        "title": "Ultraman: Rising",
-        "duration": 117,
-        "platforms": [
-            "Netflix",
-            "Netflix basic with Ads"
-        ]
-    },
-    {
         "title": "Wolfwalkers",
         "duration": 103,
         "platforms": [
@@ -822,14 +825,10 @@
         "platforms": [
             "Netflix",
             "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
             "SkyShowtime",
             "Netflix basic with Ads"
         ]
-    },
-    {
-        "title": "Justice League Dark: Apokolips War",
-        "duration": 90,
-        "platforms": []
     },
     {
         "title": "Gladiator",
@@ -840,6 +839,11 @@
             "Filmin",
             "SkyShowtime"
         ]
+    },
+    {
+        "title": "Justice League Dark: Apokolips War",
+        "duration": 90,
+        "platforms": []
     },
     {
         "title": "Inglourious Basterds",
@@ -875,18 +879,18 @@
         ]
     },
     {
-        "title": "The Help",
-        "duration": 146,
-        "platforms": [
-            "Disney Plus"
-        ]
-    },
-    {
         "title": "Witness for the Prosecution",
         "duration": 116,
         "platforms": [
             "Amazon Prime Video",
             "Filmin"
+        ]
+    },
+    {
+        "title": "The Help",
+        "duration": 146,
+        "platforms": [
+            "Disney Plus"
         ]
     },
     {
@@ -942,6 +946,13 @@
         ]
     },
     {
+        "title": "Maquia: When the Promised Flower Blooms",
+        "duration": 115,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
         "title": "Michael Jackson's Thriller",
         "duration": 14,
         "platforms": []
@@ -950,13 +961,6 @@
         "title": "My Mom Is a Character 3",
         "duration": 111,
         "platforms": []
-    },
-    {
-        "title": "Maquia: When the Promised Flower Blooms",
-        "duration": 115,
-        "platforms": [
-            "Filmin"
-        ]
     },
     {
         "title": "Doctor Who: The Day of the Doctor",
@@ -969,6 +973,14 @@
         "platforms": [
             "Amazon Prime Video",
             "Filmin"
+        ]
+    },
+    {
+        "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
+        "duration": 91,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
         ]
     },
     {
@@ -985,14 +997,6 @@
         "platforms": [
             "Movistar Plus+ Ficción Total ",
             "Max"
-        ]
-    },
-    {
-        "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
-        "duration": 91,
-        "platforms": [
-            "Netflix",
-            "Netflix basic with Ads"
         ]
     },
     {
@@ -1013,20 +1017,20 @@
         ]
     },
     {
+        "title": "Bicycle Thieves",
+        "duration": 89,
+        "platforms": [
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
         "title": "Memento",
         "duration": 113,
         "platforms": [
             "Amazon Prime Video",
             "Movistar Plus+",
             "Movistar Plus+ Ficción Total "
-        ]
-    },
-    {
-        "title": "Bicycle Thieves",
-        "duration": 89,
-        "platforms": [
-            "FlixOlé",
-            "FlixOlé Amazon Channel"
         ]
     },
     {
@@ -1042,18 +1046,18 @@
         ]
     },
     {
-        "title": "Investigation of a Citizen Above Suspicion",
-        "duration": 111,
-        "platforms": [
-            "Filmin"
-        ]
-    },
-    {
         "title": "Tokyo Story",
         "duration": 137,
         "platforms": [
             "Acontra Plus",
             "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Investigation of a Citizen Above Suspicion",
+        "duration": 111,
+        "platforms": [
+            "Filmin"
         ]
     },
     {
@@ -1074,15 +1078,6 @@
         ]
     },
     {
-        "title": "The Kid",
-        "duration": 68,
-        "platforms": [
-            "Amazon Prime Video",
-            "Filmin",
-            "Acontra Plus"
-        ]
-    },
-    {
         "title": "Persona",
         "duration": 83,
         "platforms": [
@@ -1090,6 +1085,13 @@
             "Filmin",
             "Acontra Plus",
             "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Alien",
+        "duration": 117,
+        "platforms": [
+            "Disney Plus"
         ]
     },
     {
@@ -1102,27 +1104,27 @@
         ]
     },
     {
+        "title": "Innocent Voices",
+        "duration": 120,
+        "platforms": []
+    },
+    {
+        "title": "The Kid",
+        "duration": 68,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin",
+            "Acontra Plus"
+        ]
+    },
+    {
         "title": "Good Will Hunting",
         "duration": 127,
         "platforms": [
             "Movistar Plus+ Ficción Total ",
             "SkyShowtime",
-            "Max"
-        ]
-    },
-    {
-        "title": "Alien",
-        "duration": 117,
-        "platforms": [
-            "Disney Plus"
-        ]
-    },
-    {
-        "title": "The Departed",
-        "duration": 151,
-        "platforms": [
-            "Netflix",
-            "Netflix basic with Ads"
+            "Max",
+            "Tivify"
         ]
     },
     {
@@ -1133,17 +1135,11 @@
         ]
     },
     {
-        "title": "Innocent Voices",
-        "duration": 120,
-        "platforms": []
-    },
-    {
-        "title": "Casablanca",
-        "duration": 102,
+        "title": "The Departed",
+        "duration": 151,
         "platforms": [
-            "Amazon Prime Video",
-            "Movistar Plus+ Ficción Total ",
-            "Max"
+            "Netflix",
+            "Netflix basic with Ads"
         ]
     },
     {
@@ -1157,12 +1153,33 @@
         ]
     },
     {
+        "title": "Casablanca",
+        "duration": 102,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
         "title": "Dune: Part Two",
         "duration": 167,
         "platforms": [
             "Movistar Plus+",
             "Movistar Plus+ Ficción Total ",
             "Max"
+        ]
+    },
+    {
+        "title": "Togo",
+        "duration": 113,
+        "platforms": []
+    },
+    {
+        "title": "Piper",
+        "duration": 6,
+        "platforms": [
+            "Disney Plus"
         ]
     },
     {
@@ -1174,24 +1191,20 @@
         ]
     },
     {
-        "title": "Piper",
-        "duration": 6,
-        "platforms": [
-            "Disney Plus"
-        ]
-    },
-    {
-        "title": "Togo",
-        "duration": 113,
-        "platforms": []
-    },
-    {
         "title": "The Truman Show",
         "duration": 103,
         "platforms": [
             "Amazon Prime Video",
             "Movistar Plus+ Ficción Total ",
             "SkyShowtime"
+        ]
+    },
+    {
+        "title": "There's Still Tomorrow",
+        "duration": 118,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
         ]
     },
     {
@@ -1202,6 +1215,15 @@
             "Netflix basic with Ads",
             "Crunchyroll",
             "Crunchyroll Amazon Channel"
+        ]
+    },
+    {
+        "title": "Singin' in the Rain",
+        "duration": 103,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Max"
         ]
     },
     {
@@ -1217,43 +1239,9 @@
         ]
     },
     {
-        "title": "Singin' in the Rain",
-        "duration": 103,
-        "platforms": [
-            "Movistar Plus+ Ficción Total ",
-            "Filmin",
-            "Max"
-        ]
-    },
-    {
-        "title": "Silenced",
-        "duration": 125,
-        "platforms": [
-            "Netflix",
-            "Netflix basic with Ads"
-        ]
-    },
-    {
         "title": "My Friends",
         "duration": 140,
         "platforms": []
-    },
-    {
-        "title": "There's Still Tomorrow",
-        "duration": 118,
-        "platforms": [
-            "Movistar Plus+",
-            "Movistar Plus+ Ficción Total "
-        ]
-    },
-    {
-        "title": "Scenes from a Marriage",
-        "duration": 169,
-        "platforms": [
-            "Amazon Prime Video",
-            "Acontra Plus",
-            "Acontra Plus Amazon Channel"
-        ]
     },
     {
         "title": "8½",
@@ -1273,6 +1261,15 @@
         ]
     },
     {
+        "title": "Scenes from a Marriage",
+        "duration": 169,
+        "platforms": [
+            "Amazon Prime Video",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
         "title": "The Shop Around the Corner",
         "duration": 99,
         "platforms": [
@@ -1285,8 +1282,18 @@
         "platforms": []
     },
     {
-        "title": "Green Snake",
-        "duration": 131,
+        "title": "Red Beard",
+        "duration": 185,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Silenced",
+        "duration": 125,
         "platforms": [
             "Netflix",
             "Netflix basic with Ads"
@@ -1303,23 +1310,10 @@
         ]
     },
     {
-        "title": "Central Station",
-        "duration": 110,
+        "title": "Stalker",
+        "duration": 162,
         "platforms": [
-            "Movistar Plus+",
-            "Movistar Plus+ Ficción Total ",
-            "Acontra Plus",
-            "Acontra Plus Amazon Channel"
-        ]
-    },
-    {
-        "title": "Red Beard",
-        "duration": 185,
-        "platforms": [
-            "Movistar Plus+ Ficción Total ",
-            "Filmin",
-            "Acontra Plus",
-            "Acontra Plus Amazon Channel"
+            "Filmin"
         ]
     },
     {
@@ -1331,10 +1325,28 @@
         ]
     },
     {
-        "title": "Stalker",
-        "duration": 162,
+        "title": "Wonder",
+        "duration": 113,
         "platforms": [
-            "Filmin"
+            "Tivify"
+        ]
+    },
+    {
+        "title": "Central Station",
+        "duration": 110,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Green Snake",
+        "duration": 131,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
         ]
     },
     {
@@ -1345,11 +1357,6 @@
             "Acontra Plus",
             "Acontra Plus Amazon Channel"
         ]
-    },
-    {
-        "title": "Wonder",
-        "duration": 113,
-        "platforms": []
     },
     {
         "title": "Call Me by Your Name",
@@ -1367,20 +1374,9 @@
         ]
     },
     {
-        "title": "Portrait of a Lady on Fire",
-        "duration": 121,
-        "platforms": [
-            "Amazon Prime Video",
-            "Filmin",
-            "Acontra Plus"
-        ]
-    },
-    {
         "title": "Reservoir Dogs",
         "duration": 99,
-        "platforms": [
-            "Tivify"
-        ]
+        "platforms": []
     },
     {
         "title": "Terminator 2: Judgment Day",
@@ -1389,6 +1385,15 @@
             "Netflix",
             "Amazon Prime Video",
             "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Better Days",
+        "duration": 135,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
         ]
     },
     {
@@ -1407,13 +1412,6 @@
         ]
     },
     {
-        "title": "Soul",
-        "duration": 101,
-        "platforms": [
-            "Disney Plus"
-        ]
-    },
-    {
         "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
         "duration": 95,
         "platforms": [
@@ -1421,12 +1419,19 @@
         ]
     },
     {
-        "title": "Better Days",
-        "duration": 135,
+        "title": "Soul",
+        "duration": 101,
         "platforms": [
-            "Movistar Plus+",
-            "Movistar Plus+ Ficción Total ",
-            "Filmin"
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Portrait of a Lady on Fire",
+        "duration": 121,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin",
+            "Acontra Plus"
         ]
     },
     {
@@ -1437,11 +1442,6 @@
         ]
     },
     {
-        "title": "Metropolis",
-        "duration": 148,
-        "platforms": []
-    },
-    {
         "title": "Double Indemnity",
         "duration": 107,
         "platforms": [
@@ -1449,18 +1449,15 @@
         ]
     },
     {
+        "title": "Metropolis",
+        "duration": 148,
+        "platforms": []
+    },
+    {
         "title": "The Great War",
         "duration": 137,
         "platforms": [
             "Filmin"
-        ]
-    },
-    {
-        "title": "Big Deal on Madonna Street",
-        "duration": 106,
-        "platforms": [
-            "Filmin",
-            "Acontra Plus"
         ]
     },
     {
@@ -1481,6 +1478,11 @@
         ]
     },
     {
+        "title": "Transformers One",
+        "duration": 104,
+        "platforms": []
+    },
+    {
         "title": "“The Shorts” by Aldo, Giovanni and Giacomo",
         "duration": 120,
         "platforms": []
@@ -1493,14 +1495,12 @@
         ]
     },
     {
-        "title": "The Best of Youth",
-        "duration": 367,
-        "platforms": []
-    },
-    {
-        "title": "Transformers One",
-        "duration": 104,
-        "platforms": []
+        "title": "Big Deal on Madonna Street",
+        "duration": 106,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus"
+        ]
     },
     {
         "title": "Mortal Kombat Legends: Scorpion's Revenge",
@@ -1508,17 +1508,14 @@
         "platforms": []
     },
     {
+        "title": "The Best of Youth",
+        "duration": 367,
+        "platforms": []
+    },
+    {
         "title": "Sansho the Bailiff",
         "duration": 124,
         "platforms": [
-            "Filmin"
-        ]
-    },
-    {
-        "title": "Incendies",
-        "duration": 131,
-        "platforms": [
-            "Amazon Prime Video",
             "Filmin"
         ]
     },
@@ -1532,10 +1529,2176 @@
         ]
     },
     {
+        "title": "Incendies",
+        "duration": 131,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin"
+        ]
+    },
+    {
         "title": "WALL·E",
         "duration": 98,
         "platforms": [
             "Disney Plus"
         ]
+    },
+    {
+        "title": "Paris, Texas",
+        "duration": 145,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "The Tale of The Princess Kaguya",
+        "duration": 137,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Some Like It Hot",
+        "duration": 122,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "duration": 108,
+        "platforms": [
+            "Netflix",
+            "Filmin",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Hunt",
+        "duration": 116,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Yojimbo",
+        "duration": 110,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Deathly Hallows: Part 2",
+        "duration": 130,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "All About Eve",
+        "duration": 139,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "La Haine",
+        "duration": 98,
+        "platforms": []
+    },
+    {
+        "title": "New Gods: Nezha Reborn",
+        "duration": 116,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Das Boot",
+        "duration": 150,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Children of Paradise",
+        "duration": 190,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Miraculous World: New York, United HeroeZ",
+        "duration": 61,
+        "platforms": [
+            "Netflix",
+            "Disney Plus",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Far from the Tree",
+        "duration": 7,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Along with the Gods: The Last 49 Days",
+        "duration": 141,
+        "platforms": [
+            "Kocowa"
+        ]
+    },
+    {
+        "title": "M",
+        "duration": 111,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Sherlock Jr.",
+        "duration": 45,
+        "platforms": [
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "La Dolce Vita",
+        "duration": 176,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "There Will Be Blood",
+        "duration": 158,
+        "platforms": []
+    },
+    {
+        "title": "Oppenheimer",
+        "duration": 181,
+        "platforms": [
+            "SkyShowtime"
+        ]
+    },
+    {
+        "title": "KONOSUBA – God's blessing on this wonderful world! Legend of Crimson",
+        "duration": 90,
+        "platforms": []
+    },
+    {
+        "title": "A Taxi Driver",
+        "duration": 138,
+        "platforms": [
+            "Kocowa"
+        ]
+    },
+    {
+        "title": "Guillermo del Toro's Pinocchio",
+        "duration": 117,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Prayers for Bobby",
+        "duration": 89,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Three Billboards Outside Ebbing, Missouri",
+        "duration": 115,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Along with the Gods: The Two Worlds",
+        "duration": 139,
+        "platforms": [
+            "Kocowa"
+        ]
+    },
+    {
+        "title": "My Neighbor Totoro",
+        "duration": 86,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Pride & Prejudice",
+        "duration": 129,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Rashomon",
+        "duration": 88,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin",
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "Believe Me: The Abduction of Lisa McVey",
+        "duration": 98,
+        "platforms": []
+    },
+    {
+        "title": "2001: A Space Odyssey",
+        "duration": 149,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "The Thing",
+        "duration": 109,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Lion",
+        "duration": 118,
+        "platforms": []
+    },
+    {
+        "title": "The Count of Monte Cristo",
+        "duration": 178,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Memories of Murder",
+        "duration": 131,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "A Special Day",
+        "duration": 106,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "A Dog's Journey",
+        "duration": 109,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Me Against You: Mr. S's Vendetta",
+        "duration": 64,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Hidden Figures",
+        "duration": 127,
+        "platforms": []
+    },
+    {
+        "title": "Ran",
+        "duration": 160,
+        "platforms": []
+    },
+    {
+        "title": "Ayla: The Daughter of War",
+        "duration": 124,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "The Young and the Damned",
+        "duration": 82,
+        "platforms": [
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Elite Squad",
+        "duration": 115,
+        "platforms": []
+    },
+    {
+        "title": "Bo Burnham: Make Happy",
+        "duration": 60,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "To Live",
+        "duration": 133,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "My Name Is Khan",
+        "duration": 165,
+        "platforms": []
+    },
+    {
+        "title": "Paper Lives",
+        "duration": 96,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Grand Budapest Hotel",
+        "duration": 100,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "The Second Mother",
+        "duration": 112,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Elephant Man",
+        "duration": 124,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Judgment at Nuremberg",
+        "duration": 191,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Amadeus",
+        "duration": 160,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Lives of Others",
+        "duration": 137,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "On My Skin",
+        "duration": 100,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "duration": 180,
+        "platforms": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The 400 Blows",
+        "duration": 99,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Sting",
+        "duration": 129,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Robot Dreams",
+        "duration": 102,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Veinteañera, divorciada y fantástica",
+        "duration": 93,
+        "platforms": []
+    },
+    {
+        "title": "How to Train Your Dragon: Homecoming",
+        "duration": 22,
+        "platforms": []
+    },
+    {
+        "title": "Rocco and His Brothers",
+        "duration": 178,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "Gifted",
+        "duration": 101,
+        "platforms": [
+            "Netflix",
+            "Disney Plus",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Dial M for Murder",
+        "duration": 105,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "The Wages of Fear",
+        "duration": 153,
+        "platforms": [
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Rome, Open City",
+        "duration": 103,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Flipped",
+        "duration": 89,
+        "platforms": []
+    },
+    {
+        "title": "Requiem for a Dream",
+        "duration": 102,
+        "platforms": []
+    },
+    {
+        "title": "Beyond the Universe",
+        "duration": 126,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Jojo Rabbit",
+        "duration": 108,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Toto, Peppino, and the Hussy",
+        "duration": 101,
+        "platforms": []
+    },
+    {
+        "title": "For a Few Dollars More",
+        "duration": 132,
+        "platforms": []
+    },
+    {
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "duration": 141,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "Room",
+        "duration": 118,
+        "platforms": []
+    },
+    {
+        "title": "Bo Burnham: Inside",
+        "duration": 87,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "El mesero",
+        "duration": 86,
+        "platforms": []
+    },
+    {
+        "title": "American Beauty",
+        "duration": 122,
+        "platforms": []
+    },
+    {
+        "title": "Hachi: A Dog's Tale",
+        "duration": 93,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin",
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "Song of the Sea",
+        "duration": 94,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Tae Guk Gi: The Brotherhood of War",
+        "duration": 148,
+        "platforms": []
+    },
+    {
+        "title": "Society of the Snow",
+        "duration": 144,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Ford v Ferrari",
+        "duration": 153,
+        "platforms": [
+            "Disney Plus",
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Weathering with You",
+        "duration": 112,
+        "platforms": [
+            "Netflix",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "3 Idiots",
+        "duration": 171,
+        "platforms": []
+    },
+    {
+        "title": "Barry Lyndon",
+        "duration": 185,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Casino",
+        "duration": 179,
+        "platforms": [
+            "Movistar Plus+"
+        ]
+    },
+    {
+        "title": "Black Beauty",
+        "duration": 110,
+        "platforms": []
+    },
+    {
+        "title": "Love, Simon",
+        "duration": 110,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Scooby-Doo! and Kiss: Rock and Roll Mystery",
+        "duration": 79,
+        "platforms": []
+    },
+    {
+        "title": "Cruella",
+        "duration": 134,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Citizen Kane",
+        "duration": 119,
+        "platforms": [
+            "Amazon Prime Video",
+            "FlixOlé"
+        ]
+    },
+    {
+        "title": "Kill Bill: The Whole Bloody Affair",
+        "duration": 247,
+        "platforms": []
+    },
+    {
+        "title": "The Imitation Game",
+        "duration": 113,
+        "platforms": []
+    },
+    {
+        "title": "Paperman",
+        "duration": 7,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Sound of Freedom",
+        "duration": 131,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Loving Vincent",
+        "duration": 95,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Late Spring",
+        "duration": 110,
+        "platforms": [
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Lawrence of Arabia",
+        "duration": 228,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "The Deer Hunter",
+        "duration": 183,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "All Your Faces",
+        "duration": 115,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Red, White & Royal Blue",
+        "duration": 121,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Gran Torino",
+        "duration": 116,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "duration": 129,
+        "platforms": []
+    },
+    {
+        "title": "1917",
+        "duration": 119,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Secret in Their Eyes",
+        "duration": 130,
+        "platforms": [
+            "Netflix",
+            "FlixOlé",
+            "Netflix basic with Ads",
+            "Tivify"
+        ]
+    },
+    {
+        "title": "In a Heartbeat",
+        "duration": 4,
+        "platforms": []
+    },
+    {
+        "title": "Like Stars on Earth",
+        "duration": 162,
+        "platforms": []
+    },
+    {
+        "title": "Nights of Cabiria",
+        "duration": 110,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Autumn Sonata",
+        "duration": 93,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Love Exposure",
+        "duration": 237,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Passion of Joan of Arc",
+        "duration": 82,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Bingo: The King of the Mornings",
+        "duration": 113,
+        "platforms": []
+    },
+    {
+        "title": "Bohemian Rhapsody",
+        "duration": 135,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "North by Northwest",
+        "duration": 136,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Gold Rush",
+        "duration": 95,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Catch Me If You Can",
+        "duration": 141,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime"
+        ]
+    },
+    {
+        "title": "Ugetsu",
+        "duration": 96,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Andrei Rublev",
+        "duration": 205,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Mirror",
+        "duration": 106,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Castle in the Sky",
+        "duration": 125,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Toy Story",
+        "duration": 81,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Kill Bill: Vol. 1",
+        "duration": 111,
+        "platforms": [
+            "Tivify"
+        ]
+    },
+    {
+        "title": "Before Sunrise",
+        "duration": 101,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Kitbull",
+        "duration": 9,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Nobody Knows",
+        "duration": 141,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "La Notte",
+        "duration": 122,
+        "platforms": [
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "The Hidden Fortress",
+        "duration": 139,
+        "platforms": [
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Three Men and a Leg",
+        "duration": 98,
+        "platforms": []
+    },
+    {
+        "title": "Chungking Express",
+        "duration": 103,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Castaway on the Moon",
+        "duration": 119,
+        "platforms": []
+    },
+    {
+        "title": "Trainspotting",
+        "duration": 94,
+        "platforms": []
+    },
+    {
+        "title": "Monster",
+        "duration": 125,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Pink Floyd: The Wall",
+        "duration": 95,
+        "platforms": []
+    },
+    {
+        "title": "The Boy and the Beast",
+        "duration": 119,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "Up",
+        "duration": 96,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Flamin' Hot",
+        "duration": 99,
+        "platforms": [
+            "Disney Plus",
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "The Red Shoes",
+        "duration": 133,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin",
+            "FlixOlé"
+        ]
+    },
+    {
+        "title": "Million Dollar Baby",
+        "duration": 132,
+        "platforms": [
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "Guardians of the Galaxy Vol. 3",
+        "duration": 150,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Death Note Relight 1: Visions of a God",
+        "duration": 131,
+        "platforms": []
+    },
+    {
+        "title": "The Way He Looks",
+        "duration": 96,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Sixth Sense",
+        "duration": 107,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Aliens",
+        "duration": 137,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Whisper of the Heart",
+        "duration": 111,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Jurassic Park",
+        "duration": 127,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "SkyShowtime",
+            "Tivify"
+        ]
+    },
+    {
+        "title": "Tel chi el telùn",
+        "duration": 120,
+        "platforms": []
+    },
+    {
+        "title": "The General",
+        "duration": 79,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Nausicaä of the Valley of the Wind",
+        "duration": 117,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Spider-Man: No Way Home",
+        "duration": 148,
+        "platforms": [
+            "Amazon Prime Video",
+            "Max"
+        ]
+    },
+    {
+        "title": "The Circus",
+        "duration": 72,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "The Treasure of the Sierra Madre",
+        "duration": 126,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Dersu Uzala",
+        "duration": 141,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Miracle in Cell No. 7",
+        "duration": 127,
+        "platforms": []
+    },
+    {
+        "title": "The Iron Giant",
+        "duration": 86,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Suzume",
+        "duration": 121,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads",
+            "Crunchyroll",
+            "Crunchyroll Amazon Channel"
+        ]
+    },
+    {
+        "title": "Ivan Vasilyevich Changes His Profession",
+        "duration": 93,
+        "platforms": []
+    },
+    {
+        "title": "No Country for Old Men",
+        "duration": 122,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime"
+        ]
+    },
+    {
+        "title": "Akira",
+        "duration": 124,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "A Man Escaped",
+        "duration": 101,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "The Great Escape",
+        "duration": 173,
+        "platforms": [
+            "MGM Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Rope",
+        "duration": 81,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Sanjuro",
+        "duration": 96,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Braveheart",
+        "duration": 177,
+        "platforms": [
+            "Disney Plus",
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "CODA",
+        "duration": 112,
+        "platforms": []
+    },
+    {
+        "title": "Farewell My Concubine",
+        "duration": 171,
+        "platforms": []
+    },
+    {
+        "title": "The Cure",
+        "duration": 97,
+        "platforms": []
+    },
+    {
+        "title": "Forgotten",
+        "duration": 108,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Blade Runner",
+        "duration": 118,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "Love Hurts",
+        "duration": 104,
+        "platforms": []
+    },
+    {
+        "title": "Raise the Red Lantern",
+        "duration": 125,
+        "platforms": []
+    },
+    {
+        "title": "12 Years a Slave",
+        "duration": 134,
+        "platforms": [
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "The Exterminating Angel",
+        "duration": 93,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "FlixOlé",
+            "FlixOlé Amazon Channel",
+            "Cultpix"
+        ]
+    },
+    {
+        "title": "Cries and Whispers",
+        "duration": 95,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Nobody",
+        "duration": 92,
+        "platforms": []
+    },
+    {
+        "title": "When Marnie Was There",
+        "duration": 103,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Close-Up",
+        "duration": 98,
+        "platforms": []
+    },
+    {
+        "title": "Gone with the Wind",
+        "duration": 233,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "Max"
+        ]
+    },
+    {
+        "title": "Ghost in the Shell",
+        "duration": 83,
+        "platforms": []
+    },
+    {
+        "title": "Pather Panchali",
+        "duration": 125,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Hoichoi"
+        ]
+    },
+    {
+        "title": "It's Such a Beautiful Day",
+        "duration": 62,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Ordet",
+        "duration": 125,
+        "platforms": []
+    },
+    {
+        "title": "Me Before You",
+        "duration": 110,
+        "platforms": [
+            "MGM Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "The Cranes Are Flying",
+        "duration": 97,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Raging Bull",
+        "duration": 129,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Postman",
+        "duration": 109,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Army of Shadows",
+        "duration": 145,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Don't Look Now... We're Being Shot At!",
+        "duration": 132,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Raiders of the Lost Ark",
+        "duration": 115,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime"
+        ]
+    },
+    {
+        "title": "Dallas Buyers Club",
+        "duration": 117,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Freedom Writers",
+        "duration": 123,
+        "platforms": []
+    },
+    {
+        "title": "Where Is The Friend's House?",
+        "duration": 83,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "About Time",
+        "duration": 123,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime"
+        ]
+    },
+    {
+        "title": "No Manches Frida 2: Paradise Lost",
+        "duration": 102,
+        "platforms": []
+    },
+    {
+        "title": "Batman: The Dark Knight Returns, Part 2",
+        "duration": 78,
+        "platforms": []
+    },
+    {
+        "title": "Amarcord",
+        "duration": 123,
+        "platforms": []
+    },
+    {
+        "title": "Heat",
+        "duration": 170,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Amélie",
+        "duration": 122,
+        "platforms": []
+    },
+    {
+        "title": "My Hero Academia: Two Heroes",
+        "duration": 96,
+        "platforms": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "A Trip to the Moon",
+        "duration": 15,
+        "platforms": []
+    },
+    {
+        "title": "Unforgiven",
+        "duration": 130,
+        "platforms": []
+    },
+    {
+        "title": "Where Hands Touch",
+        "duration": 122,
+        "platforms": []
+    },
+    {
+        "title": "Limelight",
+        "duration": 137,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Three Colors: Red",
+        "duration": 100,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Throne of Blood",
+        "duration": 108,
+        "platforms": [
+            "Filmin",
+            "Acontra Plus",
+            "Acontra Plus Amazon Channel"
+        ]
+    },
+    {
+        "title": "Inside Out",
+        "duration": 95,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Children of Heaven",
+        "duration": 88,
+        "platforms": []
+    },
+    {
+        "title": "What Ever Happened to Baby Jane?",
+        "duration": 135,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Cabinet of Dr. Caligari",
+        "duration": 76,
+        "platforms": []
+    },
+    {
+        "title": "A Street Cat Named Bob",
+        "duration": 103,
+        "platforms": []
+    },
+    {
+        "title": "Ne Zha",
+        "duration": 110,
+        "platforms": []
+    },
+    {
+        "title": "Chinatown",
+        "duration": 130,
+        "platforms": []
+    },
+    {
+        "title": "The Third Man",
+        "duration": 105,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin",
+            "MUBI"
+        ]
+    },
+    {
+        "title": "Tokyo Godfathers",
+        "duration": 92,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "On the Waterfront",
+        "duration": 108,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Titanic",
+        "duration": 194,
+        "platforms": [
+            "Disney Plus",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "My Father's Violin",
+        "duration": 112,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Guardians of the Galaxy",
+        "duration": 121,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Yi Yi",
+        "duration": 174,
+        "platforms": []
+    },
+    {
+        "title": "Mulan",
+        "duration": 88,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "In the Name of the Father",
+        "duration": 133,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Simone: Woman of the Century",
+        "duration": 140,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Boy Who Harnessed the Wind",
+        "duration": 113,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "duration": 152,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "Max"
+        ]
+    },
+    {
+        "title": "In This Corner of the World",
+        "duration": 130,
+        "platforms": []
+    },
+    {
+        "title": "Divorce Italian Style",
+        "duration": 104,
+        "platforms": [
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "La Strada",
+        "duration": 115,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "La La Land",
+        "duration": 129,
+        "platforms": [
+            "Movistar Plus+ Ficción Total ",
+            "SkyShowtime"
+        ]
+    },
+    {
+        "title": "Diabolique",
+        "duration": 117,
+        "platforms": [
+            "Acontra Plus"
+        ]
+    },
+    {
+        "title": "Remi, Nobody's Boy",
+        "duration": 109,
+        "platforms": [
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Dogman",
+        "duration": 115,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Dangal",
+        "duration": 161,
+        "platforms": []
+    },
+    {
+        "title": "Captain Fantastic",
+        "duration": 118,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "A Separation",
+        "duration": 123,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Dragon Ball Super: Super Hero",
+        "duration": 99,
+        "platforms": [
+            "Crunchyroll",
+            "Crunchyroll Amazon Channel"
+        ]
+    },
+    {
+        "title": "Ron's Gone Wrong",
+        "duration": 107,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "V for Vendetta",
+        "duration": 132,
+        "platforms": [
+            "Tivify"
+        ]
+    },
+    {
+        "title": "Faust",
+        "duration": 106,
+        "platforms": []
+    },
+    {
+        "title": "Return of the Jedi",
+        "duration": 132,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "La Maison en Petits Cubes",
+        "duration": 12,
+        "platforms": []
+    },
+    {
+        "title": "Persepolis",
+        "duration": 95,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Bad Genius",
+        "duration": 130,
+        "platforms": []
+    },
+    {
+        "title": "The Pursuit of Happyness",
+        "duration": 117,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "A Whisker Away",
+        "duration": 104,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Dragon Ball Super: Broly",
+        "duration": 99,
+        "platforms": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Mitchells vs. the Machines",
+        "duration": 110,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Coraline",
+        "duration": 100,
+        "platforms": []
+    },
+    {
+        "title": "Miraculous World: Shanghai – The Legend of Ladydragon",
+        "duration": 54,
+        "platforms": [
+            "Netflix",
+            "Disney Plus",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Gone Girl",
+        "duration": 149,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "The Notebook",
+        "duration": 123,
+        "platforms": [
+            "Netflix",
+            "Amazon Prime Video",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Rebecca",
+        "duration": 130,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "El Infierno",
+        "duration": 148,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Thirteen Lives",
+        "duration": 147,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Nimona",
+        "duration": 99,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Invisible Life",
+        "duration": 140,
+        "platforms": []
+    },
+    {
+        "title": "I'm No Longer Here",
+        "duration": 112,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Wish Dragon",
+        "duration": 99,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "The Greatest Showman",
+        "duration": 105,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "We Are the Nobles",
+        "duration": 108,
+        "platforms": []
+    },
+    {
+        "title": "Young Woman and the Sea",
+        "duration": 129,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "Justice League: The Flashpoint Paradox",
+        "duration": 75,
+        "platforms": []
+    },
+    {
+        "title": "Umberto D.",
+        "duration": 91,
+        "platforms": [
+            "Amazon Prime Video",
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "Winter Light",
+        "duration": 80,
+        "platforms": []
+    },
+    {
+        "title": "Roman Holiday",
+        "duration": 119,
+        "platforms": []
+    },
+    {
+        "title": "Argentina 1985",
+        "duration": 141,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Kill Bill: Vol. 2",
+        "duration": 136,
+        "platforms": [
+            "Tivify"
+        ]
+    },
+    {
+        "title": "An Egg Rescue",
+        "duration": 89,
+        "platforms": []
+    },
+    {
+        "title": "Ben-Hur",
+        "duration": 222,
+        "platforms": []
+    },
+    {
+        "title": "Wild Tales",
+        "duration": 122,
+        "platforms": []
+    },
+    {
+        "title": "The Battle of Algiers",
+        "duration": 121,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "La Jetée",
+        "duration": 28,
+        "platforms": [
+            "MUBI",
+            "MUBI Amazon Channel"
+        ]
+    },
+    {
+        "title": "The Night of the Hunter",
+        "duration": 93,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Sing Street",
+        "duration": 105,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Little Women",
+        "duration": 135,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Mamma Roma",
+        "duration": 110,
+        "platforms": [
+            "FlixOlé",
+            "FlixOlé Amazon Channel"
+        ]
+    },
+    {
+        "title": "Dancer in the Dark",
+        "duration": 140,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Mary and Max",
+        "duration": 92,
+        "platforms": [
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "Young Frankenstein",
+        "duration": 106,
+        "platforms": []
+    },
+    {
+        "title": "Vincent",
+        "duration": 6,
+        "platforms": []
+    },
+    {
+        "title": "Paper Moon",
+        "duration": 102,
+        "platforms": []
+    },
+    {
+        "title": "Perfect Strangers",
+        "duration": 97,
+        "platforms": []
+    },
+    {
+        "title": "Just Mercy",
+        "duration": 137,
+        "platforms": [
+            "Netflix",
+            "Netflix basic with Ads"
+        ]
+    },
+    {
+        "title": "Downfall",
+        "duration": 155,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Fargo",
+        "duration": 98,
+        "platforms": [
+            "Amazon Prime Video",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "A Bronx Tale",
+        "duration": 121,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "The Miracle Worker",
+        "duration": 106,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Mr. Smith Goes to Washington",
+        "duration": 129,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total "
+        ]
+    },
+    {
+        "title": "A Beautiful Mind",
+        "duration": 135,
+        "platforms": [
+            "Amazon Prime Video"
+        ]
+    },
+    {
+        "title": "Finch",
+        "duration": 115,
+        "platforms": [
+            "Apple TV Plus"
+        ]
+    },
+    {
+        "title": "The Cameraman",
+        "duration": 74,
+        "platforms": []
+    },
+    {
+        "title": "Shoplifters",
+        "duration": 120,
+        "platforms": [
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "The Witch: Part 1. The Subversion",
+        "duration": 125,
+        "platforms": [
+            "Kocowa"
+        ]
+    },
+    {
+        "title": "Sing 2",
+        "duration": 110,
+        "platforms": []
+    },
+    {
+        "title": "Scooby-Doo! Camp Scare",
+        "duration": 72,
+        "platforms": [
+            "Max"
+        ]
+    },
+    {
+        "title": "Her",
+        "duration": 126,
+        "platforms": [
+            "Amazon Prime Video",
+            "Movistar Plus+",
+            "Movistar Plus+ Ficción Total ",
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Werckmeister Harmonies",
+        "duration": 139,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Isle of Dogs",
+        "duration": 101,
+        "platforms": [
+            "Disney Plus"
+        ]
+    },
+    {
+        "title": "My Way",
+        "duration": 137,
+        "platforms": []
+    },
+    {
+        "title": "Grand Illusion",
+        "duration": 114,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Stand by Me",
+        "duration": 89,
+        "platforms": [
+            "Filmin"
+        ]
+    },
+    {
+        "title": "Redeeming Love",
+        "duration": 134,
+        "platforms": []
+    },
+    {
+        "title": "Tampopo",
+        "duration": 115,
+        "platforms": []
     }
 ]

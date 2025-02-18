@@ -136,8 +136,8 @@ def getAndSaveMovie(cantidad, archivo_salida):
     saveJson(archivo_salida, movieDuration)
     print(f"Datos guardados en {archivo_salida}.")
 
-#getAndSaveMovie(200, "movies.json")
-getAndSaveSeries(250, "series.json")
+#getAndSaveMovie(500, "movies.json")
+getAndSaveSeries(500, "series.json")
 
 
 

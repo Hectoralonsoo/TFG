@@ -1,56 +1,21 @@
 {
-    "Amazon Prime Video": {
-        "Standard": 0
-    },
-    "Apple TV+": {
-        "Standard": 1
-    },
-    "Paramount+": {
-        "Standard": 2
-    },
-    "Crunchyroll": {
-        "Fan": 3,
-        "Mega Fan": 4
-    },
-    "YouTube Premium": {
-        "Individual": 5,
-        "Family": 6,
-        "Student": 7
-    },
-    "Discovery+": {
-        "Standard": 8
-    },
-    "HBO Max": {
-        "Standard": 9,
-        "Mobile": 10
-    },
-    "Starz": {
-        "Standard": 11
-    },
-    "Peacock": {
-        "Free": 12,
-        "Premium": 13,
-        "Premium Plus": 14
-    },
-    "DAZN": {
-        "Standard": 15,
-        "Premium": 16
-    },
-    "Netflix": {
-        "Basic": 17,
-        "Standard": 18,
-        "Premium": 19
-    },
-    "Hulu": {
-        "Basic": 20,
-        "Standard": 21,
-        "Premium": 22
-    },
-    "Star+": {
-        "Standard": 23,
-        "Premium": 24
-    },
-    "Rakuten TV": {
-        "Pay-Per-View": 25
-    }
+    "Acontra Plus": 1,
+    "Amazon Prime Video": 2,
+    "Apple TV Plus": 3,
+    "Atres Player": 4,
+    "Crunchyroll": 5,
+    "Disney Plus": 6,
+    "FilmBox+": 7,
+    "Filmin": 8,
+    "FlixOlé": 9,
+    "Kocowa": 10,
+    "Max": 11,
+    "Movistar Plus+": 12,
+    "Movistar Plus+ Ficción Total ": 13,
+    "Netflix": 14,
+    "Netflix basic with Ads": 15,
+    "SkyShowtime": 16,
+    "Tivify": 17,
+    "YouTube Premium": 18,
+    "fuboTV": 19
 }
