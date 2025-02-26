@@ -114,6 +114,11 @@
     "precio": 19,
     "perfiles": 2
   },
+  "MUBI":{
+    "plan": "MUBI Mensual",
+    "precio": 9.99,
+    "perfiles": 2
+  },
   "Netflix": {
     "planes": [
       {
