@@ -43,7 +43,8 @@ def generate_user(user_id, max_movies=10, max_series=10):
         user_id=user_id,
         monthly_minutes=monthly_minutes,
         movies=[],
-        series=[]
+        series=[],
+        months = []
     )
 
     # Agregar preferencias con interés y plataformas disponibles para películas
@@ -97,6 +98,7 @@ def save_users_to_json(users, filename):
             "monthly_minutes": user.monthly_minutes,
             "movies": user.movies,
             "series": user.series,
+            "months": user.months
         }
         users_data.append(user_data)
 
