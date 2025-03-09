@@ -24,14 +24,14 @@ platforms = list(streaming_plans.keys())
 
 
 # Helper functions
-def generate_user(user_id, max_movies=10, max_series=10):
+def generate_user(user_id, max_movies=30, max_series=15):
     # Filtrar películas y series que tengan al menos una plataforma disponible
     available_movies = [m for m in movies if m["platforms"]]
     available_series = [s for s in series if s["platforms"]]
 
     # Seleccionar aleatoriamente solo de las disponibles
     selected_movies = random.sample(available_movies, k=random.randint(1, min(max_movies, len(available_movies))))
-    selected_series = random.sample(available_series, k=random.randint(0, min(max_series, len(available_series))))
+    selected_series = random.sample(available_series, k=random.randint(1, min(max_series, len(available_series))))
 
     # Calcular minutos de visualización mensual (base ±50%)
     base_minutes = 1800
@@ -52,6 +52,7 @@ def generate_user(user_id, max_movies=10, max_series=10):
         interest = round(random.uniform(0.5, 1.0), 2)
         user.movies.append({
             "title": movie["title"],
+            "movie_duration":movie["duration"],
             "platforms": movie["platforms"],
             "interest": interest
         })
@@ -79,6 +80,7 @@ def generate_user(user_id, max_movies=10, max_series=10):
         user.series.append({
             "title": serie["title"],
             "season": selected_seasons,
+          #  "season_duration":season ["season_duration"],
             "platforms": serie["platforms"],
             "interest": interest
         })
@@ -86,7 +88,7 @@ def generate_user(user_id, max_movies=10, max_series=10):
     return user
 
 # Generate 100 users
-users = [generate_user(user_id) for user_id in range(1, 101)]
+users = [generate_user(user_id) for user_id in range(1, 11)]
 
 # Save to JSON
 def save_users_to_json(users, filename):
