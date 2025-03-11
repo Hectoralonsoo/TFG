@@ -1,20 +1,20 @@
 {
-  "Acontra Plus": {
+  "1": {
     "plan": "Mensual Basica",
     "precio": 7.99,
     "perfiles": 5
   },
-  "Amazon Prime Video": {
+  "2": {
     "plan": "Suscripción mensual",
     "precio": 4.99,
     "perfiles": 6
   },
-  "Apple TV Plus": {
+  "3": {
     "plan": "Suscripción mensual",
     "precio": 9.99,
     "perfiles": 5
   },
-  "Atres Player": {
+  "4": {
      "planes": [
       {
         "plan": "Premium",
@@ -28,7 +28,7 @@
       }
     ]
   },
-  "Crunchyroll": {
+  "5": {
     "planes": [
       {
         "plan": "Fan",
@@ -42,7 +42,7 @@
       }
     ]
   },
-  "Disney Plus": {
+  "6": {
     "planes": [
       {
         "plan": "Estándar con anuncios",
@@ -61,17 +61,17 @@
       }
     ]
   },
-  "Filmin": {
+  "7": {
     "plan": "Suscripción mensual",
     "precio": 9.99,
     "perfiles": 1
   },
-  "FlixOlé": {
+  "8": {
     "plan": "Suscripción mensual",
     "precio": 3.99,
     "perfiles": 4
   },
-  "Kocowa": {
+  "9": {
     "planes": [
       {
         "plan": "Basic",
@@ -85,7 +85,7 @@
       }
     ]
   },
-  "Max": {
+  "10": {
     "planes": [
       {
         "plan": "Básico con anuncios",
@@ -104,22 +104,22 @@
       }
     ]
   },
-  "Movistar Plus+": {
+  "11": {
     "plan": "Movistar Plus+",
     "precio": 9.99,
     "perfiles": 2
   },
-  "Movistar Plus+ Ficción Total": {
+  "12": {
     "plan": "Movistar Plus+ Ficción Total",
     "precio": 19,
     "perfiles": 2
   },
-  "MUBI":{
+  "13":{
     "plan": "MUBI Mensual",
     "precio": 9.99,
     "perfiles": 2
   },
-  "Netflix": {
+  "14": {
     "planes": [
       {
         "plan": "Estándar",
@@ -133,12 +133,12 @@
       }
     ]
   },
-  "Netflix basic with Ads": {
+  "15": {
     "plan": "Suscripción mensual",
     "precio": 6.99,
     "perfiles": 2
   },
-  "SkyShowtime": {
+  "16": {
     "planes": [
       {
         "plan": "Estándar con anuncios",
@@ -157,7 +157,7 @@
       }
     ]
   },
-  "Tivify": {
+  "17": {
     "planes": [
       {
         "plan": "Tivify Plus",
@@ -171,7 +171,7 @@
       }
     ]
   },
-  "fuboTV": {
+  "18": {
     "plan": "Plan latino",
     "precio": 9.99,
     "perfiles": 2

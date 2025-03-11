@@ -88,7 +88,7 @@ def generate_user(user_id, max_movies=30, max_series=15):
     return user
 
 # Generate 100 users
-users = [generate_user(user_id) for user_id in range(1, 11)]
+users = [generate_user(user_id) for user_id in range(1, 17)]
 
 # Save to JSON
 def save_users_to_json(users, filename):

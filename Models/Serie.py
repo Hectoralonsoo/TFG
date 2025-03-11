@@ -27,9 +27,8 @@ class Season:
 
 
 class Serie(Content.content):
-    def __init__(self, title, streaming_services, seasons):
+    def __init__(self, title, seasons):
         super().__init__(title)
-        self.streaming_services = streaming_services
         self.seasons = seasons  # List of Season objects
 
     def __str__(self):

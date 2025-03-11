@@ -7,11 +7,18 @@ api_key = "d566937910f1e5247e09d2f97385dd0a"
 # URL base
 base_url = "https://api.themoviedb.org/3"
 
+with open("indice_plataformas.json", "r", encoding="utf-8") as file:
+    platform_name_to_id = json.load(file)
+
+def convert_platforms_to_ids(platform_names):
+    return [int(id) for id, name in platform_name_to_id.items() if name in platform_names]
+
 def getSeasonStreamingProviders(serie_id, season_number, country_code='ES'):
     url = f"{base_url}/tv/{serie_id}/season/{season_number}/watch/providers?api_key={api_key}"
     response = requests.get(url).json()
     providers = response.get("results", {}).get(country_code, {}).get("flatrate", [])
-    return [provider["provider_name"] for provider in providers]
+    platform_names =  [provider["provider_name"] for provider in providers]
+    return convert_platforms_to_ids(platform_names)
 
 def getBestMovies(cantidad):
     peliculas = []
@@ -78,7 +85,8 @@ def getStreamingProviders(media_type, media_id, country_code):
     url = f"{base_url}/{media_type}/{media_id}/watch/providers?api_key={api_key}"
     response = requests.get(url).json()
     providers = response.get("results", {}).get(country_code, {}).get("flatrate", [])
-    return [provider["provider_name"] for provider in providers]
+    platform_names = [provider["provider_name"] for provider in providers]
+    return convert_platforms_to_ids(platform_names)
 
 # Obtener la duración total de las temporadas de una serie
 def getSeasonDuration(serie_id):
@@ -109,9 +117,12 @@ def getSeasonDuration(serie_id):
 
 def getAndSaveSeries(cantidad, archivo_salida):
     mejores_series = getBestSeries(cantidad)
+    i = 0
     series_duracion = []
     for serie in mejores_series:
+        print(i)
         duraciones_temporadas = getSeasonDuration(serie["id"])
+        i = i+1
         streaming_services = getStreamingProviders("tv", serie["id"], "ES")
         series_duracion.append({
             "title": serie["name"],
@@ -124,9 +135,12 @@ def getAndSaveSeries(cantidad, archivo_salida):
 
 def getAndSaveMovie(cantidad, archivo_salida):
     bestMovies = getBestMovies(cantidad)
+    i = 0
     movieDuration = []
     for movie in bestMovies:
+        print(i)
         duracion = getMovieDuration(movie["id"])
+        i = i+1
         streaming_services = getStreamingProviders("movie", movie["id"], "ES")
         movieDuration.append({
             "title": movie["title"],
@@ -136,8 +150,8 @@ def getAndSaveMovie(cantidad, archivo_salida):
     saveJson(archivo_salida, movieDuration)
     print(f"Datos guardados en {archivo_salida}.")
 
-#getAndSaveMovie(500, "movies.json")
-getAndSaveSeries(500, "series.json")
+getAndSaveMovie(200, "movies.json")
+getAndSaveSeries(200, "series.json")
 
 
 

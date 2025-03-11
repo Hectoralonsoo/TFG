@@ -1,5 +1,5 @@
 {
-    "Netflix": {
+    "14": {
         "Breaking Bad": {
             "Season 1": 352,
             "Season 2": 623,
@@ -7,15 +7,15 @@
             "Season 4": 619,
             "Season 5": 777
         },
-        "Dan Da Dan": {
-            "Season 1": 288
-        },
         "Arcane": {
             "Season 1": 379,
-            "Season 2": 378
+            "Season 2": 379
         },
-        "Twenty Five Twenty One": {
-            "Season 1": 1224
+        "Frieren: Beyond Journey's End": {
+            "Season 1": 701
+        },
+        "Dan Da Dan": {
+            "Season 1": 288
         },
         "Avatar: The Last Airbender": {
             "Book One: Water": 487,
@@ -49,10 +49,6 @@
             "New Challenger": 624,
             "Rising": 600
         },
-        "Alchemy of Souls": {
-            "Part 1": 1501,
-            "Part 2: Light & Shadow": 787
-        },
         "Demon Slayer: Kimetsu no Yaiba": {
             "Tanjiro Kamado, Unwavering Resolve": 598,
             "Mugen Train": 167,
@@ -62,8 +58,8 @@
             "Season 1": 1488
         },
         "Regular Show": {
-            "Season 1": 132,
-            "Season 2": 308,
+            "Season 1": 127,
+            "Season 2": 307,
             "Season 3": 440
         },
         "Haikyu!!": {
@@ -72,19 +68,16 @@
             "Karasuno High School vs Shiratorizawa Academy": 240,
             "TO THE TOP": 600
         },
-        "Heartstopper": {
-            "Season 1": 234,
-            "Season 2": 283,
-            "Season 3": 284
-        },
         "Stranger Things": {
             "Season 1": 398,
             "Stranger Things 2": 467,
             "Stranger Things 3": 451,
             "Stranger Things 4": 778
         },
-        "Crash Landing on You": {
-            "Season 1": 1369
+        "Heartstopper": {
+            "Season 1": 234,
+            "Season 2": 283,
+            "Season 3": 284
         },
         "Neon Genesis Evangelion": {
             "Season 1": 650
@@ -99,15 +92,18 @@
             "Season 7": 1010,
             "Season 8": 967
         },
-        "Jujutsu Kaisen": {
-            "Season 1": 1130
-        },
         "KONOSUBA - God's blessing on this wonderful world!": {
             "Season 1": 240,
             "Season 2": 240
         },
-        "Tomorrow": {
-            "Season 1": 970
+        "Jujutsu Kaisen": {
+            "Season 1": 1130
+        },
+        "Scissor Seven": {
+            "Season 1": 151,
+            "Season 2": 165,
+            "Season 3": 176,
+            "Season 4": 162
         },
         "JoJo's Bizarre Adventure": {
             "Phantom Blood & Battle Tendency": 623,
@@ -127,11 +123,17 @@
             "Season 8": 528,
             "Season 9": 591
         },
-        "Scissor Seven": {
-            "Season 1": 151,
-            "Season 2": 165,
-            "Season 3": 176,
-            "Season 4": 162
+        "Band of Brothers": {
+            "Miniseries": 622
+        },
+        "SPY x FAMILY": {
+            "Season 1": 600,
+            "Season 2": 288
+        },
+        "Dr. STONE": {
+            "Season 1": 576,
+            "Stone Wars": 264,
+            "New World": 528
         },
         "BoJack Horseman": {
             "Season 1": 302,
@@ -141,24 +143,8 @@
             "Season 5": 313,
             "Season 6": 420
         },
-        "SPY x FAMILY": {
-            "Season 1": 600,
-            "Season 2": 288
-        },
-        "It's Okay to Not Be Okay": {
-            "Season 1": 1230
-        },
-        "Band of Brothers": {
-            "Miniseries": 622
-        },
-        "Dr. STONE": {
-            "Season 1": 576,
-            "Stone Wars": 264,
-            "New World": 528
-        },
-        "Our Planet": {
-            "Our Planet": 404,
-            "Our Planet II": 197
+        "BLUE EYE SAMURAI": {
+            "Season 1": 383
         },
         "Naruto Shippūden": {
             "Kazekage Rescue": 736,
@@ -175,29 +161,27 @@
             "Nine-Tailed Fox Taming and Karmic Encounters": 759,
             "The Seven Shinobi Swordsman": 460
         },
-        "The Umbrella Academy": {
-            "Season 1": 557,
-            "Season 2": 477,
-            "Season 3": 492,
-            "Season 4": 342
+        "Batman: The Animated Series": {
+            "Season 1": 1320
+        },
+        "The Rising of the Shield Hero": {
+            "Season 1": 623,
+            "Season 2": 312
+        },
+        "Alchemy of Souls": {
+            "Part 1": 1501,
+            "Part 2: Light & Shadow": 787
         },
         "Young Royals": {
             "Season 1": 275,
             "Season 2": 269,
             "Season 3": 291
         },
-        "The Rising of the Shield Hero": {
-            "Season 1": 623,
-            "Season 2": 312
-        },
-        "BLUE EYE SAMURAI": {
-            "Season 1": 383
-        },
-        "My Demon": {
-            "Limited Series": 1051
-        },
-        "Batman: The Animated Series": {
-            "Season 1": 1320
+        "The Umbrella Academy": {
+            "Season 1": 557,
+            "Season 2": 477,
+            "Season 3": 492,
+            "Season 4": 343
         },
         "Peaky Blinders": {
             "Series 1": 338,
@@ -207,11 +191,15 @@
             "Series 5": 348,
             "Series 6": 365
         },
-        "Business Proposal": {
-            "Season 1": 732
+        "It's Okay to Not Be Okay": {
+            "Season 1": 1230
         },
         "Cowboy Bebop": {
             "Season 1": 650
+        },
+        "Our Planet": {
+            "Our Planet": 404,
+            "Our Planet II": 197
         },
         "Vincenzo": {
             "Season 1": 1654
@@ -226,6 +214,9 @@
         "Berserk": {
             "Season 1": 597
         },
+        "Crash Landing on You": {
+            "Season 1": 1369
+        },
         "Adventure Time": {
             "Season 1": 286,
             "Season 2": 286,
@@ -236,11 +227,14 @@
             "Season 1": 552,
             "Season 2": 361
         },
-        "Extraordinary Attorney Woo": {
-            "Season 1": 1134
+        "My Holo Love": {
+            "Season 1": 641
         },
-        "The Glory": {
-            "Season 1": 847
+        "Business Proposal": {
+            "Season 1": 732
+        },
+        "My Love Story!!": {
+            "Season 1": 576
         },
         "The Good Doctor": {
             "Season 1": 774,
@@ -250,6 +244,20 @@
             "Season 5": 774,
             "Season 6": 950
         },
+        "Extraordinary Attorney Woo": {
+            "Season 1": 1134
+        },
+        "Kuroko's Basketball": {
+            "Season 1": 600,
+            "Season 2": 600,
+            "Season 3": 600
+        },
+        "Cyberpunk: Edgerunners": {
+            "Season 1": 265
+        },
+        "Violet Evergarden": {
+            "Season 1": 312
+        },
         "She-Ra and the Princesses of Power": {
             "Season 1": 312,
             "Season 2": 168,
@@ -257,32 +265,30 @@
             "Season 4": 312,
             "Season 5": 312
         },
-        "Kuroko's Basketball": {
-            "Season 1": 600,
-            "Season 2": 600,
-            "Season 3": 600
-        },
-        "My Love Story!!": {
-            "Season 1": 576
-        },
-        "Violet Evergarden": {
-            "Season 1": 312
-        },
-        "The Queen's Gambit": {
-            "Limited Series": 395
-        },
         "BEASTARS": {
             "Season 1": 276,
             "Season 2": 276,
-            "Final Season": 276
+            "Final Season": 288
         },
         "The Quintessential Quintuplets": {
             "Season 1": 288,
             "Season 2": 288
         },
+        "The Queen's Gambit": {
+            "Limited Series": 395
+        },
+        "My Demon": {
+            "Limited Series": 1051
+        },
         "Record of Ragnarok": {
             "Season 1": 288,
             "Record of Ragnarok II": 376
+        },
+        "Tomorrow": {
+            "Season 1": 970
+        },
+        "The Glory": {
+            "Season 1": 847
         },
         "Lucifer": {
             "Season 1": 542,
@@ -302,395 +308,9 @@
             "Part 1": 623,
             "Part 2": 310,
             "Part 3": 310
-        },
-        "Riverdale": {
-            "Season 1": 562,
-            "Season 2": 946,
-            "Season 3": 942,
-            "Season 4": 814,
-            "Season 5": 819,
-            "Season 6": 935,
-            "Season 7": 863
-        },
-        "Wednesday": {
-            "Season 1": 413
-        },
-        "The Resident": {
-            "Season 1": 588,
-            "Season 2": 966,
-            "Season 3": 840,
-            "Season 4": 588,
-            "Season 5": 1007,
-            "Season 6": 582
-        },
-        "The Seven Deadly Sins": {
-            "The Seven Deadly Sins": 576,
-            "Revival of the Commandments": 576,
-            "Imperial Wrath of the Gods": 576,
-            "Dragon's Judgement": 576
-        },
-        "Steins;Gate": {
-            "Season 1": 576
-        },
-        "From Me to You: Kimi ni Todoke": {
-            "Season 1": 575,
-            "Season 2": 276,
-            "Season 3": 336
-        },
-        "Dark": {
-            "Season 1": 503,
-            "Season 2": 453,
-            "Season 3": 509
-        },
-        "Assassination Classroom": {
-            "Season 1": 528,
-            "Season 2": 600
-        },
-        "The Ancient Magus' Bride": {
-            "Season 2": 576
-        },
-        "Club de Cuervos": {
-            "Season 1": 538,
-            "Season 2": 422,
-            "Season 3": 452,
-            "Season 4": 662
-        },
-        "One-Punch Man": {
-            "Season 1": 288,
-            "Season 2": 288
-        },
-        "Oshi No Ko": {
-            "Season 1": 650
-        },
-        "The Way of the Househusband": {
-            "Season 1": 178,
-            "Season 2": 88
-        },
-        "Tear Along the Dotted Line": {
-            "Miniseries": 121
-        },
-        "Komi Can't Communicate": {
-            "Season 1": 576
-        },
-        "The Uncanny Counter": {
-            "Season 1": 1020,
-            "Season 2: Counter Punch": 821
-        },
-        "Young Justice": {
-            "Season 1": 576,
-            "Invasion": 440,
-            "Outsiders": 586
-        },
-        "Outer Banks": {
-            "Season 1": 507,
-            "Season 2": 492,
-            "Season 3": 534,
-            "Season 4": 538
-        },
-        "Code Geass: Lelouch of the Rebellion": {
-            "R1": 625,
-            "R2": 625
-        },
-        "KENGAN ASHURA": {
-            "Season 1": 605,
-            "Season 2": 700
-        },
-        "Naruto": {
-            "Season 1": 1248,
-            "Season 2": 1248,
-            "Season 3": 1296,
-            "Season 4": 1488
-        },
-        "Lookism": {
-            "Season 1": 204
-        },
-        "Star Trek: The Next Generation": {
-            "Season 1": 1195,
-            "Season 2": 1011,
-            "Season 3": 1196,
-            "Season 4": 1196,
-            "Season 5": 1196,
-            "Season 6": 1179,
-            "Season 7": 1172
-        },
-        "Parasyte -the maxim-": {
-            "Season 1": 552
-        },
-        "Queen of Tears": {
-            "Season 1": 1418
-        },
-        "A Love So Beautiful": {
-            "Season 1": 555
-        },
-        "On My Block": {
-            "Season 1": 284,
-            "Season 2": 286,
-            "Season 3": 249,
-            "Season 4": 304
-        },
-        "Bloodhounds": {
-            "Season 1": 484
-        },
-        "Dorohedoro": {
-            "Season 1": 288
-        },
-        "Dragons: Race to the Edge": {
-            "Season 1": 286,
-            "Season 2": 299,
-            "Season 3": 299,
-            "Season 4": 299,
-            "Season 5": 299,
-            "Season 6": 299
-        },
-        "Tokyo Ghoul": {
-            "Tokyo Ghoul": 290,
-            "Tokyo Ghoul √A": 288,
-            "Tokyo Ghoul:re": 288
-        },
-        "The Disastrous Life of Saiki K.": {
-            "Season 1": 552,
-            "Season 2": 552
-        },
-        "BNA": {
-            "Season 1": 287
-        },
-        "The King: Eternal Monarch": {
-            "Season 1": 1175
-        },
-        "Love Alarm": {
-            "Season 1": 395,
-            "Season 2": 337
-        },
-        "Black Mirror": {
-            "Season 1": 157,
-            "Season 3": 388,
-            "Season 4": 355,
-            "Season 5": 202,
-            "Season 6": 315
-        },
-        "All of Us Are Dead": {
-            "Season 1": 735
-        },
-        "Merlí. Sapere Aude": {
-            "Season 1": 374,
-            "Season 2": 364
-        },
-        "The King's Affection": {
-            "Season 1": 1327
-        },
-        "High-Rise Invasion": {
-            "Season 1": 300
-        },
-        "Line of Duty": {
-            "Series 5": 374
-        },
-        "Henry Danger": {
-            "Season 4": 486
-        },
-        "Seinfeld": {
-            "Season 1": 115,
-            "Season 2": 276,
-            "Season 3": 538,
-            "Season 4": 604,
-            "Season 5": 524,
-            "Season 6": 579,
-            "Season 7": 595,
-            "Season 8": 512,
-            "Season 9": 617
-        },
-        "Sweet Home": {
-            "Season 1": 519,
-            "Season 3": 425
-        },
-        "Castlevania": {
-            "Season 1": 95,
-            "Season 2": 208,
-            "Season 3": 266,
-            "Season 4": 268
-        },
-        "Boys Over Flowers": {
-            "Season 1": 1628
-        },
-        "Sonic Prime": {
-            "Season 1": 227,
-            "Season 2": 198,
-            "Season 3": 173
-        },
-        "My First First Love": {
-            "Season 1": 408,
-            "Season 2": 374
-        },
-        "Start-Up": {
-            "Season 1": 1298
-        },
-        "The Last Kingdom": {
-            "Season 1": 470,
-            "Season 2": 467,
-            "Season 3": 535,
-            "Season 4": 538,
-            "Season 5": 549
-        },
-        "Love, Death & Robots": {
-            "Volume 1": 245,
-            "Volume 2": 113,
-            "Volume 3": 138
-        },
-        "The Dragon Prince": {
-            "Book 1: Moon": 236,
-            "Book 2: Sky": 241,
-            "Book 3: Sun": 249,
-            "Book 4: Earth": 253,
-            "Book 5: Ocean": 252,
-            "Book 6: Stars": 254,
-            "Book 7: Dark": 251
-        },
-        "The Midnight Gospel": {
-            "Season 1": 208
-        },
-        "Sex Education": {
-            "Season 1": 399,
-            "Season 2": 417,
-            "Season 3": 452,
-            "Season 4": 485
-        },
-        "Kipo and the Age of Wonderbeasts": {
-            "Season 1": 240,
-            "Season 2": 230,
-            "Season 3": 230
-        },
-        "My Name": {
-            "Miniseries": 395
-        },
-        "When They See Us": {
-            "Limited Series": 300
-        },
-        "Suits": {
-            "Season 1": 551,
-            "Season 2": 675,
-            "Season 3": 699,
-            "Season 4": 692,
-            "Season 5": 689,
-            "Season 6": 678,
-            "Season 7": 694,
-            "Season 8": 686,
-            "Season 9": 436
-        },
-        "The Last Dance": {
-            "Miniseries": 505
-        },
-        "Scooby-Doo! Mystery Incorporated": {
-            "Season 1": 572,
-            "Season 2": 583
-        },
-        "Kingdom": {
-            "Season 1": 312,
-            "Season 2": 273
-        },
-        "Victorious": {
-            "Season 1": 478
-        },
-        "Gossip Girl": {
-            "Season 1": 756,
-            "Season 2": 1050,
-            "Season 3": 924,
-            "Season 4": 924,
-            "Season 5": 1008,
-            "Season 6": 420
-        },
-        "Brooklyn Nine-Nine": {
-            "Season 1": 482,
-            "Season 2": 504,
-            "Season 3": 497,
-            "Season 4": 476,
-            "Season 5": 483,
-            "Season 6": 396,
-            "Season 7": 284,
-            "Season 8": 224
-        },
-        "SHAMAN KING": {
-            "Season 1": 1248
-        },
-        "Ozark": {
-            "Season 1": 601,
-            "Season 2": 621,
-            "Season 3": 609,
-            "Season 4": 850
-        },
-        "Ouran High School Host Club": {
-            "Season 1": 601
-        },
-        "Control Z": {
-            "Season 1": 300,
-            "Season 2": 307,
-            "Season 3": 308
-        },
-        "The Crown": {
-            "Season 1": 590,
-            "Season 2": 598,
-            "Season 3": 538,
-            "Season 4": 549,
-            "Season 5": 535,
-            "Season 6": 531
-        },
-        "Dragon Ball DAIMA": {
-            "Season 1": 368
-        },
-        "Chilling Adventures of Sabrina": {
-            "Season 1": 1153,
-            "Season 2": 935
-        },
-        "Cobra Kai": {
-            "Season 1": 305,
-            "Season 2": 319,
-            "Season 3": 344,
-            "Season 4": 360,
-            "Season 5": 380,
-            "Season 6": 396
-        },
-        "Dinosaur King": {
-            "Season 1": 1461
-        },
-        "Dexter": {
-            "Season 1": 657,
-            "Season 2": 643,
-            "Season 3": 636,
-            "Season 4": 638,
-            "Season 5": 622,
-            "Season 6": 625,
-            "Season 7": 676,
-            "Season 8": 639
-        },
-        "Outlander": {
-            "Book One": 964,
-            "Book Two": 801,
-            "Book Three": 787,
-            "Book Four": 784,
-            "Book Five": 748,
-            "Season 6": 533
-        },
-        "King the Land": {
-            "Season 1": 1133
-        },
-        "Record of Youth": {
-            "Season 1": 1176
-        },
-        "El marginal": {
-            "Season 1": 780,
-            "Season 2": 480,
-            "Season 3": 480,
-            "Season 4": 480,
-            "Season 5": 285
-        },
-        "Formula 1: Drive to Survive": {
-            "Season 1": 354,
-            "Season 2": 359,
-            "Season 3": 406,
-            "Season 4": 413,
-            "Season 5": 386,
-            "Season 6": 449
         }
     },
-    "Netflix basic with Ads": {
+    "15": {
         "Breaking Bad": {
             "Season 1": 352,
             "Season 2": 623,
@@ -698,15 +318,15 @@
             "Season 4": 619,
             "Season 5": 777
         },
-        "Dan Da Dan": {
-            "Season 1": 288
-        },
         "Arcane": {
             "Season 1": 379,
-            "Season 2": 378
+            "Season 2": 379
         },
-        "Twenty Five Twenty One": {
-            "Season 1": 1224
+        "Frieren: Beyond Journey's End": {
+            "Season 1": 701
+        },
+        "Dan Da Dan": {
+            "Season 1": 288
         },
         "Avatar: The Last Airbender": {
             "Book One: Water": 487,
@@ -737,10 +357,6 @@
             "New Challenger": 624,
             "Rising": 600
         },
-        "Alchemy of Souls": {
-            "Part 1": 1501,
-            "Part 2: Light & Shadow": 787
-        },
         "Demon Slayer: Kimetsu no Yaiba": {
             "Tanjiro Kamado, Unwavering Resolve": 598,
             "Mugen Train": 167,
@@ -750,8 +366,8 @@
             "Season 1": 1488
         },
         "Regular Show": {
-            "Season 1": 132,
-            "Season 2": 308,
+            "Season 1": 127,
+            "Season 2": 307,
             "Season 3": 440
         },
         "Haikyu!!": {
@@ -760,19 +376,16 @@
             "Karasuno High School vs Shiratorizawa Academy": 240,
             "TO THE TOP": 600
         },
-        "Heartstopper": {
-            "Season 1": 234,
-            "Season 2": 283,
-            "Season 3": 284
-        },
         "Stranger Things": {
             "Season 1": 398,
             "Stranger Things 2": 467,
             "Stranger Things 3": 451,
             "Stranger Things 4": 778
         },
-        "Crash Landing on You": {
-            "Season 1": 1369
+        "Heartstopper": {
+            "Season 1": 234,
+            "Season 2": 283,
+            "Season 3": 284
         },
         "Neon Genesis Evangelion": {
             "Season 1": 650
@@ -787,15 +400,18 @@
             "Season 7": 1010,
             "Season 8": 967
         },
-        "Jujutsu Kaisen": {
-            "Season 1": 1130
-        },
         "KONOSUBA - God's blessing on this wonderful world!": {
             "Season 1": 240,
             "Season 2": 240
         },
-        "Tomorrow": {
-            "Season 1": 970
+        "Jujutsu Kaisen": {
+            "Season 1": 1130
+        },
+        "Scissor Seven": {
+            "Season 1": 151,
+            "Season 2": 165,
+            "Season 3": 176,
+            "Season 4": 162
         },
         "JoJo's Bizarre Adventure": {
             "Phantom Blood & Battle Tendency": 623,
@@ -815,11 +431,16 @@
             "Season 8": 528,
             "Season 9": 591
         },
-        "Scissor Seven": {
-            "Season 1": 151,
-            "Season 2": 165,
-            "Season 3": 176,
-            "Season 4": 162
+        "Band of Brothers": {
+            "Miniseries": 622
+        },
+        "SPY x FAMILY": {
+            "Season 1": 600
+        },
+        "Dr. STONE": {
+            "Season 1": 576,
+            "Stone Wars": 264,
+            "New World": 528
         },
         "BoJack Horseman": {
             "Season 1": 302,
@@ -829,23 +450,8 @@
             "Season 5": 313,
             "Season 6": 420
         },
-        "SPY x FAMILY": {
-            "Season 1": 600
-        },
-        "It's Okay to Not Be Okay": {
-            "Season 1": 1230
-        },
-        "Band of Brothers": {
-            "Miniseries": 622
-        },
-        "Dr. STONE": {
-            "Season 1": 576,
-            "Stone Wars": 264,
-            "New World": 528
-        },
-        "Our Planet": {
-            "Our Planet": 404,
-            "Our Planet II": 197
+        "BLUE EYE SAMURAI": {
+            "Season 1": 383
         },
         "Naruto Shippūden": {
             "Kazekage Rescue": 736,
@@ -862,29 +468,27 @@
             "Nine-Tailed Fox Taming and Karmic Encounters": 759,
             "The Seven Shinobi Swordsman": 460
         },
-        "The Umbrella Academy": {
-            "Season 1": 557,
-            "Season 2": 477,
-            "Season 3": 492,
-            "Season 4": 342
+        "Batman: The Animated Series": {
+            "Season 1": 1320
+        },
+        "The Rising of the Shield Hero": {
+            "Season 1": 623,
+            "Season 2": 312
+        },
+        "Alchemy of Souls": {
+            "Part 1": 1501,
+            "Part 2: Light & Shadow": 787
         },
         "Young Royals": {
             "Season 1": 275,
             "Season 2": 269,
             "Season 3": 291
         },
-        "The Rising of the Shield Hero": {
-            "Season 1": 623,
-            "Season 2": 312
-        },
-        "BLUE EYE SAMURAI": {
-            "Season 1": 383
-        },
-        "My Demon": {
-            "Limited Series": 1051
-        },
-        "Batman: The Animated Series": {
-            "Season 1": 1320
+        "The Umbrella Academy": {
+            "Season 1": 557,
+            "Season 2": 477,
+            "Season 3": 492,
+            "Season 4": 343
         },
         "Peaky Blinders": {
             "Series 1": 338,
@@ -894,11 +498,15 @@
             "Series 5": 348,
             "Series 6": 365
         },
-        "Business Proposal": {
-            "Season 1": 732
+        "It's Okay to Not Be Okay": {
+            "Season 1": 1230
         },
         "Cowboy Bebop": {
             "Season 1": 650
+        },
+        "Our Planet": {
+            "Our Planet": 404,
+            "Our Planet II": 197
         },
         "Vincenzo": {
             "Season 1": 1654
@@ -913,6 +521,9 @@
         "Berserk": {
             "Season 1": 597
         },
+        "Crash Landing on You": {
+            "Season 1": 1369
+        },
         "Adventure Time": {
             "Season 1": 286,
             "Season 2": 286,
@@ -923,11 +534,14 @@
             "Season 1": 552,
             "Season 2": 361
         },
-        "Extraordinary Attorney Woo": {
-            "Season 1": 1134
+        "My Holo Love": {
+            "Season 1": 641
         },
-        "The Glory": {
-            "Season 1": 847
+        "Business Proposal": {
+            "Season 1": 732
+        },
+        "My Love Story!!": {
+            "Season 1": 576
         },
         "The Good Doctor": {
             "Season 1": 774,
@@ -937,6 +551,20 @@
             "Season 5": 774,
             "Season 6": 950
         },
+        "Extraordinary Attorney Woo": {
+            "Season 1": 1134
+        },
+        "Kuroko's Basketball": {
+            "Season 1": 600,
+            "Season 2": 600,
+            "Season 3": 600
+        },
+        "Cyberpunk: Edgerunners": {
+            "Season 1": 265
+        },
+        "Violet Evergarden": {
+            "Season 1": 312
+        },
         "She-Ra and the Princesses of Power": {
             "Season 1": 312,
             "Season 2": 168,
@@ -944,31 +572,29 @@
             "Season 4": 312,
             "Season 5": 312
         },
-        "Kuroko's Basketball": {
-            "Season 1": 600,
-            "Season 2": 600,
-            "Season 3": 600
-        },
-        "My Love Story!!": {
-            "Season 1": 576
-        },
-        "Violet Evergarden": {
-            "Season 1": 312
-        },
-        "The Queen's Gambit": {
-            "Limited Series": 395
-        },
         "BEASTARS": {
             "Season 1": 276,
-            "Final Season": 276
+            "Final Season": 288
         },
         "The Quintessential Quintuplets": {
             "Season 1": 288,
             "Season 2": 288
         },
+        "The Queen's Gambit": {
+            "Limited Series": 395
+        },
+        "My Demon": {
+            "Limited Series": 1051
+        },
         "Record of Ragnarok": {
             "Season 1": 288,
             "Record of Ragnarok II": 376
+        },
+        "Tomorrow": {
+            "Season 1": 970
+        },
+        "The Glory": {
+            "Season 1": 847
         },
         "Lucifer": {
             "Season 1": 542,
@@ -988,385 +614,291 @@
             "Part 1": 623,
             "Part 2": 310,
             "Part 3": 310
-        },
-        "Riverdale": {
-            "Season 1": 562,
-            "Season 2": 946,
-            "Season 3": 942,
-            "Season 4": 814,
-            "Season 5": 819,
-            "Season 6": 935,
-            "Season 7": 863
-        },
-        "Wednesday": {
-            "Season 1": 413
-        },
-        "The Resident": {
-            "Season 1": 588,
-            "Season 2": 966,
-            "Season 3": 840,
-            "Season 4": 588,
-            "Season 5": 1007,
-            "Season 6": 582
-        },
-        "The Seven Deadly Sins": {
-            "The Seven Deadly Sins": 576,
-            "Revival of the Commandments": 576,
-            "Imperial Wrath of the Gods": 576,
-            "Dragon's Judgement": 576
-        },
-        "Steins;Gate": {
-            "Season 1": 576
-        },
-        "From Me to You: Kimi ni Todoke": {
-            "Season 1": 575,
-            "Season 2": 276,
-            "Season 3": 336
-        },
-        "Dark": {
-            "Season 1": 503,
-            "Season 2": 453,
-            "Season 3": 509
-        },
-        "Assassination Classroom": {
-            "Season 1": 528,
-            "Season 2": 600
-        },
-        "The Ancient Magus' Bride": {
-            "Season 2": 576
-        },
-        "Club de Cuervos": {
-            "Season 1": 538,
-            "Season 2": 422,
-            "Season 3": 452,
-            "Season 4": 662
-        },
-        "Oshi No Ko": {
-            "Season 1": 650
-        },
-        "The Way of the Househusband": {
-            "Season 1": 178,
-            "Season 2": 88
-        },
-        "Tear Along the Dotted Line": {
-            "Miniseries": 121
-        },
-        "Komi Can't Communicate": {
-            "Season 1": 576
-        },
-        "The Uncanny Counter": {
-            "Season 1": 1020,
-            "Season 2: Counter Punch": 821
-        },
-        "Young Justice": {
-            "Season 1": 576,
-            "Invasion": 440,
-            "Outsiders": 586
-        },
-        "Outer Banks": {
-            "Season 1": 507,
-            "Season 2": 492,
-            "Season 3": 534,
-            "Season 4": 538
-        },
-        "Code Geass: Lelouch of the Rebellion": {
-            "R1": 625,
-            "R2": 625
-        },
-        "KENGAN ASHURA": {
-            "Season 1": 605,
-            "Season 2": 700
-        },
-        "Naruto": {
-            "Season 1": 1248,
-            "Season 2": 1248,
-            "Season 3": 1296,
-            "Season 4": 1488
-        },
-        "Star Trek: The Next Generation": {
-            "Season 1": 1195,
-            "Season 2": 1011,
-            "Season 3": 1196,
-            "Season 4": 1196,
-            "Season 5": 1196,
-            "Season 6": 1179,
-            "Season 7": 1172
-        },
-        "Parasyte -the maxim-": {
-            "Season 1": 552
-        },
-        "Queen of Tears": {
-            "Season 1": 1418
-        },
-        "A Love So Beautiful": {
-            "Season 1": 555
-        },
-        "On My Block": {
-            "Season 1": 284,
-            "Season 2": 286,
-            "Season 3": 249,
-            "Season 4": 304
-        },
-        "Bloodhounds": {
-            "Season 1": 484
-        },
-        "Dorohedoro": {
-            "Season 1": 288
-        },
-        "Dragons: Race to the Edge": {
-            "Season 1": 286,
-            "Season 2": 299,
-            "Season 3": 299,
-            "Season 4": 299,
-            "Season 5": 299,
-            "Season 6": 299
-        },
-        "Tokyo Ghoul": {
-            "Tokyo Ghoul": 290,
-            "Tokyo Ghoul √A": 288,
-            "Tokyo Ghoul:re": 288
-        },
-        "The Disastrous Life of Saiki K.": {
-            "Season 1": 552,
-            "Season 2": 552
-        },
-        "BNA": {
-            "Season 1": 287
-        },
-        "The King: Eternal Monarch": {
-            "Season 1": 1175
-        },
-        "Love Alarm": {
-            "Season 1": 395,
-            "Season 2": 337
-        },
-        "Black Mirror": {
-            "Season 1": 157,
-            "Season 3": 388,
-            "Season 4": 355,
-            "Season 5": 202,
-            "Season 6": 315
-        },
-        "All of Us Are Dead": {
-            "Season 1": 735
-        },
-        "Merlí. Sapere Aude": {
-            "Season 1": 374,
-            "Season 2": 364
-        },
-        "The King's Affection": {
-            "Season 1": 1327
-        },
-        "High-Rise Invasion": {
-            "Season 1": 300
-        },
-        "Line of Duty": {
-            "Series 5": 374
-        },
-        "Henry Danger": {
-            "Season 4": 486
-        },
-        "Seinfeld": {
-            "Season 1": 115,
-            "Season 2": 276,
-            "Season 3": 538,
-            "Season 4": 604,
-            "Season 5": 524,
-            "Season 6": 579,
-            "Season 7": 595,
-            "Season 8": 512,
-            "Season 9": 617
-        },
-        "Sweet Home": {
-            "Season 1": 519,
-            "Season 3": 425
-        },
-        "Castlevania": {
-            "Season 1": 95,
-            "Season 2": 208,
-            "Season 3": 266,
-            "Season 4": 268
-        },
-        "Boys Over Flowers": {
-            "Season 1": 1628
-        },
-        "Sonic Prime": {
-            "Season 1": 227,
-            "Season 2": 198,
-            "Season 3": 173
-        },
-        "My First First Love": {
-            "Season 1": 408,
-            "Season 2": 374
-        },
-        "Start-Up": {
-            "Season 1": 1298
-        },
-        "The Last Kingdom": {
-            "Season 1": 470,
-            "Season 2": 467,
-            "Season 3": 535,
-            "Season 4": 538,
-            "Season 5": 549
-        },
-        "Love, Death & Robots": {
-            "Volume 1": 245,
-            "Volume 2": 113,
-            "Volume 3": 138
-        },
-        "The Dragon Prince": {
-            "Book 1: Moon": 236,
-            "Book 2: Sky": 241,
-            "Book 3: Sun": 249,
-            "Book 4: Earth": 253,
-            "Book 5: Ocean": 252,
-            "Book 6: Stars": 254,
-            "Book 7: Dark": 251
-        },
-        "The Midnight Gospel": {
-            "Season 1": 208
-        },
-        "Sex Education": {
-            "Season 1": 399,
-            "Season 2": 417,
-            "Season 3": 452,
-            "Season 4": 485
-        },
-        "My Name": {
-            "Miniseries": 395
-        },
-        "When They See Us": {
-            "Limited Series": 300
-        },
-        "Suits": {
-            "Season 1": 551,
-            "Season 2": 675,
-            "Season 3": 699,
-            "Season 4": 692,
-            "Season 5": 689,
-            "Season 6": 678,
-            "Season 7": 694,
-            "Season 8": 686,
-            "Season 9": 436
-        },
-        "The Last Dance": {
-            "Miniseries": 505
-        },
-        "Scooby-Doo! Mystery Incorporated": {
-            "Season 1": 572,
-            "Season 2": 583
-        },
-        "Kingdom": {
-            "Season 1": 312,
-            "Season 2": 273
-        },
-        "Victorious": {
-            "Season 1": 478
-        },
-        "Gossip Girl": {
-            "Season 1": 756,
-            "Season 2": 1050,
-            "Season 3": 924,
-            "Season 4": 924,
-            "Season 5": 1008,
-            "Season 6": 420
-        },
-        "Brooklyn Nine-Nine": {
-            "Season 1": 482,
-            "Season 2": 504,
-            "Season 3": 497,
-            "Season 4": 476,
-            "Season 5": 483,
-            "Season 6": 396,
-            "Season 7": 284,
-            "Season 8": 224
-        },
-        "SHAMAN KING": {
-            "Season 1": 1248
-        },
-        "Ozark": {
-            "Season 1": 601,
-            "Season 2": 621,
-            "Season 3": 609,
-            "Season 4": 850
-        },
-        "Ouran High School Host Club": {
-            "Season 1": 601
-        },
-        "Control Z": {
-            "Season 1": 300,
-            "Season 2": 307,
-            "Season 3": 308
-        },
-        "The Crown": {
-            "Season 1": 590,
-            "Season 2": 598,
-            "Season 3": 538,
-            "Season 4": 549,
-            "Season 5": 535,
-            "Season 6": 531
-        },
-        "Dragon Ball DAIMA": {
-            "Season 1": 368
-        },
-        "Chilling Adventures of Sabrina": {
-            "Season 1": 1153,
-            "Season 2": 935
-        },
-        "Cobra Kai": {
-            "Season 1": 305,
-            "Season 2": 319,
-            "Season 3": 344,
-            "Season 4": 360,
-            "Season 5": 380,
-            "Season 6": 396
-        },
-        "Dinosaur King": {
-            "Season 1": 1461
-        },
-        "Dexter": {
-            "Season 1": 657,
-            "Season 2": 643,
-            "Season 3": 636,
-            "Season 4": 638,
-            "Season 5": 622,
-            "Season 6": 625,
-            "Season 7": 676,
-            "Season 8": 639
-        },
-        "Outlander": {
-            "Book One": 964,
-            "Book Two": 801,
-            "Book Three": 787,
-            "Book Four": 784,
-            "Book Five": 748,
-            "Season 6": 533
-        },
-        "King the Land": {
-            "Season 1": 1133
-        },
-        "Record of Youth": {
-            "Season 1": 1176
-        },
-        "Formula 1: Drive to Survive": {
-            "Season 1": 354,
-            "Season 2": 359,
-            "Season 3": 406,
-            "Season 4": 413,
-            "Season 5": 386,
-            "Season 6": 449
         }
     },
-    "Amazon Prime Video": {
+    "10": {
+        "Adventure Time: Fionna & Cake": {
+            "Season 1": 254
+        },
+        "Rick and Morty": {
+            "Season 1": 244,
+            "Season 2": 228,
+            "Season 3": 230,
+            "Season 4": 227,
+            "Season 5": 225,
+            "Season 6": 223,
+            "Season 7": 230
+        },
+        "Chernobyl": {
+            "Miniseries": 331
+        },
+        "The Sopranos": {
+            "Season 1": 677,
+            "Season 2": 690,
+            "Season 3": 715,
+            "Season 4": 733,
+            "Season 5": 698,
+            "Season 6": 1139
+        },
+        "Regular Show": {
+            "Season 1": 127,
+            "Season 2": 307,
+            "Season 3": 440,
+            "Season 4": 440,
+            "Season 5": 440,
+            "Season 6": 341,
+            "Season 7": 429,
+            "Season 8": 341
+        },
+        "Primal": {
+            "Season 1": 225,
+            "Season 2": 225
+        },
+        "The Originals": {
+            "Season 1": 946,
+            "Season 2": 913,
+            "Season 3": 902,
+            "Season 4": 544,
+            "Season 5": 540
+        },
+        "The Wire": {
+            "Season 1": 767,
+            "Season 2": 710,
+            "Season 3": 709,
+            "Season 4": 786,
+            "Season 5": 626
+        },
+        "The Last of Us": {
+            "Season 1": 534
+        },
+        "Over the Garden Wall": {
+            "Season 1": 110
+        },
+        "Band of Brothers": {
+            "Miniseries": 622
+        },
+        "Adventure Time": {
+            "Season 1": 286,
+            "Season 2": 286,
+            "Season 3": 285,
+            "Season 4": 283,
+            "Season 5": 572,
+            "Season 6": 473,
+            "Season 7": 286,
+            "Season 8": 297,
+            "Season 9": 154,
+            "Season 10": 176
+        },
+        "The Amazing World of Gumball": {
+            "Season 1": 429,
+            "Season 2": 449,
+            "Season 3": 440,
+            "Season 4": 440,
+            "Season 5": 440,
+            "Season 6": 484
+        },
+        "The Penguin": {
+            "Miniseries": 466
+        },
+        "Game of Thrones": {
+            "Season 1": 567,
+            "Season 2": 549,
+            "Season 3": 561,
+            "Season 4": 552,
+            "Season 5": 564,
+            "Season 6": 564,
+            "Season 7": 440,
+            "Season 8": 435
+        },
+        "Samurai Jack": {
+            "Season 1": 295,
+            "Season 2": 287,
+            "Season 3": 242,
+            "Season 4": 330,
+            "Season 5": 229
+        },
+        "Legacies": {
+            "Season 1": 688,
+            "Season 2": 688,
+            "Season 3": 688,
+            "Season 4": 848
+        }
+    },
+    "5": {
+        "The Apothecary Diaries": {
+            "The Apothecary Diaries": 768
+        },
+        "Frieren: Beyond Journey's End": {
+            "Season 1": 701
+        },
+        "Dan Da Dan": {
+            "Season 1": 288
+        },
+        "One Piece": {
+            "East Blue": 1524,
+            "Whisky Peak & Little Garden": 388
+        },
+        "Attack on Titan": {
+            "Season 1": 600,
+            "Season 2": 288,
+            "Season 3": 528,
+            "The Final Season": 671
+        },
+        "Hunter x Hunter": {
+            "Season 1": 1488
+        },
+        "My Hero Academia": {
+            "Season 1": 312,
+            "Season 2": 600,
+            "Season 7": 504
+        },
+        "Toilet-Bound Hanako-kun": {
+            "Season 1": 288,
+            "Season 2": 216
+        },
+        "Jujutsu Kaisen": {
+            "Season 1": 1130
+        },
+        "Kaiju No. 8": {
+            "Season 1": 276
+        },
+        "Kaguya-sama: Love Is War": {
+            "Kaguya-sama: Love Is War": 288,
+            "Kaguya-sama: Love Is War?": 288,
+            "Kaguya-sama: Love Is War -Ultra Romantic-": 316
+        },
+        "JoJo's Bizarre Adventure": {
+            "Phantom Blood & Battle Tendency": 623,
+            "Stardust Crusaders": 1152,
+            "Diamond Is Unbreakable": 935,
+            "Golden Wind": 936
+        },
+        "Given": {
+            "Season 1": 253
+        },
+        "Digimon Tamers": {
+            "Season 1": 1275
+        },
+        "Chainsaw Man": {
+            "Season 1": 292
+        },
+        "Yuri!!! on Ice": {
+            "Season 1": 276
+        },
+        "SPY x FAMILY": {
+            "Season 1": 600,
+            "Season 2": 288
+        },
+        "Dr. STONE": {
+            "Season 1": 576,
+            "Stone Wars": 264,
+            "New World": 528,
+            "Science Future": 216
+        },
+        "DARLING in the FRANXX": {
+            "Season 1": 576
+        },
+        "Solo Leveling": {
+            "Solo Leveling": 528
+        },
+        "Horimiya": {
+            "Season 1": 312
+        },
+        "Naruto Shippūden": {
+            "Kazekage Rescue": 736,
+            "Long-Awaited Reunion": 483,
+            "Twelve Guardian Ninja": 414,
+            "Immortal Devastators - Hidan & Kakuzu": 391,
+            "The Three-Tailed Demon Turtle": 552,
+            "Master's Prophecy and Vengeance": 713,
+            "The Six-Tailed Demon Slug": 184,
+            "Two Saviors": 552,
+            "Past Arc: The Locus of Konoha": 483,
+            "The Gathering of the Five Kage": 575,
+            "Paradise on the Ship": 483,
+            "Nine-Tailed Fox Taming and Karmic Encounters": 759,
+            "The Seven Shinobi Swordsman": 460,
+            "The Fourth Great Ninja War - The Return of Squad Seven": 253
+        },
+        "Mushoku Tensei: Jobless Reincarnation": {
+            "Season 1": 552,
+            "Season 2": 576
+        },
+        "The Rising of the Shield Hero": {
+            "Season 1": 623,
+            "Season 2": 312,
+            "Season 3": 288
+        },
+        "Robotech": {
+            "The Macross Saga": 0
+        },
+        "Vinland Saga": {
+            "Season 1": 604,
+            "Season 2": 624
+        },
+        "TONIKAWA: Over the Moon for You": {
+            "Season 1": 288,
+            "Season 2": 288
+        },
+        "Black Clover": {
+            "Season 1": 4074
+        },
+        "SK8 the Infinity": {
+            "Season 1": 288
+        },
+        "The Helpful Fox Senko-san": {
+            "Season 1": 288
+        },
+        "Mob Psycho 100": {
+            "Mob Psycho": 288,
+            "Mob Psycho II": 312,
+            "Mob Psycho III": 288
+        },
+        "My Dress-Up Darling": {
+            "Season 1": 288
+        },
+        "The Misfit of Demon King Academy": {
+            "The Misfit of Demon King Academy II": 577
+        },
+        "Seton Academy: Join the Pack!": {
+            "Season 1": 0
+        },
+        "My Love Story!!": {
+            "Season 1": 576
+        },
+        "Noblesse": {
+            "Season 1": 312
+        },
+        "The Quintessential Quintuplets": {
+            "Season 1": 288,
+            "Season 2": 288
+        },
+        "That Time I Got Reincarnated as a Slime": {
+            "Season 1": 576,
+            "Season 2": 576
+        },
+        "Twin Star Exorcists": {
+            "Season 1": 1200
+        },
+        "Tokyo Revengers": {
+            "Season 1": 1189
+        },
+        "Food Wars! Shokugeki no Soma": {
+            "The Third Plate": 576,
+            "The Fourth Plate": 288,
+            "The Fifth Plate": 312
+        },
+        "Akashic Records of Bastard Magic Instructor": {
+            "Season 1": 288
+        }
+    },
+    "2": {
         "Hazbin Hotel": {
             "Season 1": 200
         },
         "Avatar: The Last Airbender": {
             "Book One: Water": 487
         },
-        "No One Will Miss Us": {
-            "Season 1": 275
-        },
         "Fullmetal Alchemist: Brotherhood": {
             "Season 1": 1600
         },
@@ -1376,15 +908,16 @@
             "Season 3": 528,
             "The Final Season": 671
         },
+        "No One Will Miss Us": {
+            "Season 1": 275
+        },
         "Demon Slayer: Kimetsu no Yaiba": {
             "Tanjiro Kamado, Unwavering Resolve": 598
         },
-        "Marry My Husband": {
-            "Season 1": 1012
-        },
         "INVINCIBLE": {
             "Season 1": 390,
-            "Season 2": 405
+            "Season 2": 405,
+            "Season 3": 355
         },
         "Haikyu!!": {
             "Season 1": 600,
@@ -1453,16 +986,14 @@
         "Vinland Saga": {
             "Season 1": 604
         },
-        "Death's Game": {
-            "Season 1": 413
-        },
         "The Good Doctor": {
             "Season 1": 774,
             "Season 2": 773,
             "Season 3": 860,
             "Season 4": 860,
             "Season 5": 774,
-            "Season 6": 950
+            "Season 6": 950,
+            "Season 7": 435
         },
         "Kuroko's Basketball": {
             "Season 1": 600
@@ -1473,845 +1004,39 @@
             "Season 3": 508,
             "Season 4": 525
         },
-        "Mouse": {
-            "Season 1": 1495
+        "Marry My Husband": {
+            "Season 1": 1012
         },
         "Clarkson's Farm": {
             "Season 1": 390,
             "Season 2": 357,
             "Season 3": 401
-        },
-        "Assassination Classroom": {
-            "Season 1": 528,
-            "Season 2": 600
-        },
-        "Chicago P.D.": {
-            "Season 1": 667,
-            "Season 2": 966,
-            "Season 3": 966,
-            "Season 4": 966,
-            "Season 5": 924,
-            "Season 6": 924,
-            "Season 7": 840,
-            "Season 8": 672,
-            "Season 9": 920
-        },
-        "Maxton Hall - The World Between Us": {
-            "Season 1": 283
-        },
-        "Rebelde": {
-            "Season 1": 9545
-        },
-        "Chicago Fire": {
-            "Season 10": 920
-        },
-        "Made in Abyss": {
-            "Season 1": 323,
-            "The Golden City of the Scorching Sun": 304
-        },
-        "Tale of the Nine Tailed": {
-            "Season 1": 1092
-        },
-        "Code Geass: Lelouch of the Rebellion": {
-            "R1": 625
-        },
-        "New Amsterdam": {
-            "Season 1": 946,
-            "Season 2": 774
-        },
-        "Naruto": {
-            "Season 2": 1248,
-            "Season 3": 1296,
-            "Season 4": 1488
-        },
-        "The Mentalist": {
-            "Season 1": 999,
-            "Season 2": 984,
-            "Season 3": 1019,
-            "Season 4": 1012,
-            "Season 5": 935,
-            "Season 6": 933,
-            "Season 7": 543
-        },
-        "Yo soy Betty, la fea": {
-            "Season 1": 7363
-        },
-        "The Vampire Diaries": {
-            "Season 1": 936,
-            "Season 2": 937,
-            "Season 3": 938,
-            "Season 4": 982,
-            "Season 5": 940,
-            "Season 6": 945,
-            "Season 7": 942,
-            "Season 8": 686
-        },
-        "Physics or Chemistry": {
-            "Season 1": 640,
-            "Season 2": 1120,
-            "Season 3": 880,
-            "Season 4": 1120,
-            "Season 5": 720,
-            "Season 6": 1120,
-            "Season 7": 560
-        },
-        "Fargo": {
-            "Season 1": 545,
-            "Season 2": 537,
-            "Season 3": 525,
-            "Season 4": 587
-        },
-        "Supernatural": {
-            "Season 1": 934,
-            "Season 2": 906,
-            "Season 3": 654,
-            "Season 4": 929,
-            "Season 5": 911,
-            "Season 6": 915,
-            "Season 7": 962,
-            "Season 8": 969,
-            "Season 9": 966,
-            "Season 10": 967,
-            "Season 11": 964,
-            "Season 12": 965,
-            "Season 13": 966,
-            "Season 14": 837,
-            "Season 15": 837
-        },
-        "Chicago Med": {
-            "Season 1": 817,
-            "Season 2": 970,
-            "Season 3": 842,
-            "Season 4": 923,
-            "Season 5": 840,
-            "Season 6": 672,
-            "Season 7": 922
-        },
-        "Fleabag": {
-            "Season 1": 151,
-            "Season 2": 147
-        },
-        "Beyblade Burst": {
-            "Beyblade Burst": 612,
-            "Evolution": 1224,
-            "Turbo": 1224,
-            "Rise": 624,
-            "Surge": 612,
-            "QuadDrive": 648
-        },
-        "Fallout": {
-            "Season 1": 479
-        },
-        "Henry Danger": {
-            "Season 1": 573,
-            "Season 2": 418,
-            "Season 3": 440
-        },
-        "Mr. Robot": {
-            "season_1.0": 485,
-            "season_2.0": 599,
-            "season_3.0": 492,
-            "season_4.0": 649
-        },
-        "This Is Us": {
-            "Season 1": 774,
-            "Season 2": 774,
-            "Season 3": 774,
-            "Season 4": 774,
-            "Season 5": 688,
-            "Season 6": 776
-        },
-        "Yellowstone": {
-            "Season 1": 467,
-            "Season 2": 462,
-            "Season 3": 431
-        },
-        "The Legend of Vox Machina": {
-            "Season 1": 310,
-            "Season 2": 326,
-            "Season 3": 327
-        },
-        "Another Miss Oh": {
-            "Season 1": 1245
-        },
-        "Gossip Girl": {
-            "Season 1": 756,
-            "Season 2": 1050,
-            "Season 3": 924,
-            "Season 4": 924,
-            "Season 5": 1008,
-            "Season 6": 420
-        },
-        "Smallville": {
-            "Season 1": 903,
-            "Season 2": 989,
-            "Season 3": 946,
-            "Season 4": 946,
-            "Season 5": 946,
-            "Season 6": 946,
-            "Season 7": 860,
-            "Season 8": 946,
-            "Season 9": 944,
-            "Season 10": 944
-        },
-        "The one that is coming": {
-            "Season 1": 0,
-            "Season 2": 0,
-            "Season 3": 88,
-            "Season 4": 0,
-            "Season 5": 0,
-            "Season 6": 160,
-            "Season 7": 0,
-            "Season 8": 94,
-            "Season 9": 0,
-            "Season 10": 1156,
-            "Season 11": 1184,
-            "Season 12": 1401,
-            "Season 13": 658,
-            "Season 14": 569,
-            "Season 15": 644
         }
     },
-    "Crunchyroll": {
-        "Dan Da Dan": {
-            "Season 1": 288
-        },
-        "Frieren: Beyond Journey's End": {
-            "Season 1": 701
-        },
-        "One Piece": {
-            "East Blue": 1524,
-            "Whisky Peak & Little Garden": 388
-        },
-        "The Apothecary Diaries": {
-            "The Apothecary Diaries": 624
-        },
-        "Attack on Titan": {
-            "Season 1": 600,
-            "Season 2": 288,
-            "Season 3": 528,
-            "The Final Season": 671
-        },
-        "My Hero Academia": {
-            "Season 1": 312,
-            "Season 2": 600,
-            "Season 7": 504
-        },
-        "Hunter x Hunter": {
-            "Season 1": 1488
-        },
-        "Toilet-Bound Hanako-kun": {
-            "Season 1": 288,
-            "Season 2": 72
-        },
-        "Jujutsu Kaisen": {
-            "Season 1": 1130
-        },
-        "Kaguya-sama: Love Is War": {
-            "Kaguya-sama: Love Is War": 288,
-            "Kaguya-sama: Love Is War?": 288,
-            "Kaguya-sama: Love Is War -Ultra Romantic-": 316
-        },
-        "JoJo's Bizarre Adventure": {
-            "Phantom Blood & Battle Tendency": 623,
-            "Stardust Crusaders": 1152,
-            "Diamond Is Unbreakable": 935,
-            "Golden Wind": 936
-        },
-        "Kaiju No. 8": {
-            "Season 1": 276
-        },
-        "Digimon Tamers": {
-            "Season 1": 1275
-        },
-        "Given": {
-            "Season 1": 253
-        },
-        "SPY x FAMILY": {
-            "Season 1": 600,
-            "Season 2": 288
-        },
-        "Chainsaw Man": {
-            "Season 1": 292
-        },
-        "DARLING in the FRANXX": {
-            "Season 1": 576
-        },
-        "Yuri!!! on Ice": {
-            "Season 1": 276
-        },
-        "Horimiya": {
-            "Season 1": 312
-        },
-        "Dr. STONE": {
-            "Season 1": 576,
-            "Stone Wars": 264,
-            "New World": 528,
-            "Science Future": 96
-        },
-        "Naruto Shippūden": {
-            "Kazekage Rescue": 736,
-            "Long-Awaited Reunion": 483,
-            "Twelve Guardian Ninja": 414,
-            "Immortal Devastators - Hidan & Kakuzu": 391,
-            "The Three-Tailed Demon Turtle": 552,
-            "Master's Prophecy and Vengeance": 713,
-            "The Six-Tailed Demon Slug": 184,
-            "Two Saviors": 552,
-            "Past Arc: The Locus of Konoha": 483,
-            "The Gathering of the Five Kage": 575,
-            "Paradise on the Ship": 483,
-            "Nine-Tailed Fox Taming and Karmic Encounters": 759,
-            "The Seven Shinobi Swordsman": 460,
-            "The Fourth Great Ninja War - The Return of Squad Seven": 253
-        },
-        "The Rising of the Shield Hero": {
-            "Season 1": 623,
-            "Season 2": 312,
-            "Season 3": 288
-        },
-        "Mushoku Tensei: Jobless Reincarnation": {
-            "Season 1": 552,
-            "Season 2": 576
-        },
-        "Robotech": {
-            "The Macross Saga": 0
-        },
-        "Black Clover": {
-            "Season 1": 4074
-        },
-        "The Misfit of Demon King Academy": {
-            "The Misfit of Demon King Academy II": 577
-        },
-        "SK8 the Infinity": {
-            "Season 1": 288
-        },
-        "TONIKAWA: Over the Moon for You": {
-            "Season 1": 288,
-            "Season 2": 288
-        },
-        "Solo Leveling": {
-            "Solo Leveling": 384
-        },
-        "Vinland Saga": {
-            "Season 1": 604,
-            "Season 2": 624
-        },
-        "My Dress-Up Darling": {
-            "Season 1": 288
-        },
-        "The Helpful Fox Senko-san": {
-            "Season 1": 288
-        },
-        "Mob Psycho 100": {
-            "Mob Psycho": 288,
-            "Mob Psycho II": 312,
-            "Mob Psycho III": 288
-        },
-        "Seton Academy: Join the Pack!": {
-            "Season 1": 0
-        },
-        "Noblesse": {
-            "Season 1": 312
-        },
-        "My Love Story!!": {
-            "Season 1": 576
-        },
-        "The Quintessential Quintuplets": {
-            "Season 1": 288,
-            "Season 2": 288
-        },
-        "Food Wars! Shokugeki no Soma": {
-            "The Third Plate": 576,
-            "The Fourth Plate": 288,
-            "The Fifth Plate": 312
-        },
-        "Tokyo Revengers": {
-            "Season 1": 1189
-        },
-        "Akashic Records of Bastard Magic Instructor": {
-            "Season 1": 288
-        },
-        "Twin Star Exorcists": {
-            "Season 1": 1200
-        },
-        "That Time I Got Reincarnated as a Slime": {
-            "Season 1": 576,
-            "Season 2": 576
-        },
-        "Classroom of the Elite": {
-            "Season 1": 288,
-            "Season 2": 312,
-            "Season 3": 312
-        },
-        "TSUKIMICHI -Moonlit Fantasy-": {
-            "Season 1": 288,
-            "Season 2": 600
-        },
-        "Moriarty the Patriot": {
-            "Season 1": 576
-        },
-        "The Ancient Magus' Bride": {
-            "Season 1": 576,
-            "Season 2": 576
-        },
-        "Rent-a-Girlfriend": {
-            "Rent-a-Girlfriend": 886
-        },
-        "One-Punch Man": {
-            "Season 1": 288,
-            "Season 2": 288
-        },
-        "Fire Force": {
-            "Season 1": 576,
-            "Season 2": 576
-        },
-        "Onyx Equinox": {
-            "Season 1": 288
-        },
-        "My First Girlfriend is a Gal": {
-            "Season 1": 230
-        },
-        "Bungo Stray Dogs": {
-            "Season 1": 1440
-        },
-        "Date a Live": {
-            "Date A Live III": 288,
-            "Date A Live IV": 288,
-            "Date A Live V": 288
-        },
-        "The Daily Life of the Immortal King": {
-            "Season 1": 289,
-            "Season 2": 227,
-            "Season 3": 216,
-            "Season 4": 230
-        },
-        "The Promised Neverland": {
-            "Season 2": 253
-        },
-        "Plastic Memories": {
-            "Season 1": 312
-        },
-        "Naruto": {
-            "Season 1": 1248,
-            "Season 2": 1248,
-            "Season 3": 1296
-        },
-        "The Case Study of Vanitas": {
-            "Season 1": 576
-        },
-        "Welcome to Demon School! Iruma-kun": {
-            "Season 1": 575,
-            "Season 2": 525,
-            "Season 3": 525
-        },
-        "Parasyte -the maxim-": {
-            "Season 1": 552
-        },
-        "Miss Kobayashi's Dragon Maid": {
-            "Miss Kobayashi's Dragon Maid": 312,
-            "Miss Kobayashi's Dragon Maid S": 288
-        },
-        "Magical Sempai": {
-            "Season 1": 180
-        },
-        "Seirei Gensouki: Spirit Chronicles": {
-            "Season 1": 288,
-            "Season 2": 288
-        },
-        "Uzaki-chan Wants to Hang Out!": {
-            "Season 1": 288,
-            "Season 2": 312
-        },
-        "MASHLE: MAGIC AND MUSCLES": {
-            "Season 1": 575
-        },
-        "Yamada-kun and the Seven Witches": {
-            "Season 1": 288
-        },
-        "Saga of Tanya the Evil": {
-            "Season 1": 288
-        },
-        "Plunderer": {
-            "Season 1": 0
-        },
-        "DON'T TOY WITH ME, MISS NAGATORO": {
-            "Season 1": 288,
-            "2nd Attack": 288
-        },
-        "Tower of God": {
-            "Season 1": 312,
-            "Return of the Prince / -Workshop Battle-": 624
-        },
-        "Cautious Hero: The Hero Is Overpowered but Overly Cautious": {
-            "Season 1": 288
-        },
-        "Higehiro: After Being Rejected, I Shaved and Took in a High School Runaway": {
-            "Season 1": 312
-        },
-        "Our Last Crusade or the Rise of a New World": {
-            "Season 1": 288,
-            "Season 2": 96
-        },
-        "Free!": {
-            "Free! Iwatobi Swim Club": 288,
-            "Free! Eternal Summer": 312,
-            "Free! Dive to the Future": 288
-        },
-        "The God of High School": {
-            "Season 1": 312
-        },
-        "Domestic Girlfriend": {
-            "Season 1": 288
-        },
-        "I Got a Cheat Skill in Another World and Became Unrivaled in the Real World, Too": {
-            "Season 1": 312
-        },
-        "Teasing Master Takagi-san": {
-            "Season 1": 288
-        },
-        "Dragon Ball DAIMA": {
-            "Season 1": 368
-        },
-        "BLUE LOCK": {
-            "Season 1": 912
-        },
-        "Kill la Kill": {
-            "Season 1": 576
-        },
-        "Hell's Paradise": {
-            "Season 1": 325
-        },
-        "Dragon Ball Super": {
-            "Season 1": 3144
-        },
-        "To Your Eternity": {
-            "Season 1": 500,
-            "Season 2": 500
-        },
-        "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat": {
-            "Season 1": 288
-        },
-        "Sword Art Online": {
-            "Sword Art Online": 601
-        },
-        "Mieruko-chan": {
-            "Season 1": 288
-        }
-    },
-    "Crunchyroll Amazon Channel": {
-        "Dan Da Dan": {
-            "Season 1": 288
-        },
-        "Frieren: Beyond Journey's End": {
-            "Season 1": 701
-        },
-        "One Piece": {
-            "East Blue": 1524,
-            "Dressrosa": 1200
-        },
-        "The Apothecary Diaries": {
-            "The Apothecary Diaries": 624
-        },
-        "Attack on Titan": {
-            "Season 2": 288,
-            "Season 3": 528,
-            "The Final Season": 671
-        },
-        "Demon Slayer: Kimetsu no Yaiba": {
-            "Swordsmith Village": 315
-        },
-        "My Hero Academia": {
-            "Season 1": 312,
-            "Season 2": 600
-        },
-        "Hunter x Hunter": {
-            "Season 1": 1488
-        },
-        "Toilet-Bound Hanako-kun": {
-            "Season 1": 288
-        },
-        "Jujutsu Kaisen": {
-            "Season 1": 1130
-        },
-        "KONOSUBA - God's blessing on this wonderful world!": {
-            "Season 3": 264
-        },
-        "Kaguya-sama: Love Is War": {
-            "Kaguya-sama: Love Is War?": 288
-        },
-        "JoJo's Bizarre Adventure": {
-            "Phantom Blood & Battle Tendency": 623,
-            "Stardust Crusaders": 1152,
-            "Diamond Is Unbreakable": 935
-        },
-        "Kaiju No. 8": {
-            "Season 1": 276
-        },
-        "Digimon Tamers": {
-            "Season 1": 1275
-        },
-        "Given": {
-            "Season 1": 253
-        },
-        "SPY x FAMILY": {
-            "Season 1": 600
-        },
-        "Chainsaw Man": {
-            "Season 1": 292
-        },
-        "DARLING in the FRANXX": {
-            "Season 1": 576
-        },
-        "Yuri!!! on Ice": {
-            "Season 1": 276
-        },
-        "Horimiya": {
-            "Season 1": 312
-        },
-        "Dr. STONE": {
-            "Season 1": 576
-        },
-        "Naruto Shippūden": {
-            "Kazekage Rescue": 736
-        },
-        "The Rising of the Shield Hero": {
-            "Season 1": 623
-        },
-        "Mushoku Tensei: Jobless Reincarnation": {
-            "Season 1": 552,
-            "Season 2": 576
-        },
-        "Robotech": {
-            "The Macross Saga": 0
-        },
-        "Black Clover": {
-            "Season 1": 4074
-        },
-        "The Misfit of Demon King Academy": {
-            "The Misfit of Demon King Academy II": 577
-        },
-        "SK8 the Infinity": {
-            "Season 1": 288
-        },
-        "TONIKAWA: Over the Moon for You": {
-            "Season 1": 288,
-            "Season 2": 288
-        },
-        "Solo Leveling": {
-            "Solo Leveling": 384
-        },
-        "Vinland Saga": {
-            "Season 1": 604
-        },
-        "My Dress-Up Darling": {
-            "Season 1": 288
-        },
-        "The Helpful Fox Senko-san": {
-            "Season 1": 288
-        },
-        "Mob Psycho 100": {
-            "Mob Psycho": 288,
-            "Mob Psycho II": 312
-        },
-        "Seton Academy: Join the Pack!": {
-            "Season 1": 0
-        },
-        "Noblesse": {
-            "Season 1": 312
-        },
-        "My Love Story!!": {
-            "Season 1": 576
-        },
-        "The Quintessential Quintuplets": {
-            "Season 1": 288
-        },
-        "Food Wars! Shokugeki no Soma": {
-            "The Third Plate": 576,
-            "The Fifth Plate": 312
-        },
-        "Tokyo Revengers": {
-            "Season 1": 1189
-        },
-        "Akashic Records of Bastard Magic Instructor": {
-            "Season 1": 288
-        },
-        "That Time I Got Reincarnated as a Slime": {
-            "Season 1": 576
-        },
-        "Classroom of the Elite": {
-            "Season 1": 288,
-            "Season 2": 312
-        },
-        "TSUKIMICHI -Moonlit Fantasy-": {
-            "Season 1": 288,
-            "Season 2": 600
-        },
-        "Moriarty the Patriot": {
-            "Season 1": 576
-        },
-        "The Ancient Magus' Bride": {
-            "Season 1": 576,
-            "Season 2": 576
-        },
-        "Rent-a-Girlfriend": {
-            "Rent-a-Girlfriend": 886
-        },
-        "One-Punch Man": {
-            "Season 1": 288,
-            "Season 2": 288
-        },
-        "Fire Force": {
-            "Season 1": 576
-        },
-        "Onyx Equinox": {
-            "Season 1": 288
-        },
-        "My First Girlfriend is a Gal": {
-            "Season 1": 230
-        },
-        "Bungo Stray Dogs": {
-            "Season 1": 1440
-        },
-        "Date a Live": {
-            "Date A Live III": 288,
-            "Date A Live IV": 288,
-            "Date A Live V": 288
-        },
-        "The Daily Life of the Immortal King": {
-            "Season 1": 289,
-            "Season 2": 227,
-            "Season 3": 216
-        },
-        "Plastic Memories": {
-            "Season 1": 312
-        },
-        "Naruto": {
-            "Season 1": 1248,
-            "Season 2": 1248,
-            "Season 3": 1296,
-            "Season 4": 1488
-        },
-        "The Case Study of Vanitas": {
-            "Season 1": 576
-        },
-        "Welcome to Demon School! Iruma-kun": {
-            "Season 1": 575
-        },
-        "Parasyte -the maxim-": {
-            "Season 1": 552
-        },
-        "Miss Kobayashi's Dragon Maid": {
-            "Miss Kobayashi's Dragon Maid": 312
-        },
-        "Magical Sempai": {
-            "Season 1": 180
-        },
-        "Seirei Gensouki: Spirit Chronicles": {
-            "Season 1": 288
-        },
-        "Uzaki-chan Wants to Hang Out!": {
-            "Season 1": 288,
-            "Season 2": 312
-        },
-        "MASHLE: MAGIC AND MUSCLES": {
-            "Season 1": 575
-        },
-        "Yamada-kun and the Seven Witches": {
-            "Season 1": 288
-        },
-        "Saga of Tanya the Evil": {
-            "Season 1": 288
-        },
-        "Plunderer": {
-            "Season 1": 0
-        },
-        "True Beauty": {
-            "Season 1": 1207
-        },
-        "DON'T TOY WITH ME, MISS NAGATORO": {
-            "Season 1": 288
-        },
-        "Tower of God": {
-            "Season 1": 312,
-            "Return of the Prince / -Workshop Battle-": 624
-        },
-        "Cautious Hero: The Hero Is Overpowered but Overly Cautious": {
-            "Season 1": 288
-        },
-        "Higehiro: After Being Rejected, I Shaved and Took in a High School Runaway": {
-            "Season 1": 312
-        },
-        "Our Last Crusade or the Rise of a New World": {
-            "Season 1": 288
-        },
-        "Yu-Gi-Oh! Duel Monsters": {
-            "Yu-Gi-Oh! Duel Monsters": 5277
-        },
-        "Free!": {
-            "Free! Iwatobi Swim Club": 288,
-            "Free! Eternal Summer": 312,
-            "Free! Dive to the Future": 288
-        },
-        "The God of High School": {
-            "Season 1": 312
-        },
-        "Domestic Girlfriend": {
-            "Season 1": 288
-        },
-        "I Got a Cheat Skill in Another World and Became Unrivaled in the Real World, Too": {
-            "Season 1": 312
-        },
-        "Teasing Master Takagi-san": {
-            "Season 1": 288
-        },
-        "Dragon Ball DAIMA": {
-            "Season 1": 368
-        },
-        "BLUE LOCK": {
-            "Season 1": 912
-        },
-        "Kill la Kill": {
-            "Season 1": 576
-        },
-        "Hell's Paradise": {
-            "Season 1": 325
-        },
-        "To Your Eternity": {
-            "Season 1": 500
-        },
-        "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat": {
-            "Season 1": 288
-        },
-        "Sword Art Online": {
-            "Sword Art Online": 601,
-            "Sword Art Online: Alicization - War of Underworld": 552
-        },
-        "Mieruko-chan": {
-            "Season 1": 288
-        }
-    },
-    "Movistar Plus+ Ficción Total ": {
+    "12": {
         "Avatar: The Last Airbender": {
             "Book One: Water": 487,
             "Book Two: Earth": 497,
             "Book Three: Fire": 512
         },
-        "One Piece": {
-            "East Blue": 1524
+        "Better Call Saul": {
+            "Season 6": 702
         },
         "Rick and Morty": {
             "Season 1": 244
         },
-        "Better Call Saul": {
-            "Season 6": 702
-        },
         "Chernobyl": {
             "Miniseries": 331
         },
+        "The Chosen": {
+            "Season 1": 377,
+            "Season 2": 405,
+            "Season 3": 536,
+            "Season 4": 554
+        },
         "Regular Show": {
-            "Season 1": 132,
-            "Season 2": 308,
+            "Season 1": 127,
+            "Season 2": 307,
             "Season 3": 440,
             "Season 4": 440,
             "Season 5": 440,
@@ -2320,14 +1045,7 @@
             "Season 8": 341
         },
         "Primal": {
-            "Season 1": 225,
             "Season 2": 225
-        },
-        "The Chosen": {
-            "Season 1": 377,
-            "Season 2": 405,
-            "Season 3": 536,
-            "Season 4": 554
         },
         "The Originals": {
             "Season 1": 946,
@@ -2335,12 +1053,6 @@
             "Season 3": 902,
             "Season 4": 544,
             "Season 5": 540
-        },
-        "Big Time Rush": {
-            "Season 1": 480,
-            "Season 2": 694,
-            "Season 3": 198,
-            "Season 4": 297
         },
         "House": {
             "Season 1": 966,
@@ -2352,8 +1064,11 @@
             "Season 7": 1010,
             "Season 8": 967
         },
-        "The Last of Us": {
-            "Season 1": 534
+        "Big Time Rush": {
+            "Season 1": 480,
+            "Season 2": 694,
+            "Season 3": 198,
+            "Season 4": 297
         },
         "The Wire": {
             "Season 1": 767,
@@ -2361,6 +1076,9 @@
             "Season 3": 709,
             "Season 4": 786,
             "Season 5": 626
+        },
+        "The Last of Us": {
+            "Season 1": 534
         },
         "The Office": {
             "Season 1": 133,
@@ -2377,13 +1095,10 @@
         "Band of Brothers": {
             "Miniseries": 622
         },
-        "The Amazing World of Gumball": {
-            "Season 1": 429,
-            "Season 2": 449,
-            "Season 3": 440,
-            "Season 4": 440,
-            "Season 5": 440,
-            "Season 6": 484
+        "The Rookie": {
+            "Season 5": 947,
+            "Season 6": 430,
+            "Season 7": 388
         },
         "Adventure Time": {
             "Season 1": 286,
@@ -2397,9 +1112,13 @@
             "Season 9": 154,
             "Season 10": 176
         },
-        "The Rookie": {
-            "Season 5": 947,
-            "Season 6": 430
+        "The Amazing World of Gumball": {
+            "Season 1": 429,
+            "Season 2": 449,
+            "Season 3": 440,
+            "Season 4": 440,
+            "Season 5": 440,
+            "Season 6": 484
         },
         "The Good Doctor": {
             "Season 1": 774,
@@ -2423,272 +1142,19 @@
         "Lucifer": {
             "Season 3": 1091
         },
-        "Samurai Jack": {
-            "Season 1": 295,
-            "Season 2": 287,
-            "Season 3": 242,
-            "Season 4": 330,
-            "Season 5": 229
-        },
         "Legacies": {
             "Season 1": 688,
             "Season 2": 688,
             "Season 3": 688,
             "Season 4": 848
-        },
-        "Riverdale": {
-            "Season 1": 562,
-            "Season 2": 946,
-            "Season 3": 942,
-            "Season 4": 814,
-            "Season 5": 819,
-            "Season 6": 935,
-            "Season 7": 863
-        },
-        "Friends": {
-            "Season 1": 550,
-            "Season 2": 550,
-            "Season 3": 575,
-            "Season 4": 532,
-            "Season 5": 530,
-            "Season 6": 552,
-            "Season 7": 527,
-            "Season 8": 527,
-            "Season 9": 590,
-            "Season 10": 453
-        },
-        "Chicago P.D.": {
-            "Season 1": 667,
-            "Season 2": 966,
-            "Season 3": 966,
-            "Season 7": 840,
-            "Season 8": 672,
-            "Season 9": 920,
-            "Season 12": 427
-        },
-        "Snowfall": {
-            "Season 1": 494,
-            "Season 2": 462,
-            "Season 3": 469,
-            "Season 4": 469,
-            "Season 5": 461,
-            "Season 6": 514
-        },
-        "Chicago Fire": {
-            "Season 1": 1023,
-            "Season 2": 924,
-            "Season 3": 966,
-            "Season 4": 966,
-            "Season 5": 924,
-            "Season 6": 966,
-            "Season 7": 924,
-            "Season 8": 840,
-            "Season 9": 672,
-            "Season 10": 920,
-            "Season 11": 938
-        },
-        "New Amsterdam": {
-            "Season 5": 547
-        },
-        "The Mentalist": {
-            "Season 1": 999,
-            "Season 2": 984,
-            "Season 3": 1019,
-            "Season 4": 1012,
-            "Season 5": 935,
-            "Season 6": 933,
-            "Season 7": 543
-        },
-        "Star Trek: The Next Generation": {
-            "Season 1": 1195,
-            "Season 2": 1011,
-            "Season 3": 1196,
-            "Season 4": 1196,
-            "Season 5": 1196,
-            "Season 6": 1179,
-            "Season 7": 1172
-        },
-        "Ninja Kamui": {
-            "Miniseries": 310
-        },
-        "Tulsa King": {
-            "Season 1": 354,
-            "Season 2": 409
-        },
-        "Smiling Friends": {
-            "Season 1": 107,
-            "Season 2": 94
-        },
-        "Harley Quinn": {
-            "Season 1": 299,
-            "Season 2": 299,
-            "Season 3": 275,
-            "Season 4": 231,
-            "Season 5": 69
-        },
-        "The Vampire Diaries": {
-            "Season 1": 936,
-            "Season 2": 937,
-            "Season 3": 938,
-            "Season 4": 982,
-            "Season 5": 940,
-            "Season 6": 945,
-            "Season 7": 942,
-            "Season 8": 686
-        },
-        "Teenage Mutant Ninja Turtles": {
-            "Season 1": 601,
-            "Season 2": 573,
-            "Season 3": 573,
-            "Season 4": 572,
-            "Tales of the Teenage Mutant Ninja Turtles": 440
-        },
-        "Criminal Minds": {
-            "Season 17: Evolution Season 2": 529
-        },
-        "Euphoria": {
-            "Season 1": 453,
-            "Season 2": 468
-        },
-        "Physics or Chemistry": {
-            "Season 1": 640,
-            "Season 2": 1120,
-            "Season 3": 880,
-            "Season 4": 1120,
-            "Season 5": 720,
-            "Season 6": 1120,
-            "Season 7": 560
-        },
-        "Fargo": {
-            "Season 1": 545,
-            "Season 2": 537,
-            "Season 3": 525,
-            "Season 4": 587,
-            "Season 5": 480
-        },
-        "Supernatural": {
-            "Season 1": 934,
-            "Season 2": 906,
-            "Season 3": 654,
-            "Season 4": 929,
-            "Season 5": 911,
-            "Season 6": 915,
-            "Season 7": 962,
-            "Season 9": 966,
-            "Season 10": 967,
-            "Season 11": 964,
-            "Season 12": 965,
-            "Season 13": 966,
-            "Season 14": 837,
-            "Season 15": 837
-        },
-        "True Detective": {
-            "Season 1": 439,
-            "Season 2": 486,
-            "Season 3": 466,
-            "Night Country": 382
-        },
-        "Merlí. Sapere Aude": {
-            "Season 1": 374,
-            "Season 2": 364
-        },
-        "The Day of the Jackal": {
-            "Series 1": 508
-        },
-        "Peacemaker": {
-            "Season 1": 349
-        },
-        "Henry Danger": {
-            "Season 2": 418,
-            "Season 3": 440,
-            "Season 5": 902
-        },
-        "Grimm": {
-            "Season 1": 902,
-            "Season 2": 933,
-            "Season 3": 924
-        },
-        "Rome": {
-            "Season 1": 613,
-            "Season 2": 55
-        },
-        "9-1-1": {
-            "Season 8": 348
-        },
-        "Yellowstone": {
-            "Season 5": 819
-        },
-        "Victorious": {
-            "Season 1": 478,
-            "Season 2": 333,
-            "Season 3": 311
-        },
-        "Mare of Easttown": {
-            "Miniseries": 415
-        },
-        "The Legend of Korra": {
-            "Book One: Air": 276,
-            "Book Two: Spirits": 322,
-            "Book Three: Change": 299,
-            "Book Four: Balance": 299
-        },
-        "Gossip Girl": {
-            "Season 1": 756,
-            "Season 2": 1050,
-            "Season 3": 924,
-            "Season 4": 924,
-            "Season 5": 1008,
-            "Season 6": 420
-        },
-        "Battlestar Galactica": {
-            "Season 1": 573,
-            "Season 2": 904,
-            "Season 3": 880,
-            "Season 4": 928,
-            "Miniseries": 185
-        },
-        "Dexter": {
-            "Season 1": 657,
-            "Season 2": 643,
-            "Season 3": 636,
-            "Season 4": 638,
-            "Season 5": 622,
-            "Season 6": 625,
-            "Season 7": 676,
-            "Season 8": 639
-        },
-        "FROM": {
-            "Season 1": 506,
-            "Season 2": 499,
-            "Season 3": 508
-        },
-        "Outlander": {
-            "Book One": 964,
-            "Book Two": 801,
-            "Book Three": 787,
-            "Book Four": 784,
-            "Book Five": 748,
-            "Season 6": 533,
-            "Season 7": 945
-        },
-        "Mr. Pickles": {
-            "Season 1": 150,
-            "Season 2": 150,
-            "Season 3": 150
         }
     },
-    "SkyShowtime": {
+    "16": {
         "Avatar: The Last Airbender": {
             "Book One: Water": 487,
             "Book Two: Earth": 497,
             "Book Three: Fire": 512
         },
-        "Big Time Rush": {
-            "Season 1": 480,
-            "Season 2": 694,
-            "Season 3": 198,
-            "Season 4": 297
-        },
         "House": {
             "Season 1": 966,
             "Season 2": 1055,
@@ -2699,6 +1165,12 @@
             "Season 7": 1010,
             "Season 8": 967
         },
+        "Big Time Rush": {
+            "Season 1": 480,
+            "Season 2": 694,
+            "Season 3": 198,
+            "Season 4": 297
+        },
         "The Office": {
             "Season 1": 133,
             "Season 2": 472,
@@ -2707,111 +1179,9 @@
             "Season 5": 614,
             "Season 6": 568,
             "Season 7": 582
-        },
-        "Chicago P.D.": {
-            "Season 1": 667,
-            "Season 2": 966,
-            "Season 3": 966,
-            "Season 7": 840,
-            "Season 8": 672,
-            "Season 9": 920
-        },
-        "Chicago Fire": {
-            "Season 8": 840,
-            "Season 9": 672,
-            "Season 10": 920
-        },
-        "Star Trek: The Next Generation": {
-            "Season 1": 1195,
-            "Season 2": 1011,
-            "Season 3": 1196,
-            "Season 4": 1196,
-            "Season 5": 1196,
-            "Season 6": 1179,
-            "Season 7": 1172
-        },
-        "Tulsa King": {
-            "Season 1": 354,
-            "Season 2": 409
-        },
-        "Twin Peaks": {
-            "Season 1": 426,
-            "Season 2": 1092
-        },
-        "Teenage Mutant Ninja Turtles": {
-            "Season 1": 601,
-            "Season 2": 573,
-            "Season 3": 573,
-            "Season 4": 572,
-            "Tales of the Teenage Mutant Ninja Turtles": 440
-        },
-        "Physics or Chemistry": {
-            "Season 1": 640,
-            "Season 2": 1120,
-            "Season 3": 880,
-            "Season 4": 1120,
-            "Season 5": 720,
-            "Season 6": 1120,
-            "Season 7": 560
-        },
-        "The Day of the Jackal": {
-            "Series 1": 508
-        },
-        "1883": {
-            "Season 1": 561
-        },
-        "Henry Danger": {
-            "Season 1": 573,
-            "Season 2": 418,
-            "Season 3": 440,
-            "Season 4": 486,
-            "Season 5": 902
-        },
-        "Grimm": {
-            "Season 1": 902,
-            "Season 2": 933,
-            "Season 3": 924
-        },
-        "Yellowstone": {
-            "Season 1": 467,
-            "Season 2": 462,
-            "Season 3": 431,
-            "Season 4": 532,
-            "Season 5": 819
-        },
-        "Victorious": {
-            "Season 1": 478,
-            "Season 2": 333,
-            "Season 3": 311
-        },
-        "The Legend of Korra": {
-            "Book One: Air": 276,
-            "Book Two: Spirits": 322,
-            "Book Three: Change": 299,
-            "Book Four: Balance": 299
-        },
-        "Battlestar Galactica": {
-            "Season 1": 573,
-            "Season 2": 904,
-            "Season 3": 880,
-            "Season 4": 928,
-            "Miniseries": 185
-        },
-        "Dexter": {
-            "Season 1": 657,
-            "Season 2": 643,
-            "Season 3": 636,
-            "Season 4": 638,
-            "Season 5": 622,
-            "Season 6": 625,
-            "Season 7": 676,
-            "Season 8": 639
         }
     },
-    "Movistar Plus+": {
-        "One Piece": {
-            "East Blue": 1524
-        },
+    "11": {
         "Better Call Saul": {
             "Season 6": 702
         },
@@ -2823,7 +1193,8 @@
         },
         "The Rookie": {
             "Season 5": 947,
-            "Season 6": 430
+            "Season 6": 430,
+            "Season 7": 388
         },
         "The Good Doctor": {
             "Season 1": 774,
@@ -2836,298 +1207,13 @@
         },
         "Lucifer": {
             "Season 3": 1091
-        },
-        "Riverdale": {
-            "Season 1": 562,
-            "Season 2": 946,
-            "Season 3": 942,
-            "Season 4": 814,
-            "Season 5": 819,
-            "Season 6": 935
-        },
-        "Chicago P.D.": {
-            "Season 12": 427
-        },
-        "Chicago Fire": {
-            "Season 10": 920,
-            "Season 11": 938
-        },
-        "New Amsterdam": {
-            "Season 5": 547
-        },
-        "Criminal Minds": {
-            "Season 17: Evolution Season 2": 529
-        },
-        "Physics or Chemistry": {
-            "Season 1": 640,
-            "Season 2": 1120,
-            "Season 3": 880,
-            "Season 4": 1120,
-            "Season 5": 720,
-            "Season 6": 1120,
-            "Season 7": 560
-        },
-        "Fargo": {
-            "Season 1": 545,
-            "Season 2": 537,
-            "Season 3": 525,
-            "Season 4": 587,
-            "Season 5": 480
-        },
-        "Merlí. Sapere Aude": {
-            "Season 1": 374,
-            "Season 2": 364
-        },
-        "Henry Danger": {
-            "Season 2": 418,
-            "Season 3": 440
-        },
-        "9-1-1": {
-            "Season 8": 348
-        },
-        "Outlander": {
-            "Book One": 964,
-            "Book Two": 801,
-            "Book Three": 787,
-            "Book Four": 784,
-            "Book Five": 748,
-            "Season 6": 533,
-            "Season 7": 945
         }
     },
-    "Max": {
-        "Rick and Morty": {
-            "Season 1": 244,
-            "Season 2": 228,
-            "Season 3": 230,
-            "Season 4": 227,
-            "Season 5": 225,
-            "Season 6": 223,
-            "Season 7": 230
-        },
-        "Chernobyl": {
-            "Miniseries": 331
-        },
-        "The Sopranos": {
-            "Season 1": 677,
-            "Season 2": 690,
-            "Season 3": 715,
-            "Season 4": 733,
-            "Season 5": 698,
-            "Season 6": 1139
-        },
-        "Regular Show": {
-            "Season 1": 132,
-            "Season 2": 308,
-            "Season 3": 440,
-            "Season 4": 440,
-            "Season 5": 440,
-            "Season 6": 341,
-            "Season 7": 429,
-            "Season 8": 341
-        },
-        "Primal": {
-            "Season 1": 225,
-            "Season 2": 225
-        },
-        "The Originals": {
-            "Season 1": 946,
-            "Season 2": 913,
-            "Season 3": 902,
-            "Season 4": 544,
-            "Season 5": 540
-        },
-        "The Last of Us": {
-            "Season 1": 534
-        },
-        "The Wire": {
-            "Season 1": 767,
-            "Season 2": 710,
-            "Season 3": 709,
-            "Season 4": 786,
-            "Season 5": 626
-        },
-        "Over the Garden Wall": {
-            "Season 1": 110
-        },
-        "Band of Brothers": {
-            "Miniseries": 622
-        },
-        "The Amazing World of Gumball": {
-            "Season 1": 429,
-            "Season 2": 449,
-            "Season 3": 440,
-            "Season 4": 440,
-            "Season 5": 440,
-            "Season 6": 484
-        },
-        "Adventure Time": {
-            "Season 1": 286,
-            "Season 2": 286,
-            "Season 3": 285,
-            "Season 4": 283,
-            "Season 5": 572,
-            "Season 6": 473,
-            "Season 7": 286,
-            "Season 8": 297,
-            "Season 9": 154,
-            "Season 10": 176
-        },
-        "The Penguin": {
-            "Miniseries": 466
-        },
-        "Game of Thrones": {
-            "Season 1": 567,
-            "Season 2": 549,
-            "Season 3": 561,
-            "Season 4": 552,
-            "Season 5": 564,
-            "Season 6": 564,
-            "Season 7": 440,
-            "Season 8": 435
-        },
-        "Samurai Jack": {
-            "Season 1": 295,
-            "Season 2": 287,
-            "Season 3": 242,
-            "Season 4": 330,
-            "Season 5": 229
-        },
-        "Legacies": {
-            "Season 1": 688,
-            "Season 2": 688,
-            "Season 3": 688,
-            "Season 4": 848
-        },
-        "Riverdale": {
-            "Season 1": 562,
-            "Season 2": 946,
-            "Season 3": 942,
-            "Season 4": 814,
-            "Season 5": 819,
-            "Season 6": 935,
-            "Season 7": 863
-        },
-        "Friends": {
-            "Season 1": 550,
-            "Season 2": 550,
-            "Season 3": 575,
-            "Season 4": 532,
-            "Season 5": 530,
-            "Season 6": 552,
-            "Season 7": 527,
-            "Season 8": 527,
-            "Season 9": 590,
-            "Season 10": 453
-        },
-        "Snowfall": {
-            "Season 1": 494,
-            "Season 2": 462,
-            "Season 3": 469,
-            "Season 4": 469,
-            "Season 5": 461,
-            "Season 6": 514
-        },
-        "House of the Dragon": {
-            "Season 1": 620,
-            "Season 2": 516
-        },
-        "Ninja Kamui": {
-            "Miniseries": 310
-        },
-        "Smiling Friends": {
-            "Season 1": 107,
-            "Season 2": 94
-        },
-        "Harley Quinn": {
-            "Season 1": 299,
-            "Season 2": 299,
-            "Season 3": 275,
-            "Season 4": 231,
-            "Season 5": 69
-        },
-        "The Vampire Diaries": {
-            "Season 1": 936,
-            "Season 2": 937,
-            "Season 3": 938,
-            "Season 4": 982,
-            "Season 5": 940,
-            "Season 6": 945,
-            "Season 7": 942,
-            "Season 8": 686
-        },
-        "Euphoria": {
-            "Season 1": 453,
-            "Season 2": 468
-        },
-        "Fargo": {
-            "Season 1": 545,
-            "Season 2": 537,
-            "Season 3": 525,
-            "Season 4": 587
-        },
-        "Supernatural": {
-            "Season 1": 934,
-            "Season 2": 906,
-            "Season 3": 654,
-            "Season 4": 929,
-            "Season 5": 911,
-            "Season 6": 915,
-            "Season 7": 962,
-            "Season 8": 969,
-            "Season 9": 966,
-            "Season 10": 967,
-            "Season 11": 964,
-            "Season 12": 965,
-            "Season 13": 966,
-            "Season 14": 837,
-            "Season 15": 837
-        },
-        "True Detective": {
-            "Season 1": 439,
-            "Season 2": 486,
-            "Season 3": 466,
-            "Night Country": 382
-        },
-        "Peacemaker": {
-            "Season 1": 349
-        },
-        "Rome": {
-            "Season 1": 613,
-            "Season 2": 55
-        },
-        "Mare of Easttown": {
-            "Miniseries": 415
-        },
-        "Gossip Girl": {
-            "Season 1": 756,
-            "Season 2": 1050,
-            "Season 3": 924,
-            "Season 4": 924,
-            "Season 5": 1008,
-            "Season 6": 420
-        },
-        "FROM": {
-            "Season 1": 506,
-            "Season 2": 499,
-            "Season 3": 508
-        },
-        "Mr. Pickles": {
-            "Season 1": 150,
-            "Season 2": 150,
-            "Season 3": 150
-        }
-    },
-    "Disney Plus": {
+    "6": {
         "The Owl House": {
             "Season 1": 457,
             "Season 2": 533,
             "Season 3": 159
-        },
-        "Love, Victor": {
-            "Season 1": 276,
-            "Season 2": 283,
-            "Season 3": 227
         },
         "Bluey": {
             "Series 1": 364,
@@ -3144,12 +1230,10 @@
             "Season 3": 433,
             "Season 4": 271
         },
-        "The Kardashians": {
-            "Season 1": 437,
-            "Season 2": 447,
-            "Season 3": 471,
-            "Season 4": 483,
-            "Season 5": 471
+        "Love, Victor": {
+            "Season 1": 276,
+            "Season 2": 283,
+            "Season 3": 227
         },
         "X-Men '97": {
             "Season 1": 343
@@ -3159,8 +1243,13 @@
             "Season 2": 446,
             "Season 3": 428
         },
-        "Snowdrop": {
-            "Season 1": 1374
+        "The Kardashians": {
+            "Season 1": 437,
+            "Season 2": 447,
+            "Season 3": 471,
+            "Season 4": 483,
+            "Season 5": 471,
+            "Season 6": 263
         },
         "Only Murders in the Building": {
             "Season 1": 324,
@@ -3168,14 +1257,14 @@
             "Season 3": 369,
             "Season 4": 370
         },
+        "Snowdrop": {
+            "Season 1": 1374
+        },
         "Wizards of Waverly Place": {
             "Season 1": 483,
             "Season 2": 690,
             "Season 3": 671,
             "Season 4": 675
-        },
-        "Shogun": {
-            "Season 1": 595
         },
         "Malcolm in the Middle": {
             "Season 1": 352,
@@ -3186,6 +1275,9 @@
             "Season 6": 484,
             "Season 7": 484
         },
+        "Shōgun": {
+            "Season 1": 595
+        },
         "Star Wars: The Clone Wars": {
             "Season 1": 500,
             "Season 2": 487,
@@ -3195,479 +1287,61 @@
             "Season 6": 286,
             "Season 7": 324
         },
-        "The Resident": {
-            "Season 1": 588,
-            "Season 2": 966,
-            "Season 3": 840,
-            "Season 4": 588,
-            "Season 5": 1007,
-            "Season 6": 582
-        },
-        "The Mandalorian": {
-            "Season 1": 331,
-            "Season 2": 348,
-            "Season 3": 350
-        },
-        "The Beatles: Get Back": {
-            "Miniseries": 468
-        },
-        "Sons of Anarchy": {
-            "Season 1": 608,
-            "Season 2": 581,
-            "Season 3": 613,
-            "Season 4": 669,
-            "Season 5": 676,
-            "Season 6": 813,
-            "Season 7": 827
-        },
-        "Snowfall": {
-            "Season 1": 494,
-            "Season 2": 462,
-            "Season 3": 469,
-            "Season 4": 469,
-            "Season 5": 461,
-            "Season 6": 514
-        },
-        "Bleach": {
-            "Bleach": 8677,
-            "Thousand-Year Blood War": 985
-        },
-        "Futurama": {
-            "Season 1": 198,
-            "Season 2": 440,
-            "Season 3": 330,
-            "Season 4": 264,
-            "Season 5": 352,
-            "Season 6": 572,
-            "Season 7": 572,
-            "Season 8": 249,
-            "Season 9": 250
-        },
-        "The X-Files": {
-            "Season 1": 1091,
-            "Season 2": 1124,
-            "Season 3": 1072,
-            "Season 4": 1070,
-            "Season 5": 912,
-            "Season 6": 989,
-            "Season 7": 985,
-            "Season 8": 937,
-            "Season 9": 889,
-            "Season 10": 264,
-            "Season 11": 438
-        },
-        "Star vs. the Forces of Evil": {
-            "Season 1": 286,
-            "Season 2": 484,
-            "Season 3": 462,
-            "Season 4": 469
-        },
-        "Girl Meets World": {
-            "Season 1": 460,
-            "Season 2": 690,
-            "Season 3": 483
-        },
-        "Criminal Minds": {
-            "Season 1": 914,
-            "Season 2": 971,
-            "Season 3": 827,
-            "Season 4": 1064,
-            "Season 5": 939,
-            "Season 6": 1008,
-            "Season 7": 1008,
-            "Season 8": 1008,
-            "Season 9": 1008,
-            "Season 10": 966,
-            "Season 11": 924,
-            "Season 12": 924,
-            "Season 13": 924,
-            "Season 14": 630,
-            "Season 15": 420,
-            "Season 16: Evolution": 521
-        },
-        "Revenge of Others": {
-            "Season 1": 744
-        },
-        "It's Always Sunny in Philadelphia": {
-            "Season 1": 156,
-            "Season 2": 233,
-            "Season 3": 336,
-            "Season 4": 276,
-            "Season 5": 254,
-            "Season 6": 298,
-            "Season 7": 275,
-            "Season 8": 211,
-            "Season 9": 214,
-            "Season 10": 209,
-            "Season 11": 217,
-            "Season 12": 213,
-            "Season 13": 211,
-            "Season 14": 223,
-            "Season 15": 183,
-            "Season 16": 183
-        },
-        "Spider-Man": {
-            "Season 1": 275,
-            "Season 2": 305,
-            "Season 3": 306,
-            "Season 4": 238,
-            "Season 5": 283
-        },
-        "POSE": {
-            "Season 1": 481,
-            "Season 2": 528,
-            "Season 3": 410
-        },
-        "White Collar": {
-            "Season 1": 616,
-            "Season 2": 718,
-            "Season 3": 697,
-            "Season 4": 697,
-            "Season 5": 565,
-            "Season 6": 264
-        },
-        "The Bear": {
-            "Season 1": 247,
-            "Season 2": 369,
-            "Season 3": 355
-        },
-        "This Is Us": {
-            "Season 1": 774,
-            "Season 2": 774,
-            "Season 3": 774,
-            "Season 4": 774,
-            "Season 5": 688,
-            "Season 6": 776
-        },
-        "Boy Meets World": {
-            "Season 1": 528,
-            "Season 2": 552,
-            "Season 3": 528,
-            "Season 4": 528,
-            "Season 5": 576,
-            "Season 6": 528,
-            "Season 7": 552
-        },
-        "9-1-1": {
-            "Season 1": 430,
-            "Season 2": 774,
-            "Season 3": 774,
-            "Season 4": 602,
-            "Season 5": 774,
-            "Season 6": 789,
-            "Season 7": 435
-        },
-        "Mr Inbetween": {
-            "Season 1": 156,
-            "Season 2": 286,
-            "Season 3": 254
-        },
-        "Grey's Anatomy": {
-            "Season 1": 387,
-            "Season 2": 1161,
-            "Season 3": 1075,
-            "Season 4": 731,
-            "Season 5": 1032,
-            "Season 6": 1032,
-            "Season 7": 946,
-            "Season 8": 1032,
-            "Season 9": 1032,
-            "Season 10": 1032,
-            "Season 11": 1072,
-            "Season 12": 1032,
-            "Season 13": 1032,
-            "Season 14": 1032,
-            "Season 15": 1075,
-            "Season 16": 903,
-            "Season 17": 731,
-            "Season 18": 858,
-            "Season 19": 869,
-            "Season 20": 436,
-            "Season 21": 350
-        },
-        "Bones": {
-            "Season 1": 880,
-            "Season 2": 840,
-            "Season 3": 600,
-            "Season 4": 1040,
-            "Season 5": 880,
-            "Season 6": 920,
-            "Season 7": 520,
-            "Season 8": 960,
-            "Season 9": 960,
-            "Season 10": 880,
-            "Season 11": 880,
-            "Season 12 - The Final Chapter": 480
-        },
-        "Big Mouth": {
-            "Season 1": 1097
-        },
-        "Star Wars: The Bad Batch": {
-            "Season 1": 512,
-            "Season 2": 462,
-            "Season 3": 423
-        },
-        "WandaVision": {
-            "Miniseries": 363
-        },
-        "Station 19": {
-            "Season 1": 430,
-            "Season 2": 731,
-            "Season 3": 688,
-            "Season 4": 694,
-            "Season 5": 775,
-            "Season 6": 775,
-            "Season 7": 434
-        },
-        "Mayday": {
-            "Season 5": 450,
-            "Season 7": 360,
-            "Season 9": 360,
-            "Season 10": 270,
-            "Season 17": 450,
-            "Season 18": 450,
-            "Season 20": 450,
-            "Season 21": 450,
-            "Season 22": 450
-        },
-        "Star Wars: Andor": {
-            "Season 1": 582
-        },
-        "Love Is in the Air": {
-            "Season 1": 5215,
-            "Season 2": 1697
-        },
-        "Wu-Tang: An American Saga": {
-            "Season 1": 501,
-            "Season 2": 498,
-            "Season 3": 534
-        },
-        "The one that is coming": {
-            "Season 1": 0,
-            "Season 2": 0,
-            "Season 3": 88,
-            "Season 4": 0,
-            "Season 5": 0,
-            "Season 6": 160,
-            "Season 7": 0,
-            "Season 8": 94,
-            "Season 9": 0,
-            "Season 10": 1156,
-            "Season 11": 1184
-        },
-        "X-Men": {
-            "Season 1": 286,
-            "Season 2": 286,
-            "Season 3": 418,
-            "Season 4": 374,
-            "Season 5": 308
+        "Moving": {
+            "Season 1": 955
         }
     },
-    "Kocowa": {
-        "Weightlifting Fairy Kim Bok-joo": {
-            "Season 1": 962
-        },
-        "BTS In the SOOP": {
-            "Season 1": 687,
-            "Season 2": 423
-        },
-        "Jewel in the Palace": {
-            "Season 1": 0
-        },
-        "The Penthouse": {
-            "Season 1": 1573,
-            "Season 2": 924,
-            "Season 3": 1008
-        },
-        "Descendants of the Sun": {
-            "Season 1": 954
-        },
-        "Healer": {
-            "Season 1": 1236
-        },
-        "Fated to Love You": {
-            "Season 1": 1197
-        },
-        "My Love From Another Star": {
-            "Season 1": 1232
-        },
-        "I Am Not a Robot": {
-            "Season 1": 994
-        },
-        "She Was Pretty": {
-            "Season 1": 957
-        },
-        "Pinocchio": {
-            "Season 1": 1166
-        },
-        "Are You Human?": {
-            "Season 1": 1109
+    "1": {
+        "The Chosen": {
+            "Season 1": 377,
+            "Season 2": 405,
+            "Season 3": 536,
+            "Season 4": 554
         }
     },
-    "Filmin": {
+    "7": {
         "Merlí": {
             "Season 1": 645,
             "Season 2": 660,
             "Season 3": 685
         },
+        "Brassic": {
+            "Season 1": 258,
+            "Season 2": 261,
+            "Season 3": 346,
+            "Season 4": 362,
+            "Season 5": 348
+        },
         "The Familiar of Zero": {
             "The Familiar of Zero": 325
-        },
-        "Kiss Him, Not Me": {
-            "Season 1": 276
         }
     },
-    "Acontra Plus": {
-        "The Chosen": {
-            "Season 1": 377,
-            "Season 2": 405,
-            "Season 3": 536,
-            "Season 4": 554
+    "9": {
+        "BTS In the SOOP": {
+            "Season 1": 687,
+            "Season 2": 423
+        },
+        "Weightlifting Fairy Kim Bok-joo": {
+            "Season 1": 962
+        },
+        "Jewel in the Palace": {
+            "Season 1": 0
         }
     },
-    "Acontra Plus Amazon Channel": {
-        "The Chosen": {
-            "Season 1": 377,
-            "Season 2": 405,
-            "Season 3": 536,
-            "Season 4": 554
-        }
-    },
-    "Apple TV Plus": {
-        "Dickinson": {
-            "Season 1": 293,
-            "Season 2": 284,
-            "Season 3": 319
-        },
-        "Ted Lasso": {
-            "Season 1": 319,
-            "Season 2": 478,
-            "Season 3": 704
-        },
-        "Severance": {
-            "Season 1": 430,
-            "Season 2": 248
-        },
-        "Prehistoric Planet": {
-            "Season 1": 208,
-            "Season 2": 204
-        },
-        "Defending Jacob": {
-            "Miniseries": 402
-        },
-        "Lessons in Chemistry": {
-            "Miniseries": 370
-        }
-    },
-    "Tivify": {
+    "17": {
         "The Rookie": {
-            "Season 1": 854,
-            "Season 2": 858
+            "Season 2": 858,
+            "Season 5": 947,
+            "Season 6": 430
         },
         "The Good Doctor": {
-            "Season 2": 773
-        },
-        "Friends": {
-            "Season 6": 552
-        },
-        "Chicago P.D.": {
-            "Season 2": 966,
-            "Season 3": 966
-        },
-        "Chicago Fire": {
-            "Season 2": 924,
-            "Season 3": 966,
-            "Season 12": 554
-        },
-        "Criminal Minds": {
-            "Season 1": 914,
-            "Season 2": 971,
-            "Season 12": 924,
-            "Season 16: Evolution": 521
-        },
-        "Chicago Med": {
-            "Season 6": 672,
-            "Season 7": 922,
-            "Season 8": 934
-        },
-        "9-1-1": {
-            "Season 5": 774,
-            "Season 6": 789
-        },
-        "Station 19": {
-            "Season 4": 694
-        },
-        "The one that is coming": {
-            "Season 1": 0,
-            "Season 2": 0,
-            "Season 4": 0,
-            "Season 5": 0,
-            "Season 6": 160,
-            "Season 8": 94,
-            "Season 9": 0,
-            "Season 10": 1156,
-            "Season 11": 1184,
-            "Season 13": 658
+            "Season 5": 774
         }
     },
-    "MGM Plus Amazon Channel": {
-        "Teen Wolf": {
-            "Season 1": 499,
-            "Season 2": 512,
-            "Season 4": 514
-        },
-        "Power Book II: Ghost": {
-            "Season 1": 600,
-            "Season 2": 600,
-            "Season 3": 378,
-            "Season 4": 577
-        },
-        "Fargo": {
-            "Season 1": 545,
-            "Season 2": 537,
-            "Season 3": 525,
-            "Season 4": 587
-        },
-        "Stargate SG-1": {
-            "Season 1": 972,
-            "Season 2": 968,
-            "Season 3": 968,
-            "Season 4": 968,
-            "Season 7": 968,
-            "Season 8": 900,
-            "Season 9": 878,
-            "Season 10": 878
-        }
-    },
-    "FlixOlé": {
+    "8": {
         "Game of Thrones": {
             "Season 1": 567,
             "Season 2": 549
-        }
-    },
-    "Atres Player": {
-        "Veneno": {
-            "Season 1": 445
-        },
-        "Yo soy Betty, la fea": {
-            "Season 1": 7363
-        },
-        "Physics or Chemistry": {
-            "Season 1": 640
-        }
-    },
-    "fuboTV": {
-        "South Park": {
-            "Season 18": 220
-        }
-    },
-    "YouTube Premium": {
-        "Wayne": {
-            "Season 1": 360
-        },
-        "Cobra Kai": {
-            "Season 1": 305,
-            "Season 2": 319
         }
     }
 }
