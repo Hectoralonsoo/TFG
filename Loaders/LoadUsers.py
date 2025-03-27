@@ -14,7 +14,9 @@ def load_users_from_json(json_file):
                 monthly_minutes=user_data["monthly_minutes"],
                 movies=user_data["movies"],
                 series=user_data["series"],
-                months=user_data["months"]
+                months=user_data["months"],
+                watched_movies=user_data["watched_movies"],
+                watched_series=user_data["watched_series"]
             )
             for user_data in data
         ]

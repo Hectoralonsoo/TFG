@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "minutos_ponderados": 14097.479999999998,
+    "costo_total": 0,
+    "plataformas_por_mes": [
+      {
+        "mes": 1,
+        "plataforma_id": 3,
+        "plataforma_nombre": "Apple TV Plus"
+      },
+      {
+        "mes": 2,
+        "plataforma_id": 8,
+        "plataforma_nombre": "FlixOlé"
+      },
+      {
+        "mes": 3,
+        "plataforma_id": 13,
+        "plataforma_nombre": "MUBI"
+      },
+      {
+        "mes": 4,
+        "plataforma_id": 6,
+        "plataforma_nombre": "Disney Plus"
+      },
+      {
+        "mes": 5,
+        "plataforma_id": 14,
+        "plataforma_nombre": "Netflix"
+      },
+      {
+        "mes": 6,
+        "plataforma_id": 1,
+        "plataforma_nombre": "Acontra Plus"
+      },
+      {
+        "mes": 7,
+        "plataforma_id": 2,
+        "plataforma_nombre": "Amazon Prime Video"
+      },
+      {
+        "mes": 8,
+        "plataforma_id": 10,
+        "plataforma_nombre": "Max"
+      },
+      {
+        "mes": 9,
+        "plataforma_id": 8,
+        "plataforma_nombre": "FlixOlé"
+      },
+      {
+        "mes": 10,
+        "plataforma_id": 12,
+        "plataforma_nombre": "Movistar Plus+ Ficción Total "
+      },
+      {
+        "mes": 11,
+        "plataforma_id": 18,
+        "plataforma_nombre": "fuboTV"
+      },
+      {
+        "mes": 12,
+        "plataforma_id": 1,
+        "plataforma_nombre": "Acontra Plus"
+      }
+    ]
+  }
+]

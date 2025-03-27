@@ -1,6 +1,6 @@
 
 class User:
-    def __init__(self, name, user_id, monthly_minutes, movies, series, months):
+    def __init__(self, name, user_id, monthly_minutes, movies, series, months, watched_movies, watched_series):
         """
         Clase para representar un usuario.
 
@@ -17,6 +17,8 @@ class User:
         self.movies = movies
         self.series = series
         self.months = months
+        self.watched_movies = watched_movies
+        self.watched_series = watched_series
 
 
     def __repr__(self):

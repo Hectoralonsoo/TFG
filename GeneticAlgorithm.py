@@ -9,6 +9,7 @@ from inspyred.ec import emo
 from Loaders.LoadStreamingPlans import load_streaming_plan_json
 from Loaders.LoadPlatforms import load_platforms_json
 from Loaders.LoadUsers import load_users_from_json
+from scripts.User_generator import update_users_json
 
 streamingPlans = load_streaming_plan_json("Data/streamingPlans.json")
 users = load_users_from_json("Data/users.json")
@@ -49,61 +50,115 @@ def get_platform_name(platform_id):
 
 def calcular_minutos_ponderados(candidate, args):
     """
-    Maximiza: Σ(minutos_vistos_ponderados)
+    Maximiza el valor total de minutos vistos ponderados por el interés del usuario.
+
+    Parámetros:
+    - candidate: Lista de plataformas seleccionadas para cada mes
+    - args: Argumentos adicionales (no utilizados actualmente)
+
+    Retorna:
+    - float: Suma total de minutos ponderados por interés para todos los usuarios
     """
     minutos_totales_ponderados = 0
-    plataformas_por_mes = candidate  # Directamente IDs de plataforma
-    print("\n--- Evaluando minutos ponderados ---")
+    plataformas_por_mes = candidate  # Lista de IDs de plataforma seleccionadas para cada mes
+
+    # Desactivar print de depuración en producción
+    verbose = False
+    if verbose:
+        print("\n--- Evaluando minutos ponderados ---")
 
     for user in users:
         minutos_disponibles = user.monthly_minutes
-        total_minutos_usuario = 0
         contenidos_disponibles = []
 
-        print(f"Usuario: {user.name}, Minutos disponibles: {minutos_disponibles}")
+        if verbose:
+            print(f"Usuario: {user.name}, Minutos disponibles: {minutos_disponibles}")
+
+        # Mapeo de plataformas por mes para búsqueda eficiente
+        plataformas_mes_dict = {mes: plat_id for mes, plat_id in enumerate(plataformas_por_mes)}
 
         # Procesar películas disponibles
         for pelicula in user.movies:
-            meses_disponibles = [mes for mes, plataforma_id in enumerate(plataformas_por_mes)
-                                 if plataforma_id in pelicula['platforms']]
+            meses_disponibles = [
+                mes for mes, plat_id in plataformas_mes_dict.items()
+                if plat_id in pelicula['platforms']
+            ]
+
+            duracion = pelicula['movie_duration']
+            if duracion <= 0:  # Evitar división por cero y contenidos sin duración
+                continue
+
             if meses_disponibles:
                 contenidos_disponibles.append({
-                    'nombre': pelicula['title'],
-                    'duracion': pelicula['movie_duration'],
+                    'tipo': 'pelicula',
+                    'id': pelicula['title'],
+                    'duracion': duracion,
                     'interes': pelicula['interest'],
-                    'valor_ponderado': pelicula['movie_duration'] * pelicula['interest'],
-                    'meses': meses_disponibles
+                    'valor_ponderado': duracion * pelicula['interest'],
+                    'meses': meses_disponibles,
+                    'eficiencia': pelicula['interest']  # Simplificado a solo interés cuando duracion > 0
                 })
 
         # Procesar series disponibles
         for serie in user.series:
+            # Plataformas donde está disponible la serie completa
+            plataformas_serie = serie.get('platforms', [])
+
             for temporada in serie['season']:
-                meses_disponibles = [mes for mes, plataforma_id in enumerate(plataformas_por_mes)
-                                     if plataforma_id in temporada['platforms'] or plataforma_id in serie['platforms']]
+                # Combinar plataformas de la serie y temporada específica
+                plataformas_temporada = set(temporada.get('platforms', []) + plataformas_serie)
+
+                duracion = temporada['season_duration']
+                if duracion <= 0:  # Evitar división por cero y contenidos sin duración
+                    continue
+
+                meses_disponibles = [
+                    mes for mes, plat_id in plataformas_mes_dict.items()
+                    if plat_id in plataformas_temporada
+                ]
+
                 if meses_disponibles:
                     contenidos_disponibles.append({
-                        'nombre': serie['title'],
-                        'season': temporada['season_number'],
-                        'duracion': temporada['season_duration'],
+                        'tipo': 'serie',
+                        'id': f"{serie['title']} - T{temporada['season_number']}",
+                        'duracion': duracion,
                         'interes': serie['interest'],
-                        'valor_ponderado': temporada['season_duration'] * serie['interest'],
-                        'meses': meses_disponibles
+                        'valor_ponderado': duracion * serie['interest'],
+                        'meses': meses_disponibles,
+                        'eficiencia': serie['interest']  # Simplificado a solo interés cuando duracion > 0
                     })
 
-        # Ordenar contenidos por valor ponderado (interés * duración)
-        contenidos_disponibles.sort(key=lambda x: x['valor_ponderado'], reverse=True)
+        # Ordenar contenidos primero por eficiencia (interés) y luego por duración para desempatar
+        contenidos_disponibles.sort(key=lambda x: (x['eficiencia'], -x['duracion']), reverse=True)
 
+        # Diccionario para llevar el registro de minutos utilizados por mes
+        minutos_usados_por_mes = {mes: 0 for mes in range(len(plataformas_por_mes))}
         contenidos_vistos = set()
-        for contenido in contenidos_disponibles:
-            for mes in contenido['meses']:
-                clave_contenido = (contenido['nombre'], mes)
-                if clave_contenido not in contenidos_vistos and total_minutos_usuario + contenido['duracion'] <= minutos_disponibles:
-                    minutos_totales_ponderados += contenido['valor_ponderado']
-                    total_minutos_usuario += contenido['duracion']
-                    contenidos_vistos.add(clave_contenido)
-                    break
 
-    print(f"Total minutos ponderados: {minutos_totales_ponderados}")
+        # Asignar contenidos eficientemente
+        for contenido in contenidos_disponibles:
+            # Ordenar meses por menor uso (para distribuir contenido uniformemente)
+            meses_ordenados = sorted(contenido['meses'], key=lambda m: minutos_usados_por_mes[m])
+
+            for mes in meses_ordenados:
+                clave_contenido = (contenido['id'], mes)
+
+                if clave_contenido not in contenidos_vistos:
+                    # Verificar si hay suficientes minutos disponibles en este mes
+                    if minutos_usados_por_mes[mes] + contenido['duracion'] <= minutos_disponibles:
+                        minutos_totales_ponderados += contenido['valor_ponderado']
+                        minutos_usados_por_mes[mes] += contenido['duracion']
+                        contenidos_vistos.add(clave_contenido)
+
+                        if verbose:
+                            print(
+                                f"  Mes {mes}: Viendo {contenido['id']} - {contenido['duracion']} min, valor: {contenido['valor_ponderado']}")
+
+                        break
+
+    if verbose:
+        print(f"Total minutos ponderados: {minutos_totales_ponderados}")
+
     return minutos_totales_ponderados
 
 
@@ -227,6 +282,49 @@ def evaluator(candidates, args):
     print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
     return fitness
 
+def last_generation_update(population, num_generations, args):
+    """
+    Registra las películas y series vistas por cada usuario en la última generación y actualiza `users.json`.
+    """
+    if num_generations == args.get('max_generations', 100) - 1:
+        print("\n📌 **Registrando películas y series vistas en la última generación...**")
+
+        users_data = args.get('users', [])
+
+        # Tomamos el mejor individuo de la última generación
+        best_solution = sorted(population, key=lambda ind: ind.fitness)[0]
+        plataformas_por_mes = best_solution.candidate  # La configuración final de plataformas
+
+        watched_movies = {}  # Almacena qué películas vio cada usuario
+        watched_series = {}  # Almacena qué series vio cada usuario
+
+        # Procesar cada usuario
+        for user in users_data:
+            user_id = user.get("user_id")  # ID del usuario
+            watched_movies[user_id] = []
+            watched_series[user_id] = []
+
+            # Ver qué películas ha visto el usuario
+            for movie in user["movies"]:
+                for mes, plataforma in enumerate(plataformas_por_mes):
+                    if plataforma in movie.get("platforms", []):
+                        watched_movies[user_id].append(movie["title"])
+                        break  # Si ya la vio, no es necesario seguir revisando meses
+
+            # Ver qué series ha visto el usuario
+            for serie in user["series"]:
+                for temporada in serie.get("season", []):
+                    for mes, plataforma in enumerate(plataformas_por_mes):
+                        if plataforma in temporada.get("platforms", []):
+                            watched_series[user_id].append(serie["title"])
+                            break  # Si ya vio una temporada, consideramos la serie vista
+
+        # 🔥 Guardar los datos en `users.json`
+        update_users_json(users_data, watched_movies, watched_series)
+
+
+
+
 
 def observer(population, num_generations, num_evaluations, args):
     """
@@ -234,11 +332,23 @@ def observer(population, num_generations, num_evaluations, args):
     """
     global generations, best_minutes, best_cost, usuarios_meses
 
+    print(f"ESTO ES LA POPULATION: {population} ")
+
+    if num_generations == args.get('max_generations', 100) - 1:
+        last_generation_update(population, num_generations, args)
+
     print(f"\n=== Generación {num_generations} ===")
     print(f"Número de evaluaciones: {num_evaluations}")
 
     # Extraer fitness
     fitness_values = [ind.fitness for ind in population]
+
+    total_minutos = sum(-fitness[0] for fitness in fitness_values)
+    total_costo = sum(fitness[1] for fitness in fitness_values)
+
+    # Guardar en la evolución
+    evolucion_minutos.append(total_minutos)
+    evolucion_costo.append(total_costo)
 
     # Mejores y peores valores
     mejor_minutos = min(fitness[0] for fitness in fitness_values)
@@ -343,8 +453,41 @@ def plot_pareto_front(algorithm):
     plt.savefig("pareto.png")
     plt.show()
 
+
+def plot_generation_improve():
+    """
+    Genera gráficos mostrando la evolución del costo total y los minutos ponderados en el algoritmo.
+    """
+    generaciones = list(range(len(evolucion_minutos)))  # X-Axis
+
+    plt.figure(figsize=(10, 5))
+
+    # 🔹 Gráfico de Minutos Ponderados
+    plt.subplot(1, 2, 1)
+    plt.plot(generaciones, evolucion_minutos, marker='o', linestyle='-', color='blue', label="Minutos Ponderados")
+    plt.xlabel("Generación")
+    plt.ylabel("Total Minutos Ponderados")
+    plt.title("Evolución de Minutos Ponderados")
+    plt.legend()
+    plt.grid(True)
+
+    # 🔹 Gráfico de Costo Total
+    plt.subplot(1, 2, 2)
+    plt.plot(generaciones, evolucion_costo, marker='o', linestyle='-', color='red', label="Costo Total")
+    plt.xlabel("Generación")
+    plt.ylabel("Costo Total (€)")
+    plt.title("Evolución del Costo Total")
+    plt.legend()
+    plt.grid(True)
+
+    plt.savefig("evolution_improve.png")
+    plt.tight_layout()
+    plt.show()
+
 # Llamar a la función después de la evolución
 
+evolucion_minutos = []
+evolucion_costo = []
 
 def main():
     global generations, best_minutes, best_cost, usuarios_meses
@@ -365,7 +508,7 @@ def main():
     algorithm.selector = inspyred.ec.selectors.tournament_selection
     algorithm.replacer = inspyred.ec.replacers.nsga_replacement
     algorithm.variator = [
-        inspyred.ec.variators.n_point_crossover,
+        inspyred.ec.variators.uniform_crossover,
         inspyred.ec.variators.random_reset_mutation
 
     ]
@@ -376,7 +519,7 @@ def main():
 
     # Set explicit parameters
     max_gen = 100
-    pop_size = 10
+    pop_size = 15
 
     # Prepare arguments dictionary
     args = {
@@ -397,26 +540,23 @@ def main():
         num_selected=pop_size,  # Select all individuals for potential reproduction
         tournament_size=3,
         num_elites=2,
-        mutation_rate=0.5,  # Higher mutation rate for more exploration
+        mutation_rate=0.9,  # Higher mutation rate for more exploration
         crossover_rate=0.5,
         gaussian_stdev=1.0,  # Higher standard deviation for more diverse mutations
         args=args
     )
 
+
     print("✅ Evolución completada.")
 
-    # Print Pareto front solutions
-    print("Soluciones en el frente de Pareto:")
-    for i, solution in enumerate(algorithm.archive):
-        print(f"Solución {i + 1}:")
-        print(f"  Minutos ponderados: {-solution.fitness[0]}")
-        print(f"  Costo total: {solution.fitness[1]}")
-        print(f"  Configuración: {solution.candidate}")
 
-    # Plot evolution
     plot_evolution()
     plot_pareto_front(algorithm)
+    plot_generation_improve()
 
 
 if __name__ == "__main__":
     main()
+
+
+
