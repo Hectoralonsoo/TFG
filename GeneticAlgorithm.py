@@ -521,7 +521,7 @@ def main():
 
     # Set explicit parameters
     max_gen = 100
-    pop_size = len(users)/2
+    pop_size = 30
 
     # Prepare arguments dictionary
     args = {
@@ -544,7 +544,7 @@ def main():
         num_elites=2,
         mutation_rate=0.5,  # Higher mutation rate for more exploration
         crossover_rate=0.5,
-        gaussian_stdev=1.0,  # Higher standard deviation for more diverse mutations
+        gaussian_stdev=0.8,  # Higher standard deviation for more diverse mutations
         args=args
     )
 
