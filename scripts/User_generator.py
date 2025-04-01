@@ -90,7 +90,7 @@ def generate_user(user_id, max_movies=50, max_series=35):
     return user
 
 # Generate 100 users
-users = [generate_user(user_id) for user_id in range(1, 15)]
+users = [generate_user(user_id) for user_id in range(1, 101)]
 
 # Save to JSON
 def save_users_to_json(users, filename):
@@ -111,26 +111,41 @@ def save_users_to_json(users, filename):
     with open(DATA_DIR / filename, "w", encoding="utf-8") as f:
         json.dump(users_data, f, indent=4, ensure_ascii=False)
 
-def update_users_json(users_data, watched_movies, watched_series):
+def update_users_json(users_data, watched_movies=None, watched_series=None):
     """
-    Actualiza el archivo `users.json` con las películas y series vistas en la última generación.
+    Actualiza el archivo `users.json` con las películas, series o historial visto por usuario.
+    Soporta objetos tipo `User`.
     """
-    print(f"🔄 Intentando actualizar `users.json` con {len(users_data)} usuarios...")  # 🔹 Verificar datos antes de guardar
+    print(f"🔄 Intentando actualizar `users.json` con {len(users_data)} usuarios...")
 
     if not users_data:
         print("⚠️ ERROR: No hay usuarios en `users_data`. Verificar generación de usuarios.")
-        return  # Evitamos guardar una lista vacía
+        return
+
+    updated_users = []
 
     for user in users_data:
-        user_id = user.get("user_id")
-        user["watched_movies"] = watched_movies.get(user_id, [])
-        user["watched_series"] = watched_series.get(user_id, [])
+        # Convertimos el objeto User a diccionario
+        user_dict = {
+            "name": user.name,
+            "user_id": user.id,
+            "monthly_minutes": user.monthly_minutes,
+            "movies": user.movies,
+            "series": user.series,
+            "months": user.months,
+            "watched_movies": user.watched_movies,
+            "watched_series": user.watched_series,
+            "historial": user.historial if hasattr(user, "historial") else {}
+        }
 
-    # Guardar los datos actualizados en el archivo
-    with open(DATA_DIR / "users.json", "w", encoding="utf-8") as file:
-        json.dump(users_data, file, ensure_ascii=False, indent=4)
+        updated_users.append(user_dict)
 
-    print("✅ `users.json` actualizado correctamente con las películas y series vistas.")
+    # Guardar el archivo actualizado
+    output_path = DATA_DIR / "users.json"
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(updated_users, file, ensure_ascii=False, indent=4)
+
+    print(f"✅ `users.json` actualizado correctamente en {output_path}.")
 
 
 

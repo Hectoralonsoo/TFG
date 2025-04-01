@@ -34,8 +34,8 @@ usuarios_meses = {}
 
 
 def generar_individuo(random, args):
-    individuo = [random.randint(1, 17) for _ in range(12)]
-    print(f"Individuos: {individuo}")
+    num_users = len(users)
+    individuo = [[random.randint(1, 17) for _ in range(12)] for _ in range(num_users)]
     return individuo
 
 def get_platform_name(platform_id):
@@ -60,14 +60,14 @@ def calcular_minutos_ponderados(candidate, args):
     - float: Suma total de minutos ponderados por interés para todos los usuarios
     """
     minutos_totales_ponderados = 0
-    plataformas_por_mes = candidate  # Lista de IDs de plataforma seleccionadas para cada mes
 
     # Desactivar print de depuración en producción
     verbose = False
     if verbose:
         print("\n--- Evaluando minutos ponderados ---")
 
-    for user in users:
+    for i, user in enumerate(users):
+        plataformas_por_mes = candidate[i]
         minutos_disponibles = user.monthly_minutes
         contenidos_disponibles = []
 
@@ -164,102 +164,82 @@ def calcular_minutos_ponderados(candidate, args):
 
 def calcular_costo_total(candidate, args):
     """
-    Calcula el costo total de suscripciones agrupando usuarios en los planes más baratos posibles,
-    evaluando todas las combinaciones posibles para encontrar la solución óptima global.
+    Calcula el costo total mensual agrupando usuarios por plataforma y
+    muestra por consola un resumen claro por cada mes.
     """
     costo_total = 0
-    plataformas_por_mes = [str(p) for p in candidate]  # Convertir IDs a strings
-    print("\n--- Calculando costo total ---")
+    num_users = len(candidate)
+
+    print("\n📅 === CÁLCULO DE COSTO TOTAL ===")
 
     for mes in range(12):
-        plataforma_id = plataformas_por_mes[mes]
+        print(f"\n🔸 Mes {mes + 1}:")
+        plataformas_mes = [str(candidate[i][mes]) for i in range(num_users)]
+        plataformas_contadas = set(plataformas_mes)
 
-        if plataforma_id not in streamingPlans:
-            print(f"Mes {mes + 1}, Plataforma {plataforma_id}: ❌ No en streamingPlans.json")
-            continue  # Evita error si la plataforma no está en el JSON
+        costo_mes = 0
 
-        # Contar cuántos usuarios necesitan esta plataforma en este mes
-        usuarios_requieren = sum(
-            1 for user in users if any(
-                str(plataforma_id) in map(str, pelicula.get('platforms', [])) for pelicula in user.movies
-            ) or any(
-                str(plataforma_id) in map(str, temporada.get('platforms', []))
-                for serie in user.series for temporada in serie.get('season', [])
-            )
-        )
+        for plataforma_id in plataformas_contadas:
+            if plataforma_id not in streamingPlans:
+                continue
 
-        if usuarios_requieren == 0:
-          #  print(f"Mes {mes + 1}, Plataforma {plataforma_id}: ⚠️ Ningún usuario requiere esta plataforma.")
-            continue  # No necesitamos pagar nada por esta plataforma
+            # Obtener usuarios asignados a esta plataforma en este mes
+            usuarios_asignados = [
+                i for i in range(num_users) if str(candidate[i][mes]) == plataforma_id
+            ]
+            num_usuarios = len(usuarios_asignados)
 
-        # Obtener planes disponibles para esta plataforma
-        planes_info = streamingPlans[plataforma_id]
-        planes = planes_info if isinstance(planes_info, list) else [planes_info]  # Asegurar lista
+            if num_usuarios == 0:
+                continue
 
-      #  print(f"Mes {mes + 1}, Plataforma {plataforma_id}: 🧑‍💻 {usuarios_requieren} usuarios")
+            # Obtener planes de esa plataforma
+            planes_info = streamingPlans[plataforma_id]
+            planes = planes_info if isinstance(planes_info, list) else [planes_info]
+            planes_compactos = [(p["perfiles"], p["precio"]) for p in planes]
+            planes_compactos.sort(key=lambda p: p[0] / p[1], reverse=True)
 
-        # Encontrar la combinación óptima de planes usando programación dinámica
-        # Primero convertimos los planes a una estructura más fácil de usar
-        planes_compactos = [(p["perfiles"], p["precio"]) for p in planes]
+            # Programación dinámica para cubrir perfiles
+            def encontrar_combinacion_optima(n):
+                dp = [(float('inf'), []) for _ in range(n + 1)]
+                dp[0] = (0, [])
 
-        # Ordenamos los planes por eficiencia (perfiles/precio) descendente
-        planes_compactos.sort(key=lambda p: p[0] / p[1], reverse=True)
+                for i in range(1, n + 1):
+                    for perfiles, precio in planes_compactos:
+                        if i <= perfiles:
+                            if precio < dp[i][0]:
+                                dp[i] = (precio, [(1, perfiles, precio)])
+                        else:
+                            prev_cost, prev_combo = dp[i - perfiles]
+                            if prev_cost + precio < dp[i][0]:
+                                nueva_combo = prev_combo.copy()
+                                encontrado = False
+                                for idx, (cant, perf, prec) in enumerate(nueva_combo):
+                                    if perf == perfiles and prec == precio:
+                                        nueva_combo[idx] = (cant + 1, perf, prec)
+                                        encontrado = True
+                                        break
+                                if not encontrado:
+                                    nueva_combo.append((1, perfiles, precio))
+                                dp[i] = (prev_cost + precio, nueva_combo)
 
-        # Función para encontrar la combinación óptima usando programación dinámica
-        def encontrar_combinacion_optima(usuarios_a_cubrir):
-            # Inicializar DP array
-            # dp[i] = (costo mínimo para cubrir i usuarios, planes usados)
-            dp = [(float('inf'), []) for _ in range(usuarios_a_cubrir + 1)]
-            dp[0] = (0, [])  # Base case: no cuesta nada cubrir 0 usuarios
+                return dp[n]
 
-            # Para cada número de usuarios posible
-            for i in range(1, usuarios_a_cubrir + 1):
-                # Probar cada plan disponible
-                for perfiles, precio in planes_compactos:
-                    # Si este plan puede cubrir a los usuarios actuales o más
-                    if i <= perfiles:
-                        # Si es más barato usar este plan único que la mejor solución previa
-                        if precio < dp[i][0]:
-                            dp[i] = (precio, [(1, perfiles, precio)])
-                    else:
-                        # Combinar este plan con la mejor solución para los usuarios restantes
-                        usuarios_restantes = i - perfiles
-                        costo_combinado = precio + dp[usuarios_restantes][0]
+            # Calcular mejor combinación de planes
+            costo_plataforma, combinacion = encontrar_combinacion_optima(num_usuarios)
+            costo_mes += costo_plataforma
 
-                        if costo_combinado < dp[i][0]:
-                            # Crear una nueva lista de planes
-                            nuevos_planes = dp[usuarios_restantes][1].copy()
+            nombre_plataforma = platforms_indexed.get(str(plataforma_id), f"Plataforma {plataforma_id}")
+            resumen_planes = ", ".join([f"{cant}x({perf} perfiles, {precio}€)" for cant, perf, precio in combinacion])
 
-                            # Buscar si ya tenemos este plan en la solución
-                            encontrado = False
-                            for idx, (cantidad, perf, prec) in enumerate(nuevos_planes):
-                                if perf == perfiles and prec == precio:
-                                    nuevos_planes[idx] = (cantidad + 1, perf, prec)
-                                    encontrado = True
-                                    break
+            print(f"  {nombre_plataforma} → {resumen_planes} → {num_usuarios} usuario(s)")
 
-                            if not encontrado:
-                                nuevos_planes.append((1, perfiles, precio))
+        print(f"🔹 Total mes {mes + 1}: {costo_mes:.2f}€")
+        costo_total += costo_mes
 
-                            dp[i] = (costo_combinado, nuevos_planes)
-
-            return dp[usuarios_a_cubrir]
-
-        # Obtenemos la combinación óptima y su costo
-        costo_mejor, combinacion_mejor = encontrar_combinacion_optima(usuarios_requieren)
-
-        # Formatear la lista de suscripciones para mostrar
-        suscripciones_utilizadas = [f"{num}x({perfiles} perfiles, {precio}€/mes)"
-                                    for num, perfiles, precio in combinacion_mejor]
-
-    #    print(f"  ✅ Usamos: {', '.join(suscripciones_utilizadas)} → Costo: {costo_mejor}€")
-     #   print(f"  🔹 Costo total para plataforma {plataforma_id} en mes {mes + 1}: {costo_mejor}€")
-
-        costo_total += costo_mejor
-
-    print(f"\n✅ **Costo total final: {costo_total}**")
-
+    print(f"\n✅ Costo total anual: {costo_total:.2f}€")
     return costo_total
+
+
 
 
 def evaluator(candidates, args):
@@ -282,45 +262,58 @@ def evaluator(candidates, args):
     print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
     return fitness
 
+
 def last_generation_update(population, num_generations, args):
     """
-    Registra las películas y series vistas por cada usuario en la última generación y actualiza `users.json`.
+    Registra para cada usuario qué contenidos ha visto, en qué mes y plataforma, y actualiza `users.json`.
     """
     if num_generations == args.get('max_generations', 100) - 1:
-        print("\n📌 **Registrando películas y series vistas en la última generación...**")
+        print("\n📌 **Registrando contenido visto por cada usuario con mes y plataforma...**")
 
-        users_data = args.get('users', [])
+        users_data = load_users_from_json("Data/users.json")
+        best_solution = min(population, key=lambda ind: (ind.fitness[0], ind.fitness[1]))
+        plataformas_por_usuario = best_solution.candidate
 
-        # Tomamos el mejor individuo de la última generación
-        best_solution = sorted(population, key=lambda ind: ind.fitness)[0]
-        plataformas_por_mes = best_solution.candidate  # La configuración final de plataformas
+        for i, user in enumerate(users_data):
+            user.months = plataformas_por_usuario[i]
+            plataformas_mes_dict = {mes: plat_id for mes, plat_id in enumerate(user.months)}
 
-        watched_movies = {}  # Almacena qué películas vio cada usuario
-        watched_series = {}  # Almacena qué series vio cada usuario
+            watched_movies = []
+            watched_series = []
 
-        # Procesar cada usuario
-        for user in users_data:
-            user_id = user.get("user_id")  # ID del usuario
-            watched_movies[user_id] = []
-            watched_series[user_id] = []
+            # Películas vistas
+            for pelicula in user.movies:
+                for mes, plat_id in plataformas_mes_dict.items():
+                    if plat_id in pelicula.get('platforms', []):
+                        watched_movies.append({
+                            "title": pelicula["title"],
+                            "mes": mes + 1,
+                            "plataforma": platforms_indexed.get(str(plat_id), f"Plataforma {plat_id}")
+                        })
+                        break  # Una vez vista, no repetir
 
-            # Ver qué películas ha visto el usuario
-            for movie in user["movies"]:
-                for mes, plataforma in enumerate(plataformas_por_mes):
-                    if plataforma in movie.get("platforms", []):
-                        watched_movies[user_id].append(movie["title"])
-                        break  # Si ya la vio, no es necesario seguir revisando meses
-
-            # Ver qué series ha visto el usuario
-            for serie in user["series"]:
+            # Series vistas (por temporada)
+            for serie in user.series:
+                plataformas_serie = serie.get("platforms", [])
                 for temporada in serie.get("season", []):
-                    for mes, plataforma in enumerate(plataformas_por_mes):
-                        if plataforma in temporada.get("platforms", []):
-                            watched_series[user_id].append(serie["title"])
-                            break  # Si ya vio una temporada, consideramos la serie vista
+                    plataformas_temporada = set(temporada.get("platforms", []) + plataformas_serie)
 
-        # 🔥 Guardar los datos en `users.json`
-        update_users_json(users_data, watched_movies, watched_series)
+                    for mes, plat_id in plataformas_mes_dict.items():
+                        if plat_id in plataformas_temporada:
+                            watched_series.append({
+                                "title": f"{serie['title']} - T{temporada['season_number']}",
+                                "mes": mes + 1,
+                                "plataforma": platforms_indexed.get(str(plat_id), f"Plataforma {plat_id}")
+                            })
+                            break  # No repetir temporada
+
+            user.watched_movies = watched_movies
+            user.watched_series = watched_series
+
+        update_users_json(users_data)
+
+
+
 
 
 
@@ -373,28 +366,34 @@ def observer(population, num_generations, num_evaluations, args):
         print(f"  Configuración: {population[i].candidate}")
 
         # Almacenar la información del historial de plataformas por usuario
-        for mes, plataforma in enumerate(population[i].candidate):
-            if plataforma not in usuarios_meses:
-                usuarios_meses[plataforma] = {}
+        for user_index, config_mensual in enumerate(population[i].candidate):
+            for mes, plataforma in enumerate(config_mensual):
+                if plataforma not in usuarios_meses:
+                    usuarios_meses[plataforma] = {}
 
-            # Iterar sobre los usuarios reales en lugar de usar args['users']
-            for user in users:
-                user_id = user.id if hasattr(user, 'id') else user.name  # Ajustar según la estructura real de usuario
+                user = users[user_index]
+                user_id = user.id if hasattr(user, 'id') else user.name
 
                 if user_id not in usuarios_meses[plataforma]:
                     usuarios_meses[plataforma][user_id] = []
 
-                usuarios_meses[plataforma][user_id].append(mes + 1)  # Guardar el mes donde usó la plataforma
-
+                usuarios_meses[plataforma][user_id].append(mes + 1)
 
     # Al finalizar la evolución, mostrar el resumen de uso de plataformas por usuario
     if num_generations == args.get('max_generations', 0) - 1:
-        print("\n📊 **Resumen de uso de plataformas por usuario**")
-        for plataforma, usuarios in usuarios_meses.items():
-            print(f"\n🔹 **Plataforma {plataforma}:**")
-            for user_id, meses in usuarios.items():
-                meses_str = ", ".join(map(str, sorted(set(meses))))
-                print(f"  🧑 Usuario {user_id} usó la plataforma en los meses: {meses_str}")
+        print("\n📊 **Resumen de contenido visto por usuario**")
+
+        for user in users:
+            user_id = user.id if hasattr(user, 'id') else user.name
+            print(f"\n👤 Usuario {user_id}:")
+
+            historial = user.__dict__.get("historial", {})  # Si estás usando clases, accede así
+
+            for mes_str in sorted(historial, key=lambda x: int(x)):
+                entry = historial[mes_str]
+                plataforma = entry["plataforma"]
+                contenidos = ", ".join(entry["contenido"])
+                print(f"  📅 Mes {mes_str}: {plataforma} → {contenidos}")
 
 
 
@@ -490,7 +489,7 @@ evolucion_minutos = []
 evolucion_costo = []
 
 def main():
-    global generations, best_minutes, best_cost, usuarios_meses
+    global generations, best_minutes, best_cost, usuarios_meses, users
 
     # Reset global tracking variables
     generations = []
@@ -498,6 +497,10 @@ def main():
     best_cost = []
     usuarios_meses = {}
 
+    # Recargar usuarios para asegurar datos frescos
+    users = load_users_from_json("Data/users.json")
+
+    print(f" DOS PRIMERO USUARIOS: {users[:2]}")
     seed = time()
     print(f"Using random seed: {seed}")
     prng = random.Random(seed)
@@ -510,7 +513,6 @@ def main():
     algorithm.variator = [
         inspyred.ec.variators.uniform_crossover,
         inspyred.ec.variators.random_reset_mutation
-
     ]
     algorithm.observer = observer
     algorithm.terminator = [inspyred.ec.terminators.generation_termination]
@@ -519,12 +521,12 @@ def main():
 
     # Set explicit parameters
     max_gen = 100
-    pop_size = 15
+    pop_size = len(users)/2
 
     # Prepare arguments dictionary
     args = {
         'platforms_indexed': platforms_indexed,
-        'users': users,
+        'users': users,  # Pasar la lista de usuarios directamente
         'streamingPlans': streamingPlans,
         'max_generations': max_gen,
         'pop_size': pop_size
@@ -540,15 +542,13 @@ def main():
         num_selected=pop_size,  # Select all individuals for potential reproduction
         tournament_size=3,
         num_elites=2,
-        mutation_rate=0.9,  # Higher mutation rate for more exploration
+        mutation_rate=0.5,  # Higher mutation rate for more exploration
         crossover_rate=0.5,
         gaussian_stdev=1.0,  # Higher standard deviation for more diverse mutations
         args=args
     )
 
-
     print("✅ Evolución completada.")
-
 
     plot_evolution()
     plot_pareto_front(algorithm)
