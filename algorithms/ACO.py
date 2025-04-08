@@ -6,17 +6,17 @@ from Loaders.LoadStreamingPlans import load_streaming_plan_json
 from Loaders.LoadPlatforms import load_platforms_json
 from Loaders.LoadUsers import load_users_from_json
 
-streamingPlans = load_streaming_plan_json("Data/streamingPlans.json")
-users = load_users_from_json("Data/users.json")
+streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
+users = load_users_from_json("../Data/users.json")
 
 # Cargar películas por plataforma
-with open("Data/MoviesPlatform.json", "r") as f:
+with open("../Data/MoviesPlatform.json", "r") as f:
     movies_by_platform = json.load(f)
 
-with open("Data/SeriesPlatform.json", "r", encoding="utf-8") as f:
+with open("../Data/SeriesPlatform.json", "r", encoding="utf-8") as f:
     series_by_platform = json.load(f)
 
-with open("Data/indice_plataformas.json", "r", encoding="utf-8") as f:
+with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
     platforms_indexed = json.load(f)
 
 
