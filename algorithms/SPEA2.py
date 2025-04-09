@@ -42,9 +42,9 @@ class SPEA2(EvolutionaryComputation):
             if self.observer:
                 self.observer(self.archive, generation, self._num_evaluations, kwargs)
 
-            if self.terminator:
-                if self.terminator(self.archive, generation, self._num_evaluations, kwargs):
-                    break
+          #  if self.terminator:
+           #     if self.terminator(self.archive, generation, self._num_evaluations, kwargs):
+            #        break
 
             mating_pool = self._select_parents(self.archive, num_selected)
             offspring = []
