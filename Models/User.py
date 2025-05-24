@@ -11,9 +11,9 @@ class User:
         self.movies = movies if movies is not None else []
         self.series = series if series is not None else []
         self.months = months if months is not None else []
-        self.watched_movies = watched_movies if watched_movies is not None else []
-        self.watched_series = watched_series if watched_series is not None else []
-        self.historial = {}  # ← importante para evitar errores en el observer
+        self.watched_movies = watched_movies
+        self.watched_series = watched_series
+        self.historial = {}
 
     def __repr__(self):
         return (f"User(name={self.name}, id={self.id}, monthly_minutes={self.monthly_minutes}, "

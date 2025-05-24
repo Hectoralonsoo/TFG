@@ -1,8 +1,10 @@
 import matplotlib.pyplot as plt
 import statistics
+import json
 import numpy as np
 from Loaders.LoadUsers import load_users_from_json
 from scripts.User_generator import update_users_json
+from utils.evaluation import calcular_minutos_ponderados
 
 generations = []
 best_minutes = []
@@ -13,16 +15,13 @@ evolucion_costo = []
 
 
 def last_generation_update(population, num_generations, args):
-    """
-    Registra para cada usuario qué contenidos ha visto, en qué mes y plataforma, y actualiza `users.json`.
-    """
     platforms_indexed = args["platforms_indexed"]
 
-    if num_generations == args.get('max_generations', 100) - 1:
+    if num_generations == args.get('max_generations') - 1:
         print("\n📌 **Registrando contenido visto por cada usuario con mes y plataforma...**")
 
-        users_data = load_users_from_json("Data/users.json")
-        best_solution = min(population, key=lambda ind: (ind.fitness[0], ind.fitness[1]))
+        users_data = load_users_from_json("../Data/users.json")
+        best_solution = min(population, key=lambda ind: (ind.objective_values[0], ind.objective_values[1]))
         plataformas_por_usuario = best_solution.candidate
 
         for i, user in enumerate(users_data):
@@ -41,7 +40,7 @@ def last_generation_update(population, num_generations, args):
                             "mes": mes + 1,
                             "plataforma": platforms_indexed.get(str(plat_id), f"Plataforma {plat_id}")
                         })
-                        break  # Una vez vista, no repetir
+                        break
 
             # Series vistas (por temporada)
             for serie in user.series:
@@ -56,17 +55,157 @@ def last_generation_update(population, num_generations, args):
                                 "mes": mes + 1,
                                 "plataforma": platforms_indexed.get(str(plat_id), f"Plataforma {plat_id}")
                             })
-                            break  # No repetir temporada
+                            break
 
             user.watched_movies = watched_movies
             user.watched_series = watched_series
 
         update_users_json(users_data)
+'''
+def update_user_viewing_for_individual(individual, platforms_indexed, users_path, output_path):
+    users_data = load_users_from_json(users_path)
+    plataformas_por_usuario = individual.candidate
+
+    final_output = {}
+
+    for i, user in enumerate(users_data):
+        user_id = f"user_{i}"
+        user.months = plataformas_por_usuario[i]
+        final_output[user_id] = {}
+
+        # Inicializar cada mes con su plataforma asignada
+        for m in range(12):
+            platform_id = user.months[m]
+            plataforma = platforms_indexed.get(str(platform_id), f"Plataforma {platform_id}")
+            final_output[user_id][f"month_{m+1}"] = {
+                "plataforma": plataforma,
+                "watched_movies": [],
+                "watched_series": [],
+                "minutes": 0
+            }
+
+    # Recuperar contenidos vistos desde el individuo
+    watched_movies = getattr(individual, 'watched_movies', [])
+    watched_series = getattr(individual, 'watched_series', [])
+
+    for movie in watched_movies:
+        user_id = movie.get("user_id", f"user_0")  # Si incluyes user_id en el futuro
+        mes_key = f"month_{movie['mes']}"
+        if user_id in final_output and mes_key in final_output[user_id]:
+            final_output[user_id][mes_key]["watched_movies"].append({
+                "title": movie["title"],
+                "minutes": movie["duracion"]
+            })
+            final_output[user_id][mes_key]["minutes"] += movie["duracion"]
+
+    for serie in watched_series:
+        user_id = serie.get("user_id", f"user_0")
+        mes_key = f"month_{serie['mes']}"
+        if user_id in final_output and mes_key in final_output[user_id]:
+            final_output[user_id][mes_key]["watched_series"].append({
+                "title": serie["title"],
+                "minutes": serie["duracion"]
+            })
+            final_output[user_id][mes_key]["minutes"] += serie["duracion"]
+
+    # Guardar en archivo JSON
+    with open(output_path, "w") as f:
+        json.dump(final_output, f, indent=4)
+
+    print(f"✅ Exportado: {output_path}")
+
+
+'''
+
+
+def update_user_viewing_for_individual(individual, platforms_indexed, users_path, output_path):
+
+    # Cargar datos de usuarios
+    with open(users_path, 'r', encoding='utf-8') as f:
+        users_data = json.load(f)
+
+    # Preparar la estructura para el resultado
+    result = {
+        "users": []
+    }
+
+    # Si el individuo tiene los atributos watched_movies y watched_series
+    if hasattr(individual, 'watched_movies') and hasattr(individual, 'watched_series'):
+        # Agrupar el contenido visto por usuario
+        content_by_user = {}
+
+        # Procesar películas vistas
+        for movie in individual.watched_movies:
+            user_id = movie["user_id"]
+            if user_id not in content_by_user:
+                content_by_user[user_id] = {}
+
+            mes = movie["mes"]
+            if mes not in content_by_user[user_id]:
+                content_by_user[user_id][mes] = {
+                    "plataforma": movie["plataforma"],
+                    "contenido": []
+                }
+
+            content_by_user[user_id][mes]["contenido"].append({
+                "tipo": "pelicula",
+                "titulo": movie["title"],
+                "duracion": movie["duracion"]
+            })
+
+        # Procesar series vistas
+        for serie in individual.watched_series:
+            user_id = serie["user_id"]
+            if user_id not in content_by_user:
+                content_by_user[user_id] = {}
+
+            mes = serie["mes"]
+            if mes not in content_by_user[user_id]:
+                content_by_user[user_id][mes] = {
+                    "plataforma": serie["plataforma"],
+                    "contenido": []
+                }
+
+            content_by_user[user_id][mes]["contenido"].append({
+                "tipo": "serie",
+                "titulo": serie["title"],
+                "duracion": serie["duracion"]
+            })
+
+        # Crear el resultado final
+        for user_id, months in content_by_user.items():
+            # Extraer el índice de usuario del formato "user_X"
+            user_index = int(user_id.split('_')[1])
+
+            # Obtener información del usuario original
+            user_data = users_data[user_index]
+
+            user_result = {
+                "id": user_data.get("id", user_id),
+                "name": user_data.get("name", f"Usuario {user_index}"),
+                "monthly_minutes": user_data.get("monthly_minutes", 0),
+                "historial": {}
+            }
+
+            for mes, data in months.items():
+                user_result["historial"][str(mes)] = {
+                    "plataforma": data["plataforma"],
+                    "contenido": [item["titulo"] for item in data["contenido"]]
+                }
+
+            result["users"].append(user_result)
+    else:
+        print("⚠️ Warning: El individuo no tiene los atributos watched_movies y watched_series")
 
 
 
 
 
+    # Guardar el resultado en formato JSON
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Solución guardada en {output_path}")
 
 
 
@@ -77,12 +216,37 @@ def observer(population, num_generations, num_evaluations, args):
     global generations, best_minutes, best_cost, usuarios_meses
 
     users = args["users"]
-
+    print(args)
 
     print(f"ESTO ES LA POPULATION: {population} ")
 
-    if num_generations == args.get('max_generations', 100) - 1:
+    if num_generations == args.get('max_generations'):
         last_generation_update(population, num_generations, args)
+        print("📦 Exportando soluciones del frente de Pareto...")
+
+
+        archive = args['_ec'].archive
+
+        for idx, ind in enumerate(archive):
+            output_path = f"../results/NSGA2/pareto_solution_{idx}NSGA-II.json"
+
+            # 1. Reconstruir monthly_data para el individuo actual
+            calcular_minutos_ponderados(ind.candidate, args)
+            ind.monthly_data = args['monthly_data_by_user']
+
+            # 2. Preparar el JSON de salida
+            export = {
+                "candidate": ind.candidate,
+                "fitness": list(ind.fitness),
+                "monthly_data": ind.monthly_data
+            }
+
+            # 3. Guardar en JSON
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(export, f, ensure_ascii=False, indent=2)
+
+
+
 
     print(f"\n=== Generación {num_generations} ===")
     print(f"Número de evaluaciones: {num_evaluations}")
@@ -141,7 +305,7 @@ def observer(population, num_generations, num_evaluations, args):
             user_id = user.id if hasattr(user, 'id') else user.name
             print(f"\n👤 Usuario {user_id}:")
 
-            historial = user.__dict__.get("historial", {})  # Si estás usando clases, accede así
+            historial = user.__dict__.get("historial", {})
 
             for mes_str in sorted(historial, key=lambda x: int(x)):
                 entry = historial[mes_str]
@@ -191,10 +355,9 @@ def plot_pareto_front(algorithm):
     pareto_solutions = algorithm.archive
     for solution in pareto_solutions:
         print(f"fitness: {solution.fitness} | type: {type(solution.fitness)}")
-    minutos_ponderados = [-solution.fitness[0] for solution in pareto_solutions]  # Maximizar
-    costo_total = [solution.fitness[1] for solution in pareto_solutions]  # Minimizar
+    minutos_ponderados = [-solution.fitness[0] for solution in pareto_solutions]
+    costo_total = [solution.fitness[1] for solution in pareto_solutions]
 
-    # Ordenar los puntos por costo para que la línea sea continua
     pareto_data = sorted(zip(costo_total, minutos_ponderados))
     costo_total_sorted, minutos_ponderados_sorted = zip(*pareto_data)
 
@@ -207,6 +370,8 @@ def plot_pareto_front(algorithm):
     plt.grid(True)
     plt.savefig("pareto.png")
     plt.show()
+
+
 
 
 def plot_generation_improve():
@@ -242,27 +407,25 @@ def plot_generation_improve():
 
 
 
+def observador_spea2(algorithm, population, num_generations, num_evaluations, args):
+    """
+    Observador para SPEA2 con exportación del frente de Pareto.
+    """
 
 
-def observador_spea2(population, generation, num_evaluations, args=None):
-    """
-    Observador para el algoritmo SPEA2.
-    Muestra y guarda estadísticas de cada generación.
-    """
+    print(args)
     if not population:
         return
 
-    # Calcular estadísticas básicas
     fitness_values = [ind.fitness for ind in population]
     objectives_1 = [ind.objective_values[0] for ind in population]  # costo
-    objectives_2 = [ind.objective_values[1] for ind in population]  # -minutos (negativo porque queremos maximizar)
+    objectives_2 = [ind.objective_values[1] for ind in population]  # -minutos
 
-    # Encontrar el mejor individuo
     best = min(population, key=lambda x: x.fitness)
 
-    # Identificar soluciones no dominadas (frente de Pareto)
+    # Calcular frente de Pareto (no dominados)
     pareto_front = []
-    for ind in population:
+    for ind in algorithm.archive:
         is_dominated = False
         for other in population:
             if other != ind and all(x <= y for x, y in zip(other.objective_values, ind.objective_values)) and any(
@@ -272,11 +435,10 @@ def observador_spea2(population, generation, num_evaluations, args=None):
         if not is_dominated:
             pareto_front.append(ind)
 
-    # Control de frecuencia de impresión detallada
-    print_detailed = generation % args.get('frequency', 1) == 0 if args else True
 
-    # Mostrar información
-    print(f"\n🧬 Generación {generation} | Evaluaciones: {num_evaluations}")
+    print_detailed = num_generations % args.get('frequency', 1) == 0 if args else True
+
+    print(f"\n🧬 Generación {num_generations} | Evaluaciones: {num_evaluations}")
     print(f"  Soluciones en el frente de Pareto: {len(pareto_front)}/{len(population)}")
     print(f"  Mejor fitness: {best.fitness:.4f}")
 
@@ -287,19 +449,41 @@ def observador_spea2(population, generation, num_evaluations, args=None):
         print(f"  Rango costo: [{min(objectives_1):.2f}, {max(objectives_1):.2f}]")
         print(f"  Rango minutos: [{-max(objectives_2):.2f}, {-min(objectives_2):.2f}]")
 
-    # Guardar historial si se pasa un archivo
-    if args and 'log_file' in args:
-        # Primera vez, escribir encabezado
-        if generation == 0:
-            with open(args['log_file'], 'w') as f:
-                f.write(
-                    "generation,best_fitness,best_cost,best_minutes,avg_cost,avg_minutes,std_cost,std_minutes,pareto_size\n")
+    # Exportar resultados del frente de Pareto solo en la última generación
+    print(f"ESTO ES LA POPULATION: {population} ")
 
-        # Añadir datos de esta generación
-        with open(args['log_file'], 'a') as f:
-            f.write(f"{generation},{best.fitness:.6f},{best.objective_values[0]:.6f},{-best.objective_values[1]:.6f}," +
-                    f"{statistics.mean(objectives_1):.6f},{-statistics.mean(objectives_2):.6f}," +
-                    f"{statistics.stdev(objectives_1):.6f},{statistics.stdev(objectives_2):.6f},{len(pareto_front)}\n")
+    if num_generations == args.get('max_generations') -1:
+        last_generation_update(population, num_generations, args)
+        print("📦 Exportando soluciones del frente de Pareto...")
+
+        pareto_front2 = get_non_dominated(algorithm.archive)
+
+
+
+        for idx, ind in enumerate(pareto_front2):
+            output_path = f"../results/SPEA2/pareto_solution_{idx}SPEA2.json"
+            update_user_viewing_for_individual(
+                individual=ind,
+                platforms_indexed=args["platforms_indexed"],
+                users_path="../Data/users.json",
+                output_path=output_path
+            )
+
+
+def get_non_dominated(solutions):
+    pareto = []
+    for ind in solutions:
+        dominated = False
+        for other in solutions:
+            if (other != ind and
+                    all(x <= y for x, y in zip(other.objective_values, ind.objective_values)) and
+                    any(x < y for x, y in zip(other.objective_values, ind.objective_values))):
+                dominated = True
+                break
+        if not dominated:
+            pareto.append(ind)
+    return pareto
+
 
 
 def plot_pareto_front_spea2(algorithm):
@@ -307,16 +491,124 @@ def plot_pareto_front_spea2(algorithm):
     Grafica el frente de Pareto específico para SPEA2.
     Usa objective_values, ya que fitness es escalar.
     """
-    pareto_solutions = algorithm.archive
+
+
+
+    pareto_solutions = get_non_dominated(algorithm.archive)
+    print('ESTO ES EL FRENTE DE PARETO COMPLETO: ' + str(pareto_solutions))
+    # Extraer valores objetivos
     minutos_ponderados = [-s.objective_values[1] for s in pareto_solutions]
     costo_total = [s.objective_values[0] for s in pareto_solutions]
 
+
+
+    # Ordenar los puntos para una mejor visualización
+    puntos_ordenados = sorted(zip(costo_total, minutos_ponderados), key=lambda x: x[0])
+    costo_ordenado, minutos_ordenados = zip(*puntos_ordenados) if puntos_ordenados else ([], [])
+
     import matplotlib.pyplot as plt
+
     plt.figure(figsize=(8, 6))
-    plt.scatter(costo_total, minutos_ponderados, c='blue')
+    plt.scatter(costo_ordenado, minutos_ordenados, marker='o', c='blue')
+
+    # Opcionalmente, conectar los puntos del frente
+    plt.plot(costo_ordenado, minutos_ordenados, linestyle='-', c='blue', alpha=0.5)
+
     plt.xlabel("Costo total (€)")
     plt.ylabel("Minutos ponderados vistos")
     plt.title("Frente de Pareto - SPEA2")
     plt.grid(True)
     plt.savefig("pareto_spea2.png")
     plt.show()
+
+
+
+def plot_pareto_front_paco(archive, title="Pareto Front - PACOStreaming", save_path="pareto_paco.png"):
+    """
+    Dibuja el Frente de Pareto final de PACOStreaming.
+    archive: lista de (solution, [minutos_ponderados, costo_total])
+    """
+    if not archive:
+        print("No hay soluciones en el archivo.")
+        return
+
+    minutos_ponderados = [objectives[0] for _, objectives in archive]  # Maximizar
+    costo_total = [objectives[1] for _, objectives in archive]  # Minimizar
+
+    pareto_data = sorted(zip(costo_total, minutos_ponderados))
+    costo_total_sorted, minutos_ponderados_sorted = zip(*pareto_data)
+
+    import matplotlib.pyplot as plt
+    plt.figure(figsize=(8, 6))
+    plt.plot(costo_total_sorted, minutos_ponderados_sorted, marker='o', linestyle='-', color='green', label="Pareto Front")
+    plt.xlabel("Costo total (€)")
+    plt.ylabel("Minutos ponderados vistos")
+    plt.title(title)
+    plt.grid(True)
+    plt.legend()
+    plt.savefig(save_path)
+    plt.show()
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def plot_ant_paths_lines(all_solutions, n_months, n_users, platform_options, title="Recorrido de Hormigas (Caminos)",
+                         max_ants_to_plot=20):
+    """
+    Dibuja los recorridos de varias hormigas como caminos.
+
+    all_solutions: lista de soluciones de todas las hormigas
+    n_months: número de meses
+    n_users: número de usuarios
+    platform_options: lista de IDs de plataformas
+    max_ants_to_plot: máximo de hormigas a graficar para que no quede saturado
+    """
+
+    plt.figure(figsize=(14, 8))
+
+    # Limitar el número de hormigas a graficar
+    ants_to_plot = all_solutions[:max_ants_to_plot]
+
+    for i, solution in enumerate(ants_to_plot):
+        path = []
+
+        for month in range(n_months):
+            for user in range(n_users):
+                idx = month * n_users + user
+                path.append(solution[idx])
+
+        steps = range(len(path))
+        plt.plot(steps, path, marker='o', linestyle='-', label=f"Hormiga {i + 1}", alpha=0.7)
+
+    plt.xlabel("Paso (Mes × Usuarios)")
+    plt.ylabel("ID Plataforma Elegida")
+    plt.title(title)
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize='small')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+import matplotlib.pyplot as plt
+
+def plot_user_platforms_over_time(user_platforms, user_name="Usuario X"):
+    """
+    Dibuja la evolución de las plataformas asignadas a un usuario a lo largo de los 12 meses.
+
+    user_platforms: lista de plataformas (longitud 12) para el usuario.
+    user_name: nombre o identificador del usuario.
+    """
+    months = list(range(1, 13))  # Meses de 1 a 12
+
+    plt.figure(figsize=(10, 6))
+    plt.step(months, user_platforms, where='mid', marker='o', linestyle='-', color='blue')
+    plt.xticks(months)
+    plt.xlabel("Mes")
+    plt.ylabel("ID Plataforma")
+    plt.title(f"Evolución de plataformas - {user_name}")
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+

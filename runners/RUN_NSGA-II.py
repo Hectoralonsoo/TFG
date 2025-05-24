@@ -7,9 +7,13 @@ from Loaders.LoadStreamingPlans import load_streaming_plan_json
 from Loaders.LoadUsers import load_users_from_json
 from Loaders.LoadPlatforms import load_platforms_json
 
-from utils.evaluation import evaluator
+from utils.evaluation import evaluator, calcular_minutos_ponderados
 from utils.logging import observer, plot_evolution, plot_generation_improve, plot_pareto_front
 from generators.Individual_generator import generar_individuo
+
+
+
+#from utils.save import save_pareto_archive_ea
 
 
 def main():
@@ -32,18 +36,21 @@ def main():
         inspyred.ec.variators.uniform_crossover,
         inspyred.ec.variators.random_reset_mutation
     ]
-    algorithm.observer = observer
+
     algorithm.terminator = [inspyred.ec.terminators.generation_termination]
+    algorithm.observer = observer
 
     # Parámetros del algoritmo
-    max_gen = 100
-    pop_size = 30
+    max_gen = 30
+    pop_size = 25
 
     args = {
         'users': users,
         'streamingPlans': streamingPlans,
         'platforms_indexed': platforms_indexed,
+        'max_generations': max_gen
     }
+
 
     print(args['users'])
 
@@ -55,7 +62,6 @@ def main():
         bounder=bounder,
         pop_size=pop_size,
         maximize=False,
-        max_generations=max_gen,
         num_selected=pop_size,
         tournament_size=3,
         num_elites=2,
@@ -67,10 +73,17 @@ def main():
 
     print("\n✅ Evolución completada.")
 
+    import pprint
+    pprint.pprint(vars(algorithm))
+
     # Gráficas
     plot_evolution()
     plot_generation_improve()
     plot_pareto_front(algorithm)
+
+
+
+
 
 
 if __name__ == "__main__":

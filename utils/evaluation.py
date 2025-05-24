@@ -1,48 +1,33 @@
 from utils.heuristics import encontrar_combinacion_optima
 from inspyred.ec import emo
 
-def calcular_minutos_ponderados(candidate, args):
-    """
-    Maximiza el valor total de minutos vistos ponderados por el interés del usuario.
 
-    Parámetros:
-    - candidate: Lista de plataformas seleccionadas para cada mes
-    - args: Argumentos adicionales (no utilizados actualmente)
-
-    Retorna:
-    - float: Suma total de minutos ponderados por interés para todos los usuarios
-    """
-
+def calcular_minutos_ponderados(candidate, args, individual=None):
     users = args['users']
+    platforms_indexed = args['platforms_indexed']
     minutos_totales_ponderados = 0
-
-    # Desactivar print de depuración en producción
     verbose = False
-    if verbose:
-        print("\n--- Evaluando minutos ponderados ---")
 
     for i, user in enumerate(users):
+        # Creamos una copia del usuario o usamos un objeto nuevo para este individuo
+        if individual is None:
+            current_individual = type('Individual', (), {})
+        else:
+            current_individual = individual
+
         plataformas_por_mes = candidate[i]
-        minutos_disponibles = user.monthly_minutes
+        plataformas_mes_dict = {mes: plat_id for mes, plat_id in enumerate(plataformas_por_mes)}
         contenidos_disponibles = []
 
-        if verbose:
-            print(f"Usuario: {user.name}, Minutos disponibles: {minutos_disponibles}")
-
-        # Mapeo de plataformas por mes para búsqueda eficiente
-        plataformas_mes_dict = {mes: plat_id for mes, plat_id in enumerate(plataformas_por_mes)}
-
-        # Procesar películas disponibles
+        # Crear contenidos disponibles con tipo
         for pelicula in user.movies:
+            duracion = pelicula['movie_duration']
+            if duracion <= 0:
+                continue
             meses_disponibles = [
                 mes for mes, plat_id in plataformas_mes_dict.items()
                 if plat_id in pelicula['platforms']
             ]
-
-            duracion = pelicula['movie_duration']
-            if duracion <= 0:  # Evitar división por cero y contenidos sin duración
-                continue
-
             if meses_disponibles:
                 contenidos_disponibles.append({
                     'tipo': 'pelicula',
@@ -51,27 +36,20 @@ def calcular_minutos_ponderados(candidate, args):
                     'interes': pelicula['interest'],
                     'valor_ponderado': duracion * pelicula['interest'],
                     'meses': meses_disponibles,
-                    'eficiencia': pelicula['interest']  # Simplificado a solo interés cuando duracion > 0
+                    'eficiencia': pelicula['interest']
                 })
 
-        # Procesar series disponibles
         for serie in user.series:
-            # Plataformas donde está disponible la serie completa
             plataformas_serie = serie.get('platforms', [])
-
             for temporada in serie['season']:
-                # Combinar plataformas de la serie y temporada específica
-                plataformas_temporada = set(temporada.get('platforms', []) + plataformas_serie)
-
                 duracion = temporada['season_duration']
-                if duracion <= 0:  # Evitar división por cero y contenidos sin duración
+                if duracion <= 0:
                     continue
-
+                plataformas_temporada = set(temporada.get('platforms', []) + plataformas_serie)
                 meses_disponibles = [
                     mes for mes, plat_id in plataformas_mes_dict.items()
                     if plat_id in plataformas_temporada
                 ]
-
                 if meses_disponibles:
                     contenidos_disponibles.append({
                         'tipo': 'serie',
@@ -80,48 +58,90 @@ def calcular_minutos_ponderados(candidate, args):
                         'interes': serie['interest'],
                         'valor_ponderado': duracion * serie['interest'],
                         'meses': meses_disponibles,
-                        'eficiencia': serie['interest']  # Simplificado a solo interés cuando duracion > 0
+                        'eficiencia': serie['interest']
                     })
 
-        # Ordenar contenidos primero por eficiencia (interés) y luego por duración para desempatar
+        # Ordenar por eficiencia
         contenidos_disponibles.sort(key=lambda x: (x['eficiencia'], -x['duracion']), reverse=True)
 
-        # Diccionario para llevar el registro de minutos utilizados por mes
-        minutos_usados_por_mes = {mes: 0 for mes in range(len(plataformas_por_mes))}
+        minutos_usados_por_mes = {mes: 0 for mes in range(12)}
         contenidos_vistos = set()
+        watched_movies = {mes: [] for mes in range(12)}
+        watched_series = {mes: [] for mes in range(12)}
 
-        # Asignar contenidos eficientemente
         for contenido in contenidos_disponibles:
-            # Ordenar meses por menor uso (para distribuir contenido uniformemente)
             meses_ordenados = sorted(contenido['meses'], key=lambda m: minutos_usados_por_mes[m])
-
             for mes in meses_ordenados:
                 clave_contenido = (contenido['id'], mes)
-
                 if clave_contenido not in contenidos_vistos:
-                    # Verificar si hay suficientes minutos disponibles en este mes
-                    if minutos_usados_por_mes[mes] + contenido['duracion'] <= minutos_disponibles:
+                    if minutos_usados_por_mes[mes] + contenido['duracion'] <= user.monthly_minutes:
                         minutos_totales_ponderados += contenido['valor_ponderado']
                         minutos_usados_por_mes[mes] += contenido['duracion']
                         contenidos_vistos.add(clave_contenido)
 
+                        if contenido['tipo'] == 'pelicula':
+                            entrada = {
+                                "title": contenido['id'],
+                                "mes": mes + 1,
+                                "plataforma": platforms_indexed.get(
+                                    str(plataformas_mes_dict[mes]), f"Plataforma {plataformas_mes_dict[mes]}"
+                                ),
+                                "duracion": contenido['duracion'],
+                                "user_id": f"user_{i}"
+                            }
+                            watched_movies[mes].append(entrada)
+                        else:
+                            if ' - T' in contenido['id']:
+                                title, season_str = contenido['id'].split(' - T')
+                                season_number = int(season_str)
+                            else:
+                                title = contenido['id']
+                                season_number = 1
+
+                            entrada = {
+                                "title": title,
+                                "season_number": season_number,
+                                "mes": mes + 1,
+                                "plataforma": platforms_indexed.get(
+                                    str(plataformas_mes_dict[mes]), f"Plataforma {plataformas_mes_dict[mes]}"
+                                ),
+                                "duracion": contenido['duracion'],
+                                "user_id": f"user_{i}"
+                            }
+                            watched_series[mes].append(entrada)
+
                         if verbose:
                             print(
-                                f"  Mes {mes}: Viendo {contenido['id']} - {contenido['duracion']} min, valor: {contenido['valor_ponderado']}")
+                                f"  Mes {mes + 1}: {contenido['tipo']} - {contenido['id']} ({contenido['duracion']} min)")
 
                         break
+
+        monthly_data = []
+
+        for mes in range(12):
+            monthly_data.append({
+                "month": mes,
+                "platform": plataformas_mes_dict[mes],
+                "watched_movies": watched_movies[mes],
+                "watched_series": watched_series[mes]
+            })
+
+        user_id = f"user_{i}"
+        if 'monthly_data_by_user' not in args:
+            args['monthly_data_by_user'] = {}
+        args['monthly_data_by_user'][user_id] = monthly_data
+
 
     if verbose:
         print(f"Total minutos ponderados: {minutos_totales_ponderados}")
 
+    # Devolvemos solo el valor de fitness para mantener la compatibilidad
     return minutos_totales_ponderados
 
 
+
 def calcular_costo_total(candidate, args):
-    """
-    Calcula el costo total mensual agrupando usuarios por plataforma y
-    muestra por consola un resumen claro por cada mes.
-    """
+
     costo_total = 0
     num_users = len(candidate)
     streamingPlans = args["streamingPlans"]
@@ -175,10 +195,7 @@ def calcular_costo_total(candidate, args):
 
 
 def evaluator(candidates, args):
-    """
-    Evaluador del algoritmo multiobjetivo.
-    Devuelve una lista de valores de fitness para cada candidato.
-    """
+
     fitness = []
 
     print(f"\n--- Evaluando {len(candidates)} individuos ---")
@@ -189,6 +206,7 @@ def evaluator(candidates, args):
         minutos_ponderados = calcular_minutos_ponderados(candidate, args)
         costo_total = calcular_costo_total(candidate, args)
 
+
         fitness.append(emo.Pareto([-minutos_ponderados, costo_total]))
 
     print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
@@ -197,12 +215,34 @@ def evaluator(candidates, args):
 
 def evaluatorSPEA2(candidates, args):
 
-    results = []
+    fitness = []
 
     for candidate in candidates:
+        print(f"Evaluando individuo: {candidate}")
         minutos_ponderados = calcular_minutos_ponderados(candidate, args)
         costo_total = calcular_costo_total(candidate, args)
 
-        results.append([costo_total, -minutos_ponderados])
+        fitness.append([costo_total, -minutos_ponderados])
 
-    return results
+    print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
+    return fitness
+
+
+
+def fitness_paco(solution, args):
+
+    n_users = len(args['users'])
+    n_months = 12
+
+    candidate = []
+    for user_idx in range(n_users):
+        user_platforms = []
+        for month in range(n_months):
+            index = month * n_users + user_idx
+            user_platforms.append(solution[index])
+        candidate.append(user_platforms)
+
+    minutos_ponderados = calcular_minutos_ponderados(candidate, args)
+    costo_total = calcular_costo_total(candidate, args)
+
+    return [minutos_ponderados, costo_total]

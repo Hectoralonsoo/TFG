@@ -11,8 +11,6 @@ class SPEA2(EvolutionaryComputation):
         self.archive = []
         self.archive_size = 300
         self.k = 3
-
-        # ✅ Define atributos por defecto
         self.default_selector = selectors.tournament_selection
         self.default_variator = [variators.uniform_crossover, variators.random_reset_mutation]
         self.default_terminator = terminators.generation_termination
@@ -25,9 +23,13 @@ class SPEA2(EvolutionaryComputation):
         self.num_generations = 0
         self._num_evaluations = 0
         self.archive = []
+        kwargs['max_generations'] = max_generations
 
         generation = 0
         population = [Individual(self.generator(random=self._random, args=kwargs)) for _ in range(pop_size)]
+
+        # Guardamos la población como _individuals para poder acceder a ella desde la función de evaluación
+        kwargs['_individuals'] = population
         population = self._evaluate_population(population, kwargs)
 
         # Calcular k dinámicamente para densidad
@@ -40,11 +42,9 @@ class SPEA2(EvolutionaryComputation):
             self.archive = self._select_archive(combined)
 
             if self.observer:
-                self.observer(self.archive, generation, self._num_evaluations, kwargs)
+                self.observer(self, self.archive, generation, self._num_evaluations, kwargs)
 
-          #  if self.terminator:
-           #     if self.terminator(self.archive, generation, self._num_evaluations, kwargs):
-            #        break
+
 
             mating_pool = self._select_parents(self.archive, num_selected)
             offspring = []
@@ -58,6 +58,9 @@ class SPEA2(EvolutionaryComputation):
                 offspring.extend([Individual(child) for child in children])
 
             offspring = offspring[:pop_size]
+
+            # Actualizar _individuals con los nuevos descendientes
+            kwargs['_individuals'] = offspring
             offspring = self._evaluate_population(offspring, kwargs)
             population = offspring
 
@@ -65,29 +68,22 @@ class SPEA2(EvolutionaryComputation):
             self.num_generations = generation
             self._num_evaluations += len(population)
 
+        # Evaluar el archivo final una vez más para asegurar que contiene la información correcta
+        # Esto asegura que todos los individuos del frente de Pareto tengan watched_movies y watched_series
+        kwargs['_individuals'] = self.archive
+        self._evaluate_population(self.archive, kwargs)
+
         return self.archive
-
-    def _generate_initial_population(self, **kwargs):
-        """Genera la población inicial y crea objetos Individual."""
-        pop_size = kwargs.get('pop_size', self._pop_size)
-        generator = kwargs.get('generator')
-        candidates = generator(random=self._random, args=kwargs)
-
-        population = []
-        for candidate in candidates:
-            population.append(Individual(candidate))
-
-        return population
 
     def _evaluate_population(self, population, kwargs):
         """Evalúa la población y asigna valores objetivo."""
         if population:
             candidates = [p.candidate for p in population]
+            # Evaluar con el evaluador y pasar la población actual
             fitness_values = self.evaluator(candidates=candidates, args=kwargs)
 
             for index, individual in enumerate(population):
                 individual.objective_values = fitness_values[index]
-                # No asignamos fitness aquí, se hará en _assign_spea2_fitness
 
         return population
 
@@ -195,17 +191,60 @@ class SPEA2(EvolutionaryComputation):
             if not is_dominated:
                 non_dominated.append(ind)
 
+        # Copiar atributos adicionales de individuos originales a sus copias en el archivo
+        self._copy_attributes(individuals, non_dominated)
+
         # Ajustar tamaño del archivo
         if len(non_dominated) <= self.archive_size:
             # Si hay espacio disponible, añadir los mejores individuos dominados
             if len(non_dominated) < self.archive_size:
                 dominated = sorted([ind for ind in individuals if ind not in non_dominated],
                                    key=lambda x: x.fitness)
-                non_dominated.extend(dominated[:self.archive_size - len(non_dominated)])
+                to_add = dominated[:self.archive_size - len(non_dominated)]
+                self._copy_attributes(individuals, to_add)
+                non_dominated.extend(to_add)
             return non_dominated
         else:
             # Truncar archivo usando el método de distancia
             return self._truncate_archive(non_dominated)
+
+    def _copy_attributes(self, source_individuals, target_individuals):
+        """
+        Copia atributos como watched_movies y watched_series entre individuos
+        """
+        # Crear un diccionario para búsqueda rápida por candidate
+        source_dict = {}
+        for ind in source_individuals:
+            # Usar una tupla de los valores del candidato como clave
+            if hasattr(ind, 'candidate'):
+                key = self._get_candidate_key(ind.candidate)
+                source_dict[key] = ind
+
+        # Copiar atributos a los individuos target
+        for target_ind in target_individuals:
+            key = self._get_candidate_key(target_ind.candidate)
+            if key in source_dict:
+                source_ind = source_dict[key]
+                # Copiar watched_movies si existe
+                if hasattr(source_ind, 'watched_movies'):
+                    target_ind.watched_movies = source_ind.watched_movies
+                # Copiar watched_series si existe
+                if hasattr(source_ind, 'watched_series'):
+                    target_ind.watched_series = source_ind.watched_series
+
+    def _get_candidate_key(self, candidate):
+        """
+        Crea una clave única para un candidato
+        """
+        # Convertir el candidato a una tupla para usarlo como clave
+        if isinstance(candidate, list):
+            # Si es una lista anidada, convertir cada elemento interno
+            if any(isinstance(item, list) for item in candidate):
+                return tuple(tuple(item) if isinstance(item, list) else item for item in candidate)
+            else:
+                return tuple(candidate)
+        else:
+            return candidate
 
     def _truncate_archive(self, archive):
         """
@@ -255,7 +294,3 @@ class SPEA2(EvolutionaryComputation):
                 archive.pop(self._random.randrange(len(archive)))
 
         return archive
-
-
-
-

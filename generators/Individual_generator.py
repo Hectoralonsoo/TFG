@@ -1,5 +1,4 @@
 def generar_individuo(random, args):
-
     print(args['users'])
     num_users = len(args['users'])
     num_platforms = len(args['platforms_indexed'])
@@ -7,7 +6,4 @@ def generar_individuo(random, args):
     return individuo
 
 def get_platform_name(platform_id, platforms_indexed):
-    """
-    Devuelve el nombre de la plataforma a partir de su ID numérico.
-    """
     return platforms_indexed.get(str(platform_id))

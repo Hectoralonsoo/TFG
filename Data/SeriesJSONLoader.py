@@ -16,8 +16,7 @@ def process_series_data():
 
         for season in series["seasons"]:
             season_name = season["season_name"]
-            season_duration = sum(
-                episode["duration"] for episode in season["episodes"])  # 🔹 Calcula la duración total de la temporada
+            season_duration = sum(episode["duration"] for episode in season["episodes"])  # 🔹 Calcula la duración total de la temporada
             season_platforms = season["platforms"]
 
             for platform in season_platforms:
@@ -27,8 +26,7 @@ def process_series_data():
                 if series_title not in platform_dict[platform]:
                     platform_dict[platform][series_title] = {}  # Crea la serie si no existe
 
-                platform_dict[platform][series_title][
-                    season_name] = season_duration  # Agrega la temporada con su duración
+                platform_dict[platform][series_title][season_name] = season_duration  # Agrega la temporada con su duración
 
     # 📂 Guarda el JSON final
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
