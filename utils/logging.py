@@ -404,16 +404,11 @@ def plot_generation_improve():
     plt.tight_layout()
     plt.show()
 
-
-
-
+'''
 def observador_spea2(algorithm, population, num_generations, num_evaluations, args):
     """
-    Observador para SPEA2 con exportación del frente de Pareto.
+    Observador para SPEA2 with exportación del frente de Pareto.
     """
-
-
-    print(args)
     if not population:
         return
 
@@ -423,23 +418,10 @@ def observador_spea2(algorithm, population, num_generations, num_evaluations, ar
 
     best = min(population, key=lambda x: x.fitness)
 
-    # Calcular frente de Pareto (no dominados)
-    pareto_front = []
-    for ind in algorithm.archive:
-        is_dominated = False
-        for other in population:
-            if other != ind and all(x <= y for x, y in zip(other.objective_values, ind.objective_values)) and any(
-                    x < y for x, y in zip(other.objective_values, ind.objective_values)):
-                is_dominated = True
-                break
-        if not is_dominated:
-            pareto_front.append(ind)
-
-
     print_detailed = num_generations % args.get('frequency', 1) == 0 if args else True
 
     print(f"\n🧬 Generación {num_generations} | Evaluaciones: {num_evaluations}")
-    print(f"  Soluciones en el frente de Pareto: {len(pareto_front)}/{len(population)}")
+    print(f"  Tamaño del archivo: {len(population)}")
     print(f"  Mejor fitness: {best.fitness:.4f}")
 
     if print_detailed:
@@ -450,17 +432,22 @@ def observador_spea2(algorithm, population, num_generations, num_evaluations, ar
         print(f"  Rango minutos: [{-max(objectives_2):.2f}, {-min(objectives_2):.2f}]")
 
     # Exportar resultados del frente de Pareto solo en la última generación
-    print(f"ESTO ES LA POPULATION: {population} ")
+    if num_generations == args.get('max_generations') - 1:
 
-    if num_generations == args.get('max_generations') -1:
+        # EJECUTAR PRIMERO last_generation_update
+        print("📦 Ejecutando last_generation_update...")
         last_generation_update(population, num_generations, args)
+
+        # AHORA CALCULAR EL FRENTE DE PARETO (después del update)
+        print("📊 Calculando frente de Pareto final...")
+        pareto_front = get_non_dominated(algorithm.archive)
+
+        print(f"  - Archive final: {len(algorithm.archive)} individuos")
+        print(f"  - Frente de Pareto final: {len(pareto_front)} soluciones")
         print("📦 Exportando soluciones del frente de Pareto...")
 
-        pareto_front2 = get_non_dominated(algorithm.archive)
-
-
-
-        for idx, ind in enumerate(pareto_front2):
+        # EXPORTAR EL FRENTE CALCULADO DESPUÉS DEL UPDATE
+        for idx, ind in enumerate(pareto_front):
             output_path = f"../results/SPEA2/pareto_solution_{idx}SPEA2.json"
             update_user_viewing_for_individual(
                 individual=ind,
@@ -468,9 +455,103 @@ def observador_spea2(algorithm, population, num_generations, num_evaluations, ar
                 users_path="../Data/users.json",
                 output_path=output_path
             )
+'''
+def observador_spea2(algorithm, population, num_generations, num_evaluations, args):
+    """
+    Observer adaptado para SPEA2. Muestra evolución y exporta soluciones del frente.
+    """
+    global generations, best_minutes, best_cost, usuarios_meses
 
+    users = args["users"]
+
+    if num_generations == args.get('max_generations') - 1:
+        print("📦 Exportando soluciones del frente de Pareto...")
+
+        archive = algorithm.archive
+
+        for idx, ind in enumerate(archive):
+            output_path = f"../results/SPEA2/pareto_solution_{idx}_SPEA2.json"
+
+            # 1. Reconstruir monthly_data para el individuo actual
+            calcular_minutos_ponderados(ind.candidate, args)
+            ind.monthly_data = args['monthly_data_by_user']
+
+            # 2. Preparar el JSON de salida
+            export = {
+                "candidate": ind.candidate,
+                "objectives": list(ind.objective_values),
+                "monthly_data": ind.monthly_data
+            }
+
+            # 3. Guardar en JSON
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(export, f, ensure_ascii=False, indent=2)
+
+    print(f"\n=== Generación {num_generations} ===")
+    print(f"Número de evaluaciones: {num_evaluations}")
+
+    # Extraer objetivos
+    fitness_values = [ind.objective_values for ind in population]
+
+    total_minutos = sum(-obj[1] for obj in fitness_values)
+    total_costo = sum(obj[0] for obj in fitness_values)
+
+    # Guardar en la evolución
+    evolucion_minutos.append(total_minutos)
+    evolucion_costo.append(total_costo)
+
+    mejor_minutos = min(obj[1] for obj in fitness_values)
+    peor_minutos = max(obj[1] for obj in fitness_values)
+    mejor_costo = min(obj[0] for obj in fitness_values)
+    peor_costo = max(obj[0] for obj in fitness_values)
+
+    generations.append(num_generations)
+    best_minutes.append(-mejor_minutos)
+    best_cost.append(mejor_costo)
+
+    print(f"  Mejor Minutos Ponderados: {-mejor_minutos:.2f}, Peor: {-peor_minutos:.2f}")
+    print(f"  Mejor Costo Total: {mejor_costo:.2f}, Peor: {peor_costo:.2f}")
+
+    print("\n--- Todos los individuos ---")
+    for i, ind in enumerate(population):
+        minutos_ponderados = -ind.objective_values[1]
+        costo_total = ind.objective_values[0]
+        print(f"Individuo {i + 1}: Minutos ponderados: {minutos_ponderados:.2f}, Costo total: {costo_total:.2f}")
+        print(f"  Configuración: {ind.candidate}")
+
+        # Almacenar la información del historial de plataformas por usuario
+        for user_index, config_mensual in enumerate(ind.candidate):
+            for mes, plataforma in enumerate(config_mensual):
+                if plataforma not in usuarios_meses:
+                    usuarios_meses[plataforma] = {}
+
+                user = users[user_index]
+                user_id = user.id if hasattr(user, 'id') else user.name
+
+                if user_id not in usuarios_meses[plataforma]:
+                    usuarios_meses[plataforma][user_id] = []
+
+                usuarios_meses[plataforma][user_id].append(mes + 1)
+
+    if num_generations == args.get('max_generations', 0) - 1:
+        print("\n📊 **Resumen de contenido visto por usuario**")
+
+        for user in users:
+            user_id = user.id if hasattr(user, 'id') else user.name
+            print(f"\n👤 Usuario {user_id}:")
+
+            historial = user.__dict__.get("historial", {})
+
+            for mes_str in sorted(historial, key=lambda x: int(x)):
+                entry = historial[mes_str]
+                plataforma = entry["plataforma"]
+                contenidos = ", ".join(entry["contenido"])
+                print(f"  📅 Mes {mes_str}: {plataforma} → {contenidos}")
 
 def get_non_dominated(solutions):
+    """
+    Encuentra las soluciones no dominadas (frente de Pareto) en un conjunto de soluciones.
+    """
     pareto = []
     for ind in solutions:
         dominated = False
@@ -485,26 +566,23 @@ def get_non_dominated(solutions):
     return pareto
 
 
-
 def plot_pareto_front_spea2(algorithm):
     """
     Grafica el frente de Pareto específico para SPEA2.
     Usa objective_values, ya que fitness es escalar.
     """
-
-
-
     pareto_solutions = get_non_dominated(algorithm.archive)
     print('ESTO ES EL FRENTE DE PARETO COMPLETO: ' + str(pareto_solutions))
+
     # Extraer valores objetivos
     minutos_ponderados = [-s.objective_values[1] for s in pareto_solutions]
     costo_total = [s.objective_values[0] for s in pareto_solutions]
 
-
-
     # Ordenar los puntos para una mejor visualización
     puntos_ordenados = sorted(zip(costo_total, minutos_ponderados), key=lambda x: x[0])
     costo_ordenado, minutos_ordenados = zip(*puntos_ordenados) if puntos_ordenados else ([], [])
+
+    print("LONGITUD FRENTE DE PARETO->>>>>>>>" +  str(len(pareto_solutions)))
 
     import matplotlib.pyplot as plt
 
@@ -612,3 +690,62 @@ def plot_user_platforms_over_time(user_platforms, user_name="Usuario X"):
     plt.show()
 
 
+
+
+def observer_paco(paco, iteration, args, export_dir="../results/PACO"):
+    """
+    Observer para PACO: muestra estado por iteración y exporta archivo final.
+    """
+    global generations, best_minutes, best_cost
+
+    archive = paco.archive
+    print(f"\n=== Iteración {iteration + 1}/{paco.n_iterations} ===")
+    print(f"Archivo actual (frente de Pareto): {len(archive)} soluciones")
+
+    if not archive:
+        print("⚠️ Archivo vacío. No hay soluciones no dominadas.")
+        return
+
+    # Extraer objetivos
+    minutos = [obj[0] for _, obj in archive]
+    costos = [obj[1] for _, obj in archive]
+
+    mejor_minutos = max(minutos)
+    peor_minutos = min(minutos)
+    mejor_costo = min(costos)
+    peor_costo = max(costos)
+
+    print(f"  ✅ Mejor minutos ponderados: {mejor_minutos:.2f} | Peor: {peor_minutos:.2f}")
+    print(f"  💰 Mejor costo total: {mejor_costo:.2f} | Peor: {peor_costo:.2f}")
+
+    # Guardar para graficar evolución
+    generations.append(iteration)
+    best_minutes.append(mejor_minutos)
+    best_cost.append(mejor_costo)
+
+    # Si es la última iteración, exportar soluciones
+    if iteration + 1 == paco.n_iterations:
+        n_users = len(args["users"])
+        n_months = paco.n_months
+
+        print("📦 Exportando soluciones finales del frente de Pareto...")
+
+        for idx, (solution, objectives) in enumerate(archive):
+            # Reconstruir candidato
+            candidate = [[solution[month * n_users + user] for month in range(n_months)]
+                         for user in range(n_users)]
+
+            # Calcular contenidos vistos (esto actualiza monthly_data_by_user en args)
+            calcular_minutos_ponderados(candidate, args)
+            monthly_data = args.get("monthly_data_by_user", {})
+
+            output = {
+                "candidate": candidate,
+                "objectives": objectives,
+                "monthly_data": monthly_data
+            }
+
+            with open(f"{export_dir}/pareto_solution_{idx}_PACO.json", 'w', encoding='utf-8') as f:
+                json.dump(output, f, indent=2, ensure_ascii=False)
+
+        print(f"✅ {len(archive)} soluciones exportadas a {export_dir}")

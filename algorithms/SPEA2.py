@@ -3,6 +3,7 @@ from inspyred.ec import Individual
 import numpy as np
 from scipy.spatial import distance
 from inspyred.ec import selectors, variators, terminators
+from utils.logging import get_non_dominated
 
 
 class SPEA2(EvolutionaryComputation):
@@ -15,9 +16,10 @@ class SPEA2(EvolutionaryComputation):
         self.default_variator = [variators.uniform_crossover, variators.random_reset_mutation]
         self.default_terminator = terminators.generation_termination
 
+    # Método mejorado para el bucle principal de evolución
     def evolve(self, pop_size, maximize, max_generations, num_selected, **kwargs):
         """
-        Implementación personalizada del algoritmo SPEA2.
+        Implementación corregida del algoritmo SPEA2.
         """
         self._maximize = maximize
         self.num_generations = 0
@@ -28,7 +30,6 @@ class SPEA2(EvolutionaryComputation):
         generation = 0
         population = [Individual(self.generator(random=self._random, args=kwargs)) for _ in range(pop_size)]
 
-        # Guardamos la población como _individuals para poder acceder a ella desde la función de evaluación
         kwargs['_individuals'] = population
         population = self._evaluate_population(population, kwargs)
 
@@ -36,30 +37,36 @@ class SPEA2(EvolutionaryComputation):
         self.k = kwargs.get('k', max(1, int(len(population) ** 0.5)))
 
         while generation < max_generations:
+            # Combinar población actual con archivo
             combined = population + self.archive
 
+            # Asignar fitness SPEA2 a todos los individuos
             self._assign_spea2_fitness(combined)
+
+            # Seleccionar nuevo archivo (debería contener el frente de Pareto)
             self.archive = self._select_archive(combined)
 
             if self.observer:
                 self.observer(self, self.archive, generation, self._num_evaluations, kwargs)
 
-
-
+            # Selección de padres del archivo
             mating_pool = self._select_parents(self.archive, num_selected)
             offspring = []
 
+            # Generar descendencia
             while len(offspring) < pop_size:
                 selected = self._random.sample(mating_pool, 2)
                 parents = [p.candidate for p in selected]
                 children = parents
+
                 for v in self.variator:
                     children = v(self._random, children, {'random': self._random, '_ec': self, **kwargs})
+
                 offspring.extend([Individual(child) for child in children])
 
             offspring = offspring[:pop_size]
 
-            # Actualizar _individuals con los nuevos descendientes
+            # Evaluar descendencia
             kwargs['_individuals'] = offspring
             offspring = self._evaluate_population(offspring, kwargs)
             population = offspring
@@ -68,8 +75,7 @@ class SPEA2(EvolutionaryComputation):
             self.num_generations = generation
             self._num_evaluations += len(population)
 
-        # Evaluar el archivo final una vez más para asegurar que contiene la información correcta
-        # Esto asegura que todos los individuos del frente de Pareto tengan watched_movies y watched_series
+        # Evaluación final del archivo
         kwargs['_individuals'] = self.archive
         self._evaluate_population(self.archive, kwargs)
 
@@ -160,53 +166,142 @@ class SPEA2(EvolutionaryComputation):
 
     def _dominates(self, ind1, ind2):
         """
-        Determina si ind1 domina a ind2 (minimización).
-        Para maximización, invertir los signos de comparación.
+        Determina si ind1 domina a ind2 usando la MISMA lógica que get_non_dominated().
         """
         if not hasattr(ind1, 'objective_values') or not hasattr(ind2, 'objective_values'):
             return False
 
-        # Verificar si ind1 es al menos igual en todos los objetivos
-        at_least_equal = all(x <= y for x, y in zip(ind1.objective_values, ind2.objective_values))
-        # Y estrictamente mejor en al menos un objetivo
-        strictly_better = any(x < y for x, y in zip(ind1.objective_values, ind2.objective_values))
+        if len(ind1.objective_values) != len(ind2.objective_values):
+            return False
 
-        return at_least_equal and strictly_better
+        # Usar la MISMA lógica que tu función get_non_dominated
+        return (all(x <= y for x, y in zip(ind1.objective_values, ind2.objective_values)) and
+                any(x < y for x, y in zip(ind1.objective_values, ind2.objective_values)))
+
+    def _get_pareto_front(self, individuals):
+        """
+        Identifica el frente de Pareto usando la MISMA lógica que get_non_dominated().
+        """
+        pareto_front = []
+
+        for ind in individuals:
+            dominated = False
+            for other in individuals:
+                if other != ind and self._dominates(other, ind):
+                    dominated = True
+                    break
+            if not dominated:
+                pareto_front.append(ind)
+
+        return pareto_front
 
     def _select_archive(self, individuals):
         """
-        Selecciona individuos para el archivo:
-        1. Selecciona todos los no dominados
-        2. Si hay más que archive_size, usa truncamiento
-        3. Si hay menos, añade individuos dominados con mejor fitness
+        Selecciona SOLO individuos no dominados para el archivo.
+        El archivo contendrá únicamente el frente de Pareto.
         """
-        # Filtrar por no dominancia
-        non_dominated = []
-        for i, ind in enumerate(individuals):
-            is_dominated = False
-            for other in individuals:
-                if other != ind and self._dominates(other, ind):
-                    is_dominated = True
-                    break
-            if not is_dominated:
-                non_dominated.append(ind)
+        if not individuals:
+            return []
 
-        # Copiar atributos adicionales de individuos originales a sus copias en el archivo
+        # Encontrar el frente de Pareto (individuos no dominados)
+        non_dominated = self._get_pareto_front(individuals)
+
+        non_dominated = self._deduplicate_objectives(non_dominated)
+
+        # Copiar atributos útiles
         self._copy_attributes(individuals, non_dominated)
 
-        # Ajustar tamaño del archivo
-        if len(non_dominated) <= self.archive_size:
-            # Si hay espacio disponible, añadir los mejores individuos dominados
-            if len(non_dominated) < self.archive_size:
-                dominated = sorted([ind for ind in individuals if ind not in non_dominated],
-                                   key=lambda x: x.fitness)
-                to_add = dominated[:self.archive_size - len(non_dominated)]
-                self._copy_attributes(individuals, to_add)
-                non_dominated.extend(to_add)
-            return non_dominated
-        else:
-            # Truncar archivo usando el método de distancia
+        print(f"Frente de Pareto encontrado: {len(non_dominated)} individuos")
+
+        # Si hay demasiados individuos no dominados, truncar por densidad
+        if len(non_dominated) > self.archive_size:
+            print(f"Truncando de {len(non_dominated)} a {self.archive_size} por densidad")
             return self._truncate_archive(non_dominated)
+
+        # Devolver SOLO el frente de Pareto (sin completar con dominados)
+
+        print(f"Archivo final: {len(non_dominated)} individuos (solo no dominados)")
+        return non_dominated
+
+    def _deduplicate_objectives(self, individuals):
+        """
+        Elimina individuos con objetivos repetidos (duplicados en el frente).
+        """
+        seen = set()
+        unique = []
+        for ind in individuals:
+            key = tuple(ind.objective_values)
+            if key not in seen:
+                seen.add(key)
+                unique.append(ind)
+        return unique
+
+    def _select_parents(self, archive, num_selected):
+        """
+        Selección de padres mejorada para manejar archivos pequeños.
+        """
+        selected = []
+        if len(archive) == 0:
+            return selected
+
+        # Si el archivo es muy pequeño, permitir selección con reemplazo
+        for _ in range(num_selected):
+            if len(archive) == 1:
+                # Solo hay un individuo, seleccionarlo siempre
+                selected.append(archive[0])
+            elif len(archive) >= 2:
+                # Torneo binario normal
+                competitors = self._random.sample(archive, 2)
+                winner = min(competitors, key=lambda x: x.fitness)
+                selected.append(winner)
+
+        return selected
+
+    def _debug_get_non_dominated(self, solutions):
+        """
+        Función de debug que replica exactamente tu get_non_dominated()
+        """
+        pareto = []
+        for ind in solutions:
+            dominated = False
+            for other in solutions:
+                if (other != ind and
+                        all(x <= y for x, y in zip(other.objective_values, ind.objective_values)) and
+                        any(x < y for x, y in zip(other.objective_values, ind.objective_values))):
+                    dominated = True
+                    break
+            if not dominated:
+                pareto.append(ind)
+        return pareto
+
+    # Método adicional para debug completo
+    def debug_archive_consistency(self):
+        """
+        Verifica la consistencia entre el archivo y get_non_dominated()
+        """
+        if not self.archive:
+            return
+
+        # Aplicar get_non_dominated al archivo actual
+        external_pareto = self._debug_get_non_dominated(self.archive)
+
+        print(f"Tamaño del archivo: {len(self.archive)}")
+        print(f"Frente de Pareto externo: {len(external_pareto)}")
+
+        # Verificar si todos los del archivo están en el frente externo
+        archive_in_pareto = sum(1 for ind in self.archive if ind in external_pareto)
+        print(f"Individuos del archivo que están en frente externo: {archive_in_pareto}")
+
+        if len(external_pareto) != archive_in_pareto:
+            print("WARNING: El archivo contiene individuos dominados que no deberían estar")
+
+            # Mostrar los que no están
+            not_in_pareto = [ind for ind in self.archive if ind not in external_pareto]
+            print(f"Individuos dominados en archivo: {len(not_in_pareto)}")
+            for i, ind in enumerate(not_in_pareto[:3]):  # Mostrar solo los primeros 3
+                print(f"  Dominado {i}: objectives={ind.objective_values}, fitness={ind.fitness}")
+
+
 
     def _copy_attributes(self, source_individuals, target_individuals):
         """
@@ -286,11 +381,9 @@ class SPEA2(EvolutionaryComputation):
                             break
                         k += 1
 
-            # Eliminar el individuo con la menor distancia
             if to_remove >= 0:
                 archive.pop(to_remove)
             else:
-                # Caso extremo: todos tienen la misma distancia, eliminar uno aleatorio
                 archive.pop(self._random.randrange(len(archive)))
 
         return archive

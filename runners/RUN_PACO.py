@@ -6,6 +6,7 @@ from utils.logging import plot_pareto_front_paco
 from utils.logging import plot_ant_paths_lines
 from utils.save import save_pareto_archive_paco
 from utils.logging import plot_user_platforms_over_time
+from utils.logging import observer_paco
 import json
 
 def main():
@@ -24,23 +25,24 @@ def main():
         'platforms_indexed': platforms_indexed
     }
 
+
     # Instanciar PACO
     paco = PACOStreaming(
-        n_ants=12,
-        n_iterations=20,
+        n_ants=4,
+        n_iterations=15,
         n_months=12,
         n_users=len(users),
         platform_options=plataformas_disponibles,
-        rho=0.2,
+        rho=0.4,
         alpha=1,
-        beta=1,
+        beta=3,
         archive_size=100
     )
 
     # Optimizar
     pareto_archive = paco.optimize(lambda sol: fitness_paco(sol, args))
 
-    save_pareto_archive_paco(pareto_archive,paco.n_users,  path="../Results/soluciones_PACO.json")
+    save_pareto_archive_paco(pareto_archive,paco.n_users, args)
 
     # Mostrar resultados finales
     print("\nPareto Front encontrado:")
