@@ -11,10 +11,10 @@ from utils.evaluation import calcular_minutos_ponderados, calcular_costo_total
 from utils.evaluation import fitness_paco
 
 streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
-users = load_users_from_json("../Data/users.json")
+users = load_users_from_json("../Data/users1.json")
 
 # Cargar películas por plataforma
-with open("../Data/MoviesPlatform.json", "r") as f:
+with open("../Data/MoviesPlatform.json", "r", encoding="utf-8") as f:
     movies_by_platform = json.load(f)
 
 with open("../Data/SeriesPlatform.json", "r", encoding="utf-8") as f:
@@ -26,7 +26,7 @@ with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
 
 class PACOStreaming:
     def __init__(self, n_ants: int, n_iterations: int, n_months: int, n_users: int, platform_options: List[int],
-                 rho: float = 0.1, alpha: float = 1, beta: float = 3, archive_size: int = 100):
+                 rho: float = 0.1, alpha: float = 1, beta: float = 3, archive_size: int = 100, max_no_improvement: int = 10):
         self.n_ants = n_ants
         self.n_iterations = n_iterations
         self.n_months = n_months
@@ -48,9 +48,14 @@ class PACOStreaming:
         # Historial para análisis opcional
         self.archive_history = []
         self.trails_history = []
+        self.max_no_improvement = max_no_improvement
+        self.no_improvement_counter = 0
+        self.best_archive_size = 0
 
     def optimize(self, fitness_function, args=None):
         self._initialize()
+        self.no_improvement_counter = 0
+        self.best_archive_size = 0
 
         for iteration in range(self.n_iterations):
             trails = []
@@ -75,10 +80,22 @@ class PACOStreaming:
             self.archive_history.append(deepcopy(self.archive))
             self.trails_history.append(deepcopy(trails))
 
-         #   self.observer(self, iteration, args)
+            # Comprobación de mejora
+            if len(self.archive) > self.best_archive_size:
+                self.best_archive_size = len(self.archive)
+                self.no_improvement_counter = 0
+            else:
+                self.no_improvement_counter += 1
 
-            if (iteration + 1) % 10 == 0:
-                print(f"Iteración {iteration + 1}/{self.n_iterations}, Tamaño del archivo: {len(self.archive)}")
+            if (iteration + 1) % 10 == 0 or self.no_improvement_counter >= self.max_no_improvement:
+                print(f"Iteración {iteration + 1}/{self.n_iterations}, "
+                      f"Tamaño del archivo: {len(self.archive)}, "
+                      f"Sin mejora: {self.no_improvement_counter}")
+
+            # Criterio de terminación anticipada
+            if self.no_improvement_counter >= self.max_no_improvement:
+                print(f"Terminación anticipada: {self.max_no_improvement} iteraciones sin mejora.")
+                break
 
         self.all_solutions = all_solutions
         return self.archive

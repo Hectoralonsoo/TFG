@@ -220,33 +220,6 @@ def observer(population, num_generations, num_evaluations, args):
 
     print(f"ESTO ES LA POPULATION: {population} ")
 
-    if num_generations == args.get('max_generations'):
-        last_generation_update(population, num_generations, args)
-        print("📦 Exportando soluciones del frente de Pareto...")
-
-
-        archive = args['_ec'].archive
-
-        for idx, ind in enumerate(archive):
-            output_path = f"../results/NSGA2/pareto_solution_{idx}NSGA-II.json"
-
-            # 1. Reconstruir monthly_data para el individuo actual
-            calcular_minutos_ponderados(ind.candidate, args)
-            ind.monthly_data = args['monthly_data_by_user']
-
-            # 2. Preparar el JSON de salida
-            export = {
-                "candidate": ind.candidate,
-                "fitness": list(ind.fitness),
-                "monthly_data": ind.monthly_data
-            }
-
-            # 3. Guardar en JSON
-            with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(export, f, ensure_ascii=False, indent=2)
-
-
-
 
     print(f"\n=== Generación {num_generations} ===")
     print(f"Número de evaluaciones: {num_evaluations}")

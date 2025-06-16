@@ -1,0 +1,611 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "duration": 142,
+        "platforms": [
+            7,
+            11,
+            12,
+            14
+        ]
+    },
+    {
+        "title": "The Godfather",
+        "duration": 175,
+        "platforms": [
+            10,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "The Godfather Part II",
+        "duration": 202,
+        "platforms": [
+            10,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "Schindler's List",
+        "duration": 195,
+        "platforms": [
+            7,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "12 Angry Men",
+        "duration": 97,
+        "platforms": [
+            2
+        ]
+    },
+    {
+        "title": "Spirited Away",
+        "duration": 125,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "The Dark Knight",
+        "duration": 152,
+        "platforms": [
+            2,
+            10,
+            12,
+            14
+        ]
+    },
+    {
+        "title": "The Green Mile",
+        "duration": 189,
+        "platforms": [
+            7,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "Parasite",
+        "duration": 133,
+        "platforms": [
+            2,
+            7,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Pulp Fiction",
+        "duration": 154,
+        "platforms": [
+            10,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "duration": 201,
+        "platforms": [
+            2
+        ]
+    },
+    {
+        "title": "Your Name.",
+        "duration": 106,
+        "platforms": [
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Forrest Gump",
+        "duration": 142,
+        "platforms": [
+            11,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "duration": 161,
+        "platforms": [
+            8,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Interstellar",
+        "duration": 169,
+        "platforms": [
+            2,
+            14
+        ]
+    },
+    {
+        "title": "GoodFellas",
+        "duration": 145,
+        "platforms": [
+            2,
+            7,
+            10,
+            11,
+            12,
+            14
+        ]
+    },
+    {
+        "title": "Seven Samurai",
+        "duration": 207,
+        "platforms": [
+            1,
+            7
+        ]
+    },
+    {
+        "title": "Grave of the Fireflies",
+        "duration": 89,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Life Is Beautiful",
+        "duration": 116,
+        "platforms": [
+            14,
+            17
+        ]
+    },
+    {
+        "title": "Cinema Paradiso",
+        "duration": 124,
+        "platforms": [
+            1,
+            2,
+            7,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Fight Club",
+        "duration": 139,
+        "platforms": [
+            6,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "City of God",
+        "duration": 129,
+        "platforms": [
+            1,
+            10,
+            12
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "duration": 179,
+        "platforms": [
+            2
+        ]
+    },
+    {
+        "title": "Psycho",
+        "duration": 109,
+        "platforms": [
+            12,
+            16
+        ]
+    },
+    {
+        "title": "Harakiri",
+        "duration": 135,
+        "platforms": [
+            1,
+            2,
+            7
+        ]
+    },
+    {
+        "title": "Once Upon a Time in America",
+        "duration": 229,
+        "platforms": [
+            2,
+            6
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Two Towers",
+        "duration": 179,
+        "platforms": [
+            2
+        ]
+    },
+    {
+        "title": "Spider-Man: Into the Spider-Verse",
+        "duration": 117,
+        "platforms": [
+            10,
+            12
+        ]
+    },
+    {
+        "title": "Howl's Moving Castle",
+        "duration": 119,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "The Empire Strikes Back",
+        "duration": 124,
+        "platforms": [
+            6
+        ]
+    },
+    {
+        "title": "The Pianist",
+        "duration": 150,
+        "platforms": [
+            6,
+            8,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Whiplash",
+        "duration": 107,
+        "platforms": [
+            14,
+            17
+        ]
+    },
+    {
+        "title": "Se7en",
+        "duration": 127,
+        "platforms": [
+            7,
+            11,
+            12,
+            14
+        ]
+    },
+    {
+        "title": "Inception",
+        "duration": 148,
+        "platforms": [
+            2,
+            14
+        ]
+    },
+    {
+        "title": "Radical",
+        "duration": 126,
+        "platforms": [
+            2,
+            7,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "Rear Window",
+        "duration": 112,
+        "platforms": [
+            7
+        ]
+    },
+    {
+        "title": "The Silence of the Lambs",
+        "duration": 119,
+        "platforms": [
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Spider-Man: Across the Spider-Verse",
+        "duration": 140,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "High and Low",
+        "duration": 142,
+        "platforms": [
+            1,
+            7
+        ]
+    },
+    {
+        "title": "The Legend of Hei",
+        "duration": 102,
+        "platforms": [
+            2
+        ]
+    },
+    {
+        "title": "American History X",
+        "duration": 119,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Counterattack",
+        "duration": 85,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Princess Mononoke",
+        "duration": 134,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "The Quintessential Quintuplets Movie",
+        "duration": 136,
+        "platforms": [
+            5,
+            14
+        ]
+    },
+    {
+        "title": "Back to the Future",
+        "duration": 116,
+        "platforms": [
+            2,
+            7,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "The Wild Robot",
+        "duration": 102,
+        "platforms": [
+            12,
+            16
+        ]
+    },
+    {
+        "title": "Ikiru",
+        "duration": 143,
+        "platforms": [
+            1,
+            7
+        ]
+    },
+    {
+        "title": "Dead Poets Society",
+        "duration": 128,
+        "platforms": [
+            6,
+            7
+        ]
+    },
+    {
+        "title": "Perfect Blue",
+        "duration": 82,
+        "platforms": [
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Josee, the Tiger and the Fish",
+        "duration": 98,
+        "platforms": [
+            7,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "The Great Dictator",
+        "duration": 125,
+        "platforms": [
+            1,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Neon Genesis Evangelion: The End of Evangelion",
+        "duration": 87,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Once Upon a Studio",
+        "duration": 9,
+        "platforms": [
+            6
+        ]
+    },
+    {
+        "title": "Once Upon a Time in the West",
+        "duration": 166,
+        "platforms": [
+            12,
+            16
+        ]
+    },
+    {
+        "title": "Modern Times",
+        "duration": 87,
+        "platforms": [
+            1,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "It's a Wonderful Life",
+        "duration": 130,
+        "platforms": [
+            7,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "Violet Evergarden: The Movie",
+        "duration": 140,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "The Intouchables",
+        "duration": 113,
+        "platforms": [
+            1,
+            2,
+            11,
+            12,
+            14
+        ]
+    },
+    {
+        "title": "Apocalypse Now",
+        "duration": 147,
+        "platforms": [
+            2,
+            7,
+            17
+        ]
+    },
+    {
+        "title": "City Lights",
+        "duration": 87,
+        "platforms": [
+            1,
+            11,
+            12
+        ]
+    },
+    {
+        "title": "The Lion King",
+        "duration": 89,
+        "platforms": [
+            6
+        ]
+    },
+    {
+        "title": "Miracle in Cell No. 7",
+        "duration": 132,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Oldboy",
+        "duration": 120,
+        "platforms": [
+            1
+        ]
+    },
+    {
+        "title": "Le Trou",
+        "duration": 132,
+        "platforms": [
+            7
+        ]
+    },
+    {
+        "title": "Out of the Clear Blue Sky",
+        "duration": 112,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Klaus",
+        "duration": 96,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Avengers: Endgame",
+        "duration": 181,
+        "platforms": [
+            6
+        ]
+    },
+    {
+        "title": "Five Feet Apart",
+        "duration": 116,
+        "platforms": [
+            2,
+            12,
+            16
+        ]
+    },
+    {
+        "title": "Come and See",
+        "duration": 142,
+        "platforms": [
+            7
+        ]
+    },
+    {
+        "title": "Avengers: Infinity War",
+        "duration": 149,
+        "platforms": [
+            6
+        ]
+    },
+    {
+        "title": "Green Book",
+        "duration": 130,
+        "platforms": [
+            14
+        ]
+    },
+    {
+        "title": "Mommy",
+        "duration": 138,
+        "platforms": [
+            7,
+            10,
+            12
+        ]
+    },
+    {
+        "title": "The Matrix",
+        "duration": 136,
+        "platforms": [
+            2,
+            10,
+            12,
+            14
+        ]
+    },
+    {
+        "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
+        "duration": 155,
+        "platforms": [
+            2
+        ]
+    }
+]

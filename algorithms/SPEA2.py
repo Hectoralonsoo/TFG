@@ -14,18 +14,27 @@ class SPEA2(EvolutionaryComputation):
         self.k = 3
         self.default_selector = selectors.tournament_selection
         self.default_variator = [variators.uniform_crossover, variators.random_reset_mutation]
-        self.default_terminator = terminators.generation_termination
+        self.default_terminator = terminators.no_improvement_termination
+
+        # Variables para el terminador de no mejora
+        self.best_fitness_history = []
+        self.generations_without_improvement = 0
 
     # Método mejorado para el bucle principal de evolución
     def evolve(self, pop_size, maximize, max_generations, num_selected, **kwargs):
         """
-        Implementación corregida del algoritmo SPEA2.
+        Implementación corregida del algoritmo SPEA2 con terminador de no mejora.
         """
         self._maximize = maximize
         self.num_generations = 0
         self._num_evaluations = 0
         self.archive = []
         kwargs['max_generations'] = max_generations
+
+        # Parámetros para el terminador de no mejora
+        max_generations_without_improvement = kwargs.get('max_generations_without_improvement', 10)
+        self.best_fitness_history = []
+        self.generations_without_improvement = 0
 
         generation = 0
         population = [Individual(self.generator(random=self._random, args=kwargs)) for _ in range(pop_size)]
@@ -46,8 +55,17 @@ class SPEA2(EvolutionaryComputation):
             # Seleccionar nuevo archivo (debería contener el frente de Pareto)
             self.archive = self._select_archive(combined)
 
+            # Verificar terminación por no mejora
+            should_terminate = self._check_no_improvement_termination(max_generations_without_improvement, kwargs)
+
             if self.observer:
                 self.observer(self, self.archive, generation, self._num_evaluations, kwargs)
+
+            # Si debe terminar por no mejora, salir del bucle
+            if should_terminate:
+                print(
+                    f"Terminando en generación {generation} por no mejora durante {max_generations_without_improvement} generaciones")
+                break
 
             # Selección de padres del archivo
             mating_pool = self._select_parents(self.archive, num_selected)
@@ -80,6 +98,46 @@ class SPEA2(EvolutionaryComputation):
         self._evaluate_population(self.archive, kwargs)
 
         return self.archive
+
+    def _check_no_improvement_termination(self, max_generations_without_improvement, kwargs):
+        """
+        Verifica si debe terminar por no mejora en el fitness.
+        Para problemas multiobjetivo, usa el hipervolumen o número de soluciones no dominadas.
+        """
+        if not self.archive:
+            return False
+
+        # Para SPEA2, usamos como métrica de mejora el mejor fitness del archivo
+        # (menor fitness es mejor en SPEA2)
+        current_best_fitness = min(ind.fitness for ind in self.archive)
+
+        # Si es la primera generación, inicializar
+        if not self.best_fitness_history:
+            self.best_fitness_history.append(current_best_fitness)
+            self.generations_without_improvement = 0
+            return False
+
+        # Verificar si hay mejora (en SPEA2, menor fitness es mejor)
+        previous_best = self.best_fitness_history[-1]
+
+        # Tolerancia para considerar una mejora significativa
+        tolerance = kwargs.get('improvement_tolerance', 1e-6)
+
+        if current_best_fitness < (previous_best - tolerance):
+            # Hay mejora
+            self.generations_without_improvement = 0
+            print(f"Mejora detectada: {previous_best:.6f} -> {current_best_fitness:.6f}")
+        else:
+            # No hay mejora
+            self.generations_without_improvement += 1
+            print(
+                f"Sin mejora por {self.generations_without_improvement} generaciones (best: {current_best_fitness:.6f})")
+
+        # Agregar el fitness actual al historial
+        self.best_fitness_history.append(current_best_fitness)
+
+        # Verificar si debe terminar
+        return self.generations_without_improvement >= max_generations_without_improvement
 
     def _evaluate_population(self, population, kwargs):
         """Evalúa la población y asigna valores objetivo."""
@@ -300,8 +358,6 @@ class SPEA2(EvolutionaryComputation):
             print(f"Individuos dominados en archivo: {len(not_in_pareto)}")
             for i, ind in enumerate(not_in_pareto[:3]):  # Mostrar solo los primeros 3
                 print(f"  Dominado {i}: objectives={ind.objective_values}, fitness={ind.fitness}")
-
-
 
     def _copy_attributes(self, source_individuals, target_individuals):
         """

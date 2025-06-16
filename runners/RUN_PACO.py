@@ -12,7 +12,7 @@ import json
 def main():
     # Cargar datos
     streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
-    users = load_users_from_json("../Data/users.json")
+    users = load_users_from_json("../Data/users1.json")
 
     with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
         platforms_indexed = json.load(f)

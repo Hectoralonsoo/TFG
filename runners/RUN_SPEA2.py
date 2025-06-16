@@ -37,13 +37,12 @@ def main():
 
     bounder = inspyred.ec.Bounder(1, len(platforms_indexed))
     max_gen = 15
-    pop_size = 50
+    pop_size = 30
 
     args = {
         'users': users,
         'streamingPlans': streamingPlans,
         'platforms_indexed': platforms_indexed,
-        'max_generations': max_gen,
     }
 
     # Ejecutar evolución
@@ -57,6 +56,9 @@ def main():
         num_elites=2,
         mutation_rate=0.5,
         crossover_rate=0.5,
+        max_generations=100,  # Más generaciones máximas
+        max_generations_without_improvement=10,  # Terminar si no mejora en 10 generaciones
+        improvement_tolerance=1e-6,  # Tolerancia para considerar mejora
         gaussian_stdev=0.7,
         **args
     )

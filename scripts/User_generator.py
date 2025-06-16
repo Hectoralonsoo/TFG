@@ -24,7 +24,7 @@ platforms = list(streaming_plans.keys())
 
 
 # Helper functions
-def generate_user(user_id, max_movies=100, max_series=100):
+def generate_user(user_id, max_movies=250, max_series=250):
     # Filtrar películas y series que tengan al menos una plataforma disponible
     available_movies = [m for m in movies if m["platforms"]]
     available_series = [s for s in series if s["platforms"]]
@@ -45,11 +45,11 @@ def generate_user(user_id, max_movies=100, max_series=100):
         movies=[],
         series=[],
         months = [],
-        watched_movies=[],  # Inicializamos como lista vacía
+        watched_movies=[],
         watched_series=[]
     )
     print(f"🧑‍💻 Usuario generado: {user.__dict__}")
-    # Agregar preferencias con interés y plataformas disponibles para películas
+
     for movie in selected_movies:
         interest = round(random.uniform(0.5, 1.0), 2)
         user.movies.append({
@@ -59,20 +59,17 @@ def generate_user(user_id, max_movies=100, max_series=100):
             "interest": interest
         })
 
-    # Agregar preferencias para series
+
     for serie in selected_series:
         interest = round(random.uniform(0.5, 1.0), 2)
         available_seasons = []
-        # Filtrar temporadas que tengan plataformas y crear una copia sin episodios
         for season in serie["seasons"]:
             if season.get("platforms"):  # Se ignoran temporadas sin plataformas
                 season_copy = {k: v for k, v in season.items() if k != "episodes"}
                 available_seasons.append(season_copy)
 
-        # Ordenar las temporadas por número de temporada (asumiendo que la clave es "season_number")
         available_seasons.sort(key=lambda s: s.get("season_number", 0))
 
-        # Elegir una temporada de inicio aleatoriamente y tomar todas las siguientes
         if available_seasons:
             start_index = random.randint(0, len(available_seasons) - 1)
             selected_seasons = available_seasons[start_index:]
@@ -90,7 +87,7 @@ def generate_user(user_id, max_movies=100, max_series=100):
     return user
 
 
-users = [generate_user(user_id) for user_id in range(1, 51)]
+users = [generate_user(user_id) for user_id in range(1, 201)]
 
 
 def save_users_to_json(users, filename):
@@ -150,5 +147,5 @@ def update_users_json(users_data, watched_movies=None, watched_series=None):
 
 
 
-save_users_to_json(users, "users.json")
-print("✅ Users generated successfully at:", DATA_DIR / "users.json")
+save_users_to_json(users, "users5.json")
+print("✅ Users generated successfully at:", DATA_DIR / "users5.json")

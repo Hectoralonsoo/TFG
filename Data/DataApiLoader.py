@@ -86,6 +86,7 @@ def getStreamingProviders(media_type, media_id, country_code):
     response = requests.get(url).json()
     providers = response.get("results", {}).get(country_code, {}).get("flatrate", [])
     platform_names = [provider["provider_name"] for provider in providers]
+    print(platform_names)
     return convert_platforms_to_ids(platform_names)
 
 # Obtener la duración total de las temporadas de una serie
@@ -102,15 +103,15 @@ def getSeasonDuration(serie_id):
         # Obtener la duración total de los episodios y la lista de episodios
         season_duration, episodes_duration = getEpisodeDuration(serie_id, season_number)
         season_streaming_providers = getSeasonStreamingProviders(serie_id, season_number)
+        if season_streaming_providers:
+            seasons_duration.append({
+                "season_number": season_number,
+                "season_name": season_name,
+                "season_duration": season_duration,
+                "platforms": season_streaming_providers,
+                "episodes": episodes_duration
 
-        seasons_duration.append({
-            "season_number": season_number,
-            "season_name": season_name,
-            "season_duration": season_duration,
-            "platforms": season_streaming_providers,
-            "episodes": episodes_duration
-
-        })
+            })
 
     return seasons_duration
 
@@ -124,11 +125,12 @@ def getAndSaveSeries(cantidad, archivo_salida):
         duraciones_temporadas = getSeasonDuration(serie["id"])
         i = i+1
         streaming_services = getStreamingProviders("tv", serie["id"], "ES")
-        series_duracion.append({
-            "title": serie["name"],
-            "platforms": streaming_services,
-            "seasons": duraciones_temporadas,
-        })
+        if streaming_services:
+            series_duracion.append({
+                "title": serie["name"],
+                "platforms": streaming_services,
+                "seasons": duraciones_temporadas,
+            })
     saveJson(archivo_salida, series_duracion)
     print(f"Datos guardados en {archivo_salida}.")
 
@@ -142,16 +144,18 @@ def getAndSaveMovie(cantidad, archivo_salida):
         duracion = getMovieDuration(movie["id"])
         i = i+1
         streaming_services = getStreamingProviders("movie", movie["id"], "ES")
-        movieDuration.append({
-            "title": movie["title"],
-            "duration": duracion,
-            "platforms": streaming_services
-        })
+        if streaming_services:
+            movieDuration.append({
+                "title": movie["title"],
+                "duration": duracion,
+                "platforms": streaming_services
+            })
     saveJson(archivo_salida, movieDuration)
     print(f"Datos guardados en {archivo_salida}.")
 
-getAndSaveMovie(200, "movies.json")
-getAndSaveSeries(200, "series.json")
+getAndSaveMovie(2000, "movies.json")
+getAndSaveSeries(2000, "series.json")
+
 
 
 

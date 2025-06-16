@@ -34,7 +34,7 @@ def calcular_minutos_ponderados(candidate, args, individual=None):
                     'id': pelicula['title'],
                     'duracion': duracion,
                     'interes': pelicula['interest'],
-                    'valor_ponderado': duracion * pelicula['interest'],
+                    'valor_ponderado': duracion * (pelicula['interest']),
                     'meses': meses_disponibles,
                     'eficiencia': pelicula['interest']
                 })
@@ -53,10 +53,10 @@ def calcular_minutos_ponderados(candidate, args, individual=None):
                 if meses_disponibles:
                     contenidos_disponibles.append({
                         'tipo': 'serie',
-                        'id': f"{serie['title']} - T{temporada['season_number']}",
+                        'id': f"{serie['title']} - SEASON{temporada['season_number']}",
                         'duracion': duracion,
                         'interes': serie['interest'],
-                        'valor_ponderado': duracion * serie['interest'],
+                        'valor_ponderado': duracion * (serie['interest']),
                         'meses': meses_disponibles,
                         'eficiencia': serie['interest']
                     })
@@ -92,7 +92,7 @@ def calcular_minutos_ponderados(candidate, args, individual=None):
                             watched_movies[mes].append(entrada)
                         else:
                             if ' - T' in contenido['id']:
-                                title, season_str = contenido['id'].split(' - T')
+                                title, season_str = contenido['id'].split(' - SEASON')
                                 season_number = int(season_str)
                             else:
                                 title = contenido['id']
