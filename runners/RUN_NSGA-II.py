@@ -9,12 +9,10 @@ from Loaders.LoadUsers import load_users_from_json
 from Loaders.LoadPlatforms import load_platforms_json
 
 from utils.evaluation import evaluator, calcular_minutos_ponderados
-from utils.logging import observer, plot_evolution, plot_generation_improve, plot_pareto_front
+from utils.logging_custom import observer, plot_evolution, plot_generation_improve, plot_pareto_front
 from generators.Individual_generator import generar_individuo
+from utils.hypervolume import compute_hypervolume
 
-
-
-#from utils.save import save_pareto_archive_ea
 
 
 def main():
@@ -120,10 +118,7 @@ def main():
         import pprint
         pprint.pprint(vars(algorithm))
 
-        # Gráficas
-       # plot_evolution()
-       # plot_generation_improve()
-      #  plot_pareto_front(algorithm)
+
 
     with open("../results/NSGA2/summary_runs.json", 'w') as f:
         json.dump(results, f, indent=2)

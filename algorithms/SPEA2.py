@@ -3,7 +3,7 @@ from inspyred.ec import Individual
 import numpy as np
 from scipy.spatial import distance
 from inspyred.ec import selectors, variators, terminators
-from utils.logging import get_non_dominated
+from utils.logging_custom import get_non_dominated
 
 
 class SPEA2(EvolutionaryComputation):

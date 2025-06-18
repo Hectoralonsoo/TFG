@@ -2,11 +2,11 @@ from algorithms.PACO import PACOStreaming, fitness_paco
 from Loaders.LoadStreamingPlans import load_streaming_plan_json
 from Loaders.LoadPlatforms import load_platforms_json
 from Loaders.LoadUsers import load_users_from_json
-from utils.logging import plot_pareto_front_paco
-from utils.logging import plot_ant_paths_lines
+from utils.logging_custom import plot_pareto_front_paco
+from utils.logging_custom import plot_ant_paths_lines
 from utils.save import save_pareto_archive_paco
-from utils.logging import plot_user_platforms_over_time
-from utils.logging import observer_paco
+from utils.logging_custom import plot_user_platforms_over_time
+from utils.logging_custom import observer_paco
 import json
 
 def main():
@@ -28,7 +28,7 @@ def main():
 
     # Instanciar PACO
     paco = PACOStreaming(
-        n_ants=4,
+        n_ants=8,
         n_iterations=15,
         n_months=12,
         n_users=len(users),

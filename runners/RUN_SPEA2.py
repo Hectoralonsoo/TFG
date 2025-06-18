@@ -9,7 +9,7 @@ from Loaders.LoadPlatforms import load_platforms_json
 
 from generators.Individual_generator import generar_individuo
 from utils.evaluation import calcular_costo_total, calcular_minutos_ponderados
-from utils.logging import observador_spea2, plot_pareto_front_spea2, get_non_dominated
+from utils.logging_custom import observador_spea2, plot_pareto_front_spea2, get_non_dominated
 from algorithms.SPEA2 import SPEA2
 from utils.evaluation import evaluatorSPEA2
 #from utils.save import save_pareto_archive_ea
@@ -19,7 +19,7 @@ from utils.evaluation import evaluatorSPEA2
 def main():
     # Cargar datos
     streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
-    users = load_users_from_json("../Data/users.json")
+    users = load_users_from_json("../Data/users1.json")
     platforms_indexed = load_platforms_json("../Data/indice_plataformas.json")
 
     seed = int(time())
