@@ -127,7 +127,6 @@ except Exception as e:
     print(f"Error ejecutando pruebas estadísticas: {e}")
     print(f"Tipo de error: {type(e).__name__}")
 
-# Mostrar el dataset completo
 print("\n" + "=" * 60)
 print("DATASET COMPLETO")
 print("=" * 60)
