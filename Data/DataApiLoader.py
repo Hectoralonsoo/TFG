@@ -1,10 +1,8 @@
 import requests
 import json
 
-# Configuración
 api_key = "d566937910f1e5247e09d2f97385dd0a"
 
-# URL base
 base_url = "https://api.themoviedb.org/3"
 
 with open("indice_plataformas.json", "r", encoding="utf-8") as file:
@@ -51,15 +49,6 @@ def getMovieDuration(movie_id):
     movie_data = requests.get(url).json()
     return movie_data.get("runtime", "Desconocido")
 
-def searchSeriesByName(name):
-    url = f"{base_url}/search/tv?api_key={api_key}&query={name}&language=es-ES"
-    response = requests.get(url).json()
-    series = response.get("results", [])
-    if series:
-        return series[0]  # Retorna la primera serie que coincida
-    return None
-
-
 
 def getEpisodeDuration(serie_id, season_number):
     url = f"{base_url}/tv/{serie_id}/season/{season_number}?api_key={api_key}&language=en-US"
@@ -67,11 +56,11 @@ def getEpisodeDuration(serie_id, season_number):
     episodes = response.get("episodes", [])
 
     episodes_duration = []
-    total_duration = 0  # Variable para sumar las duraciones de los episodios
+    total_duration = 0
 
     for episode in episodes:
         episode_name = episode.get("name", "Desconocido")
-        episode_duration = episode.get("runtime", 0) or 0  # Si no tiene duración, consideramos 0
+        episode_duration = episode.get("runtime", 0) or 0
         total_duration += episode_duration
         episodes_duration.append({
             "episode_name": episode_name,
@@ -89,7 +78,6 @@ def getStreamingProviders(media_type, media_id, country_code):
     print(platform_names)
     return convert_platforms_to_ids(platform_names)
 
-# Obtener la duración total de las temporadas de una serie
 def getSeasonDuration(serie_id):
     url = f"{base_url}/tv/{serie_id}?api_key={api_key}&language=en-US"
     serie_data = requests.get(url).json()
@@ -100,7 +88,6 @@ def getSeasonDuration(serie_id):
         season_number = season["season_number"]
         season_name = season["name"]
 
-        # Obtener la duración total de los episodios y la lista de episodios
         season_duration, episodes_duration = getEpisodeDuration(serie_id, season_number)
         season_streaming_providers = getSeasonStreamingProviders(serie_id, season_number)
         if season_streaming_providers:
@@ -155,7 +142,3 @@ def getAndSaveMovie(cantidad, archivo_salida):
 
 getAndSaveMovie(2000, "movies.json")
 getAndSaveSeries(2000, "series.json")
-
-
-
-

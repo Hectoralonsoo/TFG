@@ -222,8 +222,7 @@ def evaluatorSPEA2(candidates, args):
         minutos_ponderados = calcular_minutos_ponderados(candidate, args)
         costo_total = calcular_costo_total(candidate, args)
 
-        fitness.append([costo_total, -minutos_ponderados])
-
+        fitness.append((costo_total, -minutos_ponderados))
     print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
     return fitness
 
