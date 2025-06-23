@@ -14,15 +14,11 @@ from generators.Individual_generator import generar_individuo
 
 
 def create_directory_structure(base_path, dataset_name, config_name, run_number):
-    """Crea la estructura de directorios necesaria"""
-    # Directorio para soluciones del dataset, configuración y run
     solutions_dir = os.path.join(base_path, "solutions", dataset_name.replace('.json', ''), config_name,
                                  f"run{run_number}")
 
-    # Directorio para summaries del dataset
     summaries_dir = os.path.join(base_path, "summaries", dataset_name.replace('.json', ''))
 
-    # Crear directorios si no existen
     os.makedirs(solutions_dir, exist_ok=True)
     os.makedirs(summaries_dir, exist_ok=True)
 
@@ -174,6 +170,9 @@ def main():
 
                     solution_filename = f"sol{idx}.json"
                     solution_path = os.path.join(solutions_dir, solution_filename)
+                    plot_evolution()
+                    plot_generation_improve()
+                    plot_pareto_front(algorithm)
 
                     with open(solution_path, 'w', encoding='utf-8') as f:
                         json.dump(export, f, ensure_ascii=False, indent=2)

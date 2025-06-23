@@ -11,7 +11,7 @@ from utils.evaluation import calcular_minutos_ponderados, calcular_costo_total
 from utils.evaluation import fitness_paco
 
 streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
-users = load_users_from_json("../Data/users1.json")
+#users = load_users_from_json("../Data/users1.json")
 
 # Cargar películas por plataforma
 with open("../Data/MoviesPlatform.json", "r", encoding="utf-8") as f:
@@ -25,12 +25,14 @@ with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
 
 
 class PACOStreaming:
-    def __init__(self, n_ants: int, n_iterations: int, n_months: int, n_users: int, platform_options: List[int],
-                 rho: float = 0.1, alpha: float = 1, beta: float = 3, archive_size: int = 100):
+    def __init__(self, n_ants: int, n_iterations: int, n_months: int, n_users: int, users, platform_options: List[int],
+                 rho: float = 0.1, alpha: float = 1, beta: float = 3, archive_size: int = 100,
+                 no_improvement_generations: int = 10):
         self.n_ants = n_ants
         self.n_iterations = n_iterations
         self.n_months = n_months
         self.n_users = n_users
+        self.users = users
         self.platform_options = platform_options
         self.n_platforms = len(platform_options)
 
@@ -38,6 +40,13 @@ class PACOStreaming:
         self.beta = beta
         self.rho = rho
         self.archive_size = archive_size
+
+        # Parámetros para terminación por falta de mejora
+        self.no_improvement_generations = no_improvement_generations
+        self.generations_without_improvement = 0
+        self.best_archive_size = 0
+        self.best_hypervolume = 0.0
+        self.terminated_early = False
 
         # Feromonas: una matriz de (n_months x n_users x n_platforms)
         self.pheromone = np.ones((self.n_months, self.n_users, self.n_platforms))
@@ -55,6 +64,7 @@ class PACOStreaming:
         for iteration in range(self.n_iterations):
             trails = []
             all_solutions = []
+            archive_improved = False
 
             for _ in range(self.n_ants):
                 solution = self._construct_solution()
@@ -67,7 +77,11 @@ class PACOStreaming:
                     objectives = fitness_function(solution)
 
                 if self._is_pareto_optimal(objectives):
+                    old_archive_size = len(self.archive)
                     self._update_archive(solution, objectives)
+                    # Si el archivo creció, hubo mejora
+                    if len(self.archive) > old_archive_size:
+                        archive_improved = True
 
                 trails.append((solution, objectives))
 
@@ -75,10 +89,26 @@ class PACOStreaming:
             self.archive_history.append(deepcopy(self.archive))
             self.trails_history.append(deepcopy(trails))
 
-         #   self.observer(self, iteration, args)
+            # Verificar si hubo mejora en esta iteración
+            current_quality = self._calculate_archive_quality()
+            improvement_detected = self._check_improvement(current_quality, archive_improved)
 
-            if (iteration + 1) % 10 == 0:
-                print(f"Iteración {iteration + 1}/{self.n_iterations}, Tamaño del archivo: {len(self.archive)}")
+            if improvement_detected:
+                self.generations_without_improvement = 0
+            else:
+                self.generations_without_improvement += 1
+
+
+            print(f"Iteración {iteration + 1}/{self.n_iterations}, "
+                  f"Tamaño del archivo: {len(self.archive)}, "
+                  f"Generaciones sin mejora: {self.generations_without_improvement}")
+
+            # Verificar criterio de terminación
+            if self.generations_without_improvement >= self.no_improvement_generations:
+                print(f"\nTerminación temprana en iteración {iteration + 1}")
+                print(f"No se detectaron mejoras durante {self.no_improvement_generations} generaciones consecutivas")
+                self.terminated_early = True
+                break
 
         self.all_solutions = all_solutions
         return self.archive
@@ -87,10 +117,90 @@ class PACOStreaming:
         self.archive = []
         self.archive_history = []
         self.trails_history = []
+        self.generations_without_improvement = 0
+        self.best_archive_size = 0
+        self.best_hypervolume = 0.0
+        self.terminated_early = False
+
+    def _calculate_archive_quality(self) -> float:
+        """
+        Calcula una métrica de calidad del archivo actual.
+        Combina el tamaño del archivo con el hipervolumen aproximado.
+        """
+        if not self.archive:
+            return 0.0
+
+        # Componente 1: Tamaño del archivo (diversidad)
+        size_component = len(self.archive)
+
+        # Componente 2: Hipervolumen aproximado (calidad)
+        hypervolume = self._approximate_hypervolume()
+
+        # Combinar ambos componentes
+        quality = 0.3 * size_component + 0.7 * hypervolume
+
+        return quality
+
+    def _approximate_hypervolume(self) -> float:
+        """
+        Calcula una aproximación del hipervolumen del frente de Pareto.
+        """
+        if not self.archive:
+            return 0.0
+
+        # Extraer objetivos
+        objectives = np.array([obj for _, obj in self.archive])
+
+        if len(objectives) == 1:
+            return objectives[0][0] / max(1, objectives[0][1])  # minutos/costo
+
+        # Puntos de referencia para hipervolumen
+        # Para minutos (maximizar): usar el mínimo como referencia
+        # Para costo (minimizar): usar el máximo como referencia
+        ref_minutos = np.min(objectives[:, 0]) - 1
+        ref_costo = np.max(objectives[:, 1]) + 1
+
+        # Calcular hipervolumen aproximado usando el método de los rectángulos
+        # Ordenar por minutos descendente
+        sorted_indices = np.argsort(-objectives[:, 0])
+        sorted_objectives = objectives[sorted_indices]
+
+        hypervolume = 0.0
+        prev_costo = ref_costo
+
+        for minutos, costo in sorted_objectives:
+            if costo < prev_costo:
+                # Área del rectángulo
+                width = minutos - ref_minutos
+                height = prev_costo - costo
+                hypervolume += width * height
+                prev_costo = costo
+
+        return max(0.0, hypervolume)
+
+    def _check_improvement(self, current_quality: float, archive_grew: bool) -> bool:
+        """
+        Determina si hubo mejora significativa en esta iteración.
+        """
+        # Mejora detectada si:
+        # 1. El archivo creció (nuevas soluciones no dominadas)
+        # 2. La calidad general mejoró significativamente
+
+        if archive_grew:
+            return True
+
+        # Umbral de mejora mínima (1% de mejora en calidad)
+        improvement_threshold = 0.01
+
+        if current_quality > self.best_hypervolume * (1 + improvement_threshold):
+            self.best_hypervolume = current_quality
+            return True
+
+        return False
 
     def _construct_solution(self) -> np.ndarray:
         solution = np.zeros(self.n_months * self.n_users, dtype=int)
-        epsilon = 0.15  # 15% de exploración aleatoria (incrementado para mejor exploración)
+        epsilon = 0.15  # 15% de exploración aleatoria
 
         for month in range(self.n_months):
             for user in range(self.n_users):
@@ -130,7 +240,7 @@ class PACOStreaming:
         """Calcula información heurística para un usuario y mes específicos"""
         heuristic = np.ones(self.n_platforms)
 
-        user = users[current_user]
+        user = self.users[current_user]
 
         for plat_idx, platform_id in enumerate(self.platform_options):
             platform_name = platforms_indexed.get(str(platform_id), "")
