@@ -33,14 +33,14 @@ def main():
     configurations = [
         {
             "name": "uniform_reset_low_mutation",
-            "pop_size": 20,
+            "pop_size": 75,
             "mutation_rate": 0.01,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "uniform_reset_high_crossover",
-            "pop_size": 20,
+            "pop_size": 75,
             "mutation_rate": 0.025,
             "crossover_rate": 0.8,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
