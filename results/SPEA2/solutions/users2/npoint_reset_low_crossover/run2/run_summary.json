@@ -1,0 +1,42 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "npoint_reset_low_crossover",
+    "run": 2,
+    "execution_time": 342.4431092739105,
+    "generations": 89,
+    "pareto_size": 7,
+    "pareto_points": [
+      [
+        -733586.6200000026,
+        2477.6899999999996
+      ],
+      [
+        -736678.7600000021,
+        2493.18
+      ],
+      [
+        -753899.1100000018,
+        2526.63
+      ],
+      [
+        -759021.9200000004,
+        2734.61
+      ],
+      [
+        -755306.6300000002,
+        2692.11
+      ],
+      [
+        -742990.0900000018,
+        2496.19
+      ],
+      [
+        -756914.9900000005,
+        2721.63
+      ]
+    ]
+  },
+  "solutions_count": 7,
+  "solutions_directory": "../results/SPEA2\\solutions\\users2\\npoint_reset_low_crossover\\run2"
+}

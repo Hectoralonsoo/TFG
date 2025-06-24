@@ -28,67 +28,66 @@ def main():
     configurations = [
         {
             "name": "balanced_original",
-            "n_ants": 5,
-            "n_iterations": 100,
+            "n_ants": 25,
+            "n_iterations": 200,
             "rho": 0.4,
             "alpha": 1.0,
             "beta": 3.0,
             "archive_size": 100,
-            "no_improvement_generations": 10
+            "no_improvement_generations": 12
         },
         {
             "name": "high_pheromone_influence",
-            "n_ants": 5,
-            "n_iterations": 100,
+            "n_ants": 25,
+            "n_iterations": 200,
             "rho": 0.3,
             "alpha": 3.0,
             "beta": 2.0,
             "archive_size": 100,
-            "no_improvement_generations": 10
+            "no_improvement_generations": 12
         },
         {
             "name": "high_heuristic_influence",
-            "n_ants": 5,
-            "n_iterations": 100,
+            "n_ants": 25,
+            "n_iterations": 200,
             "rho": 0.4,
             "alpha": 0.5,
             "beta": 5.0,
             "archive_size": 100,
-            "no_improvement_generations": 10
+            "no_improvement_generations": 12
         },
         {
             "name": "slow_evaporation_exploitative",
-            "n_ants": 5,
-            "n_iterations": 100,
+            "n_ants": 25,
+            "n_iterations": 200,
             "rho": 0.2,
             "alpha": 2.0,
             "beta": 3.0,
             "archive_size": 100,
-            "no_improvement_generations": 10
+            "no_improvement_generations": 12
         },
         {
             "name": "fast_evaporation_explorative",
-            "n_ants": 5,
-            "n_iterations": 100,
+            "n_ants": 25,
+            "n_iterations": 200,
             "rho": 0.7,
             "alpha": 1.0,
             "beta": 2.5,
             "archive_size": 100,
-            "no_improvement_generations": 10
+            "no_improvement_generations": 12
         },
         {
             "name": "minimal_guidance",
-            "n_ants": 5,
-            "n_iterations": 100,
+            "n_ants": 25,
+            "n_iterations": 200,
             "rho": 0.5,
             "alpha": 0.2,
             "beta": 1.0,
             "archive_size": 100,
-            "no_improvement_generations": 10
+            "no_improvement_generations": 12
         }
     ]
 
-    # Cargar datos base
     streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
 
     with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
@@ -97,6 +96,7 @@ def main():
     plataformas_disponibles = [int(p) for p in platforms_indexed.keys()]
 
     user_datasets = [
+        "users1.json",
         "users2.json",
         "users3.json",
         "users4.json",
@@ -106,7 +106,6 @@ def main():
     base_results_path = "../results/PACO"
     all_results = []
 
-    # Crear directorio base si no existe
     os.makedirs(base_results_path, exist_ok=True)
 
     for dataset_name in user_datasets:
@@ -114,7 +113,7 @@ def main():
         print(f"\n📂 Ejecutando para dataset: {dataset_name}")
         users = load_users_from_json(dataset_path)
 
-        dataset_results = []  # Resultados específicos del dataset
+        dataset_results = []
 
         for config in configurations:
             print(f"\n🔧 Configuración: {config['name']}")

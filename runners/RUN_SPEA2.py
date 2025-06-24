@@ -31,13 +31,10 @@ def safe_fitness_to_list(fitness):
     Safely convert fitness to list, handling both single values and iterables
     """
     if isinstance(fitness, (int, float, np.number)):
-        # Single objective - convert to list
         return [float(fitness)]
     elif hasattr(fitness, '__iter__'):
-        # Multi-objective - convert to list
         return [float(f) for f in fitness]
     else:
-        # Fallback - try to convert directly
         try:
             return list(fitness)
         except TypeError:
@@ -48,42 +45,42 @@ def main():
     configurations = [
         {
             "name": "uniform_reset_low_mutation",
-            "pop_size": 10,
+            "pop_size": 40,
             "mutation_rate": 0.01,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "uniform_reset_high_crossover",
-            "pop_size": 10,
+            "pop_size": 40,
             "mutation_rate": 0.025,
             "crossover_rate": 0.8,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "uniform_inversion_high_mutation",
-            "pop_size": 75,
+            "pop_size": 40,
             "mutation_rate": 0.1,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.inversion_mutation]
         },
         {
             "name": "npoint_reset_low_crossover",
-            "pop_size": 75,
+            "pop_size": 40,
             "mutation_rate": 0.025,
             "crossover_rate": 0.4,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "npoint_inversion_low_mutation",
-            "pop_size": 75,
+            "pop_size": 40,
             "mutation_rate": 0.01,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
         },
         {
             "name": "npoint_inversion_high_all",
-            "pop_size": 75,
+            "pop_size": 40,
             "mutation_rate": 0.1,
             "crossover_rate": 0.8,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
@@ -103,7 +100,6 @@ def main():
     base_results_path = "../results/SPEA2"
     all_results = []
 
-    # Crear directorio base si no existe
     os.makedirs(base_results_path, exist_ok=True)
 
     for dataset_name in user_datasets:
@@ -111,7 +107,7 @@ def main():
         print(f"\n📂 Ejecutando para dataset: {dataset_name}")
         users = load_users_from_json(dataset_path)
 
-        dataset_results = []  # Resultados específicos del dataset
+        dataset_results = []
 
         for config in configurations:
             print(f"\n🔧 Configuración: {config['name']}")
@@ -121,7 +117,6 @@ def main():
             for run in range(5):
                 print(f"🔁 Run {run + 1}/5")
 
-                # Crear estructura de directorios para este run específico
                 solutions_dir, summaries_dir = create_directory_structure(
                     base_results_path, dataset_name, config['name'], run + 1
                 )
@@ -164,7 +159,6 @@ def main():
                 generations = algorithm.num_generations
                 pareto_size = len(algorithm.archive)
 
-                # Fix: Use safe conversion for fitness values
                 pareto_points = [safe_fitness_to_list(ind.fitness) for ind in algorithm.archive]
 
                 run_result = {
@@ -179,13 +173,13 @@ def main():
 
                 config_results.append(run_result)
 
-                # Guardar soluciones individuales en la carpeta específica del run
+
                 for idx, ind in enumerate(algorithm.archive):
                     calcular_minutos_ponderados(ind.candidate, args)
                     ind.monthly_data = args['monthly_data_by_user']
                     export = {
                         "candidate": ind.candidate,
-                        "fitness": safe_fitness_to_list(ind.fitness),  # Fix: Use safe conversion here too
+                        "fitness": safe_fitness_to_list(ind.fitness),
                         "monthly_data": ind.monthly_data
                     }
 
@@ -195,8 +189,6 @@ def main():
 
                     with open(solution_path, 'w', encoding='utf-8') as f:
                         json.dump(export, f, ensure_ascii=False, indent=2)
-
-                # Guardar summary individual del run
                 run_summary = {
                     'run_info': run_result,
                     'solutions_count': len(algorithm.archive),
@@ -207,21 +199,18 @@ def main():
                 with open(run_summary_path, 'w') as f:
                     json.dump(run_summary, f, indent=2)
 
-            # Guardar summary de la configuración específica
             config_summary_path = os.path.join(summaries_dir, f"summary_{config['name']}.json")
             with open(config_summary_path, 'w') as f:
                 json.dump(config_results, f, indent=2)
 
             dataset_results.extend(config_results)
 
-        # Guardar summary completo del dataset
         dataset_summary_path = os.path.join(summaries_dir, f"summary_complete_{dataset_name.replace('.json', '')}.json")
         with open(dataset_summary_path, 'w') as f:
             json.dump(dataset_results, f, indent=2)
 
         all_results.extend(dataset_results)
 
-    # Guardar summary general de todos los experimentos
     general_summary_path = os.path.join(base_results_path, "summary_all_experiments.json")
     with open(general_summary_path, 'w') as f:
         json.dump(all_results, f, indent=2)
