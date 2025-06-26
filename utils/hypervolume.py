@@ -32,7 +32,6 @@ def compute_hypervolumes_from_runs(file_path, reference_point=[1.1, 1.1]):
         if not pareto_points:
             continue
 
-        # Convertir de [-coste, minutos] a [minutos, coste] (ambos a maximizar)
         converted = [[p[1], -p[0]] for p in pareto_points]
         normalized, _, _ = normalize_front(converted)
         hv = hypervolume(normalized, reference_point)
@@ -55,7 +54,6 @@ def compute_hypervolumes_from_runs_global(file_path, reference_point=[1.1, 1.1])
 
     all_points = []
 
-    # Recoger todos los puntos
     for run in runs:
         pareto = run.get("pareto_points", [])
         converted = [[p[1], -p[0]] for p in pareto]  # [minutos, coste]
@@ -100,5 +98,4 @@ def save_hv_results_to_csv(hv_results, output_path):
         writer.writeheader()
         writer.writerows(hv_results)
 
-# Guardar a CSV
 save_hv_results_to_csv(hv_results, "resultadosNSGA2.csv")

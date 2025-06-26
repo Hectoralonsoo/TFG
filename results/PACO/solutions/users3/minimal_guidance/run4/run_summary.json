@@ -1,0 +1,100 @@
+{
+  "run_info": {
+    "dataset": "users3.json",
+    "config": "minimal_guidance",
+    "run": 4,
+    "execution_time": 2225.5239470005035,
+    "iterations_completed": 69,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 15,
+    "pareto_points": [
+      [
+        1029043.4600000024,
+        2974.120000000001
+      ],
+      [
+        1099024.7399999967,
+        3368.800000000001
+      ],
+      [
+        1089819.0799999991,
+        3143.83
+      ],
+      [
+        1096679.1199999994,
+        3166.42
+      ],
+      [
+        1050616.199999998,
+        2985.59
+      ],
+      [
+        1015241.95,
+        2969.56
+      ],
+      [
+        989655.4000000001,
+        2927.55
+      ],
+      [
+        1071580.2700000019,
+        3027.1000000000004
+      ],
+      [
+        1039378.1900000006,
+        2977.5600000000004
+      ],
+      [
+        1051982.0600000017,
+        3001.58
+      ],
+      [
+        1072558.66,
+        3045.4600000000005
+      ],
+      [
+        1065532.2200000002,
+        3026.6000000000004
+      ],
+      [
+        1085986.9600000016,
+        3120.6000000000004
+      ],
+      [
+        1082780.7500000014,
+        3080.7600000000007
+      ],
+      [
+        1047891.8799999988,
+        2985.100000000001
+      ]
+    ],
+    "solutions_evaluated": 1380,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 15,
+  "solutions_directory": "../results/PACO\\solutions\\users3\\minimal_guidance\\run4",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 2927.55,
+      "max": 3368.800000000001
+    },
+    "minutes_range": {
+      "min": 989655.4000000001,
+      "max": 1099024.7399999967
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 69,
+    "max_archive_size_reached": 17
+  }
+}

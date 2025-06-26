@@ -1,0 +1,60 @@
+{
+  "run_info": {
+    "dataset": "users5.json",
+    "config": "high_heuristic_influence",
+    "run": 2,
+    "execution_time": 1249.9479179382324,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        2055030.7899999982,
+        6933.610000000008
+      ],
+      [
+        2067708.000000005,
+        6960.670000000007
+      ],
+      [
+        2060764.4500000044,
+        6935.810000000008
+      ],
+      [
+        2144814.8400000045,
+        6982.190000000006
+      ],
+      [
+        2046234.6500000046,
+        6856.620000000006
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 5,
+  "solutions_directory": "../results/PACO\\solutions\\users5\\high_heuristic_influence\\run2",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 6856.620000000006,
+      "max": 6982.190000000006
+    },
+    "minutes_range": {
+      "min": 2046234.6500000046,
+      "max": 2144814.8400000045
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 14,
+    "max_archive_size_reached": 5
+  }
+}

@@ -28,7 +28,7 @@ def main():
     configurations = [
         {
             "name": "balanced_original",
-            "n_ants": 25,
+            "n_ants": 20,
             "n_iterations": 200,
             "rho": 0.4,
             "alpha": 1.0,
@@ -38,7 +38,7 @@ def main():
         },
         {
             "name": "high_pheromone_influence",
-            "n_ants": 25,
+            "n_ants": 20,
             "n_iterations": 200,
             "rho": 0.3,
             "alpha": 3.0,
@@ -48,7 +48,7 @@ def main():
         },
         {
             "name": "high_heuristic_influence",
-            "n_ants": 25,
+            "n_ants": 20,
             "n_iterations": 200,
             "rho": 0.4,
             "alpha": 0.5,
@@ -58,7 +58,7 @@ def main():
         },
         {
             "name": "slow_evaporation_exploitative",
-            "n_ants": 25,
+            "n_ants": 20,
             "n_iterations": 200,
             "rho": 0.2,
             "alpha": 2.0,
@@ -68,7 +68,7 @@ def main():
         },
         {
             "name": "fast_evaporation_explorative",
-            "n_ants": 25,
+            "n_ants": 20,
             "n_iterations": 200,
             "rho": 0.7,
             "alpha": 1.0,
@@ -78,7 +78,7 @@ def main():
         },
         {
             "name": "minimal_guidance",
-            "n_ants": 25,
+            "n_ants": 20,
             "n_iterations": 200,
             "rho": 0.5,
             "alpha": 0.2,

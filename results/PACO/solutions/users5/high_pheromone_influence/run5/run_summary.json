@@ -1,0 +1,96 @@
+{
+  "run_info": {
+    "dataset": "users5.json",
+    "config": "high_pheromone_influence",
+    "run": 5,
+    "execution_time": 2964.4712171554565,
+    "iterations_completed": 33,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 14,
+    "pareto_points": [
+      [
+        2677073.549999998,
+        7485.770000000001
+      ],
+      [
+        2662568.0900000003,
+        7124.880000000001
+      ],
+      [
+        2497470.759999992,
+        6954.630000000003
+      ],
+      [
+        2459351.719999995,
+        6906.090000000003
+      ],
+      [
+        2515722.1800000006,
+        7109.910000000003
+      ],
+      [
+        2421851.62,
+        6881.790000000003
+      ],
+      [
+        2465341.149999992,
+        6928.290000000003
+      ],
+      [
+        2406887.0499999924,
+        6820.930000000002
+      ],
+      [
+        2304414.569999993,
+        6762.640000000004
+      ],
+      [
+        2314326.8999999994,
+        6763.520000000006
+      ],
+      [
+        2203152.529999998,
+        6750.290000000007
+      ],
+      [
+        2193958.0300000035,
+        6696.990000000007
+      ],
+      [
+        2201941.639999999,
+        6722.540000000005
+      ],
+      [
+        2131606.7099999976,
+        6663.2600000000075
+      ]
+    ],
+    "solutions_evaluated": 660,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 14,
+  "solutions_directory": "../results/PACO\\solutions\\users5\\high_pheromone_influence\\run5",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 6663.2600000000075,
+      "max": 7485.770000000001
+    },
+    "minutes_range": {
+      "min": 2131606.7099999976,
+      "max": 2677073.549999998
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 33,
+    "max_archive_size_reached": 14
+  }
+}

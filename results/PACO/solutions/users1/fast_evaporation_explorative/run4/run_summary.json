@@ -1,0 +1,100 @@
+{
+  "run_info": {
+    "dataset": "users1.json",
+    "config": "fast_evaporation_explorative",
+    "run": 4,
+    "execution_time": 354.6451241970062,
+    "iterations_completed": 26,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 15,
+    "pareto_points": [
+      [
+        382727.3700000001,
+        1319.8799999999997
+      ],
+      [
+        373823.1400000005,
+        1228.4499999999998
+      ],
+      [
+        371870.3499999998,
+        1186.04
+      ],
+      [
+        368330.3700000001,
+        1185.58
+      ],
+      [
+        362390.0399999997,
+        1163.84
+      ],
+      [
+        358779.71000000025,
+        1144.77
+      ],
+      [
+        355195.19999999984,
+        1106.43
+      ],
+      [
+        343944.4700000001,
+        1088.28
+      ],
+      [
+        342875.9400000001,
+        1068.3600000000001
+      ],
+      [
+        367587.71999999986,
+        1173.7700000000002
+      ],
+      [
+        318185.64,
+        1025.6700000000003
+      ],
+      [
+        328753.2300000003,
+        1068.0500000000002
+      ],
+      [
+        258029.57999999996,
+        1015.19
+      ],
+      [
+        251607.14999999985,
+        989.27
+      ],
+      [
+        268097.98000000016,
+        1015.7800000000001
+      ]
+    ],
+    "solutions_evaluated": 520,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.7,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 15,
+  "solutions_directory": "../results/PACO\\solutions\\users1\\fast_evaporation_explorative\\run4",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 989.27,
+      "max": 1319.8799999999997
+    },
+    "minutes_range": {
+      "min": 251607.14999999985,
+      "max": 382727.3700000001
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 26,
+    "max_archive_size_reached": 15
+  }
+}

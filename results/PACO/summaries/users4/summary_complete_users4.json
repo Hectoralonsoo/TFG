@@ -1,0 +1,1470 @@
+[
+  {
+    "dataset": "users4.json",
+    "config": "balanced_original",
+    "run": 1,
+    "execution_time": 770.6144261360168,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 6,
+    "pareto_points": [
+      [
+        1487684.8399999954,
+        4490.51
+      ],
+      [
+        1398534.9099999957,
+        4264.16
+      ],
+      [
+        1489645.7899999938,
+        4550.78
+      ],
+      [
+        1446514.7799999954,
+        4455.2
+      ],
+      [
+        1438784.3799999987,
+        4412.029999999999
+      ],
+      [
+        1483306.629999999,
+        4475.92
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "balanced_original",
+    "run": 2,
+    "execution_time": 771.2485251426697,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1481445.889999995,
+        4466.2
+      ],
+      [
+        1472889.1899999934,
+        4376.6
+      ],
+      [
+        1514822.4599999997,
+        4503.050000000001
+      ],
+      [
+        1526471.9299999946,
+        4629.94
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "balanced_original",
+    "run": 3,
+    "execution_time": 772.7807970046997,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        1499892.5499999926,
+        4408.6900000000005
+      ],
+      [
+        1473645.669999996,
+        4402.95
+      ],
+      [
+        1502859.4299999957,
+        4496.95
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "balanced_original",
+    "run": 4,
+    "execution_time": 771.6274976730347,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1501444.3299999966,
+        4558.4400000000005
+      ],
+      [
+        1488787.9399999918,
+        4431.95
+      ],
+      [
+        1468534.7799999937,
+        4405.04
+      ],
+      [
+        1445921.9499999934,
+        4391.54
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "balanced_original",
+    "run": 5,
+    "execution_time": 771.2490286827087,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 6,
+    "pareto_points": [
+      [
+        1487791.0899999943,
+        4486.450000000001
+      ],
+      [
+        1406638.2999999935,
+        4379.800000000001
+      ],
+      [
+        1497340.4399999941,
+        4658.93
+      ],
+      [
+        1461227.8299999963,
+        4420.49
+      ],
+      [
+        1492069.3399999973,
+        4500.35
+      ],
+      [
+        1456614.4599999953,
+        4408.65
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 1,
+    "execution_time": 1606.482858657837,
+    "iterations_completed": 29,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 13,
+    "pareto_points": [
+      [
+        1555157.229999999,
+        4649.35
+      ],
+      [
+        1588748.619999996,
+        4653.380000000001
+      ],
+      [
+        1603269.0299999935,
+        4826.71
+      ],
+      [
+        1596433.1599999927,
+        4689.59
+      ],
+      [
+        1523929.8799999945,
+        4593.82
+      ],
+      [
+        1473650.8699999927,
+        4422.14
+      ],
+      [
+        1499416.509999996,
+        4435.21
+      ],
+      [
+        1385475.0799999938,
+        4420.99
+      ],
+      [
+        1363305.3599999927,
+        4314.000000000001
+      ],
+      [
+        1371023.4699999948,
+        4324.200000000001
+      ],
+      [
+        1382340.329999995,
+        4403.700000000001
+      ],
+      [
+        1323588.1799999925,
+        4267.960000000002
+      ],
+      [
+        1305758.7899999928,
+        4265.7400000000025
+      ]
+    ],
+    "solutions_evaluated": 580,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 2,
+    "execution_time": 1165.0704555511475,
+    "iterations_completed": 21,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 17,
+    "pareto_points": [
+      [
+        1600345.5099999928,
+        4749.450000000001
+      ],
+      [
+        1570670.3499999964,
+        4712.870000000001
+      ],
+      [
+        1524344.0899999964,
+        4610.38
+      ],
+      [
+        1566569.7699999982,
+        4614.14
+      ],
+      [
+        1594799.1199999982,
+        4712.960000000001
+      ],
+      [
+        1509257.229999994,
+        4533.2
+      ],
+      [
+        1469373.4399999974,
+        4499.8
+      ],
+      [
+        1471545.1699999939,
+        4503.749999999999
+      ],
+      [
+        1474880.049999996,
+        4511.24
+      ],
+      [
+        1391820.7899999933,
+        4407.340000000001
+      ],
+      [
+        1437096.9599999941,
+        4434.610000000001
+      ],
+      [
+        1413116.2699999954,
+        4417.230000000001
+      ],
+      [
+        1348878.6999999948,
+        4361.050000000001
+      ],
+      [
+        1353624.3799999934,
+        4363.470000000001
+      ],
+      [
+        1318729.1499999948,
+        4274.920000000001
+      ],
+      [
+        1345839.139999993,
+        4278.790000000002
+      ],
+      [
+        1363329.9599999934,
+        4378.840000000001
+      ]
+    ],
+    "solutions_evaluated": 420,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 3,
+    "execution_time": 1328.991688489914,
+    "iterations_completed": 24,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 14,
+    "pareto_points": [
+      [
+        1599197.259999991,
+        4762.93
+      ],
+      [
+        1672300.2399999965,
+        4995.700000000001
+      ],
+      [
+        1581842.4900000019,
+        4690.06
+      ],
+      [
+        1537509.5999999985,
+        4634.970000000001
+      ],
+      [
+        1598916.3299999968,
+        4722.910000000002
+      ],
+      [
+        1617291.2999999973,
+        4829.99
+      ],
+      [
+        1543186.5299999977,
+        4641.46
+      ],
+      [
+        1515820.4699999986,
+        4511.9800000000005
+      ],
+      [
+        1519766.6599999962,
+        4544.31
+      ],
+      [
+        1495792.8599999978,
+        4392.4400000000005
+      ],
+      [
+        1433872.3599999931,
+        4291.410000000001
+      ],
+      [
+        1365374.2499999946,
+        4276.950000000001
+      ],
+      [
+        1344191.2699999905,
+        4249.180000000001
+      ],
+      [
+        1335450.2899999921,
+        4224.980000000001
+      ]
+    ],
+    "solutions_evaluated": 480,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 4,
+    "execution_time": 1215.7900516986847,
+    "iterations_completed": 22,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 11,
+    "pareto_points": [
+      [
+        1601875.5999999961,
+        4718.430000000001
+      ],
+      [
+        1615869.899999997,
+        4771.300000000001
+      ],
+      [
+        1541422.0799999945,
+        4577.030000000001
+      ],
+      [
+        1587010.7399999974,
+        4605.02
+      ],
+      [
+        1618435.7099999995,
+        4906.79
+      ],
+      [
+        1478647.8299999987,
+        4496.21
+      ],
+      [
+        1493171.649999998,
+        4523.189999999999
+      ],
+      [
+        1404527.5799999963,
+        4339.970000000001
+      ],
+      [
+        1424730.389999995,
+        4363.590000000001
+      ],
+      [
+        1318004.8399999933,
+        4324.240000000002
+      ],
+      [
+        1300356.959999997,
+        4306.180000000002
+      ]
+    ],
+    "solutions_evaluated": 440,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 5,
+    "execution_time": 2098.5346324443817,
+    "iterations_completed": 38,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 15,
+    "pareto_points": [
+      [
+        1596757.2099999995,
+        4664.02
+      ],
+      [
+        1613246.0599999987,
+        4789.610000000001
+      ],
+      [
+        1575862.6099999964,
+        4597.91
+      ],
+      [
+        1465321.5599999926,
+        4405.589999999999
+      ],
+      [
+        1474461.7699999916,
+        4438.1900000000005
+      ],
+      [
+        1468026.879999995,
+        4406.47
+      ],
+      [
+        1488192.249999993,
+        4482.840000000001
+      ],
+      [
+        1479199.529999993,
+        4481.549999999999
+      ],
+      [
+        1386689.8899999922,
+        4279.710000000001
+      ],
+      [
+        1319791.1299999936,
+        4228.870000000001
+      ],
+      [
+        1311976.449999993,
+        4211.180000000001
+      ],
+      [
+        1324351.389999993,
+        4240.780000000002
+      ],
+      [
+        1333558.8499999912,
+        4245.260000000001
+      ],
+      [
+        1284220.5699999935,
+        4195.120000000001
+      ],
+      [
+        1313113.6199999887,
+        4215.300000000001
+      ]
+    ],
+    "solutions_evaluated": 760,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_heuristic_influence",
+    "run": 1,
+    "execution_time": 785.0619487762451,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        1288500.169999993,
+        4578.310000000002
+      ],
+      [
+        1249705.9599999955,
+        4509.960000000003
+      ],
+      [
+        1271783.4299999971,
+        4518.870000000002
+      ],
+      [
+        1237852.249999998,
+        4422.820000000002
+      ],
+      [
+        1296070.3699999945,
+        4630.600000000002
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_heuristic_influence",
+    "run": 2,
+    "execution_time": 1011.4521377086639,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1263950.2099999988,
+        4500.6600000000035
+      ],
+      [
+        1208833.5599999933,
+        4489.590000000003
+      ],
+      [
+        1317809.2899999954,
+        4529.350000000002
+      ],
+      [
+        1264936.1399999952,
+        4525.660000000003
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_heuristic_influence",
+    "run": 3,
+    "execution_time": 1046.2023899555206,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        1296611.0399999954,
+        4573.840000000002
+      ],
+      [
+        1260630.0199999965,
+        4504.090000000003
+      ],
+      [
+        1270872.769999997,
+        4545.920000000002
+      ],
+      [
+        1260956.419999996,
+        4514.170000000003
+      ],
+      [
+        1239601.429999995,
+        4455.240000000003
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_heuristic_influence",
+    "run": 4,
+    "execution_time": 930.6578664779663,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1274617.3299999975,
+        4584.540000000002
+      ],
+      [
+        1258110.3599999952,
+        4429.830000000003
+      ],
+      [
+        1248005.6299999964,
+        4422.340000000002
+      ],
+      [
+        1291655.4799999942,
+        4661.9900000000025
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "high_heuristic_influence",
+    "run": 5,
+    "execution_time": 847.7150058746338,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1292706.1099999966,
+        4627.190000000003
+      ],
+      [
+        1276855.3199999935,
+        4527.290000000002
+      ],
+      [
+        1290196.5399999968,
+        4612.760000000001
+      ],
+      [
+        1266150.429999993,
+        4497.180000000003
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "slow_evaporation_exploitative",
+    "run": 1,
+    "execution_time": 800.4781260490417,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        1514144.4099999971,
+        4474.790000000001
+      ],
+      [
+        1456295.5199999942,
+        4412.530000000001
+      ],
+      [
+        1515355.8799999945,
+        4643.26
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.2,
+      "alpha": 2.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "slow_evaporation_exploitative",
+    "run": 2,
+    "execution_time": 795.8271324634552,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1510681.6199999994,
+        4508.389999999999
+      ],
+      [
+        1479515.8899999931,
+        4386.42
+      ],
+      [
+        1483619.5599999924,
+        4469.089999999999
+      ],
+      [
+        1490684.6699999946,
+        4489.46
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.2,
+      "alpha": 2.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "slow_evaporation_exploitative",
+    "run": 3,
+    "execution_time": 802.4636945724487,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        1463682.7799999968,
+        4404.59
+      ],
+      [
+        1496753.9999999956,
+        4445.54
+      ],
+      [
+        1483812.4499999986,
+        4426.09
+      ],
+      [
+        1458863.3599999947,
+        4353.02
+      ],
+      [
+        1507527.7599999916,
+        4506.749999999999
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.2,
+      "alpha": 2.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "slow_evaporation_exploitative",
+    "run": 4,
+    "execution_time": 1056.9242734909058,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        1489955.9699999955,
+        4486.5
+      ],
+      [
+        1471710.4799999967,
+        4449.5
+      ],
+      [
+        1488766.6699999955,
+        4482.429999999999
+      ],
+      [
+        1538031.909999998,
+        4514.54
+      ],
+      [
+        1462529.0499999928,
+        4417.09
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.2,
+      "alpha": 2.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "slow_evaporation_exploitative",
+    "run": 5,
+    "execution_time": 1545.0112688541412,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1487569.0399999993,
+        4483.549999999999
+      ],
+      [
+        1493192.0499999928,
+        4509.669999999999
+      ],
+      [
+        1482914.0799999954,
+        4442.25
+      ],
+      [
+        1477814.349999997,
+        4387.06
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.2,
+      "alpha": 2.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "fast_evaporation_explorative",
+    "run": 1,
+    "execution_time": 1424.1827573776245,
+    "iterations_completed": 15,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1561797.5499999977,
+        4587.66
+      ],
+      [
+        1521813.9699999958,
+        4496.13
+      ],
+      [
+        1486041.8199999903,
+        4422.110000000001
+      ],
+      [
+        1487488.689999999,
+        4492.719999999999
+      ]
+    ],
+    "solutions_evaluated": 300,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.7,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "fast_evaporation_explorative",
+    "run": 2,
+    "execution_time": 1421.4401443004608,
+    "iterations_completed": 15,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 8,
+    "pareto_points": [
+      [
+        1508207.0799999943,
+        4507.94
+      ],
+      [
+        1548413.3999999953,
+        4619.660000000001
+      ],
+      [
+        1552689.259999994,
+        4678.459999999999
+      ],
+      [
+        1578354.2999999975,
+        4689.360000000001
+      ],
+      [
+        1546052.7100000004,
+        4516.630000000001
+      ],
+      [
+        1431193.3199999942,
+        4467.83
+      ],
+      [
+        1419208.9099999939,
+        4445.280000000001
+      ],
+      [
+        1436736.699999998,
+        4493.2300000000005
+      ]
+    ],
+    "solutions_evaluated": 300,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.7,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "fast_evaporation_explorative",
+    "run": 3,
+    "execution_time": 907.7816936969757,
+    "iterations_completed": 15,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        1477745.3899999973,
+        4465.6
+      ],
+      [
+        1548001.7699999935,
+        4596.93
+      ],
+      [
+        1525268.1799999971,
+        4511.35
+      ],
+      [
+        1405184.2899999914,
+        4397.2300000000005
+      ]
+    ],
+    "solutions_evaluated": 300,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.7,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "fast_evaporation_explorative",
+    "run": 4,
+    "execution_time": 964.9166460037231,
+    "iterations_completed": 15,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 7,
+    "pareto_points": [
+      [
+        1564465.2199999988,
+        4675.900000000001
+      ],
+      [
+        1535275.789999995,
+        4501.27
+      ],
+      [
+        1489658.079999997,
+        4493.000000000001
+      ],
+      [
+        1539697.8899999976,
+        4613.4800000000005
+      ],
+      [
+        1379656.609999995,
+        4439.830000000001
+      ],
+      [
+        1360577.649999993,
+        4425.89
+      ],
+      [
+        1428218.6099999947,
+        4468.88
+      ]
+    ],
+    "solutions_evaluated": 300,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.7,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "fast_evaporation_explorative",
+    "run": 5,
+    "execution_time": 944.1396975517273,
+    "iterations_completed": 15,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        1530838.8499999952,
+        4488.56
+      ],
+      [
+        1571997.8899999987,
+        4595.39
+      ],
+      [
+        1532033.309999996,
+        4544.4400000000005
+      ],
+      [
+        1605556.3999999969,
+        4615.0199999999995
+      ],
+      [
+        1475582.6099999931,
+        4464.929999999999
+      ]
+    ],
+    "solutions_evaluated": 300,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.7,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "minimal_guidance",
+    "run": 1,
+    "execution_time": 3761.463349342346,
+    "iterations_completed": 59,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 12,
+    "pareto_points": [
+      [
+        1726958.9399999983,
+        5646.420000000001
+      ],
+      [
+        1678954.2499999977,
+        4841.950000000001
+      ],
+      [
+        1664056.4899999958,
+        4811.3
+      ],
+      [
+        1680831.8999999906,
+        4861.570000000001
+      ],
+      [
+        1652516.2099999955,
+        4710.960000000001
+      ],
+      [
+        1687099.7200000018,
+        4891.76
+      ],
+      [
+        1690507.3599999957,
+        4906.780000000001
+      ],
+      [
+        1668539.6199999957,
+        4836.81
+      ],
+      [
+        1664187.9499999995,
+        4821.9400000000005
+      ],
+      [
+        1643060.0799999968,
+        4634.990000000001
+      ],
+      [
+        1705841.8199999973,
+        4921.030000000001
+      ],
+      [
+        1660751.109999998,
+        4790.780000000001
+      ]
+    ],
+    "solutions_evaluated": 1180,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "minimal_guidance",
+    "run": 2,
+    "execution_time": 2883.026865720749,
+    "iterations_completed": 47,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 6,
+    "pareto_points": [
+      [
+        1696022.1899999941,
+        5271.120000000001
+      ],
+      [
+        1706649.2699999956,
+        5281.980000000001
+      ],
+      [
+        1695708.5899999973,
+        4924.4400000000005
+      ],
+      [
+        1613696.6099999987,
+        4666.08
+      ],
+      [
+        1691622.4900000002,
+        4745.95
+      ],
+      [
+        1645959.459999995,
+        4696.5700000000015
+      ]
+    ],
+    "solutions_evaluated": 940,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "minimal_guidance",
+    "run": 3,
+    "execution_time": 3209.7052092552185,
+    "iterations_completed": 57,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        1672872.3299999947,
+        4775.290000000001
+      ],
+      [
+        1633621.3999999964,
+        4735.790000000001
+      ],
+      [
+        1620172.6199999966,
+        4669.620000000001
+      ],
+      [
+        1663808.1499999915,
+        4741.99
+      ],
+      [
+        1712132.4999999967,
+        4796.4400000000005
+      ]
+    ],
+    "solutions_evaluated": 1140,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "minimal_guidance",
+    "run": 4,
+    "execution_time": 3737.341160058975,
+    "iterations_completed": 66,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 9,
+    "pareto_points": [
+      [
+        1702775.6100000003,
+        5204.640000000001
+      ],
+      [
+        1706666.7599999928,
+        5272.670000000001
+      ],
+      [
+        1672034.4999999965,
+        4766.620000000001
+      ],
+      [
+        1701465.9199999983,
+        4835.060000000001
+      ],
+      [
+        1677598.9099999962,
+        4817.46
+      ],
+      [
+        1664598.9399999965,
+        4736.4400000000005
+      ],
+      [
+        1625148.7399999958,
+        4688.100000000001
+      ],
+      [
+        1644015.01,
+        4724.88
+      ],
+      [
+        1611344.969999997,
+        4636.150000000001
+      ]
+    ],
+    "solutions_evaluated": 1320,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "config": "minimal_guidance",
+    "run": 5,
+    "execution_time": 3914.1941170692444,
+    "iterations_completed": 61,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 6,
+    "pareto_points": [
+      [
+        1696571.079999999,
+        4826.810000000001
+      ],
+      [
+        1721340.8799999955,
+        4895.010000000001
+      ],
+      [
+        1616287.9099999978,
+        4661.95
+      ],
+      [
+        1618066.8399999994,
+        4694.42
+      ],
+      [
+        1674067.6899999965,
+        4737.9800000000005
+      ],
+      [
+        1653605.699999994,
+        4714.000000000001
+      ]
+    ],
+    "solutions_evaluated": 1220,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  }
+]

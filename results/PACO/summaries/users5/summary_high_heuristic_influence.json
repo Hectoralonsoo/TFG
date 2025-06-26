@@ -1,0 +1,192 @@
+[
+  {
+    "dataset": "users5.json",
+    "config": "high_heuristic_influence",
+    "run": 1,
+    "execution_time": 1254.5593597888947,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        2116312.990000003,
+        7039.430000000008
+      ],
+      [
+        2084960.0700000033,
+        6843.090000000007
+      ],
+      [
+        2113322.920000001,
+        6979.460000000006
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users5.json",
+    "config": "high_heuristic_influence",
+    "run": 2,
+    "execution_time": 1249.9479179382324,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        2055030.7899999982,
+        6933.610000000008
+      ],
+      [
+        2067708.000000005,
+        6960.670000000007
+      ],
+      [
+        2060764.4500000044,
+        6935.810000000008
+      ],
+      [
+        2144814.8400000045,
+        6982.190000000006
+      ],
+      [
+        2046234.6500000046,
+        6856.620000000006
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users5.json",
+    "config": "high_heuristic_influence",
+    "run": 3,
+    "execution_time": 1251.5363132953644,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        2087121.9900000005,
+        7044.600000000009
+      ],
+      [
+        2084141.0800000024,
+        6932.120000000008
+      ],
+      [
+        2080722.9200000092,
+        6918.7200000000075
+      ],
+      [
+        2089517.5899999994,
+        7052.490000000006
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users5.json",
+    "config": "high_heuristic_influence",
+    "run": 4,
+    "execution_time": 1246.0148198604584,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        2086539.0199999982,
+        6908.250000000007
+      ],
+      [
+        2113857.4200000023,
+        6996.670000000008
+      ],
+      [
+        2130198.4600000074,
+        7097.210000000008
+      ],
+      [
+        2133581.2500000047,
+        7185.210000000007
+      ],
+      [
+        2096449.7500000012,
+        6933.280000000008
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users5.json",
+    "config": "high_heuristic_influence",
+    "run": 5,
+    "execution_time": 1250.2841536998749,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        2070548.8200000043,
+        6872.560000000008
+      ],
+      [
+        2146476.1100000017,
+        6973.770000000007
+      ],
+      [
+        2093350.6000000052,
+        6928.180000000007
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  }
+]

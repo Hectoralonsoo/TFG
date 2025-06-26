@@ -1,0 +1,308 @@
+[
+  {
+    "dataset": "users3.json",
+    "config": "minimal_guidance",
+    "run": 1,
+    "execution_time": 1384.6969301700592,
+    "iterations_completed": 43,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 6,
+    "pareto_points": [
+      [
+        1050577.1500000004,
+        3009.100000000001
+      ],
+      [
+        1049202.7400000016,
+        2947.0400000000004
+      ],
+      [
+        1101819.2699999998,
+        3206.0
+      ],
+      [
+        1097409.4600000007,
+        3160.56
+      ],
+      [
+        1057194.5899999999,
+        3025.1500000000005
+      ],
+      [
+        1093294.8699999999,
+        3041.0000000000005
+      ]
+    ],
+    "solutions_evaluated": 860,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "minimal_guidance",
+    "run": 2,
+    "execution_time": 2255.778629541397,
+    "iterations_completed": 70,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 11,
+    "pareto_points": [
+      [
+        1112137.0899999961,
+        3387.8500000000004
+      ],
+      [
+        1068782.6899999985,
+        3064.56
+      ],
+      [
+        1018208.389999999,
+        2938.0100000000007
+      ],
+      [
+        1074703.499999998,
+        3082.56
+      ],
+      [
+        1092538.290000001,
+        3091.4200000000005
+      ],
+      [
+        1063707.8200000003,
+        3036.5
+      ],
+      [
+        1100804.2800000003,
+        3135.02
+      ],
+      [
+        1110211.6799999997,
+        3159.4
+      ],
+      [
+        1055765.1200000031,
+        2960.78
+      ],
+      [
+        1064023.1499999994,
+        3058.020000000001
+      ],
+      [
+        1083942.14,
+        3090.4900000000007
+      ]
+    ],
+    "solutions_evaluated": 1400,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "minimal_guidance",
+    "run": 3,
+    "execution_time": 1805.9994158744812,
+    "iterations_completed": 56,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 9,
+    "pareto_points": [
+      [
+        1100410.889999999,
+        3151.9100000000008
+      ],
+      [
+        1088083.9200000004,
+        3105.4900000000002
+      ],
+      [
+        1074388.0599999994,
+        3044.0400000000004
+      ],
+      [
+        1066648.3400000024,
+        3040.46
+      ],
+      [
+        1111340.0099999977,
+        3173.4200000000005
+      ],
+      [
+        1075385.160000002,
+        3063.0700000000006
+      ],
+      [
+        1091920.2899999982,
+        3108.0400000000004
+      ],
+      [
+        1051689.710000001,
+        3000.54
+      ],
+      [
+        1038219.700000001,
+        2970.65
+      ]
+    ],
+    "solutions_evaluated": 1120,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "minimal_guidance",
+    "run": 4,
+    "execution_time": 2225.5239470005035,
+    "iterations_completed": 69,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 15,
+    "pareto_points": [
+      [
+        1029043.4600000024,
+        2974.120000000001
+      ],
+      [
+        1099024.7399999967,
+        3368.800000000001
+      ],
+      [
+        1089819.0799999991,
+        3143.83
+      ],
+      [
+        1096679.1199999994,
+        3166.42
+      ],
+      [
+        1050616.199999998,
+        2985.59
+      ],
+      [
+        1015241.95,
+        2969.56
+      ],
+      [
+        989655.4000000001,
+        2927.55
+      ],
+      [
+        1071580.2700000019,
+        3027.1000000000004
+      ],
+      [
+        1039378.1900000006,
+        2977.5600000000004
+      ],
+      [
+        1051982.0600000017,
+        3001.58
+      ],
+      [
+        1072558.66,
+        3045.4600000000005
+      ],
+      [
+        1065532.2200000002,
+        3026.6000000000004
+      ],
+      [
+        1085986.9600000016,
+        3120.6000000000004
+      ],
+      [
+        1082780.7500000014,
+        3080.7600000000007
+      ],
+      [
+        1047891.8799999988,
+        2985.100000000001
+      ]
+    ],
+    "solutions_evaluated": 1380,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "minimal_guidance",
+    "run": 5,
+    "execution_time": 1417.399493932724,
+    "iterations_completed": 44,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 8,
+    "pareto_points": [
+      [
+        1095986.7199999995,
+        3286.380000000001
+      ],
+      [
+        1085642.520000001,
+        3204.8800000000006
+      ],
+      [
+        1086868.0799999994,
+        3273.2400000000007
+      ],
+      [
+        1074724.769999999,
+        2986.74
+      ],
+      [
+        1029232.0599999988,
+        2950.1300000000006
+      ],
+      [
+        1035306.7800000024,
+        2972.03
+      ],
+      [
+        1077826.62,
+        3142.8300000000004
+      ],
+      [
+        1084066.9500000011,
+        3145.5200000000004
+      ]
+    ],
+    "solutions_evaluated": 880,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  }
+]

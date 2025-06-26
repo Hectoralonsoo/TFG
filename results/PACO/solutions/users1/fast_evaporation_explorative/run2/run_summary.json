@@ -1,0 +1,68 @@
+{
+  "run_info": {
+    "dataset": "users1.json",
+    "config": "fast_evaporation_explorative",
+    "run": 2,
+    "execution_time": 219.68753170967102,
+    "iterations_completed": 16,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 7,
+    "pareto_points": [
+      [
+        357679.3400000001,
+        1098.64
+      ],
+      [
+        386589.5699999995,
+        1166.53
+      ],
+      [
+        365160.6000000002,
+        1105.9099999999999
+      ],
+      [
+        346791.8199999994,
+        1078.8500000000001
+      ],
+      [
+        321969.45000000007,
+        991.1200000000001
+      ],
+      [
+        335962.78,
+        1023.2600000000001
+      ],
+      [
+        341244.79999999946,
+        1051.19
+      ]
+    ],
+    "solutions_evaluated": 320,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.7,
+      "alpha": 1.0,
+      "beta": 2.5,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 7,
+  "solutions_directory": "../results/PACO\\solutions\\users1\\fast_evaporation_explorative\\run2",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 991.1200000000001,
+      "max": 1166.53
+    },
+    "minutes_range": {
+      "min": 321969.45000000007,
+      "max": 386589.5699999995
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 16,
+    "max_archive_size_reached": 7
+  }
+}
