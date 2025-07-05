@@ -1,0 +1,54 @@
+{
+  "run_info": {
+    "dataset": "users1.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 26,
+    "execution_time": 225.33361411094666,
+    "generations": 91,
+    "pareto_size": 10,
+    "pareto_points": [
+      [
+        -490610.64000000013,
+        1036.27
+      ],
+      [
+        -497889.8699999999,
+        1152.26
+      ],
+      [
+        -495319.1000000001,
+        1101.2599999999998
+      ],
+      [
+        -497954.92999999993,
+        1162.73
+      ],
+      [
+        -497577.00000000006,
+        1113.27
+      ],
+      [
+        -493162.57000000007,
+        1041.2799999999997
+      ],
+      [
+        -498377.6699999999,
+        1201.1799999999998
+      ],
+      [
+        -494396.2300000001,
+        1050.32
+      ],
+      [
+        -494678.3999999999,
+        1088.27
+      ],
+      [
+        -495405.8699999999,
+        1106.2499999999998
+      ]
+    ]
+  },
+  "solutions_count": 10,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\NSGA2\\solutions\\users1\\uniform_inversion_high_mutation\\run26"
+}

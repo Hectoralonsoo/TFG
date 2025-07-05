@@ -1,0 +1,7 @@
+config,hv_mean,hv_std,hv_cv,hv_count
+uniform_inversion_high_mutation,0.980092,0.173225,0.1767436118241961,5
+npoint_inversion_high_all,0.680057,0.222936,0.3278195798293378,5
+uniform_reset_high_crossover,0.591436,0.076562,0.12945103104985156,5
+uniform_reset_low_mutation,0.536509,0.090131,0.1679953178791036,5
+npoint_inversion_low_mutation,0.466309,0.125232,0.2685601178617612,5
+npoint_reset_low_crossover,0.410034,0.128668,0.3137983679402196,5

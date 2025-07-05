@@ -1,0 +1,6 @@
+dataset,config,hypervolume,num_points,num_pareto_points,num_runs,mean_execution_time,mean_generations,mean_pareto_size
+users1.json,npoint_inversion_high_all,0.9328683067970509,84,17,5,348.7423499107361,104.2,16.8
+users2.json,uniform_inversion_high_mutation,0.9945865941942611,91,23,5,704.9685477256775,118.0,18.2
+users3.json,uniform_inversion_high_mutation,0.8854744522533233,123,25,5,1381.9539940357208,126.8,24.6
+users4.json,uniform_inversion_high_mutation,0.859601657129866,90,18,5,3403.4225240707397,145.2,18.0
+users5.json,uniform_inversion_high_mutation,0.8035025048105787,94,20,5,6091.475147151947,150.8,18.8
