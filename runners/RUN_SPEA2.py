@@ -8,6 +8,7 @@ import numpy as np
 from Loaders.LoadStreamingPlans import load_streaming_plan_json
 from Loaders.LoadUsers import load_users_from_json
 from Loaders.LoadPlatforms import load_platforms_json
+from algorithms.SPEA2 import SPEA2
 
 from utils.evaluation import evaluator, calcular_minutos_ponderados
 from utils.logging_custom import observer
@@ -45,42 +46,42 @@ def main():
     configurations = [
         {
             "name": "uniform_reset_low_mutation",
-            "pop_size": 40,
+            "pop_size": 30,
             "mutation_rate": 0.01,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "uniform_reset_high_crossover",
-            "pop_size": 40,
+            "pop_size": 30,
             "mutation_rate": 0.025,
             "crossover_rate": 0.8,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "uniform_inversion_high_mutation",
-            "pop_size": 40,
+            "pop_size": 30,
             "mutation_rate": 0.1,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.inversion_mutation]
         },
         {
             "name": "npoint_reset_low_crossover",
-            "pop_size": 40,
+            "pop_size": 30,
             "mutation_rate": 0.025,
             "crossover_rate": 0.4,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "npoint_inversion_low_mutation",
-            "pop_size": 40,
+            "pop_size": 30,
             "mutation_rate": 0.01,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
         },
         {
             "name": "npoint_inversion_high_all",
-            "pop_size": 40,
+            "pop_size": 30,
             "mutation_rate": 0.1,
             "crossover_rate": 0.8,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
@@ -97,7 +98,7 @@ def main():
         "users5.json"
     ]
 
-    base_results_path = "../results/SPEA2"
+    base_results_path = "../results/SPEA2-NICE"
     all_results = []
 
     os.makedirs(base_results_path, exist_ok=True)
@@ -124,27 +125,27 @@ def main():
                 seed = time()
                 prng = random.Random(seed)
 
-                algorithm = inspyred.ec.emo.NSGA2(prng)
+                algorithm = SPEA2(prng)
                 bounder = inspyred.ec.Bounder(1, len(platforms_indexed))
 
                 algorithm.selector = inspyred.ec.selectors.tournament_selection
-                algorithm.replacer = inspyred.ec.replacers.nsga_replacement
                 algorithm.variator = config["variator"]
                 algorithm.terminator = inspyred.ec.terminators.no_improvement_termination
                 algorithm.observer = observer
+                algorithm.evaluator = evaluator
+                algorithm.generator = generar_individuo
 
                 args = {
                     'users': users,
                     'streamingPlans': streamingPlans,
-                    'platforms_indexed': platforms_indexed,
-                    'max_generations': 10,
+                    'platforms_indexed': platforms_indexed
                 }
 
                 start_time = time()
                 final_pop = algorithm.evolve(
-                    generator=generar_individuo,
                     evaluator=evaluator,
                     bounder=bounder,
+                    max_generations=300,
                     pop_size=config["pop_size"],
                     maximize=False,
                     num_selected=config["pop_size"],
@@ -159,7 +160,17 @@ def main():
                 generations = algorithm.num_generations
                 pareto_size = len(algorithm.archive)
 
-                pareto_points = [safe_fitness_to_list(ind.fitness) for ind in algorithm.archive]
+                if hasattr(algorithm, 'archive') and algorithm.archive:
+                    pareto_size = len(algorithm.archive)
+                    # Usar objective_values en lugar de fitness para los puntos del frente de Pareto
+                    pareto_points = []
+                    for ind in algorithm.archive:
+                        if hasattr(ind, 'objective_values') and ind.objective_values:
+                            pareto_points.append(safe_fitness_to_list(ind.objective_values))
+                        elif hasattr(ind, 'fitness'):
+                            pareto_points.append(safe_fitness_to_list(ind.fitness))
+                        else:
+                            pareto_points.append([0.0])  # Valor por defecto
 
                 run_result = {
                     'dataset': dataset_name,

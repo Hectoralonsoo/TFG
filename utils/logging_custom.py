@@ -225,7 +225,7 @@ def observer(population, num_generations, num_evaluations, args):
     print(f"Número de evaluaciones: {num_evaluations}")
 
     # Extraer fitness
-    fitness_values = [ind.fitness for ind in population]
+    fitness_values = [ind.objective_values for ind in population]
 
     total_minutos = sum(-fitness[0] for fitness in fitness_values)
     total_costo = sum(fitness[1] for fitness in fitness_values)
@@ -251,8 +251,8 @@ def observer(population, num_generations, num_evaluations, args):
     # Mostrar todos los individuos de la población
     print("\n--- Todos los individuos ---")
     for i in range(len(population)):
-        minutos_ponderados = -population[i].fitness[0]
-        costo_total = population[i].fitness[1]
+        minutos_ponderados = -population[i].objective_values[1]
+        costo_total = population[i].objective_values[0]
         print(f"Individuo {i + 1}: Minutos ponderados: {minutos_ponderados:.2f}, Costo total: {costo_total:.2f}")
         print(f"  Configuración: {population[i].candidate}")
 

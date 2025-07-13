@@ -3,32 +3,20 @@
     "dataset": "users1.json",
     "config": "uniform_inversion_high_mutation",
     "run": 1,
-    "execution_time": 203.8516902923584,
-    "generations": 112,
-    "pareto_size": 5,
+    "execution_time": 4.744403600692749,
+    "generations": 16,
+    "pareto_size": 2,
     "pareto_points": [
       [
-        -496238.17999999924,
-        848.9999999999999
+        -426826.8499999998,
+        1552.2099999999996
       ],
       [
-        -498375.59999999916,
-        895.9699999999998
-      ],
-      [
-        -499342.63999999926,
-        910.9399999999998
-      ],
-      [
-        -497859.32999999926,
-        863.9699999999999
-      ],
-      [
-        -500220.6199999991,
-        921.4099999999999
+        -397965.40999999974,
+        1491.7599999999998
       ]
     ]
   },
-  "solutions_count": 5,
+  "solutions_count": 2,
   "solutions_directory": "../results/SPEA2\\solutions\\users1\\uniform_inversion_high_mutation\\run1"
 }
