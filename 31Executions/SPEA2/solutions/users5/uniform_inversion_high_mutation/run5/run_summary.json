@@ -1,0 +1,23 @@
+{
+  "run_info": {
+    "dataset": "users5.json",
+    "config": "uniform_inversion_high_mutation",
+    "algorithm": "SPEA2",
+    "run": 5,
+    "execution_time": 1229.1389310359955,
+    "generations": 61,
+    "pareto_size": 2,
+    "pareto_points": [
+      [
+        -3272986.400000021,
+        9496.410000000002
+      ],
+      [
+        -3256326.7200000114,
+        9267.07
+      ]
+    ]
+  },
+  "solutions_count": 2,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\SPEA2\\solutions\\users5\\uniform_inversion_high_mutation\\run5"
+}

@@ -1,0 +1,7 @@
+config,hv_mean,hv_std,hv_count,exec_time_mean,iterations_mean,pareto_size_mean,pareto_points_mean,runs_mean
+high_heuristic_influence,0.847969,0.089421,5,624.554735,14.8,4.28,21.4,5.0
+high_pheromone_influence,0.824485,0.151117,5,1308.236926,34.56,15.48,77.4,5.0
+slow_evaporation_exploitative,0.774031,0.089646,5,676.389364,17.04,5.8,29.0,5.0
+fast_evaporation_explorative,0.765513,0.064676,5,721.01442,16.4,7.08,35.4,5.0
+balanced_original,0.729857,0.067387,5,640.119098,16.68,4.92,24.6,5.0
+minimal_guidance,0.420431,0.066076,5,2967.921684,66.44,8.68,43.4,5.0

@@ -6,12 +6,43 @@ import os
 from pathlib import Path
 
 
-def calculate_hypervolume_for_dataset(file_path, dataset_name):
+def load_global_reference_points(
+        stats_file="C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\pareto_outputs\\pareto_stats_summary.csv"):
     """
-    Calcula el hipervolumen para un dataset específico (adaptado para PACO)
+    Carga los puntos de referencia globales desde el archivo de estadísticas
+    """
+    try:
+        stats_df = pd.read_csv(stats_file)
+        print(f"Cargando puntos de referencia globales desde: {stats_file}")
+        print(f"Datasets encontrados: {list(stats_df['dataset'].values)}")
+
+        # Crear diccionario con estadísticas por dataset
+        global_stats = {}
+        for _, row in stats_df.iterrows():
+            dataset = row['dataset']
+            global_stats[dataset] = {
+                'min_cost': row['min_cost'],
+                'max_cost': row['max_cost'],
+                'min_minutes': row['min_minutes'],
+                'max_minutes': row['max_minutes']
+            }
+            print(f"  {dataset}: Cost[{row['min_cost']:.2f}, {row['max_cost']:.2f}], "
+                  f"Minutes[{row['min_minutes']:.0f}, {row['max_minutes']:.0f}]")
+
+        return global_stats
+
+    except Exception as e:
+        print(f"ERROR: No se pudo cargar {stats_file}: {e}")
+        return None
+
+
+def calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_name, global_stats):
+    """
+    Calcula el hipervolumen para PACO usando puntos de Pareto ya calculados (no los recalcula)
+    Adaptado para el formato de datos de PACO
     """
     print(f"\n{'=' * 60}")
-    print(f"PROCESANDO: {dataset_name}")
+    print(f"PROCESANDO PACO: {dataset_name}")
     print(f"Archivo: {file_path}")
     print(f"{'=' * 60}")
 
@@ -19,6 +50,22 @@ def calculate_hypervolume_for_dataset(file_path, dataset_name):
     if not os.path.exists(file_path):
         print(f"ADVERTENCIA: El archivo {file_path} no existe. Saltando...")
         return None
+
+    # Verificar que tenemos estadísticas globales para este dataset
+    if dataset_name not in global_stats:
+        print(f"ADVERTENCIA: No se encontraron estadísticas globales para {dataset_name}")
+        return None
+
+    # Obtener estadísticas globales para este dataset
+    stats = global_stats[dataset_name]
+    global_min_cost = stats['min_cost']
+    global_max_cost = stats['max_cost']
+    global_min_minutes = stats['min_minutes']
+    global_max_minutes = stats['max_minutes']
+
+    print(f"Usando puntos de referencia globales:")
+    print(f"  Cost: [{global_min_cost:.2f}, {global_max_cost:.2f}]")
+    print(f"  Minutes: [{global_min_minutes:.0f}, {global_max_minutes:.0f}]")
 
     # Cargar el archivo
     try:
@@ -28,105 +75,128 @@ def calculate_hypervolume_for_dataset(file_path, dataset_name):
         print(f"ERROR: No se pudo cargar {file_path}: {e}")
         return None
 
-    all_costs = []
-    all_minutes = []
-
-    # Recopilar todos los puntos para normalización global
-    for entry in data:
-        if entry["dataset"] == dataset_name:
-            for cost, minutes in entry["pareto_points"]:
-                all_costs.append(cost)
-                all_minutes.append(minutes)
-
-    if not all_costs:
-        print(f"ADVERTENCIA: No se encontraron datos para {dataset_name}")
-        return None
-
-    # Máximos y mínimos globales para normalización
-    max_cost = max(all_costs)
-    min_cost = min(all_costs)
-    max_minutes = max(all_minutes)
-    min_minutes = min(all_minutes)
-
-    print(f"Max cost: {max_cost:.4f}")
-    print(f"Min cost: {min_cost:.4f}")
-    print(f"Max minutes: {max_minutes:.4f}")
-    print(f"Min minutes: {min_minutes:.4f}")
-    print(f"Total puntos encontrados: {len(all_costs)}")
-
-    config_points = {}
+    config_pareto_points = {}
     config_metrics = {}
+    total_points = 0
 
-    # Agrupar puntos por configuración y recopilar métricas
+    # Agrupar puntos de Pareto ya calculados por configuración
     for entry in data:
         if entry["dataset"] == dataset_name:
             config = entry["config"]
 
             # Inicializar estructuras de datos para esta configuración
-            if config not in config_points:
-                config_points[config] = []
+            if config not in config_pareto_points:
+                config_pareto_points[config] = []
                 config_metrics[config] = {
                     'execution_times': [],
                     'iterations': [],
-                    'pareto_sizes': [],
-                    'solutions_evaluated': [],
-                    'terminated_early': []
+                    'pareto_sizes': []
                 }
 
-            # Recopilar métricas de ejecución (adaptado para PACO)
+            # Recopilar métricas de ejecución (PACO usa 'iterations_completed' en lugar de 'generations')
             config_metrics[config]['execution_times'].append(entry.get('execution_time', 0))
             config_metrics[config]['iterations'].append(entry.get('iterations_completed', 0))
             config_metrics[config]['pareto_sizes'].append(entry.get('pareto_size', 0))
-            config_metrics[config]['solutions_evaluated'].append(entry.get('solutions_evaluated', 0))
-            config_metrics[config]['terminated_early'].append(entry.get('terminated_early', False))
 
-            for cost, minutes in entry["pareto_points"]:
-                cost_norm = (cost - min_cost) / (max_cost - min_cost) if max_cost != min_cost else 0
-                minutes_norm = (minutes - min_minutes) / (
-                            max_minutes - min_minutes) if max_minutes != min_minutes else 0
-                config_points[config].append([cost_norm, minutes_norm])
+            # USAR DIRECTAMENTE LOS PUNTOS DE PARETO (no recalcular frente)
+            # Para PACO, el formato puede ser (minutes, cost) en lugar de (neg_minutes, cost)
+            for minutes, cost in entry["pareto_points"]:
+                # Si minutes viene como negativo en PACO, ajustar según sea necesario
+                # Verificar el formato real de tus datos PACO
 
-    # Calcular hipervolumen por configuración
+                # Validar rangos
+                if cost < global_min_cost or cost > global_max_cost:
+                    print(f"  ⚠️  Cost fuera de rango: {cost} (rango: [{global_min_cost}, {global_max_cost}])")
+                if minutes < global_min_minutes or minutes > global_max_minutes:
+                    print(f"  ⚠️  Minutes fuera de rango: {minutes} (rango: [{global_min_minutes}, {global_max_minutes}])")
+
+                # NORMALIZACIÓN PARA MAXIMIZACIÓN
+                cost_range = global_max_cost - global_min_cost
+                minutes_range = global_max_minutes - global_min_minutes
+
+                if cost_range == 0:
+                    cost_normalized = 1.0
+                else:
+                    # Maximizar eficiencia = minimizar costo
+                    cost_normalized = (global_max_cost - cost) / cost_range
+
+                if minutes_range == 0:
+                    minutes_normalized = 1.0
+                else:
+                    # Para PACO: si minutes es positivo, maximizar velocidad = minimizar tiempo
+                    # Si minutes es negativo (como en NSGA-II), ajustar según corresponda
+                    # Aquí asumo que minutes en PACO es positivo y queremos minimizarlo
+                    minutes_normalized = (global_max_minutes - minutes) / minutes_range
+
+                # Validar que estén en [0,1]
+                cost_normalized = max(0.0, min(1.0, cost_normalized))
+                minutes_normalized = max(0.0, min(1.0, minutes_normalized))
+
+                # Debug para los primeros puntos
+                if total_points < 3:
+                    print(f"  Debug punto {total_points + 1}:")
+                    print(f"    Original: cost={cost:.2f}, minutes={minutes:.2f}")
+                    print(f"    Normalizado: cost_norm={cost_normalized:.6f}, minutes_norm={minutes_normalized:.6f}")
+
+                config_pareto_points[config].append([cost_normalized, minutes_normalized])
+                total_points += 1
+
+    print(f"Total puntos de Pareto procesados: {total_points}")
+    print(f"Configuraciones encontradas: {len(config_pareto_points)}")
+
+    # Calcular hipervolumen por configuración usando puntos ya calculados
     hv_by_config = []
-    ref_point = [1.0, 1.0]
+    ref_point = [0.0, 0.0]  # Para maximización
 
-    print(f"\nConfigurations encontradas: {len(config_points)}")
+    print(f"Usando punto de referencia para MAXIMIZACIÓN: {ref_point}")
+    print("NOTA: Se usan directamente los puntos de Pareto proporcionados (no se recalcula el frente)")
 
-    for config, points in config_points.items():
-        if not points:
+    for config, pareto_points in config_pareto_points.items():
+        if not pareto_points:
             continue
 
-        # Convertir a DataFrame para análisis
-        df = pd.DataFrame(points, columns=["cost_norm", "minutes_norm"])
+        print(f"\nProcesando configuración: {config}")
+        print(f"  Puntos de Pareto proporcionados: {len(pareto_points)}")
 
-        # Segunda normalización (como en el código original)
-        df["cost_final"] = df["cost_norm"] / df["cost_norm"].max() if df["cost_norm"].max() > 0 else df["cost_norm"]
-        df["minutes_final"] = df["minutes_norm"] / df["minutes_norm"].max() if df["minutes_norm"].max() > 0 else df[
-            "minutes_norm"]
+        # Convertir a array numpy
+        pareto_array = np.array(pareto_points)
 
-        pareto_front = df[["cost_final", "minutes_final"]].values.tolist()
+        # Mostrar estadísticas de los puntos
+        if len(pareto_points) > 0:
+            print(f"  Rango cost_normalized: [{pareto_array[:, 0].min():.6f}, {pareto_array[:, 0].max():.6f}]")
+            print(f"  Rango minutes_normalized: [{pareto_array[:, 1].min():.6f}, {pareto_array[:, 1].max():.6f}]")
 
         # Calcular medias de las métricas
         metrics = config_metrics[config]
         mean_exec_time = np.mean(metrics['execution_times']) if metrics['execution_times'] else 0
         mean_iterations = np.mean(metrics['iterations']) if metrics['iterations'] else 0
         mean_pareto_size = np.mean(metrics['pareto_sizes']) if metrics['pareto_sizes'] else 0
-        mean_solutions_evaluated = np.mean(metrics['solutions_evaluated']) if metrics['solutions_evaluated'] else 0
-        early_termination_rate = np.mean(metrics['terminated_early']) if metrics['terminated_early'] else 0
 
         # Calcular desviaciones estándar
         std_exec_time = np.std(metrics['execution_times']) if len(metrics['execution_times']) > 1 else 0
         std_iterations = np.std(metrics['iterations']) if len(metrics['iterations']) > 1 else 0
         std_pareto_size = np.std(metrics['pareto_sizes']) if len(metrics['pareto_sizes']) > 1 else 0
-        std_solutions_evaluated = np.std(metrics['solutions_evaluated']) if len(
-            metrics['solutions_evaluated']) > 1 else 0
 
         try:
-            hv = hypervolume(pareto_front, reference_point=ref_point)
+            if len(pareto_points) > 0:
+                # Calcular hipervolumen directamente con los puntos proporcionados
+                hv = hypervolume(pareto_points, reference_point=ref_point)
+
+                # Validación del hipervolumen
+                if hv > 1.0:
+                    print(f"  ⚠️  HV excede 1.0: {hv:.6f}")
+                elif hv < 0:
+                    print(f"  ⚠️  HV negativo: {hv:.6f}")
+                else:
+                    print(f"  ✅ HV = {hv:.6f}")
+            else:
+                hv = 0.0
+                print(f"  ⚠️  Sin puntos de Pareto, HV = 0")
+
             hv_by_config.append({
                 "dataset": dataset_name,
                 "config": config,
-                "num_points": len(points),
+                "num_pareto_points": len(pareto_points),
                 "num_runs": len(metrics['execution_times']),
                 "hypervolume": hv,
                 "mean_execution_time": mean_exec_time,
@@ -134,24 +204,19 @@ def calculate_hypervolume_for_dataset(file_path, dataset_name):
                 "mean_iterations": mean_iterations,
                 "std_iterations": std_iterations,
                 "mean_pareto_size": mean_pareto_size,
-                "std_pareto_size": std_pareto_size,
-                "mean_solutions_evaluated": mean_solutions_evaluated,
-                "std_solutions_evaluated": std_solutions_evaluated,
-                "early_termination_rate": early_termination_rate
+                "std_pareto_size": std_pareto_size
             })
-            print(f"Config {config}: {len(points)} puntos, {len(metrics['execution_times'])} runs")
-            print(f"  HV = {hv:.6f}")
-            print(f"  Exec time: {mean_exec_time:.2f}±{std_exec_time:.2f}s")
-            print(f"  Iterations: {mean_iterations:.1f}±{std_iterations:.1f}")
-            print(f"  Pareto size: {mean_pareto_size:.1f}±{std_pareto_size:.1f}")
-            print(f"  Solutions evaluated: {mean_solutions_evaluated:.1f}±{std_solutions_evaluated:.1f}")
-            print(f"  Early termination rate: {early_termination_rate:.2%}")
+
+            print(f"  Resumen - Exec time: {mean_exec_time:.2f}±{std_exec_time:.2f}s")
+            print(f"            Iterations: {mean_iterations:.1f}±{std_iterations:.1f}")
+            print(f"            Pareto size: {mean_pareto_size:.1f}±{std_pareto_size:.1f}")
+
         except Exception as e:
             print(f"ERROR calculando hipervolumen para config {config}: {e}")
             hv_by_config.append({
                 "dataset": dataset_name,
                 "config": config,
-                "num_points": len(points),
+                "num_pareto_points": len(pareto_points),
                 "num_runs": len(metrics['execution_times']),
                 "hypervolume": 0.0,
                 "mean_execution_time": mean_exec_time,
@@ -159,17 +224,21 @@ def calculate_hypervolume_for_dataset(file_path, dataset_name):
                 "mean_iterations": mean_iterations,
                 "std_iterations": std_iterations,
                 "mean_pareto_size": mean_pareto_size,
-                "std_pareto_size": std_pareto_size,
-                "mean_solutions_evaluated": mean_solutions_evaluated,
-                "std_solutions_evaluated": std_solutions_evaluated,
-                "early_termination_rate": early_termination_rate
+                "std_pareto_size": std_pareto_size
             })
 
     return hv_by_config
 
 
 def main():
-    # Configuración de rutas - ADAPTAR SEGÚN TU ESTRUCTURA DE CARPETAS
+    # Cargar puntos de referencia globales
+    global_stats = load_global_reference_points(
+        "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\pareto_outputs\\pareto_stats_summary.csv")
+    if global_stats is None:
+        print("ERROR: No se pudieron cargar los puntos de referencia globales. Terminando...")
+        return
+
+    # Configuración de rutas para PACO
     base_path = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\results\\PACO\\summaries"
 
     # Datasets a procesar
@@ -186,7 +255,7 @@ def main():
     # Procesar cada dataset
     for folder, dataset_file in datasets:
         file_path = os.path.join(base_path, folder, f"summary_complete_{folder}.json")
-        results = calculate_hypervolume_for_dataset(file_path, dataset_file)
+        results = calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_file, global_stats)
 
         if results:
             all_results.extend(results)
@@ -199,8 +268,13 @@ def main():
     results_df = pd.DataFrame(all_results)
 
     print(f"\n{'=' * 120}")
-    print("RESULTADOS COMPLETOS - HIPERVOLUMEN Y MÉTRICAS PACO POR DATASET Y CONFIGURACIÓN")
+    print("RESULTADOS COMPLETOS - HIPERVOLUMEN PACO CON PUNTOS DE PARETO DIRECTOS")
     print(f"{'=' * 120}")
+    print("INTERPRETACIÓN:")
+    print("- cost_normalized: 1 = costo mínimo (mejor), 0 = costo máximo (peor)")
+    print("- minutes_normalized: 1 = tiempo mínimo/velocidad máxima (mejor), 0 = tiempo máximo/velocidad mínima (peor)")
+    print("- Hipervolumen: 0 = peor rendimiento, 1 = mejor rendimiento posible")
+    print("- NOTA: Se usan directamente los puntos de Pareto del archivo (no se recalcula el frente)")
 
     # Mostrar resultados ordenados por dataset y luego por hipervolumen
     results_sorted = results_df.sort_values(["dataset", "hypervolume"], ascending=[True, False])
@@ -213,12 +287,12 @@ def main():
     print(results_sorted.to_string(index=False))
 
     # Guardar resultados completos
-    results_sorted.to_csv("paco_hypervolume_results_all_datasets_complete.csv", index=False)
-    print(f"\nResultados completos guardados en 'paco_hypervolume_results_all_datasets_complete.csv'")
+    results_sorted.to_csv("hypervolume_results_paco_direct_pareto.csv", index=False)
+    print(f"\nResultados completos guardados en 'hypervolume_results_paco_direct_pareto.csv'")
 
     # Análisis por dataset
     print(f"\n{'=' * 120}")
-    print("ANÁLISIS POR DATASET")
+    print("ANÁLISIS POR DATASET - PACO")
     print(f"{'=' * 120}")
 
     dataset_summary = []
@@ -234,151 +308,118 @@ def main():
             'best_config': dataset_data.loc[dataset_data['hypervolume'].idxmax(), 'config'],
             'mean_exec_time_all': dataset_data['mean_execution_time'].mean(),
             'mean_iterations_all': dataset_data['mean_iterations'].mean(),
-            'mean_pareto_size_all': dataset_data['mean_pareto_size'].mean(),
-            'mean_early_termination_rate': dataset_data['early_termination_rate'].mean()
+            'mean_pareto_size_all': dataset_data['mean_pareto_size'].mean()
         }
         dataset_summary.append(summary)
 
     summary_df = pd.DataFrame(dataset_summary)
     print(summary_df.to_string(index=False))
 
-    # Guardar resumen
-    summary_df.to_csv("paco_hypervolume_summary_by_dataset_complete.csv", index=False)
-    print(f"\nResumen por dataset guardado en 'paco_hypervolume_summary_by_dataset_complete.csv'")
+    summary_df.to_csv("hypervolume_summary_paco_direct_pareto.csv", index=False)
+    print(f"\nResumen por dataset guardado en 'hypervolume_summary_paco_direct_pareto.csv'")
 
-    # Mejores configuraciones por dataset
+    # Ranking de configuraciones
     print(f"\n{'=' * 120}")
-    print("MEJORES CONFIGURACIONES PACO POR DATASET (CON MÉTRICAS COMPLETAS)")
+    print("RANKING DE CONFIGURACIONES PACO POR HIPERVOLUMEN PROMEDIO")
     print(f"{'=' * 120}")
 
-    best_configs = results_df.loc[results_df.groupby('dataset')['hypervolume'].idxmax()]
-    best_configs_display = best_configs[[
-        'dataset', 'config', 'hypervolume', 'num_points', 'num_runs',
-        'mean_execution_time', 'mean_iterations', 'mean_pareto_size', 'early_termination_rate'
-    ]]
-    print(best_configs_display.to_string(index=False))
-
-    # Guardar mejores configuraciones
-    best_configs_display.to_csv("paco_best_configs_by_dataset_complete.csv", index=False)
-    print(f"\nMejores configuraciones guardadas en 'paco_best_configs_by_dataset_complete.csv'")
-
-    # Análisis de correlaciones
-    print(f"\n{'=' * 120}")
-    print("ANÁLISIS DE CORRELACIONES PACO")
-    print(f"{'=' * 120}")
-
-    correlation_cols = ['hypervolume', 'mean_execution_time', 'mean_iterations', 'mean_pareto_size',
-                        'early_termination_rate']
-    correlations = results_df[correlation_cols].corr()
-    print("Matriz de correlaciones:")
-    print(correlations.to_string())
-
-    # Guardar correlaciones
-    correlations.to_csv("paco_correlation_analysis.csv")
-    print(f"\nAnálisis de correlaciones guardado en 'paco_correlation_analysis.csv'")
-
-    # ANÁLISIS DE MEJOR CONFIGURACIÓN GLOBAL (PROMEDIO ENTRE DATASETS)
-    print(f"\n{'=' * 120}")
-    print("ANÁLISIS DE MEJOR CONFIGURACIÓN GLOBAL PACO - PROMEDIO ENTRE DATASETS")
-    print(f"{'=' * 120}")
-
-    # Calcular media de hipervolumen por configuración across datasets
     config_means = results_df.groupby('config').agg({
         'hypervolume': ['mean', 'std', 'count'],
         'mean_execution_time': 'mean',
         'mean_iterations': 'mean',
         'mean_pareto_size': 'mean',
-        'early_termination_rate': 'mean',
-        'num_points': 'mean',
+        'num_pareto_points': 'mean',
         'num_runs': 'mean'
     }).round(6)
 
-    # Aplanar el índice multi-nivel
     config_means.columns = [
         'hv_mean', 'hv_std', 'hv_count',
-        'exec_time_mean', 'iterations_mean', 'pareto_size_mean', 'early_term_rate_mean',
-        'points_mean', 'runs_mean'
+        'exec_time_mean', 'iterations_mean', 'pareto_size_mean',
+        'pareto_points_mean', 'runs_mean'
     ]
 
-    # Resetear el índice para tener 'config' como columna
     config_means = config_means.reset_index()
-
-    # Ordenar por hipervolumen medio (descendente)
     config_means_sorted = config_means.sort_values('hv_mean', ascending=False)
 
-    print("RANKING DE CONFIGURACIONES PACO POR HIPERVOLUMEN PROMEDIO:")
+    print("RANKING DE CONFIGURACIONES PACO:")
     print("-" * 140)
 
-    # Mostrar resultados formateados
     for idx, row in config_means_sorted.iterrows():
-        print(f"Rank {config_means_sorted.index.get_loc(idx) + 1:2d}: {row['config']:<25}")
+        rank = config_means_sorted.index.get_loc(idx) + 1
+        print(f"Rank {rank:2d}: {row['config']:<25}")
         print(f"         HV promedio: {row['hv_mean']:.6f} ± {row['hv_std']:.6f} (n={int(row['hv_count'])} datasets)")
         print(f"         Tiempo medio: {row['exec_time_mean']:.2f}s")
         print(f"         Iteraciones: {row['iterations_mean']:.1f}")
         print(f"         Tamaño Pareto: {row['pareto_size_mean']:.1f}")
-        print(f"         Terminación temprana: {row['early_term_rate_mean']:.2%}")
+        print(f"         Puntos Pareto promedio: {row['pareto_points_mean']:.1f}")
         print()
 
-    # Guardar ranking completo
-    config_means_sorted.to_csv("paco_config_ranking_global.csv", index=False)
-    print(f"Ranking completo guardado en 'paco_config_ranking_global.csv'")
+    config_means_sorted.to_csv("config_ranking_paco_direct_pareto.csv", index=False)
+    print(f"Ranking completo guardado en 'config_ranking_paco_direct_pareto.csv'")
 
-    # Identificar la mejor configuración
+    # Mejor configuración global
     best_global_config = config_means_sorted.iloc[0]
 
-    print(f"\n{'🏆' * 50}")
+    print(f"\n{'🏆' * 60}")
     print("MEJOR CONFIGURACIÓN GLOBAL PACO:")
-    print(f"{'🏆' * 50}")
+    print(f"{'🏆' * 60}")
     print(f"Configuración: {best_global_config['config']}")
     print(f"Hipervolumen promedio: {best_global_config['hv_mean']:.6f} ± {best_global_config['hv_std']:.6f}")
     print(f"Evaluada en {int(best_global_config['hv_count'])} datasets")
     print(f"Tiempo de ejecución promedio: {best_global_config['exec_time_mean']:.2f} segundos")
     print(f"Iteraciones promedio: {best_global_config['iterations_mean']:.1f}")
     print(f"Tamaño Pareto promedio: {best_global_config['pareto_size_mean']:.1f}")
-    print(f"Tasa de terminación temprana: {best_global_config['early_term_rate_mean']:.2%}")
+    print(f"Puntos Pareto promedio: {best_global_config['pareto_points_mean']:.1f}")
+    print("💡 Interpretación: Mayor HV = mejor balance entre bajo costo y bajo tiempo")
 
-    # Detalles por dataset de la mejor configuración
     print(f"\n{'=' * 100}")
     print(f"DETALLES DE '{best_global_config['config']}' POR DATASET:")
     print(f"{'=' * 100}")
 
     best_config_details = results_df[results_df['config'] == best_global_config['config']].sort_values('dataset')
     best_config_summary = best_config_details[[
-        'dataset', 'hypervolume', 'mean_execution_time', 'mean_iterations', 'mean_pareto_size',
-        'early_termination_rate', 'num_runs'
+        'dataset', 'hypervolume', 'num_pareto_points', 'mean_execution_time',
+        'mean_iterations', 'mean_pareto_size', 'num_runs'
     ]]
 
     print(best_config_summary.to_string(index=False))
 
-    # Guardar detalles de la mejor configuración
-    best_config_summary.to_csv("paco_best_global_config_details.csv", index=False)
-    print(f"\nDetalles de la mejor configuración guardados en 'paco_best_global_config_details.csv'")
+    best_config_summary.to_csv("best_global_config_details_paco_direct_pareto.csv", index=False)
+    print(f"\nDetalles de la mejor configuración guardados en 'best_global_config_details_paco_direct_pareto.csv'")
 
-    # Análisis de consistencia
-    print(f"\n{'=' * 100}")
-    print("ANÁLISIS DE CONSISTENCIA DE CONFIGURACIONES PACO:")
-    print(f"{'=' * 100}")
+    # Diagnóstico de problemas específicos de PACO
+    print(f"\n{'=' * 120}")
+    print("DIAGNÓSTICO DE PROBLEMAS - PACO")
+    print(f"{'=' * 120}")
 
-    config_means_sorted['hv_cv'] = config_means_sorted['hv_std'] / config_means_sorted['hv_mean']
+    # Verificar configuraciones con solo 1 punto Pareto
+    single_point_configs = results_df[results_df['num_pareto_points'] == 1]
+    if len(single_point_configs) > 0:
+        print(f"⚠️  {len(single_point_configs)} configuraciones tienen solo 1 punto Pareto:")
+        print(single_point_configs[['dataset', 'config', 'num_pareto_points']].to_string(index=False))
 
-    most_consistent = config_means_sorted.sort_values('hv_cv').head(5)
+    # Verificar HV muy altos
+    high_hv_configs = results_df[results_df['hypervolume'] >= 0.95]
+    if len(high_hv_configs) > 0:
+        print(f"\n⚠️  {len(high_hv_configs)} configuraciones tienen HV >= 0.95:")
+        print(high_hv_configs[['dataset', 'config', 'hypervolume', 'num_pareto_points']].to_string(index=False))
 
-    print("TOP 5 CONFIGURACIONES MÁS CONSISTENTES (menor variabilidad):")
-    for idx, row in most_consistent.iterrows():
-        rank_in_hv = config_means_sorted[config_means_sorted['config'] == row['config']].index[0] + 1
-        print(f"{most_consistent.index.get_loc(idx) + 1}. {row['config']:<25} (Rank HV: {rank_in_hv})")
-        print(f"   CV: {row['hv_cv']:.4f}, HV: {row['hv_mean']:.6f} ± {row['hv_std']:.6f}")
+    # Verificar iteraciones en 0
+    zero_iter_configs = results_df[results_df['mean_iterations'] == 0]
+    if len(zero_iter_configs) > 0:
+        print(f"\n⚠️  {len(zero_iter_configs)} configuraciones tienen 0 iteraciones:")
+        print(zero_iter_configs[['dataset', 'config', 'mean_iterations']].to_string(index=False))
 
-    consistency_analysis = config_means_sorted[['config', 'hv_mean', 'hv_std', 'hv_cv', 'hv_count']].copy()
-    consistency_analysis.to_csv("paco_consistency_analysis.csv", index=False)
-    print(f"\nAnálisis de consistencia guardado en 'paco_consistency_analysis.csv'")
-
-    print(f"\n{'=' * 100}")
-    print("RECOMENDACIÓN FINAL PARA PACO:")
-    print(f"{'=' * 100}")
-    print(f"Para el algoritmo PACO, usa la configuración: {best_global_config['config']}")
-    print(f"Esta configuración tiene el mejor hipervolumen promedio ({best_global_config['hv_mean']:.6f})")
-    print(f"y ha sido evaluada consistentemente en {int(best_global_config['hv_count'])} datasets diferentes.")
+    print(f"\n{'🎯' * 50}")
+    print("CARACTERÍSTICAS DE ESTE ANÁLISIS PACO:")
+    print(f"{'🎯' * 50}")
+    print("✅ Usa directamente los puntos de Pareto proporcionados en el archivo")
+    print("✅ NO recalcula el frente de Pareto")
+    print("✅ Adaptado para formato de datos PACO (iterations_completed en lugar de generations)")
+    print("✅ Normalización correcta para maximización")
+    print("✅ Punto de referencia: [0, 0] para maximización")
+    print("✅ Hipervolumen refleja el rendimiento de los puntos dados")
+    print("⚠️  IMPORTANTE: Verificar que el formato de datos (minutes, cost) sea correcto para PACO")
 
 
 if __name__ == "__main__":

@@ -18,7 +18,7 @@ def last_generation_update(population, num_generations, args):
     platforms_indexed = args["platforms_indexed"]
 
     if num_generations == args.get('max_generations') - 1:
-        print("\n📌 **Registrando contenido visto por cada usuario con mes y plataforma...**")
+        #  print("\n📌 **Registrando contenido visto por cada usuario con mes y plataforma...**")
 
         users_data = load_users_from_json("../Data/users.json")
         best_solution = min(population, key=lambda ind: (ind.objective_values[0], ind.objective_values[1]))
@@ -216,10 +216,9 @@ def observer(population, num_generations, num_evaluations, args):
     global generations, best_minutes, best_cost, usuarios_meses
 
     users = args["users"]
-    print(args)
+    #  print(args)
 
-    print(f"ESTO ES LA POPULATION: {population} ")
-
+    #  print(f"ESTO ES LA POPULATION: {population} ")
 
     print(f"\n=== Generación {num_generations} ===")
     print(f"Número de evaluaciones: {num_evaluations}")
@@ -249,12 +248,12 @@ def observer(population, num_generations, num_evaluations, args):
     print(f"  Mejor Costo Total: {mejor_costo:.2f}, Peor: {peor_costo:.2f}")
 
     # Mostrar todos los individuos de la población
-    print("\n--- Todos los individuos ---")
+    # print("\n--- Todos los individuos ---")
     for i in range(len(population)):
         minutos_ponderados = -population[i].objective_values[1]
         costo_total = population[i].objective_values[0]
-        print(f"Individuo {i + 1}: Minutos ponderados: {minutos_ponderados:.2f}, Costo total: {costo_total:.2f}")
-        print(f"  Configuración: {population[i].candidate}")
+        #  print(f"Individuo {i + 1}: Minutos ponderados: {minutos_ponderados:.2f}, Costo total: {costo_total:.2f}")
+        # print(f"  Configuración: {population[i].candidate}")
 
         # Almacenar la información del historial de plataformas por usuario
         for user_index, config_mensual in enumerate(population[i].candidate):
@@ -272,11 +271,11 @@ def observer(population, num_generations, num_evaluations, args):
 
     # Al finalizar la evolución, mostrar el resumen de uso de plataformas por usuario
     if num_generations == args.get('max_generations', 0) - 1:
-        print("\n📊 **Resumen de contenido visto por usuario**")
+        #   print("\n📊 **Resumen de contenido visto por usuario**")
 
         for user in users:
             user_id = user.id if hasattr(user, 'id') else user.name
-            print(f"\n👤 Usuario {user_id}:")
+            #  print(f"\n👤 Usuario {user_id}:")
 
             historial = user.__dict__.get("historial", {})
 
@@ -284,7 +283,7 @@ def observer(population, num_generations, num_evaluations, args):
                 entry = historial[mes_str]
                 plataforma = entry["plataforma"]
                 contenidos = ", ".join(entry["contenido"])
-                print(f"  📅 Mes {mes_str}: {plataforma} → {contenidos}")
+                #   print(f"  📅 Mes {mes_str}: {plataforma} → {contenidos}")
 
 
 

@@ -1,0 +1,108 @@
+{
+  "run_info": {
+    "dataset": "users4.json",
+    "config": "high_heuristic_influence",
+    "run": 26,
+    "execution_time": 3554.4832208156586,
+    "iterations_completed": 63,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 17,
+    "pareto_points": [
+      [
+        1771910.7300000053,
+        4424.610000000003
+      ],
+      [
+        1810820.630000015,
+        4505.100000000002
+      ],
+      [
+        1798555.2500000126,
+        4495.110000000002
+      ],
+      [
+        1828318.8400000168,
+        4760.270000000004
+      ],
+      [
+        1811937.4400000237,
+        4715.220000000005
+      ],
+      [
+        1829952.7900000245,
+        4801.5000000000055
+      ],
+      [
+        1841967.940000017,
+        4820.2500000000055
+      ],
+      [
+        1860349.990000021,
+        4946.260000000006
+      ],
+      [
+        1849633.420000024,
+        4854.760000000007
+      ],
+      [
+        1862465.2200000267,
+        4958.270000000008
+      ],
+      [
+        1885341.1100000269,
+        5069.740000000006
+      ],
+      [
+        1870498.350000026,
+        4970.700000000007
+      ],
+      [
+        1853554.5800000245,
+        4922.2600000000075
+      ],
+      [
+        1857467.5400000275,
+        4932.920000000007
+      ],
+      [
+        1889231.5800000278,
+        5177.2200000000075
+      ],
+      [
+        1881447.0900000245,
+        5028.560000000007
+      ],
+      [
+        1879209.990000029,
+        4998.590000000008
+      ]
+    ],
+    "solutions_evaluated": 1260,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 17,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users4\\high_heuristic_influence\\run26",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 4424.610000000003,
+      "max": 5177.2200000000075
+    },
+    "minutes_range": {
+      "min": 1771910.7300000053,
+      "max": 1889231.5800000278
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 63,
+    "max_archive_size_reached": 17
+  }
+}

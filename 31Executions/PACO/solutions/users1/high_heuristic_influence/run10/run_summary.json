@@ -1,0 +1,72 @@
+{
+  "run_info": {
+    "dataset": "users1.json",
+    "config": "high_heuristic_influence",
+    "run": 10,
+    "execution_time": 490.509738445282,
+    "iterations_completed": 37,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 8,
+    "pareto_points": [
+      [
+        427113.3999999997,
+        1010.19
+      ],
+      [
+        452161.18999999936,
+        1070.0900000000001
+      ],
+      [
+        424158.44999999995,
+        1008.2
+      ],
+      [
+        446742.98999999976,
+        1060.5800000000002
+      ],
+      [
+        460483.88999999984,
+        1140.5500000000002
+      ],
+      [
+        454050.1399999995,
+        1089.1100000000001
+      ],
+      [
+        445198.3999999996,
+        1017.0900000000001
+      ],
+      [
+        451870.9799999996,
+        1064.5600000000002
+      ]
+    ],
+    "solutions_evaluated": 740,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 8,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users1\\high_heuristic_influence\\run10",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 1008.2,
+      "max": 1140.5500000000002
+    },
+    "minutes_range": {
+      "min": 424158.44999999995,
+      "max": 460483.88999999984
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 37,
+    "max_archive_size_reached": 8
+  }
+}

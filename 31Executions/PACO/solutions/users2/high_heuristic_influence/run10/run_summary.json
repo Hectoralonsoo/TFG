@@ -1,0 +1,92 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "high_heuristic_influence",
+    "run": 10,
+    "execution_time": 2115.962052822113,
+    "iterations_completed": 102,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 13,
+    "pareto_points": [
+      [
+        720914.8200000013,
+        1947.4799999999993
+      ],
+      [
+        735271.7899999999,
+        1992.6599999999996
+      ],
+      [
+        749936.4100000003,
+        2011.2899999999997
+      ],
+      [
+        752753.790000002,
+        2015.3199999999997
+      ],
+      [
+        777930.9900000013,
+        2158.6999999999994
+      ],
+      [
+        773263.1400000014,
+        2110.2599999999998
+      ],
+      [
+        773042.3700000024,
+        2100.3099999999995
+      ],
+      [
+        772136.6300000013,
+        2079.1699999999996
+      ],
+      [
+        779994.8100000011,
+        2158.8699999999994
+      ],
+      [
+        777723.8000000019,
+        2132.2599999999993
+      ],
+      [
+        770098.0400000035,
+        2058.7599999999993
+      ],
+      [
+        763702.2300000007,
+        2020.7499999999995
+      ],
+      [
+        771960.79,
+        2063.2799999999997
+      ]
+    ],
+    "solutions_evaluated": 2040,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 13,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users2\\high_heuristic_influence\\run10",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 1947.4799999999993,
+      "max": 2158.8699999999994
+    },
+    "minutes_range": {
+      "min": 720914.8200000013,
+      "max": 779994.8100000011
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 102,
+    "max_archive_size_reached": 19
+  }
+}

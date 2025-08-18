@@ -31,11 +31,10 @@ class SPEA2(EvolutionaryComputation):
         self.archive = []
         kwargs['max_generations'] = max_generations
 
-        # Parámetros para el terminador de no mejora (fijado en 10 generaciones)
         max_generations_without_improvement = 10
         self.generations_without_improvement = 0
-        self.previous_pareto_count = 0  # Contador de soluciones no dominadas
-        self.previous_solutions = set()  # Conjunto de soluciones de la generación anterior
+        self.previous_pareto_count = 0
+        self.previous_solutions = set()
 
         generation = 0
         population = [Individual(self.generator(random=self._random, args=kwargs)) for _ in range(pop_size)]

@@ -46,42 +46,42 @@ def main():
     configurations = [
         {
             "name": "uniform_reset_low_mutation",
-            "pop_size": 30,
+            "pop_size": 50,
             "mutation_rate": 0.01,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "uniform_reset_high_crossover",
-            "pop_size": 30,
+            "pop_size": 50,
             "mutation_rate": 0.025,
             "crossover_rate": 0.8,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "uniform_inversion_high_mutation",
-            "pop_size": 30,
+            "pop_size": 50,
             "mutation_rate": 0.1,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.inversion_mutation]
         },
         {
             "name": "npoint_reset_low_crossover",
-            "pop_size": 30,
+            "pop_size": 50,
             "mutation_rate": 0.025,
             "crossover_rate": 0.4,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.random_reset_mutation]
         },
         {
             "name": "npoint_inversion_low_mutation",
-            "pop_size": 30,
+            "pop_size": 50,
             "mutation_rate": 0.01,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
         },
         {
             "name": "npoint_inversion_high_all",
-            "pop_size": 30,
+            "pop_size": 50,
             "mutation_rate": 0.1,
             "crossover_rate": 0.8,
             "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
@@ -98,7 +98,7 @@ def main():
         "users5.json"
     ]
 
-    base_results_path = "../results/SPEA2-NICE"
+    base_results_path = "../results/SPEA2"
     all_results = []
 
     os.makedirs(base_results_path, exist_ok=True)

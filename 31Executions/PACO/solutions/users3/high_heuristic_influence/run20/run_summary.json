@@ -1,0 +1,92 @@
+{
+  "run_info": {
+    "dataset": "users3.json",
+    "config": "high_heuristic_influence",
+    "run": 20,
+    "execution_time": 2370.5603806972504,
+    "iterations_completed": 73,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 13,
+    "pareto_points": [
+      [
+        1179313.219999993,
+        2747.4199999999996
+      ],
+      [
+        1207325.139999991,
+        2905.7599999999998
+      ],
+      [
+        1214222.0299999963,
+        2944.6900000000005
+      ],
+      [
+        1224732.9899999942,
+        3006.1400000000012
+      ],
+      [
+        1255307.889999991,
+        3150.560000000001
+      ],
+      [
+        1256155.9299999923,
+        3151.520000000001
+      ],
+      [
+        1240614.349999995,
+        3029.980000000002
+      ],
+      [
+        1235903.6399999969,
+        3017.050000000001
+      ],
+      [
+        1256331.6199999948,
+        3249.6100000000006
+      ],
+      [
+        1252141.709999994,
+        3050.4100000000017
+      ],
+      [
+        1254132.8499999952,
+        3077.0400000000013
+      ],
+      [
+        1254435.9599999948,
+        3147.620000000001
+      ],
+      [
+        1252122.469999996,
+        3042.1200000000013
+      ]
+    ],
+    "solutions_evaluated": 1460,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 13,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users3\\high_heuristic_influence\\run20",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 2747.4199999999996,
+      "max": 3249.6100000000006
+    },
+    "minutes_range": {
+      "min": 1179313.219999993,
+      "max": 1256331.6199999948
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 73,
+    "max_archive_size_reached": 14
+  }
+}

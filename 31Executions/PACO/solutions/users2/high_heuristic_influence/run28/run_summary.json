@@ -1,0 +1,96 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "high_heuristic_influence",
+    "run": 28,
+    "execution_time": 1086.2889711856842,
+    "iterations_completed": 47,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 14,
+    "pareto_points": [
+      [
+        700601.4399999992,
+        1915.0300000000002
+      ],
+      [
+        729077.6600000001,
+        1947.8299999999997
+      ],
+      [
+        749760.8800000024,
+        2033.1399999999994
+      ],
+      [
+        739986.7900000016,
+        1980.5899999999995
+      ],
+      [
+        747871.460000002,
+        2027.9299999999994
+      ],
+      [
+        764465.4700000007,
+        2063.4399999999996
+      ],
+      [
+        770871.750000001,
+        2067.3199999999993
+      ],
+      [
+        772206.2400000001,
+        2093.8499999999995
+      ],
+      [
+        756925.7399999992,
+        2041.2899999999997
+      ],
+      [
+        769196.940000001,
+        2067.1799999999994
+      ],
+      [
+        752710.6800000006,
+        2040.7399999999996
+      ],
+      [
+        759027.9600000002,
+        2041.7699999999995
+      ],
+      [
+        752362.1200000008,
+        2037.8099999999995
+      ],
+      [
+        781640.9600000015,
+        2110.72
+      ]
+    ],
+    "solutions_evaluated": 940,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 14,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users2\\high_heuristic_influence\\run28",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 1915.0300000000002,
+      "max": 2110.72
+    },
+    "minutes_range": {
+      "min": 700601.4399999992,
+      "max": 781640.9600000015
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 47,
+    "max_archive_size_reached": 20
+  }
+}

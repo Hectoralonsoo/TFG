@@ -3,17 +3,17 @@
     "dataset": "users1.json",
     "config": "uniform_inversion_high_mutation",
     "run": 4,
-    "execution_time": 3.72595477104187,
-    "generations": 12,
+    "execution_time": 209.4306502342224,
+    "generations": 69,
     "pareto_size": 2,
     "pareto_points": [
       [
-        -417289.1399999997,
-        1600.1599999999999
+        -454936.44000000024,
+        1242.4799999999996
       ],
       [
-        -423551.2599999995,
-        1681.1099999999997
+        -456749.54000000027,
+        1325.4199999999996
       ]
     ]
   },

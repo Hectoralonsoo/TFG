@@ -1,0 +1,96 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "high_heuristic_influence",
+    "run": 2,
+    "execution_time": 2030.8149058818817,
+    "iterations_completed": 98,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 14,
+    "pareto_points": [
+      [
+        707967.7100000014,
+        1913.6000000000004
+      ],
+      [
+        686832.7799999992,
+        1894.9400000000003
+      ],
+      [
+        720837.4300000003,
+        1938.96
+      ],
+      [
+        733746.5100000001,
+        1995.2599999999993
+      ],
+      [
+        760698.2100000002,
+        2014.7799999999995
+      ],
+      [
+        780171.2600000006,
+        2217.7299999999996
+      ],
+      [
+        780002.1600000007,
+        2129.8099999999995
+      ],
+      [
+        773244.4200000009,
+        2074.7699999999995
+      ],
+      [
+        780308.3300000017,
+        2229.2699999999995
+      ],
+      [
+        777419.4000000018,
+        2105.3099999999995
+      ],
+      [
+        761855.380000001,
+        2046.3099999999995
+      ],
+      [
+        768566.1600000005,
+        2050.2199999999993
+      ],
+      [
+        761196.6100000015,
+        2030.6699999999996
+      ],
+      [
+        775613.9800000018,
+        2088.7099999999996
+      ]
+    ],
+    "solutions_evaluated": 1960,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 14,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users2\\high_heuristic_influence\\run2",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 1894.9400000000003,
+      "max": 2229.2699999999995
+    },
+    "minutes_range": {
+      "min": 686832.7799999992,
+      "max": 780308.3300000017
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 98,
+    "max_archive_size_reached": 17
+  }
+}
