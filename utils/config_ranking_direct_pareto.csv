@@ -1,0 +1,2 @@
+config,hv_mean,hv_std,hv_count,exec_time_mean,generations_mean,pareto_size_mean,pareto_points_mean,runs_mean
+uniform_inversion_high_mutation,0.763932,0.127864,5,2050.441205,192.780645,14.729032,456.6,31.0

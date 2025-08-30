@@ -4,12 +4,12 @@ import pandas as pd
 from pathlib import Path
 
 uploaded_files = {
-    "SPEA2": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\SPEA2\\summary_all_experiments.json",
-    "NSGA2": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\NSGA2\\summary_all_experiments.json",
-    "PACO":  "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\summary_all_experiments.json"
+    "SPEA2": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\results\\SPEA2\\summary_all_experiments.json",
+    "NSGA2": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\results\\NSGA2\\summary_all_experiments.json",
+    "PACO":  "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\results\\PACO\\summary_all_experiments.json"
 }
 
-output_folder = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\pareto_outputs"
+output_folder = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\pareto_outputs_tests"
 os.makedirs(output_folder, exist_ok=True)
 
 pareto_points_by_dataset = {}
@@ -53,6 +53,9 @@ for dataset, points in pareto_points_by_dataset.items():
     except Exception as e:
         print(f"❌ Error al guardar {csv_path}: {e}")
 
+    # Validación adicional
+    if df["cost"].max() < df["minutes"].max():
+        print(f"⚠️ Revisión recomendada para {dataset}: minutos más altos que coste.")
 
     stats = {
         "dataset": dataset,
