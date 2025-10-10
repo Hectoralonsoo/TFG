@@ -1,0 +1,96 @@
+{
+  "run_info": {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 12,
+    "execution_time": 5218.371748924255,
+    "iterations_completed": 66,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 14,
+    "pareto_points": [
+      [
+        1837484.8500000078,
+        4693.36
+      ],
+      [
+        1847887.3200000061,
+        4882.820000000001
+      ],
+      [
+        1817410.9900000093,
+        4520.950000000002
+      ],
+      [
+        1825533.320000014,
+        4587.280000000001
+      ],
+      [
+        1831825.3900000132,
+        4629.750000000001
+      ],
+      [
+        1811493.150000013,
+        4422.820000000002
+      ],
+      [
+        1766968.5000000093,
+        4280.760000000003
+      ],
+      [
+        1786923.9100000144,
+        4357.730000000003
+      ],
+      [
+        1814054.060000015,
+        4516.190000000003
+      ],
+      [
+        1807486.5300000163,
+        4376.180000000003
+      ],
+      [
+        1767281.4000000157,
+        4303.830000000003
+      ],
+      [
+        1791735.5400000126,
+        4360.760000000003
+      ],
+      [
+        1761552.4300000167,
+        4267.830000000003
+      ],
+      [
+        1786043.920000014,
+        4316.230000000003
+      ]
+    ],
+    "solutions_evaluated": 1650,
+    "config_params": {
+      "n_ants": 25,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 14,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users4\\high_pheromone_influence\\run12",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 4267.830000000003,
+      "max": 4882.820000000001
+    },
+    "minutes_range": {
+      "min": 1761552.4300000167,
+      "max": 1847887.3200000061
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 66,
+    "max_archive_size_reached": 15
+  }
+}

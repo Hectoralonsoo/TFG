@@ -125,6 +125,12 @@ def calculate_hypervolume_with_direct_pareto(file_path, dataset_name, global_sta
                 cost_maximized = max(0.0, min(1.0, cost_maximized))
                 minutes_maximized = max(0.0, min(1.0, minutes_maximized))
 
+                if total_points < 3:
+                    print(f"  Debug punto {total_points + 1}:")
+                    print(f"    Original: cost={cost:.2f}, minutes={minutes:.2f}")
+                    print(f"    Normalizado: cost_norm={cost_maximized:.6f}, minutes_norm={minutes_maximized:.6f}")
+
+
                 config_pareto_points[config].append([cost_maximized, minutes_maximized])
                 total_points += 1
 
@@ -274,8 +280,8 @@ def main():
     print(results_sorted.to_string(index=False))
 
     # Guardar resultados completos
-    results_sorted.to_csv("hypervolume_results_direct_pareto.csv", index=False)
-    print(f"\nResultados completos guardados en 'hypervolume_results_direct_pareto.csv'")
+    results_sorted.to_csv("hypervolume_results_spea2_direct_pareto.csv", index=False)
+    print(f"\nResultados completos guardados en 'hypervolume_results_spea2_direct_pareto.csv'")
 
     # Análisis por dataset
     print(f"\n{'=' * 120}")

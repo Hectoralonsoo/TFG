@@ -28,8 +28,10 @@ def get_resume_point():
     """Determina desde dónde continuar la ejecución"""
     # Punto de reanudación: users4 desde run 22, luego users5 completo
     resume_config = {
-        "users4.json": 22,  # Empezar desde run 22 (run 22-31)
-        "users5.json": 1  # Empezar desde run 1 (run 1-31)
+        "users2.json": 1,
+        "users3.json": 1,
+        "users4.json": 1,
+        "users5.json": 1,
     }
     return resume_config
 
@@ -37,17 +39,17 @@ def get_resume_point():
 def main():
     # Solo la configuración que mejor hipervolumen ha dado
     config = {
-        "name": "high_heuristic_influence",
-        "n_ants": 20,
+        "name": "high_pheromone_influence",
+        "n_ants": 25,
         "n_iterations": 200,
-        "rho": 0.4,
-        "alpha": 0.5,
-        "beta": 5.0,
+        "rho": 0.3,
+        "alpha": 3.0,
+        "beta": 2.0,
         "archive_size": 100,
         "no_improvement_generations": 12
     }
 
-    print(f"🔧 Reanudando ejecución desde users4 run 22...")
+
     print(f"📋 Configuración: {config['name']}")
     print(f"  Hormigas: {config['n_ants']}, Iteraciones: {config['n_iterations']}")
     print(f"  Parámetros: rho={config['rho']}, alpha={config['alpha']}, beta={config['beta']}")
@@ -63,8 +65,10 @@ def main():
 
     # Solo procesar los datasets restantes
     user_datasets_to_resume = [
+        "users2.json",
+        "users3.json",
         "users4.json",
-        "users5.json"
+        "users5.json",
     ]
 
     base_results_path = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO"
@@ -82,8 +86,7 @@ def main():
 
     os.makedirs(base_results_path, exist_ok=True)
 
-    # Calcular runs totales restantes
-    total_remaining_runs = (31 - 22 + 1) + 31  # users4: runs 22-31 (10 runs) + users5: runs 1-31 (31 runs)
+
     current_run = 0
 
     for dataset_name in user_datasets_to_resume:
@@ -110,7 +113,7 @@ def main():
 
         for run in range(start_run, end_run + 1):
             current_run += 1
-            print(f"🏃 Run {run}/31 - Progreso restante: {current_run}/{total_remaining_runs}")
+            print(f"🏃 Run {run}/31 - Progreso restante: {current_run}/31")
 
             # Verificar si este run ya existe
             existing_run = next((r for r in dataset_results if r['run'] == run), None)

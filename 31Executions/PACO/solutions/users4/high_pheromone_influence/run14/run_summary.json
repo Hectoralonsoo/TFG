@@ -1,0 +1,84 @@
+{
+  "run_info": {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 14,
+    "execution_time": 3442.7414848804474,
+    "iterations_completed": 48,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 11,
+    "pareto_points": [
+      [
+        1831956.0600000087,
+        4548.660000000001
+      ],
+      [
+        1731109.549999999,
+        4296.58
+      ],
+      [
+        1774605.1900000093,
+        4298.940000000002
+      ],
+      [
+        1792933.8400000096,
+        4301.560000000002
+      ],
+      [
+        1807065.7400000095,
+        4343.900000000002
+      ],
+      [
+        1821905.88000001,
+        4358.000000000002
+      ],
+      [
+        1794766.0400000124,
+        4334.430000000002
+      ],
+      [
+        1829637.8300000133,
+        4381.420000000003
+      ],
+      [
+        1811453.2200000104,
+        4350.950000000003
+      ],
+      [
+        1793251.1000000082,
+        4327.920000000004
+      ],
+      [
+        1793350.580000012,
+        4331.460000000003
+      ]
+    ],
+    "solutions_evaluated": 1200,
+    "config_params": {
+      "n_ants": 25,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 11,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users4\\high_pheromone_influence\\run14",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 4296.58,
+      "max": 4548.660000000001
+    },
+    "minutes_range": {
+      "min": 1731109.549999999,
+      "max": 1831956.0600000087
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 48,
+    "max_archive_size_reached": 15
+  }
+}

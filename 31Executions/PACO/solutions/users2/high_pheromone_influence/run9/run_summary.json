@@ -1,0 +1,92 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "high_pheromone_influence",
+    "run": 9,
+    "execution_time": 2757.4059171676636,
+    "iterations_completed": 97,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 13,
+    "pareto_points": [
+      [
+        744333.8700000034,
+        1896.5100000000007
+      ],
+      [
+        748216.4500000024,
+        1932.4500000000005
+      ],
+      [
+        718059.1000000022,
+        1844.4300000000003
+      ],
+      [
+        736505.8000000016,
+        1857.9200000000008
+      ],
+      [
+        754220.7000000016,
+        2004.4200000000005
+      ],
+      [
+        755175.0500000025,
+        2056.4200000000005
+      ],
+      [
+        740554.2800000019,
+        1892.9800000000005
+      ],
+      [
+        739103.1500000022,
+        1880.9100000000005
+      ],
+      [
+        734134.4600000011,
+        1856.4400000000005
+      ],
+      [
+        748595.0600000013,
+        1960.8500000000004
+      ],
+      [
+        723068.8900000014,
+        1849.8600000000001
+      ],
+      [
+        743070.7600000025,
+        1894.9400000000003
+      ],
+      [
+        752915.5500000024,
+        1977.0300000000002
+      ]
+    ],
+    "solutions_evaluated": 2425,
+    "config_params": {
+      "n_ants": 25,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 13,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users2\\high_pheromone_influence\\run9",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 1844.4300000000003,
+      "max": 2056.4200000000005
+    },
+    "minutes_range": {
+      "min": 718059.1000000022,
+      "max": 755175.0500000025
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 97,
+    "max_archive_size_reached": 13
+  }
+}

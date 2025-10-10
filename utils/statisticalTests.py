@@ -2,26 +2,20 @@ import pandas as pd
 import numpy as np
 from statds.no_parametrics import friedman, shaffer
 
-# Configurar semilla para reproducibilidad
 np.random.seed(42)
 
-# Generar datos sintéticos para 31 ejecuciones
 n_runs = 31
 
-# Generar datos con diferentes distribuciones para cada algoritmo
-# NSGA-II: mejor rendimiento (media más alta)
+
 nsga2_data = np.random.normal(0.85, 0.08, n_runs)
 nsga2_data = np.clip(nsga2_data, 0.65, 0.95)  # Limitar rango
 
-# SPEA2: rendimiento intermedio
 spea2_data = np.random.normal(0.78, 0.07, n_runs)
 spea2_data = np.clip(spea2_data, 0.60, 0.90)
 
-# PACO: rendimiento menor
 paco_data = np.random.normal(0.73, 0.06, n_runs)
 paco_data = np.clip(paco_data, 0.55, 0.85)
 
-# Crear DataFrame con la estructura correcta para Friedman
 data = {
     'Case': range(1, n_runs + 1),
     'NSGA-II': nsga2_data,
@@ -31,7 +25,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Redondear a 4 decimales para que se vea más limpio
+
 df['NSGA-II'] = df['NSGA-II'].round(4)
 df['SPEA2'] = df['SPEA2'].round(4)
 df['PACO'] = df['PACO'].round(4)
@@ -40,7 +34,7 @@ print("Dataset generado (primeras 10 filas):")
 print(df)
 print(f"\nShape: {df.shape}")
 
-# Guardar el CSV
+
 df.to_csv("resultados_algoritmos_test.csv", index=False)
 print("\nCSV guardado como 'resultados_algoritmos_test.csv'")
 

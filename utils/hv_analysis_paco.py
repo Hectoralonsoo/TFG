@@ -123,32 +123,34 @@ def calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_name, globa
                 if minutes_range == 0:
                     minutes_normalized = 1.0
                 else:
-                    # Para PACO: si minutes es positivo, maximizar velocidad = minimizar tiempo
-                    # Si minutes es negativo (como en NSGA-II), ajustar según corresponda
-                    # Aquí asumo que minutes en PACO es positivo y queremos minimizarlo
-                    minutes_normalized = (global_max_minutes - minutes) / minutes_range
+                    # Para PACO: minutes es positivo, y queremos minimizarlo (maximizar velocidad)
+                    minutes_normalized = (minutes - global_min_minutes) / minutes_range
 
                 # Validar que estén en [0,1]
                 cost_normalized = max(0.0, min(1.0, cost_normalized))
                 minutes_normalized = max(0.0, min(1.0, minutes_normalized))
 
-                # Debug para los primeros puntos
-                if total_points < 3:
-                    print(f"  Debug punto {total_points + 1}:")
+                # DEBUG DETALLADO - Mostrar cálculo de normalización para los primeros puntos
+                if total_points < 10:  # Mostrar solo para los primeros 10 puntos
+                    print(f"\n  🐛 DEBUG Punto {total_points + 1}:")
                     print(f"    Original: cost={cost:.2f}, minutes={minutes:.2f}")
-                    print(f"    Normalizado: cost_norm={cost_normalized:.6f}, minutes_norm={minutes_normalized:.6f}")
+                    print(f"    Rango global coste: [{global_min_cost:.2f}, {global_max_cost:.2f}]")
+                    print(f"    Rango global minutos: [{global_min_minutes:.0f}, {global_max_minutes:.0f}]")
+                    print(f"    Cálculo coste normalizado: ({global_max_cost:.2f} - {cost:.2f}) / {cost_range:.2f} = {cost_normalized:.6f}")
+                    print(f"    Cálculo minutos normalizados: ({global_max_minutes:.0f} - {minutes:.0f}) / {minutes_range:.0f} = {minutes_normalized:.6f}")
+                    print(f"    → Punto normalizado: [{cost_normalized:.6f}, {minutes_normalized:.6f}]")
 
                 config_pareto_points[config].append([cost_normalized, minutes_normalized])
                 total_points += 1
 
-    print(f"Total puntos de Pareto procesados: {total_points}")
+    print(f"\nTotal puntos de Pareto procesados: {total_points}")
     print(f"Configuraciones encontradas: {len(config_pareto_points)}")
 
     # Calcular hipervolumen por configuración usando puntos ya calculados
     hv_by_config = []
     ref_point = [0.0, 0.0]  # Para maximización
 
-    print(f"Usando punto de referencia para MAXIMIZACIÓN: {ref_point}")
+    print(f"\nUsando punto de referencia para MAXIMIZACIÓN: {ref_point}")
     print("NOTA: Se usan directamente los puntos de Pareto proporcionados (no se recalcula el frente)")
 
     for config, pareto_points in config_pareto_points.items():
@@ -179,7 +181,6 @@ def calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_name, globa
 
         try:
             if len(pareto_points) > 0:
-                # Calcular hipervolumen directamente con los puntos proporcionados
                 hv = hypervolume(pareto_points, reference_point=ref_point)
 
                 # Validación del hipervolumen
@@ -254,8 +255,10 @@ def main():
 
     # Procesar cada dataset
     for folder, dataset_file in datasets:
-        file_path = os.path.join(base_path, folder, f"summary_high_heuristic_influence.json")
+        file_path = os.path.join(base_path, folder, f"summary_complete_{folder}.json")
         results = calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_file, global_stats)
+
+
 
         if results:
             all_results.extend(results)

@@ -274,8 +274,8 @@ def main():
     print(results_sorted.to_string(index=False))
 
     # Guardar resultados completos
-    results_sorted.to_csv("hypervolume_results_direct_pareto.csv", index=False)
-    print(f"\nResultados completos guardados en 'hypervolume_results_direct_pareto.csv'")
+    results_sorted.to_csv("hypervolume_results_nsga_direct_pareto.csv", index=False)
+    print(f"\nResultados completos guardados en 'hypervolume_results_nsga_direct_pareto.csv'")
 
     # Análisis por dataset
     print(f"\n{'=' * 120}")

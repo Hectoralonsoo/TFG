@@ -158,7 +158,6 @@ def main():
 
                 config_results.append(run_result)
 
-                # Guardar soluciones individuales en la carpeta específica del run
                 if hasattr(algorithm, 'archive') and algorithm.archive:
                     for idx, ind in enumerate(algorithm.archive):
                         calcular_minutos_ponderados(ind.candidate, args)

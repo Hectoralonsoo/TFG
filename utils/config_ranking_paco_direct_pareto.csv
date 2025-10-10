@@ -1,2 +1,2 @@
 config,hv_mean,hv_std,hv_count,exec_time_mean,iterations_mean,pareto_size_mean,pareto_points_mean,runs_mean
-high_heuristic_influence,0.902637,0.086805,5,2544.213773,59.696774,14.2,440.2,31.0
+high_pheromone_influence,0.305843,0.103459,5,2271.34942,47.445161,9.593548,297.4,31.0

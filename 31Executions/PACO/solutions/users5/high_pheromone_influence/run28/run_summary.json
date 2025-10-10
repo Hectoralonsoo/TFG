@@ -1,0 +1,104 @@
+{
+  "run_info": {
+    "dataset": "users5.json",
+    "config": "high_pheromone_influence",
+    "run": 28,
+    "execution_time": 5411.1303651332855,
+    "iterations_completed": 44,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 16,
+    "pareto_points": [
+      [
+        2983956.290000025,
+        7266.700000000001
+      ],
+      [
+        3004199.630000008,
+        7299.340000000002
+      ],
+      [
+        2989730.1200000346,
+        7278.480000000001
+      ],
+      [
+        2975838.450000019,
+        7146.4400000000005
+      ],
+      [
+        2979559.430000006,
+        7247.300000000001
+      ],
+      [
+        2933950.680000003,
+        6819.820000000003
+      ],
+      [
+        2903957.8500000075,
+        6809.300000000003
+      ],
+      [
+        2863257.479999999,
+        6701.380000000006
+      ],
+      [
+        2871554.7000000086,
+        6725.080000000007
+      ],
+      [
+        2895489.100000013,
+        6785.5900000000065
+      ],
+      [
+        2872244.7700000107,
+        6742.310000000008
+      ],
+      [
+        2897880.2100000107,
+        6801.4300000000085
+      ],
+      [
+        2883021.9000000097,
+        6764.820000000007
+      ],
+      [
+        2841205.0300000054,
+        6653.330000000007
+      ],
+      [
+        2905150.0000000084,
+        6810.420000000007
+      ],
+      [
+        2873205.5400000094,
+        6751.950000000006
+      ]
+    ],
+    "solutions_evaluated": 1100,
+    "config_params": {
+      "n_ants": 25,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 16,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users5\\high_pheromone_influence\\run28",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 6653.330000000007,
+      "max": 7299.340000000002
+    },
+    "minutes_range": {
+      "min": 2841205.0300000054,
+      "max": 3004199.630000008
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 44,
+    "max_archive_size_reached": 16
+  }
+}

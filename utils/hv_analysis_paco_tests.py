@@ -126,7 +126,7 @@ def calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_name, globa
                     # Para PACO: si minutes es positivo, maximizar velocidad = minimizar tiempo
                     # Si minutes es negativo (como en NSGA-II), ajustar según corresponda
                     # Aquí asumo que minutes en PACO es positivo y queremos minimizarlo
-                    minutes_normalized = (global_max_minutes - minutes) / minutes_range
+                    minutes_normalized = (minutes - global_min_minutes) / minutes_range
 
                 # Validar que estén en [0,1]
                 cost_normalized = max(0.0, min(1.0, cost_normalized))
@@ -287,7 +287,7 @@ def main():
     print(results_sorted.to_string(index=False))
 
     # Guardar resultados completos
-    results_sorted.to_csv("hypervolume_results_paco_direct_pareto.csv", index=False)
+    results_sorted.to_csv("hypervolume_results_paco_direct_pareto_tests.csv", index=False)
     print(f"\nResultados completos guardados en 'hypervolume_results_paco_direct_pareto.csv'")
 
     # Análisis por dataset

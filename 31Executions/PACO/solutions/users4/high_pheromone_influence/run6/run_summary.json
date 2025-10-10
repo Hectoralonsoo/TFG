@@ -1,0 +1,96 @@
+{
+  "run_info": {
+    "dataset": "users4.json",
+    "config": "high_pheromone_influence",
+    "run": 6,
+    "execution_time": 4478.877387523651,
+    "iterations_completed": 63,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 14,
+    "pareto_points": [
+      [
+        1850232.8800000174,
+        4655.58
+      ],
+      [
+        1836019.6000000134,
+        4382.200000000003
+      ],
+      [
+        1838521.3200000173,
+        4387.290000000003
+      ],
+      [
+        1807445.4100000085,
+        4280.470000000003
+      ],
+      [
+        1817803.140000014,
+        4326.600000000002
+      ],
+      [
+        1830379.4300000172,
+        4327.540000000003
+      ],
+      [
+        1813567.6100000099,
+        4281.0300000000025
+      ],
+      [
+        1840191.9800000174,
+        4452.880000000003
+      ],
+      [
+        1787158.4300000106,
+        4211.460000000003
+      ],
+      [
+        1814717.060000013,
+        4304.930000000003
+      ],
+      [
+        1830793.5500000133,
+        4368.480000000002
+      ],
+      [
+        1797813.5900000075,
+        4240.9900000000025
+      ],
+      [
+        1838999.6700000141,
+        4430.940000000002
+      ],
+      [
+        1798746.2400000086,
+        4252.850000000003
+      ]
+    ],
+    "solutions_evaluated": 1575,
+    "config_params": {
+      "n_ants": 25,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 14,
+  "solutions_directory": "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO\\solutions\\users4\\high_pheromone_influence\\run6",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 4211.460000000003,
+      "max": 4655.58
+    },
+    "minutes_range": {
+      "min": 1787158.4300000106,
+      "max": 1850232.8800000174
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 63,
+    "max_archive_size_reached": 14
+  }
+}
