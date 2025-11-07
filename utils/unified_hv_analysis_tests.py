@@ -53,9 +53,6 @@ for dataset, points in pareto_points_by_dataset.items():
     except Exception as e:
         print(f"❌ Error al guardar {csv_path}: {e}")
 
-    # Validación adicional
-    if df["cost"].max() < df["minutes"].max():
-        print(f"⚠️ Revisión recomendada para {dataset}: minutos más altos que coste.")
 
     stats = {
         "dataset": dataset,

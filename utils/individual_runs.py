@@ -79,7 +79,7 @@ def calculate_hypervolume_for_run(pareto_points, global_stats, dataset_name, alg
         normalized_points.append([cost_maximized, minutes_maximized])
 
         # DEBUG: Mostrar cada punto normalizado
-        print(f"Punto {i+1}: Original (coste={cost:.2f}, minutos={minutes:.2f}) -> "
+        print(f"Punto {i + 1}: Original (coste={cost:.2f}, minutos={minutes:.2f}) -> "
               f"Normalizado (coste={cost_maximized:.4f}, minutos={minutes_maximized:.4f})")
 
     try:
@@ -93,6 +93,32 @@ def calculate_hypervolume_for_run(pareto_points, global_stats, dataset_name, alg
     except Exception as e:
         print(f"Error calculando HV: {e}")
         return 0.0
+
+
+def calculate_pareto_statistics(pareto_points, algorithm_name):
+    """
+    Calcula estadísticas del frente de Pareto (costo medio y minutos medios)
+    """
+    if not pareto_points:
+        return None, None
+
+    costs = []
+    minutes_list = []
+
+    for neg_minutes, cost in pareto_points:
+        # Convertir minutos según el algoritmo
+        if algorithm_name != "PACO":
+            minutes = -neg_minutes  # NSGA-II y SPEA2 tienen minutos negativos
+        else:
+            minutes = neg_minutes  # PACO tiene minutos positivos
+
+        costs.append(cost)
+        minutes_list.append(minutes)
+
+    avg_cost = np.mean(costs) if costs else 0.0
+    avg_minutes = np.mean(minutes_list) if minutes_list else 0.0
+
+    return avg_cost, avg_minutes
 
 
 def extract_individual_runs(base_path, algorithm_name, datasets, global_stats):
@@ -138,6 +164,9 @@ def extract_individual_runs(base_path, algorithm_name, datasets, global_stats):
                 pareto_points = entry.get('pareto_points', [])
                 hv = calculate_hypervolume_for_run(pareto_points, global_stats, dataset_file, algorithm_name)
 
+                # Calcular estadísticas del frente de Pareto
+                avg_cost, avg_minutes = calculate_pareto_statistics(pareto_points, algorithm_name)
+
                 # Extraer datos de esta ejecución individual
                 run_data = {
                     'Dataset': dataset_file,
@@ -146,9 +175,12 @@ def extract_individual_runs(base_path, algorithm_name, datasets, global_stats):
                     'Ejecucion': execution_counter[config],
                     'Hypervolume': hv,
                     'Tiempo': entry.get('execution_time', 0),
-                    'Generaciones_Iteraciones': entry.get('generations', entry.get('iterations', 0)),
+                    'Generaciones_Iteraciones': entry.get('generations', entry.get('iterations_completed',
+                                                                                   entry.get('iterations', 0))),
                     'Tamaño_Pareto': entry.get('pareto_size', 0),
-                    'Num_Puntos_Pareto': len(pareto_points)
+                    'Num_Puntos_Pareto': len(pareto_points),
+                    'Costo_Medio': avg_cost if avg_cost is not None else 0.0,
+                    'Minutos_Medios': avg_minutes if avg_minutes is not None else 0.0
                 }
 
                 all_data.append(run_data)
@@ -265,6 +297,10 @@ def main():
               f"Std: {algo_data['Generaciones_Iteraciones'].std():.2f}")
         print(f"  Tamaño Pareto - Media: {algo_data['Tamaño_Pareto'].mean():.2f}, "
               f"Std: {algo_data['Tamaño_Pareto'].std():.2f}")
+        print(f"  Costo Medio - Media: {algo_data['Costo_Medio'].mean():.2f}, "
+              f"Std: {algo_data['Costo_Medio'].std():.2f}")
+        print(f"  Minutos Medios - Media: {algo_data['Minutos_Medios'].mean():.2f}, "
+              f"Std: {algo_data['Minutos_Medios'].std():.2f}")
 
     print(f"\n{'=' * 80}")
     print("LISTO - Ahora puedes usar este CSV para crear boxplots")
