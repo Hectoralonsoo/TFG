@@ -1,12 +1,7 @@
 from algorithms.PACO import PACOStreaming, fitness_paco
 from Loaders.LoadStreamingPlans import load_streaming_plan_json
-from Loaders.LoadPlatforms import load_platforms_json
 from Loaders.LoadUsers import load_users_from_json
-from utils.logging_custom import plot_pareto_front_paco
-from utils.logging_custom import plot_ant_paths_lines
-from utils.save import save_pareto_archive_paco
-from utils.logging_custom import plot_user_platforms_over_time
-from utils.logging_custom import observer_paco
+
 import json
 import os
 from time import time
@@ -25,9 +20,8 @@ def create_directory_structure(base_path, dataset_name, config_name, run_number)
 
 
 def get_resume_point():
-    """Determina desde dónde continuar la ejecución"""
-    # Punto de reanudación: users4 desde run 22, luego users5 completo
     resume_config = {
+        "users1.json": 1,
         "users2.json": 1,
         "users3.json": 1,
         "users4.json": 1,
@@ -37,7 +31,6 @@ def get_resume_point():
 
 
 def main():
-    # Solo la configuración que mejor hipervolumen ha dado
     config = {
         "name": "high_pheromone_influence",
         "n_ants": 25,
@@ -63,8 +56,8 @@ def main():
 
     plataformas_disponibles = [int(p) for p in platforms_indexed.keys()]
 
-    # Solo procesar los datasets restantes
     user_datasets_to_resume = [
+        "users1.json",
         "users2.json",
         "users3.json",
         "users4.json",
@@ -74,7 +67,6 @@ def main():
     base_results_path = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO"
     resume_points = get_resume_point()
 
-    # Cargar resultados existentes si existen
     general_summary_path = os.path.join(base_results_path, "summary_all_experiments.json")
     if os.path.exists(general_summary_path):
         with open(general_summary_path, 'r') as f:
@@ -97,7 +89,6 @@ def main():
         start_run = resume_points[dataset_name]
         end_run = 31
 
-        # Cargar resultados existentes del dataset si existen
         summaries_dir = os.path.join(base_results_path, "summaries", dataset_name.replace('.json', ''))
         config_summary_path = os.path.join(summaries_dir, f"summary_{config['name']}.json")
 
@@ -115,18 +106,15 @@ def main():
             current_run += 1
             print(f"🏃 Run {run}/31 - Progreso restante: {current_run}/31")
 
-            # Verificar si este run ya existe
             existing_run = next((r for r in dataset_results if r['run'] == run), None)
             if existing_run:
                 print(f"    ✅ Run {run} ya existe, saltando...")
                 continue
 
-            # Crear estructura de directorios para este run específico
             solutions_dir, summaries_dir = create_directory_structure(
                 base_results_path, dataset_name, config['name'], run
             )
 
-            # Verificar si ya existen archivos de soluciones para este run
             if os.path.exists(solutions_dir) and len(os.listdir(solutions_dir)) > 0:
                 print(f"    ✅ Soluciones del run {run} ya existen, saltando...")
                 continue
@@ -137,7 +125,6 @@ def main():
                 'platforms_indexed': platforms_indexed
             }
 
-            # Instanciar PACO con la configuración específica
             paco = PACOStreaming(
                 n_ants=config['n_ants'],
                 n_iterations=config['n_iterations'],
@@ -152,13 +139,11 @@ def main():
                 no_improvement_generations=config['no_improvement_generations']
             )
 
-            # Optimizar
             start_time = time()
             pareto_archive = paco.optimize(lambda sol: fitness_paco(sol, args))
             end_time = time()
             execution_time = end_time - start_time
 
-            # Recopilar métricas del run
             iterations_completed = len(paco.archive_history)
             pareto_size = len(pareto_archive)
             pareto_points = [list(objectives) for _, objectives in pareto_archive]
@@ -188,7 +173,6 @@ def main():
 
             dataset_results.append(run_result)
 
-            # Información sobre la terminación
             if paco.terminated_early:
                 print(f"    ✓ Terminó tempranamente: {iterations_completed}/{config['n_iterations']} iteraciones")
             else:
@@ -197,7 +181,6 @@ def main():
             print(f"    📊 Frente de Pareto: {pareto_size} soluciones")
             print(f"    ⏱️  Tiempo: {execution_time:.2f}s")
 
-            # Guardar soluciones individuales en la carpeta específica del run
             for idx, (solution, objectives) in enumerate(pareto_archive):
                 export = {
                     "solution": solution.tolist() if hasattr(solution, 'tolist') else solution,
@@ -214,7 +197,6 @@ def main():
                 with open(solution_path, 'w', encoding='utf-8') as f:
                     json.dump(export, f, ensure_ascii=False, indent=2)
 
-            # Guardar summary individual del run
             if pareto_archive:
                 objectives = [obj for _, obj in pareto_archive]
                 min_cost = min(obj[1] for obj in objectives)
@@ -245,21 +227,16 @@ def main():
             with open(run_summary_path, 'w') as f:
                 json.dump(run_summary, f, indent=2)
 
-            # Guardar progreso parcial después de cada run
             config_summary_path = os.path.join(summaries_dir, f"summary_{config['name']}.json")
             with open(config_summary_path, 'w') as f:
                 json.dump(dataset_results, f, indent=2)
 
-        # Actualizar all_results con los nuevos resultados del dataset
-        # Remover resultados anteriores de este dataset si existen
         all_results = [r for r in all_results if r['dataset'] != dataset_name]
         all_results.extend(dataset_results)
 
-        # Guardar summary general actualizado después de cada dataset
         with open(general_summary_path, 'w') as f:
             json.dump(all_results, f, indent=2)
 
-        # Estadísticas del dataset actual
         current_dataset_runs = [r for r in dataset_results if r['run'] >= start_run]
         if current_dataset_runs:
             avg_time = sum(r['execution_time'] for r in current_dataset_runs) / len(current_dataset_runs)
@@ -279,7 +256,6 @@ def main():
     print(f"📁 Estructura de archivos en: {base_results_path}")
     print(f"📊 Summary general actualizado en: {general_summary_path}")
 
-    # Estadísticas finales
     total_runs_executed = len(all_results)
     if total_runs_executed > 0:
         total_time = sum(r['execution_time'] for r in all_results)

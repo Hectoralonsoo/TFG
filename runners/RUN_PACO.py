@@ -1,12 +1,6 @@
 from algorithms.PACO import PACOStreaming, fitness_paco
 from Loaders.LoadStreamingPlans import load_streaming_plan_json
-from Loaders.LoadPlatforms import load_platforms_json
 from Loaders.LoadUsers import load_users_from_json
-from utils.logging_custom import plot_pareto_front_paco
-from utils.logging_custom import plot_ant_paths_lines
-from utils.save import save_pareto_archive_paco
-from utils.logging_custom import plot_user_platforms_over_time
-from utils.logging_custom import observer_paco
 import json
 import os
 from time import time
@@ -103,7 +97,7 @@ def main():
         "users5.json"
     ]
 
-    base_results_path = "../results/PACO"
+    base_results_path = "../TestExecutions/PACO"
     all_results = []
 
     os.makedirs(base_results_path, exist_ok=True)
@@ -126,7 +120,6 @@ def main():
             for run in range(5):
                 print(f"🔁 Run {run + 1}/5")
 
-                # Crear estructura de directorios para este run específico
                 solutions_dir, summaries_dir = create_directory_structure(
                     base_results_path, dataset_name, config['name'], run + 1
                 )
@@ -137,7 +130,6 @@ def main():
                     'platforms_indexed': platforms_indexed
                 }
 
-                # Instanciar PACO con la configuración específica
                 paco = PACOStreaming(
                     n_ants=config['n_ants'],
                     n_iterations=config['n_iterations'],
@@ -189,7 +181,6 @@ def main():
 
                 config_results.append(run_result)
 
-                # Información sobre la terminación
                 if paco.terminated_early:
                     print(f"    ✓ Terminó tempranamente: {iterations_completed}/{config['n_iterations']} iteraciones")
                 else:
@@ -198,7 +189,6 @@ def main():
                 print(f"    📊 Frente de Pareto: {pareto_size} soluciones")
                 print(f"    ⏱️  Tiempo de ejecución: {execution_time:.2f}s")
 
-                # Guardar soluciones individuales en la carpeta específica del run
                 for idx, (solution, objectives) in enumerate(pareto_archive):
                     export = {
                         "solution": solution.tolist() if hasattr(solution, 'tolist') else solution,
@@ -215,10 +205,6 @@ def main():
                     with open(solution_path, 'w', encoding='utf-8') as f:
                         json.dump(export, f, ensure_ascii=False, indent=2)
 
-                # Guardar archive de PACO con utilidad existente
-                #save_pareto_archive_paco(pareto_archive, paco.n_users, args)
-
-                # Guardar summary individual del run
                 if pareto_archive:
                     objectives = [obj for _, obj in pareto_archive]
                     min_cost = min(obj[1] for obj in objectives)
@@ -249,12 +235,10 @@ def main():
                 with open(run_summary_path, 'w') as f:
                     json.dump(run_summary, f, indent=2)
 
-            # Guardar summary de la configuración específica
             config_summary_path = os.path.join(summaries_dir, f"summary_{config['name']}.json")
             with open(config_summary_path, 'w') as f:
                 json.dump(config_results, f, indent=2)
 
-            # Estadísticas de la configuración
             avg_time = sum(r['execution_time'] for r in config_results) / len(config_results)
             avg_pareto_size = sum(r['pareto_size'] for r in config_results) / len(config_results)
             early_terminations = sum(1 for r in config_results if r['terminated_early'])
@@ -266,14 +250,12 @@ def main():
 
             dataset_results.extend(config_results)
 
-        # Guardar summary completo del dataset
         dataset_summary_path = os.path.join(summaries_dir, f"summary_complete_{dataset_name.replace('.json', '')}.json")
         with open(dataset_summary_path, 'w') as f:
             json.dump(dataset_results, f, indent=2)
 
         all_results.extend(dataset_results)
 
-    # Guardar summary general de todos los experimentos
     general_summary_path = os.path.join(base_results_path, "summary_all_experiments.json")
     with open(general_summary_path, 'w') as f:
         json.dump(all_results, f, indent=2)
@@ -282,7 +264,6 @@ def main():
     print(f"📁 Estructura de archivos creada en: {base_results_path}")
     print(f"📊 Summary general guardado en: {general_summary_path}")
 
-    # Estadísticas generales
     total_runs = len(all_results)
     total_time = sum(r['execution_time'] for r in all_results)
     avg_pareto_size = sum(r['pareto_size'] for r in all_results) / total_runs

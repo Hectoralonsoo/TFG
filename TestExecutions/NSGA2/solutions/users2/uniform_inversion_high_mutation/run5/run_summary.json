@@ -1,0 +1,46 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 5,
+    "execution_time": 643.7540981769562,
+    "generations": 106,
+    "pareto_size": 8,
+    "pareto_points": [
+      [
+        -776026.7000000004,
+        2112.97
+      ],
+      [
+        -827030.6500000001,
+        2170.97
+      ],
+      [
+        -831119.2999999999,
+        2214.43
+      ],
+      [
+        -829424.2299999996,
+        2185.96
+      ],
+      [
+        -820336.2499999999,
+        2130.96
+      ],
+      [
+        -842041.6000000006,
+        2330.81
+      ],
+      [
+        -837765.7600000007,
+        2220.9199999999996
+      ],
+      [
+        -839952.990000001,
+        2247.87
+      ]
+    ]
+  },
+  "solutions_count": 8,
+  "solutions_directory": "../results/NSGA2\\solutions\\users2\\uniform_inversion_high_mutation\\run5"
+}

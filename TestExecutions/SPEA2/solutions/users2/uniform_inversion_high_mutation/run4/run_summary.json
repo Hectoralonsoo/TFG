@@ -1,0 +1,18 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 4,
+    "execution_time": 613.3826057910919,
+    "generations": 94,
+    "pareto_size": 1,
+    "pareto_points": [
+      [
+        -822989.82,
+        2372.19
+      ]
+    ]
+  },
+  "solutions_count": 1,
+  "solutions_directory": "../results/SPEA2\\solutions\\users2\\uniform_inversion_high_mutation\\run4"
+}

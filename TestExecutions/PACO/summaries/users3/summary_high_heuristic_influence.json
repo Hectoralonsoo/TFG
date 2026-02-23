@@ -1,0 +1,180 @@
+[
+  {
+    "dataset": "users3.json",
+    "config": "high_heuristic_influence",
+    "run": 1,
+    "execution_time": 441.23679637908936,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        815996.7900000011,
+        2778.499999999999
+      ],
+      [
+        845898.7500000001,
+        2820.4899999999993
+      ],
+      [
+        799665.1500000008,
+        2769.52
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "high_heuristic_influence",
+    "run": 2,
+    "execution_time": 439.8544075489044,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        831866.7300000008,
+        2938.2999999999993
+      ],
+      [
+        790490.8300000003,
+        2809.2299999999996
+      ],
+      [
+        809062.460000002,
+        2827.849999999999
+      ],
+      [
+        831860.1100000008,
+        2860.9099999999994
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "high_heuristic_influence",
+    "run": 3,
+    "execution_time": 441.06247639656067,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        828352.6200000007,
+        2854.899999999999
+      ],
+      [
+        822141.740000002,
+        2717.129999999999
+      ],
+      [
+        827493.930000001,
+        2847.1499999999996
+      ],
+      [
+        838539.5900000017,
+        2961.4499999999994
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "high_heuristic_influence",
+    "run": 4,
+    "execution_time": 451.29507398605347,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        828433.1300000012,
+        2828.0199999999995
+      ],
+      [
+        800729.0700000016,
+        2808.3999999999996
+      ],
+      [
+        851531.0300000021,
+        2944.439999999999
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "config": "high_heuristic_influence",
+    "run": 5,
+    "execution_time": 441.4989535808563,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        819650.2500000002,
+        2802.5199999999995
+      ],
+      [
+        821212.7000000008,
+        2871.0399999999995
+      ],
+      [
+        834197.8400000017,
+        2931.8499999999995
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 0.5,
+      "beta": 5.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  }
+]

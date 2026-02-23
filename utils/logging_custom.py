@@ -1,10 +1,9 @@
-import matplotlib.pyplot as plt
-import statistics
 import json
-import numpy as np
 from Loaders.LoadUsers import load_users_from_json
 from scripts.User_generator import update_users_json
 from utils.evaluation import calcular_minutos_ponderados
+import matplotlib.pyplot as plt
+
 
 generations = []
 best_minutes = []
@@ -61,61 +60,7 @@ def last_generation_update(population, num_generations, args):
             user.watched_series = watched_series
 
         update_users_json(users_data)
-'''
-def update_user_viewing_for_individual(individual, platforms_indexed, users_path, output_path):
-    users_data = load_users_from_json(users_path)
-    plataformas_por_usuario = individual.candidate
 
-    final_output = {}
-
-    for i, user in enumerate(users_data):
-        user_id = f"user_{i}"
-        user.months = plataformas_por_usuario[i]
-        final_output[user_id] = {}
-
-        # Inicializar cada mes con su plataforma asignada
-        for m in range(12):
-            platform_id = user.months[m]
-            plataforma = platforms_indexed.get(str(platform_id), f"Plataforma {platform_id}")
-            final_output[user_id][f"month_{m+1}"] = {
-                "plataforma": plataforma,
-                "watched_movies": [],
-                "watched_series": [],
-                "minutes": 0
-            }
-
-    # Recuperar contenidos vistos desde el individuo
-    watched_movies = getattr(individual, 'watched_movies', [])
-    watched_series = getattr(individual, 'watched_series', [])
-
-    for movie in watched_movies:
-        user_id = movie.get("user_id", f"user_0")  # Si incluyes user_id en el futuro
-        mes_key = f"month_{movie['mes']}"
-        if user_id in final_output and mes_key in final_output[user_id]:
-            final_output[user_id][mes_key]["watched_movies"].append({
-                "title": movie["title"],
-                "minutes": movie["duracion"]
-            })
-            final_output[user_id][mes_key]["minutes"] += movie["duracion"]
-
-    for serie in watched_series:
-        user_id = serie.get("user_id", f"user_0")
-        mes_key = f"month_{serie['mes']}"
-        if user_id in final_output and mes_key in final_output[user_id]:
-            final_output[user_id][mes_key]["watched_series"].append({
-                "title": serie["title"],
-                "minutes": serie["duracion"]
-            })
-            final_output[user_id][mes_key]["minutes"] += serie["duracion"]
-
-    # Guardar en archivo JSON
-    with open(output_path, "w") as f:
-        json.dump(final_output, f, indent=4)
-
-    print(f"✅ Exportado: {output_path}")
-
-
-'''
 
 
 def update_user_viewing_for_individual(individual, platforms_indexed, users_path, output_path):
@@ -376,58 +321,6 @@ def plot_generation_improve():
     plt.tight_layout()
     plt.show()
 
-'''
-def observador_spea2(algorithm, population, num_generations, num_evaluations, args):
-    """
-    Observador para SPEA2 with exportación del frente de Pareto.
-    """
-    if not population:
-        return
-
-    fitness_values = [ind.fitness for ind in population]
-    objectives_1 = [ind.objective_values[0] for ind in population]  # costo
-    objectives_2 = [ind.objective_values[1] for ind in population]  # -minutos
-
-    best = min(population, key=lambda x: x.fitness)
-
-    print_detailed = num_generations % args.get('frequency', 1) == 0 if args else True
-
-    print(f"\n🧬 Generación {num_generations} | Evaluaciones: {num_evaluations}")
-    print(f"  Tamaño del archivo: {len(population)}")
-    print(f"  Mejor fitness: {best.fitness:.4f}")
-
-    if print_detailed:
-        print(f"  Objetivos: Costo={best.objective_values[0]:.2f}, Minutos={-best.objective_values[1]:.2f}")
-        print(f"  Promedio costo: {statistics.mean(objectives_1):.2f} (±{statistics.stdev(objectives_1):.2f})")
-        print(f"  Promedio minutos: {-statistics.mean(objectives_2):.2f} (±{statistics.stdev(objectives_2):.2f})")
-        print(f"  Rango costo: [{min(objectives_1):.2f}, {max(objectives_1):.2f}]")
-        print(f"  Rango minutos: [{-max(objectives_2):.2f}, {-min(objectives_2):.2f}]")
-
-    # Exportar resultados del frente de Pareto solo en la última generación
-    if num_generations == args.get('max_generations') - 1:
-
-        # EJECUTAR PRIMERO last_generation_update
-        print("📦 Ejecutando last_generation_update...")
-        last_generation_update(population, num_generations, args)
-
-        # AHORA CALCULAR EL FRENTE DE PARETO (después del update)
-        print("📊 Calculando frente de Pareto final...")
-        pareto_front = get_non_dominated(algorithm.archive)
-
-        print(f"  - Archive final: {len(algorithm.archive)} individuos")
-        print(f"  - Frente de Pareto final: {len(pareto_front)} soluciones")
-        print("📦 Exportando soluciones del frente de Pareto...")
-
-        # EXPORTAR EL FRENTE CALCULADO DESPUÉS DEL UPDATE
-        for idx, ind in enumerate(pareto_front):
-            output_path = f"../results/SPEA2/pareto_solution_{idx}SPEA2.json"
-            update_user_viewing_for_individual(
-                individual=ind,
-                platforms_indexed=args["platforms_indexed"],
-                users_path="../Data/users.json",
-                output_path=output_path
-            )
-'''
 def observador_spea2(algorithm, population, num_generations, num_evaluations, args):
     """
     Observer adaptado para SPEA2. Muestra evolución y exporta soluciones del frente.
@@ -442,7 +335,7 @@ def observador_spea2(algorithm, population, num_generations, num_evaluations, ar
         archive = algorithm.archive
 
         for idx, ind in enumerate(archive):
-            output_path = f"../results/SPEA2/pareto_solution_{idx}_SPEA2.json"
+            output_path = f"../TestExecutions/SPEA2/pareto_solution_{idx}_SPEA2.json"
 
             # 1. Reconstruir monthly_data para el individuo actual
             calcular_minutos_ponderados(ind.candidate, args)
@@ -600,9 +493,6 @@ def plot_pareto_front_paco(archive, title="Pareto Front - PACOStreaming", save_p
     plt.show()
 
 
-import matplotlib.pyplot as plt
-import numpy as np
-
 
 def plot_ant_paths_lines(all_solutions, n_months, n_users, platform_options, title="Recorrido de Hormigas (Caminos)",
                          max_ants_to_plot=20):
@@ -640,31 +530,13 @@ def plot_ant_paths_lines(all_solutions, n_months, n_users, platform_options, tit
     plt.tight_layout()
     plt.show()
 
-import matplotlib.pyplot as plt
-
-def plot_user_platforms_over_time(user_platforms, user_name="Usuario X"):
-    """
-    Dibuja la evolución de las plataformas asignadas a un usuario a lo largo de los 12 meses.
-
-    user_platforms: lista de plataformas (longitud 12) para el usuario.
-    user_name: nombre o identificador del usuario.
-    """
-    months = list(range(1, 13))  # Meses de 1 a 12
-
-    plt.figure(figsize=(10, 6))
-    plt.step(months, user_platforms, where='mid', marker='o', linestyle='-', color='blue')
-    plt.xticks(months)
-    plt.xlabel("Mes")
-    plt.ylabel("ID Plataforma")
-    plt.title(f"Evolución de plataformas - {user_name}")
-    plt.grid(True)
-    plt.tight_layout()
-    plt.show()
 
 
 
 
-def observer_paco(paco, iteration, args, export_dir="../results/PACO"):
+
+
+def observer_paco(paco, iteration, args, export_dir="../TestExecutions/PACO"):
     """
     Observer para PACO: muestra estado por iteración y exporta archivo final.
     """

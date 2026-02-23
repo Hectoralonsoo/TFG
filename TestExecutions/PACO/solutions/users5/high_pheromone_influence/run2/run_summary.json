@@ -1,0 +1,92 @@
+{
+  "run_info": {
+    "dataset": "users5.json",
+    "config": "high_pheromone_influence",
+    "run": 2,
+    "execution_time": 2793.9582648277283,
+    "iterations_completed": 31,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 13,
+    "pareto_points": [
+      [
+        2668937.980000019,
+        7387.400000000001
+      ],
+      [
+        2638408.260000007,
+        7107.9400000000005
+      ],
+      [
+        2658340.1400000006,
+        7214.84
+      ],
+      [
+        2659257.990000004,
+        7383.03
+      ],
+      [
+        2470329.0099999984,
+        6739.5300000000025
+      ],
+      [
+        2286854.7099999925,
+        6694.230000000005
+      ],
+      [
+        2329248.4199999995,
+        6730.680000000005
+      ],
+      [
+        2311578.880000001,
+        6710.890000000003
+      ],
+      [
+        2250974.689999998,
+        6675.190000000006
+      ],
+      [
+        2212931.76,
+        6629.020000000006
+      ],
+      [
+        2215429.87,
+        6674.010000000006
+      ],
+      [
+        2212337.810000005,
+        6625.850000000008
+      ],
+      [
+        2193656.8899999973,
+        6562.690000000007
+      ]
+    ],
+    "solutions_evaluated": 620,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 13,
+  "solutions_directory": "../results/PACO\\solutions\\users5\\high_pheromone_influence\\run2",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 6562.690000000007,
+      "max": 7387.400000000001
+    },
+    "minutes_range": {
+      "min": 2193656.8899999973,
+      "max": 2668937.980000019
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 31,
+    "max_archive_size_reached": 16
+  }
+}

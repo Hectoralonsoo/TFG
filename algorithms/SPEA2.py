@@ -3,7 +3,6 @@ from inspyred.ec import Individual
 import numpy as np
 from scipy.spatial import distance
 from inspyred.ec import selectors, variators, terminators
-from utils.logging_custom import get_non_dominated
 
 
 class SPEA2(EvolutionaryComputation):
@@ -31,7 +30,7 @@ class SPEA2(EvolutionaryComputation):
         self.archive = []
         kwargs['max_generations'] = max_generations
 
-        max_generations_without_improvement = 10
+        max_generations_without_improvement = 100
         self.generations_without_improvement = 0
         self.previous_pareto_count = 0
         self.previous_solutions = set()

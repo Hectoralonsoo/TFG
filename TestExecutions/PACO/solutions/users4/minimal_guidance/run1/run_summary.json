@@ -1,0 +1,88 @@
+{
+  "run_info": {
+    "dataset": "users4.json",
+    "config": "minimal_guidance",
+    "run": 1,
+    "execution_time": 3761.463349342346,
+    "iterations_completed": 59,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 12,
+    "pareto_points": [
+      [
+        1726958.9399999983,
+        5646.420000000001
+      ],
+      [
+        1678954.2499999977,
+        4841.950000000001
+      ],
+      [
+        1664056.4899999958,
+        4811.3
+      ],
+      [
+        1680831.8999999906,
+        4861.570000000001
+      ],
+      [
+        1652516.2099999955,
+        4710.960000000001
+      ],
+      [
+        1687099.7200000018,
+        4891.76
+      ],
+      [
+        1690507.3599999957,
+        4906.780000000001
+      ],
+      [
+        1668539.6199999957,
+        4836.81
+      ],
+      [
+        1664187.9499999995,
+        4821.9400000000005
+      ],
+      [
+        1643060.0799999968,
+        4634.990000000001
+      ],
+      [
+        1705841.8199999973,
+        4921.030000000001
+      ],
+      [
+        1660751.109999998,
+        4790.780000000001
+      ]
+    ],
+    "solutions_evaluated": 1180,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.5,
+      "alpha": 0.2,
+      "beta": 1.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 12,
+  "solutions_directory": "../results/PACO\\solutions\\users4\\minimal_guidance\\run1",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 4634.990000000001,
+      "max": 5646.420000000001
+    },
+    "minutes_range": {
+      "min": 1643060.0799999968,
+      "max": 1726958.9399999983
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 59,
+    "max_archive_size_reached": 16
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "run_info": {
+    "dataset": "users3.json",
+    "config": "uniform_reset_low_mutation",
+    "run": 4,
+    "execution_time": 63.5490038394928,
+    "generations": 10,
+    "pareto_size": 2,
+    "pareto_points": [
+      [
+        -1069288.4599999983,
+        3715.0700000000006
+      ],
+      [
+        -1112343.879999998,
+        3772.84
+      ]
+    ]
+  },
+  "solutions_count": 2,
+  "solutions_directory": "../results/SPEA2\\solutions\\users3\\uniform_reset_low_mutation\\run4"
+}

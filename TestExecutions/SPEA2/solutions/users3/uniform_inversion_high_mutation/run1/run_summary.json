@@ -1,0 +1,34 @@
+{
+  "run_info": {
+    "dataset": "users3.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 1,
+    "execution_time": 1623.9956393241882,
+    "generations": 257,
+    "pareto_size": 5,
+    "pareto_points": [
+      [
+        -1335393.149999998,
+        3117.67
+      ],
+      [
+        -1336865.7699999977,
+        3132.67
+      ],
+      [
+        -1337689.449999998,
+        3139.6900000000005
+      ],
+      [
+        -1336157.0699999975,
+        3124.68
+      ],
+      [
+        -1339162.0699999977,
+        3148.69
+      ]
+    ]
+  },
+  "solutions_count": 5,
+  "solutions_directory": "../results/SPEA2\\solutions\\users3\\uniform_inversion_high_mutation\\run1"
+}

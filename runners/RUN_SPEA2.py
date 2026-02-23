@@ -98,7 +98,7 @@ def main():
         "users5.json"
     ]
 
-    base_results_path = "../results/SPEA2"
+    base_results_path = "../TestExecutions/SPEA2"
     all_results = []
 
     os.makedirs(base_results_path, exist_ok=True)

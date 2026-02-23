@@ -1,0 +1,100 @@
+{
+  "run_info": {
+    "dataset": "users2.json",
+    "config": "high_pheromone_influence",
+    "run": 4,
+    "execution_time": 622.6825807094574,
+    "iterations_completed": 31,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 15,
+    "pareto_points": [
+      [
+        642529.1399999986,
+        2133.17
+      ],
+      [
+        651813.0900000011,
+        2164.98
+      ],
+      [
+        662763.1500000012,
+        2275.48
+      ],
+      [
+        655540.2099999995,
+        2190.04
+      ],
+      [
+        615795.0899999997,
+        2012.7200000000005
+      ],
+      [
+        626392.9999999998,
+        2055.0700000000006
+      ],
+      [
+        609179.6199999996,
+        2007.5100000000004
+      ],
+      [
+        594574.8499999995,
+        1950.6900000000005
+      ],
+      [
+        618389.2399999995,
+        2026.7300000000005
+      ],
+      [
+        580841.7800000003,
+        1917.9400000000005
+      ],
+      [
+        553789.1499999999,
+        1830.3300000000004
+      ],
+      [
+        586251.4899999992,
+        1936.8100000000006
+      ],
+      [
+        542905.1799999999,
+        1826.1600000000003
+      ],
+      [
+        569228.2599999998,
+        1834.7400000000007
+      ],
+      [
+        533006.2700000001,
+        1794.1500000000005
+      ]
+    ],
+    "solutions_evaluated": 620,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 15,
+  "solutions_directory": "../results/PACO\\solutions\\users2\\high_pheromone_influence\\run4",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 1794.1500000000005,
+      "max": 2275.48
+    },
+    "minutes_range": {
+      "min": 533006.2700000001,
+      "max": 662763.1500000012
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 31,
+    "max_archive_size_reached": 17
+  }
+}

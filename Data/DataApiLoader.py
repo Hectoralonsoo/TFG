@@ -14,7 +14,7 @@ def convert_platforms_to_ids(platform_names):
 def getSeasonStreamingProviders(serie_id, season_number, country_code='ES'):
     url = f"{base_url}/tv/{serie_id}/season/{season_number}/watch/providers?api_key={api_key}"
     response = requests.get(url).json()
-    providers = response.get("results", {}).get(country_code, {}).get("flatrate", [])
+    providers = response.get("TestExecutions", {}).get(country_code, {}).get("flatrate", [])
     platform_names =  [provider["provider_name"] for provider in providers]
     return convert_platforms_to_ids(platform_names)
 
@@ -24,7 +24,7 @@ def getBestMovies(cantidad):
     while len(peliculas) < cantidad:
         url = f"{base_url}/movie/top_rated?api_key={api_key}&language=en-US&page={pagina}"
         response = requests.get(url).json()
-        peliculas.extend(response.get("results", []))
+        peliculas.extend(response.get("TestExecutions", []))
         pagina += 1
     return peliculas[:cantidad]
 
@@ -34,7 +34,7 @@ def getBestSeries(cantidad):
     while len(series) < cantidad:
         url = f"{base_url}/tv/top_rated?api_key={api_key}&language=en-US&page={page}"
         response = requests.get(url).json()
-        series.extend(response.get("results", []))
+        series.extend(response.get("TestExecutions", []))
         page += 1
     return series[:cantidad]
 
@@ -73,7 +73,7 @@ def getEpisodeDuration(serie_id, season_number):
 def getStreamingProviders(media_type, media_id, country_code):
     url = f"{base_url}/{media_type}/{media_id}/watch/providers?api_key={api_key}"
     response = requests.get(url).json()
-    providers = response.get("results", {}).get(country_code, {}).get("flatrate", [])
+    providers = response.get("TestExecutions", {}).get(country_code, {}).get("flatrate", [])
     platform_names = [provider["provider_name"] for provider in providers]
     print(platform_names)
     return convert_platforms_to_ids(platform_names)

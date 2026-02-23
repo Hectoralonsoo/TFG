@@ -1,0 +1,22 @@
+{
+  "run_info": {
+    "dataset": "users5.json",
+    "config": "uniform_reset_high_crossover",
+    "run": 3,
+    "execution_time": 241.90686345100403,
+    "generations": 10,
+    "pareto_size": 2,
+    "pareto_points": [
+      [
+        -2940578.429999992,
+        9244.570000000002
+      ],
+      [
+        -2947955.759999993,
+        9808.000000000002
+      ]
+    ]
+  },
+  "solutions_count": 2,
+  "solutions_directory": "../results/SPEA2\\solutions\\users5\\uniform_reset_high_crossover\\run3"
+}

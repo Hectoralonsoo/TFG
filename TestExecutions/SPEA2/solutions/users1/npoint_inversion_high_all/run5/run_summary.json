@@ -1,0 +1,22 @@
+{
+  "run_info": {
+    "dataset": "users1.json",
+    "config": "npoint_inversion_high_all",
+    "run": 5,
+    "execution_time": 457.676527261734,
+    "generations": 137,
+    "pareto_size": 2,
+    "pareto_points": [
+      [
+        -465944.6899999994,
+        1614.1999999999996
+      ],
+      [
+        -459225.26999999967,
+        1424.8799999999997
+      ]
+    ]
+  },
+  "solutions_count": 2,
+  "solutions_directory": "../results/SPEA2\\solutions\\users1\\npoint_inversion_high_all\\run5"
+}

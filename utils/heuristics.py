@@ -1,8 +1,5 @@
 def encontrar_combinacion_optima(num_usuarios, planes_compactos):
-    """
-    Calcula la combinación óptima de planes para cubrir el número de usuarios dado.
-    planes_compactos = [(perfiles, precio), ...]
-    """
+
     dp = [(float('inf'), []) for _ in range(num_usuarios + 1)]
     dp[0] = (0, [])
 

@@ -2,16 +2,12 @@ import numpy as np
 from copy import deepcopy
 from typing import List, Tuple
 import json
-import random
-from collections import defaultdict
 from Loaders.LoadStreamingPlans import load_streaming_plan_json
-from Loaders.LoadPlatforms import load_platforms_json
-from Loaders.LoadUsers import load_users_from_json
 from utils.evaluation import calcular_minutos_ponderados, calcular_costo_total
-from utils.evaluation import fitness_paco
+
 
 streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
-#users = load_users_from_json("../Data/users1.json")
+
 
 # Cargar películas por plataforma
 with open("../Data/MoviesPlatform.json", "r", encoding="utf-8") as f:
@@ -70,7 +66,6 @@ class PACOStreaming:
                 solution = self._construct_solution()
                 all_solutions.append(solution.copy())
 
-                # Llamar función de fitness con argumentos si se proporcionan
                 if args is not None:
                     objectives = fitness_function(solution, args)
                 else:
@@ -200,36 +195,30 @@ class PACOStreaming:
 
     def _construct_solution(self) -> np.ndarray:
         solution = np.zeros(self.n_months * self.n_users, dtype=int)
-        epsilon = 0.15  # 15% de exploración aleatoria
+        epsilon = 0.15
 
         for month in range(self.n_months):
             for user in range(self.n_users):
                 if np.random.rand() < epsilon:
-                    # Exploración aleatoria pura
                     platform_choice = np.random.choice(self.platform_options)
                 else:
-                    # Heurística basada en solución parcial
                     heuristic_info = self._calculate_heuristic_info(month, user, solution)
 
-                    # Evitar valores de feromona cero para prevenir divisiones por cero
                     pheromone_values = np.maximum(self.pheromone[month, user], 1e-10)
                     heuristic_values = np.maximum(heuristic_info, 1e-10)
 
                     combined_info = (pheromone_values ** self.alpha) * (heuristic_values ** self.beta)
 
-                    # Normalizar probabilidades
                     total = np.sum(combined_info)
                     if total > 0:
                         probs = combined_info / total
                     else:
                         probs = np.ones(self.n_platforms) / self.n_platforms
 
-                    # Selección basada en probabilidad
                     try:
                         platform_idx = np.random.choice(self.n_platforms, p=probs)
                         platform_choice = self.platform_options[platform_idx]
                     except ValueError:
-                        # Fallback en caso de problemas con las probabilidades
                         platform_choice = np.random.choice(self.platform_options)
 
                 solution[month * self.n_users + user] = platform_choice
@@ -245,7 +234,6 @@ class PACOStreaming:
         for plat_idx, platform_id in enumerate(self.platform_options):
             platform_name = platforms_indexed.get(str(platform_id), "")
 
-            # Si es 0 (ninguna plataforma), valor base bajo
             if platform_id == 0:
                 content_price_ratio = 0.2
             else:
@@ -261,26 +249,24 @@ class PACOStreaming:
                 else:
                     content_price_ratio = 0.1
 
-            # Factor de continuidad mejorado
             continuity_factor = 1.0
             if current_month > 0:
                 prev_month_idx = (current_month - 1) * self.n_users + current_user
                 if prev_month_idx < len(partial_solution):
                     prev_platform = partial_solution[prev_month_idx]
                     if prev_platform == platform_id and platform_id != 0:
-                        continuity_factor = 1.15  # Pequeño bonus por continuidad
+                        continuity_factor = 1.15
 
-            # Factor de diversidad: penalizar si ya se usa mucho esta plataforma
             diversity_factor = 1.0
-            if current_month > 2:  # Solo después de algunos meses
+            if current_month > 2:
                 usage_count = 0
                 for past_month in range(max(0, current_month - 3), current_month):
                     past_idx = past_month * self.n_users + current_user
                     if past_idx < len(partial_solution) and partial_solution[past_idx] == platform_id:
                         usage_count += 1
 
-                if usage_count >= 2:  # Si se ha usado 2+ veces en los últimos 3 meses
-                    diversity_factor = 0.9  # Pequeña penalización
+                if usage_count >= 2:
+                    diversity_factor = 0.9
 
             heuristic[plat_idx] = content_price_ratio * continuity_factor * diversity_factor
 
@@ -290,7 +276,6 @@ class PACOStreaming:
         """Calcula el contenido potencial de interés de un usuario para una plataforma"""
         potential_content = 0
 
-        # Procesar películas
         for movie in user.movies:
             movie_interest = movie.get("interest", 1.0)
             movie_platforms = movie.get("platforms", [])
@@ -298,7 +283,6 @@ class PACOStreaming:
             if platform_name in movie_platforms:
                 potential_content += movie_interest * 10
 
-        # Procesar series
         for serie in user.series:
             serie_interest = serie.get("interest", 1.0)
             serie_platforms = serie.get("platforms", [])
@@ -306,7 +290,6 @@ class PACOStreaming:
             if platform_name in serie_platforms:
                 potential_content += serie_interest * 15
 
-            # Revisar temporadas
             for temporada in serie.get("season", []):
                 temporada_platforms = temporada.get("platforms", [])
                 if platform_name in temporada_platforms:

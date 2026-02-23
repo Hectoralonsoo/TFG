@@ -1,0 +1,46 @@
+{
+  "run_info": {
+    "dataset": "users1.json",
+    "config": "npoint_inversion_low_mutation",
+    "run": 3,
+    "execution_time": 296.1481120586395,
+    "generations": 86,
+    "pareto_size": 8,
+    "pareto_points": [
+      [
+        -474815.3600000006,
+        1551.23
+      ],
+      [
+        -474669.92000000057,
+        1511.2599999999998
+      ],
+      [
+        -475171.2300000007,
+        1551.71
+      ],
+      [
+        -474087.74000000075,
+        1411.34
+      ],
+      [
+        -469086.19000000076,
+        1348.8899999999999
+      ],
+      [
+        -465356.38000000064,
+        1321.37
+      ],
+      [
+        -471006.2900000006,
+        1396.8299999999997
+      ],
+      [
+        -470650.2100000007,
+        1374.8699999999997
+      ]
+    ]
+  },
+  "solutions_count": 8,
+  "solutions_directory": "../results/NSGA2\\solutions\\users1\\npoint_inversion_low_mutation\\run3"
+}

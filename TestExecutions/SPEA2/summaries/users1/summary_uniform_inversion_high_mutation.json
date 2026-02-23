@@ -1,0 +1,124 @@
+[
+  {
+    "dataset": "users1.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 1,
+    "execution_time": 126.00988006591797,
+    "generations": 40,
+    "pareto_size": 1,
+    "pareto_points": [
+      [
+        -468726.3699999994,
+        1435.8799999999997
+      ]
+    ]
+  },
+  {
+    "dataset": "users1.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 2,
+    "execution_time": 356.3107979297638,
+    "generations": 146,
+    "pareto_size": 7,
+    "pareto_points": [
+      [
+        -478802.73999999865,
+        1170.0600000000002
+      ],
+      [
+        -479790.29999999923,
+        1231.0300000000002
+      ],
+      [
+        -471772.2599999988,
+        1132.0800000000002
+      ],
+      [
+        -481552.7399999991,
+        1297.97
+      ],
+      [
+        -481370.7499999992,
+        1282.98
+      ],
+      [
+        -471590.26999999885,
+        1130.0800000000002
+      ],
+      [
+        -480383.1899999986,
+        1237.9900000000002
+      ]
+    ]
+  },
+  {
+    "dataset": "users1.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 3,
+    "execution_time": 133.64319515228271,
+    "generations": 50,
+    "pareto_size": 2,
+    "pareto_points": [
+      [
+        -458255.13999999966,
+        1312.03
+      ],
+      [
+        -459952.0300000004,
+        1341.99
+      ]
+    ]
+  },
+  {
+    "dataset": "users1.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 4,
+    "execution_time": 209.4306502342224,
+    "generations": 69,
+    "pareto_size": 2,
+    "pareto_points": [
+      [
+        -454936.44000000024,
+        1242.4799999999996
+      ],
+      [
+        -456749.54000000027,
+        1325.4199999999996
+      ]
+    ]
+  },
+  {
+    "dataset": "users1.json",
+    "config": "uniform_inversion_high_mutation",
+    "run": 5,
+    "execution_time": 254.6119818687439,
+    "generations": 94,
+    "pareto_size": 6,
+    "pareto_points": [
+      [
+        -450639.7099999995,
+        1373.26
+      ],
+      [
+        -453372.40999999957,
+        1391.6799999999998
+      ],
+      [
+        -450537.66999999934,
+        1368.7599999999995
+      ],
+      [
+        -452750.3799999997,
+        1375.2299999999998
+      ],
+      [
+        -457063.32000000007,
+        1423.2299999999998
+      ],
+      [
+        -457685.3499999999,
+        1439.6799999999998
+      ]
+    ]
+  }
+]

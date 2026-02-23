@@ -1,0 +1,108 @@
+{
+  "run_info": {
+    "dataset": "users3.json",
+    "config": "high_pheromone_influence",
+    "run": 1,
+    "execution_time": 666.5126519203186,
+    "iterations_completed": 21,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 17,
+    "pareto_points": [
+      [
+        1028056.3599999996,
+        2942.6500000000005
+      ],
+      [
+        1050494.7500000005,
+        3116.1600000000008
+      ],
+      [
+        1031837.6900000008,
+        2970.7
+      ],
+      [
+        975682.359999999,
+        2865.56
+      ],
+      [
+        955981.8300000012,
+        2792.0099999999998
+      ],
+      [
+        970735.3299999995,
+        2831.6800000000007
+      ],
+      [
+        966607.7500000007,
+        2811.93
+      ],
+      [
+        929506.9099999998,
+        2775.709999999999
+      ],
+      [
+        910485.8799999993,
+        2762.64
+      ],
+      [
+        894352.3500000002,
+        2725.9399999999996
+      ],
+      [
+        897024.2100000003,
+        2737.9999999999995
+      ],
+      [
+        878548.9100000006,
+        2643.93
+      ],
+      [
+        861988.2000000003,
+        2634.8999999999996
+      ],
+      [
+        892797.0900000008,
+        2724.9599999999996
+      ],
+      [
+        884259.7,
+        2670.0099999999998
+      ],
+      [
+        858902.1,
+        2613.8099999999995
+      ],
+      [
+        889295.0499999998,
+        2681.8999999999996
+      ]
+    ],
+    "solutions_evaluated": 420,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.3,
+      "alpha": 3.0,
+      "beta": 2.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  "solutions_count": 17,
+  "solutions_directory": "../results/PACO\\solutions\\users3\\high_pheromone_influence\\run1",
+  "objective_statistics": {
+    "cost_range": {
+      "min": 2613.8099999999995,
+      "max": 3116.1600000000008
+    },
+    "minutes_range": {
+      "min": 858902.1,
+      "max": 1050494.7500000005
+    }
+  },
+  "algorithm_info": {
+    "archive_history_length": 21,
+    "max_archive_size_reached": 17
+  }
+}

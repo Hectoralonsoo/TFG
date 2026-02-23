@@ -9,17 +9,11 @@ def calcular_minutos_ponderados(candidate, args, individual=None):
     verbose = False
 
     for i, user in enumerate(users):
-        # Creamos una copia del usuario o usamos un objeto nuevo para este individuo
-        if individual is None:
-            current_individual = type('Individual', (), {})
-        else:
-            current_individual = individual
 
         plataformas_por_mes = candidate[i]
         plataformas_mes_dict = {mes: plat_id for mes, plat_id in enumerate(plataformas_por_mes)}
         contenidos_disponibles = []
 
-        # Crear contenidos disponibles con tipo
         for pelicula in user.movies:
             duracion = pelicula['movie_duration']
             if duracion <= 0:
@@ -61,7 +55,6 @@ def calcular_minutos_ponderados(candidate, args, individual=None):
                         'eficiencia': serie['interest']
                     })
 
-        # Ordenar por eficiencia
         contenidos_disponibles.sort(key=lambda x: (x['eficiencia'], -x['duracion']), reverse=True)
 
         minutos_usados_por_mes = {mes: 0 for mes in range(12)}
@@ -110,12 +103,6 @@ def calcular_minutos_ponderados(candidate, args, individual=None):
                             }
                             watched_series[mes].append(entrada)
 
-                        # if verbose:
-                            #  print(
-                        #    f"  Mes {mes + 1}: {contenido['tipo']} - {contenido['id']} ({contenido['duracion']} min)")
-
-                    #    break
-
         monthly_data = []
 
         for mes in range(12):
@@ -131,10 +118,6 @@ def calcular_minutos_ponderados(candidate, args, individual=None):
             args['monthly_data_by_user'] = {}
         args['monthly_data_by_user'][user_id] = monthly_data
 
-    #  if verbose:
-    #    print(f"Total minutos ponderados: {minutos_totales_ponderados}")
-
-    # Devolvemos solo el valor de fitness para mantener la compatibilidad
     return minutos_totales_ponderados
 
 
@@ -145,12 +128,11 @@ def calcular_costo_total(candidate, args):
     num_users = len(candidate)
     streamingPlans = args["streamingPlans"]
     platforms_indexed = args["platforms_indexed"]
-    #  print(platforms_indexed)
 
- #   print("\n📅 === CÁLCULO DE COSTO TOTAL ===")
+  #  print("\n📅 === CÁLCULO DE COSTO TOTAL ===")
 
     for mes in range(12):
-        #   print(f"\n🔸 Mes {mes + 1}:")
+    #    print(f"\n🔸 Mes {mes + 1}:")
         plataformas_mes = [str(candidate[i][mes]) for i in range(num_users)]
         plataformas_contadas = set(plataformas_mes)
 
@@ -160,7 +142,7 @@ def calcular_costo_total(candidate, args):
             if plataforma_id not in streamingPlans:
                 continue
 
-            # Obtener usuarios asignados a esta plataforma en este mes
+
             usuarios_asignados = [
                 i for i in range(num_users) if str(candidate[i][mes]) == plataforma_id
             ]
@@ -169,25 +151,24 @@ def calcular_costo_total(candidate, args):
             if num_usuarios == 0:
                 continue
 
-            # Obtener planes de esa plataforma
+
             planes_info = streamingPlans[plataforma_id]
             planes = planes_info if isinstance(planes_info, list) else [planes_info]
             planes_compactos = [(p["perfiles"], p["precio"]) for p in planes]
             planes_compactos.sort(key=lambda p: p[0] / p[1], reverse=True)
 
-            # Calcular mejor combinación de planes
             costo_plataforma, combinacion = encontrar_combinacion_optima(num_usuarios, planes_compactos)
             costo_mes += costo_plataforma
 
-            #  nombre_plataforma = platforms_indexed.get(str(plataforma_id), f"Plataforma {plataforma_id}")
-            #     resumen_planes = ", ".join([f"{cant}x({perf} perfiles, {precio}€)" for cant, perf, precio in combinacion])
+        #    nombre_plataforma = platforms_indexed.get(str(plataforma_id), f"Plataforma {plataforma_id}")
+            #    resumen_planes = ", ".join([f"{cant}x({perf} perfiles, {precio}€)" for cant, perf, precio in combinacion])
 
-            #  print(f"  {nombre_plataforma} → {resumen_planes} → {num_usuarios} usuario(s)")
+        #    print(f"  {nombre_plataforma} → {resumen_planes} → {num_usuarios} usuario(s)")
 
-        #    print(f"🔹 Total mes {mes + 1}: {costo_mes:.2f}€")
+        #  print(f"🔹 Total mes {mes + 1}: {costo_mes:.2f}€")
         costo_total += costo_mes
 
-    # print(f"\n✅ Costo total anual: {costo_total:.2f}€")
+    #  print(f"\n✅ Costo total anual: {costo_total:.2f}€")
     return costo_total
 
 
@@ -197,10 +178,10 @@ def evaluator(candidates, args):
 
     fitness = []
 
-    #  print(f"\n--- Evaluando {len(candidates)} individuos ---")
+    print(f"\n--- Evaluando {len(candidates)} individuos ---")
 
     for candidate in candidates:
-        #    print(f"Evaluando individuo: {candidate}")
+        print(f"Evaluando individuo: {candidate}")
 
         minutos_ponderados = calcular_minutos_ponderados(candidate, args)
         costo_total = calcular_costo_total(candidate, args)
@@ -208,7 +189,7 @@ def evaluator(candidates, args):
 
         fitness.append(emo.Pareto([-minutos_ponderados, costo_total]))
 
-    #   print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
+    print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
     return fitness
 
 
@@ -217,12 +198,12 @@ def evaluatorSPEA2(candidates, args):
     fitness = []
 
     for candidate in candidates:
-        #  print(f"Evaluando individuo: {candidate}")
+        print(f"Evaluando individuo: {candidate}")
         minutos_ponderados = calcular_minutos_ponderados(candidate, args)
         costo_total = calcular_costo_total(candidate, args)
 
         fitness.append((costo_total, -minutos_ponderados))
-    #  print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
+    print(f"✅ Evaluación completada: {len(fitness)} soluciones generadas")
     return fitness
 
 

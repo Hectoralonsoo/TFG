@@ -1,0 +1,7 @@
+config,hv_mean,hv_std,hv_count,exec_time_mean,generations_mean,pareto_size_mean,pareto_points_mean,runs_mean
+uniform_inversion_high_mutation,0.88468,0.069472,5,2373.410175,125.0,19.24,96.2,5.0
+npoint_inversion_high_all,0.613991,0.246239,5,3206.485112,158.6,31.4,157.0,5.0
+uniform_reset_high_crossover,0.472347,0.044822,5,1456.90514,76.44,30.04,150.2,5.0
+uniform_reset_low_mutation,0.447006,0.035822,5,1464.311724,82.92,24.6,123.0,5.0
+npoint_inversion_low_mutation,0.392506,0.074157,5,2108.407575,110.04,27.4,137.0,5.0
+npoint_reset_low_crossover,0.243849,0.050663,5,1206.881257,67.88,20.88,104.4,5.0

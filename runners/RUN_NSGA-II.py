@@ -81,7 +81,7 @@ def main():
         "users5.json"
     ]
 
-    base_results_path = "../results/NSGA2"
+    base_results_path = "../TestExecutions/NSGA2"
     all_results = []
 
     # Crear directorio base si no existe

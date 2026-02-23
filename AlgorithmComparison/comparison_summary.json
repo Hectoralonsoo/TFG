@@ -1,0 +1,92 @@
+[
+  {
+    "dataset": "users1.json",
+    "nsga2": {
+      "final_cost": 919.78,
+      "final_minutes": 540081.3999999994,
+      "generations": 101
+    },
+    "spea2": {
+      "final_cost": 1418.3999999999996,
+      "final_minutes": 488915.9500000009,
+      "generations": 100
+    },
+    "paco": {
+      "final_cost": 973.0100000000002,
+      "final_minutes": 436064.69999999943,
+      "iterations": 100
+    }
+  },
+  {
+    "dataset": "users2.json",
+    "nsga2": {
+      "final_cost": 2009.51,
+      "final_minutes": 934353.4799999989,
+      "generations": 101
+    },
+    "spea2": {
+      "final_cost": 2314.29,
+      "final_minutes": 891326.2200000026,
+      "generations": 100
+    },
+    "paco": {
+      "final_cost": 1745.1500000000003,
+      "final_minutes": 710308.7400000003,
+      "iterations": 100
+    }
+  },
+  {
+    "dataset": "users3.json",
+    "nsga2": {
+      "final_cost": 3197.13,
+      "final_minutes": 1391017.5799999936,
+      "generations": 101
+    },
+    "spea2": {
+      "final_cost": 3487.19,
+      "final_minutes": 1371384.4999999895,
+      "generations": 100
+    },
+    "paco": {
+      "final_cost": 2662.8799999999997,
+      "final_minutes": 1187000.9899999928,
+      "iterations": 100
+    }
+  },
+  {
+    "dataset": "users4.json",
+    "nsga2": {
+      "final_cost": 5030.51,
+      "final_minutes": 2121209.7200000035,
+      "generations": 101
+    },
+    "spea2": {
+      "final_cost": 5564.700000000001,
+      "final_minutes": 2097519.260000001,
+      "generations": 100
+    },
+    "paco": {
+      "final_cost": 4293.960000000001,
+      "final_minutes": 1782781.6700000141,
+      "iterations": 100
+    }
+  },
+  {
+    "dataset": "users5.json",
+    "nsga2": {
+      "final_cost": 7690.650000000001,
+      "final_minutes": 3685144.519999985,
+      "generations": 101
+    },
+    "spea2": {
+      "final_cost": 8956.880000000001,
+      "final_minutes": 3440640.0099999732,
+      "generations": 100
+    },
+    "paco": {
+      "final_cost": 6647.200000000005,
+      "final_minutes": 3201237.609999997,
+      "iterations": 100
+    }
+  }
+]

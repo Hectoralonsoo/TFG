@@ -1,0 +1,188 @@
+[
+  {
+    "dataset": "users2.json",
+    "config": "balanced_original",
+    "run": 1,
+    "execution_time": 328.8143243789673,
+    "iterations_completed": 15,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 4,
+    "pareto_points": [
+      [
+        601794.4800000007,
+        1932.6300000000006
+      ],
+      [
+        625129.890000001,
+        2076.6900000000005
+      ],
+      [
+        611903.300000001,
+        1979.2600000000004
+      ],
+      [
+        532803.3600000001,
+        1866.8400000000008
+      ]
+    ],
+    "solutions_evaluated": 300,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users2.json",
+    "config": "balanced_original",
+    "run": 2,
+    "execution_time": 304.24174213409424,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        606575.3200000008,
+        1990.8200000000006
+      ],
+      [
+        582303.0699999997,
+        1981.6800000000005
+      ],
+      [
+        611990.6699999998,
+        2088.5800000000004
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users2.json",
+    "config": "balanced_original",
+    "run": 3,
+    "execution_time": 304.2982511520386,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 2,
+    "pareto_points": [
+      [
+        630167.8200000001,
+        1972.8300000000004
+      ],
+      [
+        562405.4900000012,
+        1932.7400000000005
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users2.json",
+    "config": "balanced_original",
+    "run": 4,
+    "execution_time": 317.09302139282227,
+    "iterations_completed": 15,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 3,
+    "pareto_points": [
+      [
+        613840.6099999999,
+        1914.3800000000006
+      ],
+      [
+        615016.4699999996,
+        2123.7200000000003
+      ],
+      [
+        549122.4499999996,
+        1912.1300000000008
+      ]
+    ],
+    "solutions_evaluated": 300,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  },
+  {
+    "dataset": "users2.json",
+    "config": "balanced_original",
+    "run": 5,
+    "execution_time": 284.2470500469208,
+    "iterations_completed": 14,
+    "max_iterations": 200,
+    "terminated_early": true,
+    "generations_without_improvement": 12,
+    "pareto_size": 7,
+    "pareto_points": [
+      [
+        610272.2499999999,
+        2023.7900000000002
+      ],
+      [
+        605438.72,
+        2001.8000000000004
+      ],
+      [
+        610394.010000001,
+        2040.9000000000003
+      ],
+      [
+        602736.6200000002,
+        1967.9300000000003
+      ],
+      [
+        619398.3000000006,
+        2103.2000000000003
+      ],
+      [
+        604599.6600000005,
+        1981.1500000000003
+      ],
+      [
+        611676.0399999993,
+        2088.1500000000005
+      ]
+    ],
+    "solutions_evaluated": 280,
+    "config_params": {
+      "n_ants": 20,
+      "rho": 0.4,
+      "alpha": 1.0,
+      "beta": 3.0,
+      "archive_size": 100,
+      "no_improvement_generations": 12
+    }
+  }
+]
