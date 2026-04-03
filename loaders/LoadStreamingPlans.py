@@ -1,5 +1,5 @@
 import json
-from Models.StreamingPlan import StreamingPlan
+from models.StreamingPlan import StreamingPlan
 
 
 def load_streaming_plan_json(json_file):

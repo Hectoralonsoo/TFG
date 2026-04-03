@@ -1,5 +1,5 @@
 import json
-from Models.Serie import Episode, Season, Serie
+from models.Serie import Episode, Season, Serie
 
 
 

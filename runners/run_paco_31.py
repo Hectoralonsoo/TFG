@@ -1,6 +1,6 @@
 from algorithms.PACO import PACOStreaming, fitness_paco
-from Loaders.LoadStreamingPlans import load_streaming_plan_json
-from Loaders.LoadUsers import load_users_from_json
+from loaders.LoadStreamingPlans import load_streaming_plan_json
+from loaders.LoadUsers import load_users_from_json
 
 import json
 import os
@@ -49,9 +49,9 @@ def main():
     print(f"  Archivo: {config['archive_size']}, Terminación: {config['no_improvement_generations']}")
     print(f"  Datasets restantes: users4 (runs 22-31), users5 (runs 1-31)\n")
 
-    streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
+    streamingPlans = load_streaming_plan_json("../data/streamingPlans.json")
 
-    with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
+    with open("../data/indice_plataformas.json", "r", encoding="utf-8") as f:
         platforms_indexed = json.load(f)
 
     plataformas_disponibles = [int(p) for p in platforms_indexed.keys()]
@@ -64,7 +64,7 @@ def main():
         "users5.json",
     ]
 
-    base_results_path = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\PACO"
+    base_results_path = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\results\\PACO"
     resume_points = get_resume_point()
 
     general_summary_path = os.path.join(base_results_path, "summary_all_experiments.json")
@@ -82,7 +82,7 @@ def main():
     current_run = 0
 
     for dataset_name in user_datasets_to_resume:
-        dataset_path = f"../Data/{dataset_name}"
+        dataset_path = f"../data/{dataset_name}"
         print(f"\n📂 Procesando dataset: {dataset_name}")
         users = load_users_from_json(dataset_path)
 

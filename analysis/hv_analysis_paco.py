@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 def load_global_reference_points(
-        stats_file="C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\pareto_outputs\\pareto_stats_summary.csv"):
+        stats_file="C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\outputs\\pareto_stats_summary.csv"):
     """
     Carga los puntos de referencia globales desde el archivo de estadísticas
     """
@@ -123,32 +123,34 @@ def calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_name, globa
                 if minutes_range == 0:
                     minutes_normalized = 1.0
                 else:
-                    # Para PACO: si minutes es positivo, maximizar velocidad = minimizar tiempo
-                    # Si minutes es negativo (como en NSGA-II), ajustar según corresponda
-                    # Aquí asumo que minutes en PACO es positivo y queremos minimizarlo
+                    # Para PACO: minutes es positivo, y queremos minimizarlo (maximizar velocidad)
                     minutes_normalized = (minutes - global_min_minutes) / minutes_range
 
                 # Validar que estén en [0,1]
                 cost_normalized = max(0.0, min(1.0, cost_normalized))
                 minutes_normalized = max(0.0, min(1.0, minutes_normalized))
 
-                # Debug para los primeros puntos
-                if total_points < 3:
-                    print(f"  Debug punto {total_points + 1}:")
+                # DEBUG DETALLADO - Mostrar cálculo de normalización para los primeros puntos
+                if total_points < 10:  # Mostrar solo para los primeros 10 puntos
+                    print(f"\n  🐛 DEBUG Punto {total_points + 1}:")
                     print(f"    Original: cost={cost:.2f}, minutes={minutes:.2f}")
-                    print(f"    Normalizado: cost_norm={cost_normalized:.6f}, minutes_norm={minutes_normalized:.6f}")
+                    print(f"    Rango global coste: [{global_min_cost:.2f}, {global_max_cost:.2f}]")
+                    print(f"    Rango global minutos: [{global_min_minutes:.0f}, {global_max_minutes:.0f}]")
+                    print(f"    Cálculo coste normalizado: ({global_max_cost:.2f} - {cost:.2f}) / {cost_range:.2f} = {cost_normalized:.6f}")
+                    print(f"    Cálculo minutos normalizados: ({global_max_minutes:.0f} - {minutes:.0f}) / {minutes_range:.0f} = {minutes_normalized:.6f}")
+                    print(f"    → Punto normalizado: [{cost_normalized:.6f}, {minutes_normalized:.6f}]")
 
                 config_pareto_points[config].append([cost_normalized, minutes_normalized])
                 total_points += 1
 
-    print(f"Total puntos de Pareto procesados: {total_points}")
+    print(f"\nTotal puntos de Pareto procesados: {total_points}")
     print(f"Configuraciones encontradas: {len(config_pareto_points)}")
 
     # Calcular hipervolumen por configuración usando puntos ya calculados
     hv_by_config = []
     ref_point = [0.0, 0.0]  # Para maximización
 
-    print(f"Usando punto de referencia para MAXIMIZACIÓN: {ref_point}")
+    print(f"\nUsando punto de referencia para MAXIMIZACIÓN: {ref_point}")
     print("NOTA: Se usan directamente los puntos de Pareto proporcionados (no se recalcula el frente)")
 
     for config, pareto_points in config_pareto_points.items():
@@ -179,7 +181,6 @@ def calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_name, globa
 
         try:
             if len(pareto_points) > 0:
-                # Calcular hipervolumen directamente con los puntos proporcionados
                 hv = hypervolume(pareto_points, reference_point=ref_point)
 
                 # Validación del hipervolumen
@@ -233,13 +234,13 @@ def calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_name, globa
 def main():
     # Cargar puntos de referencia globales
     global_stats = load_global_reference_points(
-        "../pareto_outputs_tests/pareto_stats_summary.csv")
+        "../outputs/pareto_stats_summary.csv")
     if global_stats is None:
         print("ERROR: No se pudieron cargar los puntos de referencia globales. Terminando...")
         return
 
     # Configuración de rutas para PACO
-    base_path = "../TestExecutions/PACO/summaries"
+    base_path = "../results/PACO/summaries"
 
     # Datasets a procesar
     datasets = [
@@ -256,6 +257,8 @@ def main():
     for folder, dataset_file in datasets:
         file_path = os.path.join(base_path, folder, f"summary_complete_{folder}.json")
         results = calculate_hypervolume_with_direct_pareto_paco(file_path, dataset_file, global_stats)
+
+
 
         if results:
             all_results.extend(results)
@@ -287,8 +290,8 @@ def main():
     print(results_sorted.to_string(index=False))
 
     # Guardar resultados completos
-    results_sorted.to_csv("hypervolume_results_paco_tests_pareto_tests.csv", index=False)
-    print(f"\nResultados completos guardados en 'hypervolume_results_paco_tests_pareto.csv'")
+    results_sorted.to_csv("hypervolume_results_paco_direct_pareto.csv", index=False)
+    print(f"\nResultados completos guardados en 'hypervolume_results_paco_direct_pareto.csv'")
 
     # Análisis por dataset
     print(f"\n{'=' * 120}")
@@ -315,8 +318,8 @@ def main():
     summary_df = pd.DataFrame(dataset_summary)
     print(summary_df.to_string(index=False))
 
-    summary_df.to_csv("hypervolume_summary_paco_tests_pareto.csv", index=False)
-    print(f"\nResumen por dataset guardado en 'hypervolume_summary_paco_tests_pareto.csv'")
+    summary_df.to_csv("hypervolume_summary_paco_direct_pareto.csv", index=False)
+    print(f"\nResumen por dataset guardado en 'hypervolume_summary_paco_direct_pareto.csv'")
 
     # Ranking de configuraciones
     print(f"\n{'=' * 120}")
@@ -354,8 +357,8 @@ def main():
         print(f"         Puntos Pareto promedio: {row['pareto_points_mean']:.1f}")
         print()
 
-    config_means_sorted.to_csv("config_ranking_paco_tests_pareto.csv", index=False)
-    print(f"Ranking completo guardado en 'config_ranking_paco_tests_pareto.csv'")
+    config_means_sorted.to_csv("config_ranking_paco_direct_pareto.csv", index=False)
+    print(f"Ranking completo guardado en 'config_ranking_paco_direct_pareto.csv'")
 
     # Mejor configuración global
     best_global_config = config_means_sorted.iloc[0]
@@ -384,8 +387,8 @@ def main():
 
     print(best_config_summary.to_string(index=False))
 
-    best_config_summary.to_csv("best_global_config_details_paco_tests_pareto.csv", index=False)
-    print(f"\nDetalles de la mejor configuración guardados en 'best_global_config_details_paco_tests_pareto.csv'")
+    best_config_summary.to_csv("best_global_config_details_paco_direct_pareto.csv", index=False)
+    print(f"\nDetalles de la mejor configuración guardados en 'best_global_config_details_paco_direct_pareto.csv'")
 
     # Diagnóstico de problemas específicos de PACO
     print(f"\n{'=' * 120}")

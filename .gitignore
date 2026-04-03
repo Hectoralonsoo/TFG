@@ -1,0 +1,29 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Caché Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Archivos generados (plots temporales en raíz)
+evolucion.png
+evolution_improve.png
+pareto.png
+pareto_paco.png
+resultados_optimizacion.json
+
+# OS
+.DS_Store
+Thumbs.db

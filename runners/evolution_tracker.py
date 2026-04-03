@@ -7,9 +7,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 
-from Loaders.LoadStreamingPlans import load_streaming_plan_json
-from Loaders.LoadUsers import load_users_from_json
-from Loaders.LoadPlatforms import load_platforms_json
+from loaders.LoadStreamingPlans import load_streaming_plan_json
+from loaders.LoadUsers import load_users_from_json
+from loaders.LoadPlatforms import load_platforms_json
 from algorithms.SPEA2 import SPEA2
 from algorithms.PACO import PACOStreaming, fitness_paco
 
@@ -346,8 +346,8 @@ def main():
     print("🚀 Iniciando comparación de algoritmos con gráficas de evolución\n")
 
     # Cargar datos comunes
-    streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
-    platforms_indexed = load_platforms_json("../Data/indice_plataformas.json")
+    streamingPlans = load_streaming_plan_json("../data/streamingPlans.json")
+    platforms_indexed = load_platforms_json("../data/indice_plataformas.json")
 
     user_datasets = [
         "users1.json",
@@ -369,7 +369,7 @@ def main():
 
     # Ejecutar para cada dataset
     for dataset_name in user_datasets:
-        dataset_path = f"../Data/{dataset_name}"
+        dataset_path = f"../data/{dataset_name}"
         print(f"\n{'=' * 60}")
         print(f"📂 Procesando dataset: {dataset_name}")
         print(f"{'=' * 60}")

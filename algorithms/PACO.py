@@ -2,21 +2,21 @@ import numpy as np
 from copy import deepcopy
 from typing import List, Tuple
 import json
-from Loaders.LoadStreamingPlans import load_streaming_plan_json
+from loaders.LoadStreamingPlans import load_streaming_plan_json
 from utils.evaluation import calcular_minutos_ponderados, calcular_costo_total
 
 
-streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
+streamingPlans = load_streaming_plan_json("../data/streamingPlans.json")
 
 
 # Cargar películas por plataforma
-with open("../Data/MoviesPlatform.json", "r", encoding="utf-8") as f:
+with open("../data/MoviesPlatform.json", "r", encoding="utf-8") as f:
     movies_by_platform = json.load(f)
 
-with open("../Data/SeriesPlatform.json", "r", encoding="utf-8") as f:
+with open("../data/SeriesPlatform.json", "r", encoding="utf-8") as f:
     series_by_platform = json.load(f)
 
-with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
+with open("../data/indice_plataformas.json", "r", encoding="utf-8") as f:
     platforms_indexed = json.load(f)
 
 

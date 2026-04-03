@@ -1,5 +1,5 @@
 import json
-from Loaders.LoadUsers import load_users_from_json
+from loaders.LoadUsers import load_users_from_json
 from scripts.User_generator import update_users_json
 from utils.evaluation import calcular_minutos_ponderados
 import matplotlib.pyplot as plt

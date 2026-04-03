@@ -1,6 +1,6 @@
 from algorithms.PACO import PACOStreaming, fitness_paco
-from Loaders.LoadStreamingPlans import load_streaming_plan_json
-from Loaders.LoadUsers import load_users_from_json
+from loaders.LoadStreamingPlans import load_streaming_plan_json
+from loaders.LoadUsers import load_users_from_json
 import json
 import os
 from time import time
@@ -82,9 +82,9 @@ def main():
         }
     ]
 
-    streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
+    streamingPlans = load_streaming_plan_json("../data/streamingPlans.json")
 
-    with open("../Data/indice_plataformas.json", "r", encoding="utf-8") as f:
+    with open("../data/indice_plataformas.json", "r", encoding="utf-8") as f:
         platforms_indexed = json.load(f)
 
     plataformas_disponibles = [int(p) for p in platforms_indexed.keys()]
@@ -97,13 +97,13 @@ def main():
         "users5.json"
     ]
 
-    base_results_path = "../TestExecutions/PACO"
+    base_results_path = "../results_test/PACO"
     all_results = []
 
     os.makedirs(base_results_path, exist_ok=True)
 
     for dataset_name in user_datasets:
-        dataset_path = f"../Data/{dataset_name}"
+        dataset_path = f"../data/{dataset_name}"
         print(f"\n📂 Ejecutando para dataset: {dataset_name}")
         users = load_users_from_json(dataset_path)
 

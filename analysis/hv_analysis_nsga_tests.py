@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 def load_global_reference_points(
-        stats_file="C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\pareto_outputs_tests\\pareto_stats_summary.csv"):
+        stats_file="C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\outputs_test\\pareto_stats_summary.csv"):
     """
     Carga los puntos de referencia globales desde el archivo de estadísticas
     """
@@ -220,13 +220,13 @@ def calculate_hypervolume_with_direct_pareto(file_path, dataset_name, global_sta
 def main():
     # Cargar puntos de referencia globales
     global_stats = load_global_reference_points(
-        "../pareto_outputs_tests/pareto_stats_summary.csv")
+        "../outputs_test/pareto_stats_summary.csv")
     if global_stats is None:
         print("ERROR: No se pudieron cargar los puntos de referencia globales. Terminando...")
         return
 
     # Configuración de rutas
-    base_path = "../TestExecutions/SPEA2/summaries"
+    base_path = "../results_test/NSGA2/summaries"
 
     # Datasets a procesar
     datasets = [
@@ -371,8 +371,8 @@ def main():
 
     print(best_config_summary.to_string(index=False))
 
-    best_config_summary.to_csv("best_global_config_details_tests_spea2_pareto.csv", index=False)
-    print(f"\nDetalles de la mejor configuración guardados en 'best_global_config_details_tests_spea2_pareto.csv'")
+    best_config_summary.to_csv("best_global_config_details_tests_nsga_pareto.csv", index=False)
+    print(f"\nDetalles de la mejor configuración guardados en 'best_global_config_details_tests_nsga_pareto.csv'")
 
     print(f"\n{'🎯' * 50}")
     print("CARACTERÍSTICAS DE ESTE ANÁLISIS:")

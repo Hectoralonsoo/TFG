@@ -6,7 +6,7 @@ from inspyred.ec.analysis import hypervolume
 
 
 def load_global_reference_points(
-        stats_file=r"C:\Users\hctr0\PycharmProjects\TFG_Hector\pareto_outputs\pareto_stats_summary.csv"):
+        stats_file=r"C:\Users\hctr0\PycharmProjects\TFG_Hector\outputs\pareto_stats_summary.csv"):
     """
     Carga los puntos de referencia globales desde el archivo de estadísticas
     """
@@ -221,15 +221,15 @@ def main():
     algorithms = [
         {
             'name': 'NSGA-II',
-            'base_path': r"C:\Users\hctr0\PycharmProjects\TFG_Hector\31Executions\NSGA2\summaries"
+            'base_path': r"C:\Users\hctr0\PycharmProjects\TFG_Hector\results\NSGA2\summaries"
         },
         {
             'name': 'SPEA2',
-            'base_path': r"C:\Users\hctr0\PycharmProjects\TFG_Hector\31Executions\SPEA2\summaries"
+            'base_path': r"C:\Users\hctr0\PycharmProjects\TFG_Hector\results\SPEA2\summaries"
         },
         {
             'name': 'PACO',
-            'base_path': r"C:\Users\hctr0\PycharmProjects\TFG_Hector\31Executions\PACO\summaries"
+            'base_path': r"C:\Users\hctr0\PycharmProjects\TFG_Hector\results\PACO\summaries"
         }
     ]
 

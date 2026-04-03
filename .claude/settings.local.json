@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep \"\\\\.py$\")",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(.venv/Scripts/pip freeze:*)",
+      "Bash(grep -v \"^\\\\.$\\\\|^\\\\.\\\\.$\")"
+    ]
+  }
+}

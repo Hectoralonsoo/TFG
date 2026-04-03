@@ -9,7 +9,7 @@ uploaded_files = {
     "PACO":  "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\results\\PACO\\summary_all_experiments.json"
 }
 
-output_folder = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\pareto_outputs_tests"
+output_folder = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\outputs"
 os.makedirs(output_folder, exist_ok=True)
 
 pareto_points_by_dataset = {}

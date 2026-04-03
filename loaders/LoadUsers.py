@@ -1,6 +1,6 @@
 import json
 
-from Models.User import User
+from models.User import User
 
 
 def load_users_from_json(json_file):

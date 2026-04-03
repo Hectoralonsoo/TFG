@@ -1,5 +1,5 @@
 import json
-from Models.Movie import Movie
+from models.Movie import Movie
 
 def load_movies_from_json(json_file):
     try:

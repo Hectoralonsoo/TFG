@@ -3,15 +3,13 @@ import random
 import os
 from time import time
 import inspyred
-import numpy as np
 
-from Loaders.LoadStreamingPlans import load_streaming_plan_json
-from Loaders.LoadUsers import load_users_from_json
-from Loaders.LoadPlatforms import load_platforms_json
-from algorithms.SPEA2 import SPEA2
+from loaders.LoadStreamingPlans import load_streaming_plan_json
+from loaders.LoadUsers import load_users_from_json
+from loaders.LoadPlatforms import load_platforms_json
 
 from utils.evaluation import evaluator, calcular_minutos_ponderados
-from utils.logging_custom import observer
+from utils.logging_custom import observer, plot_evolution, plot_generation_improve, plot_pareto_front
 from generators.Individual_generator import generar_individuo
 
 
@@ -27,34 +25,54 @@ def create_directory_structure(base_path, dataset_name, config_name, run_number)
     return solutions_dir, summaries_dir
 
 
-def safe_fitness_to_list(fitness):
-    """
-    Safely convert fitness to list, handling both single values and iterables
-    """
-    if isinstance(fitness, (int, float, np.number)):
-        return [float(fitness)]
-    elif hasattr(fitness, '__iter__'):
-        return [float(f) for f in fitness]
-    else:
-        try:
-            return list(fitness)
-        except TypeError:
-            return [float(fitness)]
-
-
 def main():
     configurations = [
         {
+            "name": "uniform_reset_low_mutation",
+            "pop_size": 75,
+            "mutation_rate": 0.01,
+            "crossover_rate": 0.6,
+            "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
+        },
+        {
+            "name": "uniform_reset_high_crossover",
+            "pop_size": 75,
+            "mutation_rate": 0.025,
+            "crossover_rate": 0.8,
+            "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.random_reset_mutation]
+        },
+        {
             "name": "uniform_inversion_high_mutation",
-            "pop_size": 50,
+            "pop_size": 75,
             "mutation_rate": 0.1,
             "crossover_rate": 0.6,
             "variator": [inspyred.ec.variators.uniform_crossover, inspyred.ec.variators.inversion_mutation]
+        },
+        {
+            "name": "npoint_reset_low_crossover",
+            "pop_size": 75,
+            "mutation_rate": 0.025,
+            "crossover_rate": 0.4,
+            "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.random_reset_mutation]
+        },
+        {
+            "name": "npoint_inversion_low_mutation",
+            "pop_size": 75,
+            "mutation_rate": 0.01,
+            "crossover_rate": 0.6,
+            "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
+        },
+        {
+            "name": "npoint_inversion_high_all",
+            "pop_size": 75,
+            "mutation_rate": 0.1,
+            "crossover_rate": 0.8,
+            "variator": [inspyred.ec.variators.n_point_crossover, inspyred.ec.variators.inversion_mutation]
         }
     ]
 
-    streamingPlans = load_streaming_plan_json("../Data/streamingPlans.json")
-    platforms_indexed = load_platforms_json("../Data/indice_plataformas.json")
+    streamingPlans = load_streaming_plan_json("../data/streamingPlans.json")
+    platforms_indexed = load_platforms_json("../data/indice_plataformas.json")
     user_datasets = [
         "users1.json",
         "users2.json",
@@ -63,15 +81,14 @@ def main():
         "users5.json"
     ]
 
-    # Directorio base para SPEA2 - cambiado para mantener consistencia con tu estructura
-    base_results_path = "C:\\Users\\hctr0\\PycharmProjects\\TFG_Hector\\31Executions\\SPEA2"
+    base_results_path = "../results_test/NSGA2"
     all_results = []
 
     # Crear directorio base si no existe
     os.makedirs(base_results_path, exist_ok=True)
 
     for dataset_name in user_datasets:
-        dataset_path = f"../Data/{dataset_name}"
+        dataset_path = f"../data/{dataset_name}"
         print(f"\n📂 Ejecutando para dataset: {dataset_name}")
         users = load_users_from_json(dataset_path)
 
@@ -82,9 +99,8 @@ def main():
 
             config_results = []
 
-            # Cambiado de 5 a 31 runs
-            for run in range(31):
-                print(f"🔁 Run {run + 1}/31")
+            for run in range(5):
+                print(f"🔁 Run {run + 1}/5")
 
                 # Crear estructura de directorios para este run específico
                 solutions_dir, summaries_dir = create_directory_structure(
@@ -94,28 +110,27 @@ def main():
                 seed = time()
                 prng = random.Random(seed)
 
-                # Usar tu implementación personalizada de SPEA2
-                algorithm = SPEA2(prng)
+                algorithm = inspyred.ec.emo.NSGA2(prng)
                 bounder = inspyred.ec.Bounder(1, len(platforms_indexed))
 
                 algorithm.selector = inspyred.ec.selectors.tournament_selection
+                algorithm.replacer = inspyred.ec.replacers.nsga_replacement
                 algorithm.variator = config["variator"]
                 algorithm.terminator = inspyred.ec.terminators.no_improvement_termination
                 algorithm.observer = observer
-                algorithm.evaluator = evaluator
-                algorithm.generator = generar_individuo
 
                 args = {
                     'users': users,
                     'streamingPlans': streamingPlans,
-                    'platforms_indexed': platforms_indexed
+                    'platforms_indexed': platforms_indexed,
+                    'max_generations': 10,
                 }
 
                 start_time = time()
                 final_pop = algorithm.evolve(
+                    generator=generar_individuo,
                     evaluator=evaluator,
                     bounder=bounder,
-                    max_generations=300,  # Usar el valor de tu configuración original
                     pop_size=config["pop_size"],
                     maximize=False,
                     num_selected=config["pop_size"],
@@ -128,27 +143,12 @@ def main():
                 end_time = time()
                 execution_time = end_time - start_time
                 generations = algorithm.num_generations
-
-                # Manejo seguro del archivo y puntos de Pareto
-                if hasattr(algorithm, 'archive') and algorithm.archive:
-                    pareto_size = len(algorithm.archive)
-                    # Usar objective_values en lugar de fitness para los puntos del frente de Pareto
-                    pareto_points = []
-                    for ind in algorithm.archive:
-                        if hasattr(ind, 'objective_values') and ind.objective_values:
-                            pareto_points.append(safe_fitness_to_list(ind.objective_values))
-                        elif hasattr(ind, 'fitness'):
-                            pareto_points.append(safe_fitness_to_list(ind.fitness))
-                        else:
-                            pareto_points.append([0.0])  # Valor por defecto
-                else:
-                    pareto_size = 0
-                    pareto_points = []
+                pareto_size = len(algorithm.archive)
+                pareto_points = [list(ind.fitness) for ind in algorithm.archive]
 
                 run_result = {
                     'dataset': dataset_name,
                     'config': config['name'],
-                    'algorithm': 'SPEA2',  # Identificador del algoritmo
                     'run': run + 1,
                     'execution_time': execution_time,
                     'generations': generations,
@@ -158,26 +158,29 @@ def main():
 
                 config_results.append(run_result)
 
-                if hasattr(algorithm, 'archive') and algorithm.archive:
-                    for idx, ind in enumerate(algorithm.archive):
-                        calcular_minutos_ponderados(ind.candidate, args)
-                        ind.monthly_data = args['monthly_data_by_user']
-                        export = {
-                            "candidate": ind.candidate,
-                            "fitness": safe_fitness_to_list(ind.fitness),
-                            "monthly_data": ind.monthly_data
-                        }
+                # Guardar soluciones individuales en la carpeta específica del run
+                for idx, ind in enumerate(algorithm.archive):
+                    calcular_minutos_ponderados(ind.candidate, args)
+                    ind.monthly_data = args['monthly_data_by_user']
+                    export = {
+                        "candidate": ind.candidate,
+                        "fitness": list(ind.fitness),
+                        "monthly_data": ind.monthly_data
+                    }
 
-                        solution_filename = f"sol{idx}.json"
-                        solution_path = os.path.join(solutions_dir, solution_filename)
+                    solution_filename = f"sol{idx}.json"
+                    solution_path = os.path.join(solutions_dir, solution_filename)
+                    plot_evolution()
+                    plot_generation_improve()
+                    plot_pareto_front(algorithm)
 
-                        with open(solution_path, 'w', encoding='utf-8') as f:
-                            json.dump(export, f, ensure_ascii=False, indent=2)
+                    with open(solution_path, 'w', encoding='utf-8') as f:
+                        json.dump(export, f, ensure_ascii=False, indent=2)
 
                 # Guardar summary individual del run
                 run_summary = {
                     'run_info': run_result,
-                    'solutions_count': len(algorithm.archive) if hasattr(algorithm, 'archive') and algorithm.archive else 0,
+                    'solutions_count': len(algorithm.archive),
                     'solutions_directory': solutions_dir
                 }
 
@@ -204,7 +207,7 @@ def main():
     with open(general_summary_path, 'w') as f:
         json.dump(all_results, f, indent=2)
 
-    print(f"\n✅ Experimentos SPEA2 completados!")
+    print(f"\n✅ Experimentos completados!")
     print(f"📁 Estructura de archivos creada en: {base_results_path}")
     print(f"📊 Summary general guardado en: {general_summary_path}")
 
